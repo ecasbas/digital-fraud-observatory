@@ -188,5 +188,41 @@
         "url": "https://desenmascara.me/analisis/dbe93ad9-fb73-47ca-8d2d-71a20f232e07"
       }
     ]
+  },
+  {
+    "id": "SA-006",
+    "slug": "investment-platform",
+    "title": "A trading dashboard. A promise built on urgency.",
+    "short_title": "The investment platform",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "spakasprimetrade.com",
+    "summary": "A trading platform presents crypto and CFD investing as an easy route to returns.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "investment-platform.png",
+    "image_source": "https://desenmascara.me/screens/12284042129701e8.png",
+    "image_alt": "Archived Spakas Prime Trade investment platform presenting crypto and CFD trading claims.",
+    "claim": "Professional trading platform",
+    "counterclaim": "Investment firm and licensing need independent verification",
+    "observations": [
+      "The page presents a polished trading service with crypto and investment language.",
+      "A young domain and unclear corporate identity increase the need for independent checks.",
+      "The screenshot cannot establish whether funds were accepted or returned."
+    ],
+    "source_summary": "Desenmascara records a Fraudulent assessment for spakasprimetrade.com. The assessment describes a CFD trading platform using bitcoin and crypto language, a young domain and an unclear registrar identity, and labels the pattern investment fraud.",
+    "limits": "This is a dated capture and an attributed source assessment, not a new investigation by this project. The image does not prove customer losses, the identity of an operator or that every crypto investment offer is fraudulent. Check current regulator records and the original report for updates.",
+    "analysis_date": "2026-09-14",
+    "checked_at": "2026-09-14",
+    "assessment": "Fraudulent · source assessment",
+    "assessment_source": "desenmascara.me",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture",
+        "url": "https://desenmascara.me/analisis/549ed147-9c7e-429c-977f-69b31f8e0eba"
+      }
+    ]
   }
 ]
