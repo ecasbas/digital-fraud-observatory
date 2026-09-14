@@ -19,4 +19,6 @@ The easiest contribution takes about five minutes:
 2. Open [New example](https://github.com/ecasbas/digital-fraud-observatory/issues/new?template=new-example.yml), paste the report URL, and write one or two sentences explaining what readers should notice or verify.
 3. Submit the issue. A maintainer checks the source, privacy, rights and duplication before publishing it as a case.
 
+Screenshots labelled as captures are real historical pages found online; reconstructions are labelled clearly. If you believe a trademark or other right is infringed, report the exact case and material through the correction form so it can be reviewed, corrected, blurred or removed.
+
 You can also use the website’s contribution form. [Corrections](https://github.com/ecasbas/digital-fraud-observatory/issues/new?template=correction.yml), translations, code improvements and counterexamples are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) for the full rules.
