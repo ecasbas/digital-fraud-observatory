@@ -7,7 +7,7 @@
 Real examples. Learn to spot online fraud.
 ```
 
-An open library of documented fraud, impersonation and digital deception. Initiated by [desenmascara.me](https://desenmascara.me), open to independent researchers, vendors, educators and individuals.
+An open library of documented fraud, impersonation and digital deception. Open to independent researchers, vendors, educators and individuals.
 
 Start with a public report link and one useful lesson. Contributions are reviewed before publication. The collection includes historical website captures and clearly labelled reconstructions.
 
