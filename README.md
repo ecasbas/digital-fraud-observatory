@@ -4,7 +4,7 @@
 [ o ]  DIGITAL FRAUD
        OBSERVATORY
 
-Real examples. Learn to spot online fraud.
+       Real examples. Learn to spot online fraud.
 ```
 
 An open observatory for documented online fraud and AI-enabled deception. Open to independent researchers, vendors, educators and individuals.
