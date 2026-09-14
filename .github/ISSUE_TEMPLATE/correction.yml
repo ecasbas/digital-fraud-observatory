@@ -1,0 +1,24 @@
+name: Correct a case
+description: Help improve the evidence or explanation.
+title: "[Correction] "
+body:
+  - type: input
+    id: case
+    attributes:
+      label: Case ID
+      placeholder: SA-004
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Supporting public source
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What should change and why?
+      description: This is public. Do not include private information.
+    validations:
+      required: true

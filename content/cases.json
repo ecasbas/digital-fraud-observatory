@@ -1,0 +1,192 @@
+[
+  {
+    "id": "SA-004",
+    "slug": "insurance-clone",
+    "title": "A regulatory badge. A very different reality.",
+    "short_title": "The insurance clone",
+    "category": "Insurance",
+    "technique": "Borrowed authority",
+    "kind": "capture",
+    "subject": "speedysure.co.uk",
+    "summary": "An insurance site claims FCA regulation. The regulator identifies it as a clone firm.",
+    "lesson": "Verify a regulatory claim with the regulator, using contact details from its official register.",
+    "image": "insurance-clone.png",
+    "image_source": "https://desenmascara.me/screens/d546934417842385.png",
+    "image_alt": "Archived SpeedySure website offering car insurance from £4.50 an hour and claiming FCA regulation.",
+    "claim": "FCA Regulated",
+    "counterclaim": "Clone of an authorised firm",
+    "observations": [
+      "A prominent badge claims FCA regulation.",
+      "A low hourly price, customer count and instant-quote buttons encourage registration.",
+      "The capture presents the service as an established insurance provider."
+    ],
+    "source_summary": "The FCA names SpeedySure and speedysure.co.uk in a clone-firm warning. Desenmascara separately records a Suspicious assessment of 60/100 in report #11454.",
+    "limits": "The image is a historical capture; its exact capture date is not established here. The source assessments are attributed separately. The screenshot does not establish AI use or customer losses. The genuine firm named by the FCA is separate from the clone.",
+    "analysis_date": "2026-09-13",
+    "checked_at": "2026-09-14",
+    "assessment": "Suspicious · 60/100",
+    "assessment_source": "desenmascara.me",
+    "sources": [
+      {
+        "name": "Financial Conduct Authority",
+        "short": "FCA",
+        "role": "Independent clone-firm warning · 2 February 2026",
+        "url": "https://www.fca.org.uk/news/warnings/speedysure-clone-fca-authorised-firm"
+      },
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report #11454 and archived capture",
+        "url": "https://desenmascara.me/analisis/60ffed47-2000-40f5-add7-6afa08f66085"
+      }
+    ]
+  },
+  {
+    "id": "SA-005",
+    "slug": "logistics-company-facade",
+    "title": "A global operation. An identity still to verify.",
+    "short_title": "The logistics-company facade",
+    "category": "Transport",
+    "technique": "Manufactured credibility",
+    "kind": "capture",
+    "subject": "folonicalogistics.com",
+    "summary": "A cargo-port image, certification claim and parcel tracker present the appearance of an established carrier.",
+    "lesson": "A transport website does not establish that a carrier exists. Verify the company identity and any certification through independent records before entrusting it with money or goods.",
+    "image": "logistics-company-facade.png",
+    "image_source": "https://desenmascara.me/screens/7057c6989c40fc48.png",
+    "image_alt": "Archived Folanica-branded logistics page with container ships, port cranes, a certification claim and yellow Track Parcel buttons.",
+    "claim": "Certified intermodal logistics",
+    "counterclaim": "Who certified this operator?",
+    "observations": [
+      "A large photograph of container ships and port cranes suggests an international shipping operation.",
+      "A certification badge makes an authority claim without identifying a certifier in this captured view.",
+      "Parcel-tracking buttons and service navigation make the page look operational; the image cannot show whether those services work."
+    ],
+    "source_summary": "Desenmascara report #152096 records a Fraudulent assessment of 95/100, attributed to a PhishDestroy DestroyList match. Its accompanying analysis says the operator’s legal identity could not be verified and flags a recently registered domain.",
+    "limits": "This is a suspected ghost-company facade, not an independent finding that no registered company exists. The historical capture does not establish ownership of the pictured ships, a working tracking system, customer losses or a payment demand. Its capture date is unknown. The report also labels text as AI-generated, but that automated attribution is not proof of authorship. Shared hosting or a young domain alone does not prove fraud.",
+    "analysis_date": "2026-08-20",
+    "checked_at": "2026-09-14",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · attributed PhishDestroy feed match",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report #152096 and archived capture; cites PhishDestroy as the verdict source",
+        "url": "https://desenmascara.me/analisis/a59f7ad1-cace-4ed1-98e6-6e27a7b78615"
+      }
+    ]
+  },
+  {
+    "id": "SA-002",
+    "slug": "celebrity-casino",
+    "title": "A famous face. An unverified promise.",
+    "short_title": "The celebrity casino",
+    "category": "Crypto",
+    "technique": "Celebrity impersonation",
+    "kind": "capture",
+    "subject": "Sanewex · domain partially masked in source",
+    "summary": "Celebrity imagery and supposed official partnerships make a crypto casino look credible.",
+    "lesson": "A famous face or familiar logo is a website’s claim. Check endorsements through the supposed partner’s own channels.",
+    "image": "celebrity-casino.png",
+    "image_source": "https://desenmascara.me/screens/f667d92e6e6f9130.png",
+    "image_alt": "Archived Sanewex casino page displaying Elon Musk and X and SpaceX partnership claims.",
+    "claim": "Official partner",
+    "counterclaim": "Endorsement not verified",
+    "observations": [
+      "Elon Musk’s image appears beside a claim that he backs the casino.",
+      "X and SpaceX branding is labeled as an official partnership.",
+      "A bonus invitation sits alongside large player and payout figures."
+    ],
+    "source_summary": "Desenmascara classifies the page as a crypto gambling scam involving celebrity impersonation. Its rationale cites unverified partnership claims and no visible legitimate licensing information.",
+    "limits": "This is Desenmascara’s recorded assessment, not a new investigation. The screenshot does not establish that AI created the page or images, or that the displayed payout figures are real. Follow the original report for context and corrections.",
+    "analysis_date": "2026-08-21",
+    "checked_at": "2026-09-14",
+    "assessment": "Fraudulent · 81/100",
+    "assessment_source": "desenmascara.me",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report #88469 and archived capture",
+        "url": "https://desenmascara.me/analisis/090b5a46-d486-4065-8790-aa5b59f0b725?src=gallery"
+      }
+    ]
+  },
+  {
+    "id": "SA-001",
+    "slug": "pay-to-get-paid",
+    "title": "Your earnings are ready. First, send money.",
+    "short_title": "The task-payment trap",
+    "category": "Jobs",
+    "technique": "Advance-fee request",
+    "kind": "reconstruction",
+    "subject": "Task scam pattern",
+    "summary": "A supposed job shows earnings, then demands a deposit before you can withdraw them.",
+    "lesson": "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.",
+    "message": "Great work! Your task balance is now €184. To withdraw it, top up your account with €60 to complete the final task set. The deposit will be returned with your earnings.",
+    "claim": "€184 ready to withdraw",
+    "counterclaim": "€60 deposit requested first",
+    "observations": [
+      "An apparent job offers commissions for simple online tasks.",
+      "A displayed balance makes the earnings feel real.",
+      "A separate payment is demanded before those supposed earnings can be withdrawn."
+    ],
+    "source_summary": "FTC guidance describes task scams in which an online platform displays apparent commissions, then asks the person to deposit their own money. The message here is an educational reconstruction of that pattern.",
+    "limits": "The wording and amounts are invented. This is not a victim’s message or an accusation against a named business. A legitimate payout minimum is different from asking someone to send a separate deposit. AI involvement is not established.",
+    "analysis_date": null,
+    "checked_at": "2026-09-14",
+    "assessment": "Documented pattern · fictional message",
+    "assessment_source": "FTC guidance",
+    "sources": [
+      {
+        "name": "Federal Trade Commission",
+        "short": "FTC",
+        "role": "Consumer advisory documenting task scams",
+        "url": "https://consumer.ftc.gov/consumer-alerts/2024/11/task-scams-create-illusion-making-money"
+      },
+      {
+        "name": "Federal Trade Commission",
+        "short": "FTC",
+        "role": "Task-scam analysis and reporting context",
+        "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight/2024/12/paying-get-paid-gamified-job-scams-drive-record-losses"
+      }
+    ]
+  },
+  {
+    "id": "SA-003",
+    "slug": "discount-store",
+    "title": "A big discount is a reason to check.",
+    "short_title": "The discount storefront",
+    "category": "Shopping",
+    "technique": "Deceptive storefront",
+    "kind": "capture",
+    "subject": "alwaysondeals.com",
+    "summary": "An ordinary-looking shop promotes substantial discounts. The source flags a fake-store risk.",
+    "lesson": "Check who operates a shop before trusting its sale. A discount alone proves neither fraud nor legitimacy.",
+    "image": "discount-store.png",
+    "image_source": "https://desenmascara.me/screens/d511479ddacafb4a.png",
+    "image_alt": "Archived ALWAYS storefront with a Spanish sales banner and discounts of up to 75–80%.",
+    "claim": "Large discounts and daily offers",
+    "counterclaim": "Seller legitimacy needs checking",
+    "observations": [
+      "A Spanish storefront advertises large discounts and daily offers.",
+      "Cart and account controls make the page look like a conventional shop.",
+      "The screenshot does not identify who ultimately receives a buyer’s payment."
+    ],
+    "source_summary": "Desenmascara classifies it as a fake store, citing unusually high discounts, unclear brand legitimacy and hosting associations.",
+    "limits": "Shared hosting is not proof of common ownership or fraud. The screenshot cannot establish non-delivery, stolen payments or AI-generated content. The classification belongs to the source; this card adds no independent verdict.",
+    "analysis_date": "2026-02-10",
+    "checked_at": "2026-09-14",
+    "assessment": "Fraudulent · 75/100",
+    "assessment_source": "desenmascara.me",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report #11604 and archived capture",
+        "url": "https://desenmascara.me/analisis/dbe93ad9-fb73-47ca-8d2d-71a20f232e07"
+      }
+    ]
+  }
+]

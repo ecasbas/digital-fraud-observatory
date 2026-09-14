@@ -1,0 +1,29 @@
+name: New example
+description: Share a public report and one useful lesson.
+title: "[Example] "
+body:
+  - type: markdown
+    attributes:
+      value: "Contributions from every source are welcome. This issue is public: omit private victim data and credentials. Disclose affiliations in your lesson."
+  - type: input
+    id: report
+    attributes:
+      label: Public report link
+      placeholder: https://example.org/research/report
+    validations:
+      required: true
+  - type: textarea
+    id: lesson
+    attributes:
+      label: What should people learn?
+      description: Explain the trick and what someone should verify. Separate evidence from interpretation.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source organization (optional)
+  - type: input
+    id: credit
+    attributes:
+      label: Contributor credit (optional)
