@@ -13,7 +13,13 @@ Start with a public report link and one useful lesson. No code, API key or Desen
 
 ## Contribute
 
-Use the website contribution form or GitHub's **New example** issue form. Read [CONTRIBUTING.md](CONTRIBUTING.md) for source and credit requirements. Corrections and translations are welcome.
+The easiest contribution takes about five minutes:
+
+1. Find a public report from a researcher, vendor, regulator, journalist or other attributable source.
+2. Open [New example](https://github.com/ecasbas/digital-fraud-observatory/issues/new?template=new-example.yml), paste the report URL, and write one or two sentences explaining what readers should notice or verify.
+3. Submit the issue. A maintainer checks the source, privacy, rights and duplication before publishing it as a case.
+
+You can also use the website’s contribution form. [Corrections](https://github.com/ecasbas/digital-fraud-observatory/issues/new?template=correction.yml), translations, code improvements and counterexamples are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) for the full rules.
 
 ## Run locally
 
@@ -35,7 +41,7 @@ Open http://localhost:8080. Edit case records in `content/cases.json`, branding 
 4. Run the Pages workflow on the main branch. It uses the configured Pages URL.
 5. For a custom domain, configure it in Pages settings and follow GitHub's DNS instructions.
 
-Set `repository` in `site.json` to the public repository URL to enable contribution links locally. The Pages workflow also supplies the repository URL. The current server preview is marked noindex; the Pages workflow enables indexing. Set the final domain before promoting the site.
+Set `repository` in `site.json` to the public repository URL to enable contribution links locally. The Pages workflow also supplies the repository URL. The GitHub Pages site is the public deployment. Set a custom domain in Pages settings if the project later moves to one.
 
 ## Deployment boundaries
 
