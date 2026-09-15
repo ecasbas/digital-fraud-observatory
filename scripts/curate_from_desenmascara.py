@@ -9,7 +9,9 @@ purpose, because a case here republishes an accusation in a public repository:
   use, where a human correction outranks the pipeline — never the raw column.
 * It skips well-known domains, domains with a verdict dispute on file, and
   verdicts that rest on a regulator notice (a licence question, not fraud).
-* It says who made the call: a PhishDestroy listing is attributed as such.
+* It showcases our own work: only verdicts our AI reasoned over the corpus
+  (then human review, then heuristics). Third-party listings such as
+  PhishDestroy are not curated (owner's rule, 2026-09-15).
 * It follows retractions: a case it added is withdrawn once the published
   verdict stops being FRAUDULENT or the operator disputes it. Hand-written
   cases are never touched.
@@ -53,6 +55,9 @@ ATTRIBUTION = {
     "heuristics": "heuristic analysis",
 }
 
+#: Verdict bases new cases may come from, in order of preference.
+CURATED_BASES = ("ai_reasoning", "manual_review", "heuristics")
+
 CATEGORY_RULES = [
     ("Investment", "High-return promise", ["invest", "trading", "broker", "forex", "cfd", "profit", "capital", "wealth"], "Retail investors", "Is this firm authorised to take your money?", "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.", "Big returns. No verifiable firm behind them."),
     ("Crypto", "Crypto wallet or exchange lure", ["crypto", "bitcoin", "btc", "wallet", "token", "airdrop", "defi", "nft", "exchange"], "Crypto users and retail investors", "Who controls the wallet you are asked to connect?", "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.", "A crypto platform. A source says fraudulent."),
@@ -78,15 +83,19 @@ def slug_of(value: str) -> str:
     return value.strip("-")[:70] or "fraudulent-website"
 
 
-def rejection_reason(projection: dict, rank: int | None, disputed: bool) -> str | None:
-    """Why a report may not become (or stay) a case; None when it may."""
+def rejection_reason(projection: dict, rank: int | None, disputed: bool, check_basis: bool = True) -> str | None:
+    """Why a report may not become (or stay) a case; None when it may.
+
+    ``check_basis=False`` for cases already published: which engine decided is
+    a curation preference, not a retraction.
+    """
     if projection.get("status") != "complete" or projection.get("verdict") != "FRAUDULENT":
         return f"published verdict is {projection.get('verdict') or projection.get('status')}"
     if rank is not None and rank <= PROTECTED_RANK:
         return f"well-known domain (Tranco #{rank})"
     if disputed:
         return "verdict disputed by the operator"
-    if projection.get("assessed_by") not in ATTRIBUTION:
+    if check_basis and projection.get("assessed_by") not in CURATED_BASES:
         return f"basis not attributable here ({projection.get('assessed_by')})"
     return None
 
@@ -122,8 +131,13 @@ def build_case(projection: dict, case_id: str, slug: str, image: str, image_sour
     basis = ATTRIBUTION[projection["assessed_by"]]
     observations = observations_from(projection, domain) or ["The source report records the domain as fraudulent."]
     third_party = basis.startswith("attributed")
+    score = int(round(float(projection["risk_score"])))
+    first_sentence = ""
+    if projection.get("explanation_language") == "en" and projection.get("explanation"):
+        first_sentence = re.split(r"(?<=[.!?])\s", projection["explanation"].strip(), maxsplit=1)[0]
     source_summary = (
-        f"Desenmascara publishes a Fraudulent assessment of {projection['risk_score']}/100 for {domain}, based on {basis}."
+        f"Desenmascara publishes a Fraudulent assessment of {score}/100 for {domain}, based on {basis}."
+        + (f" Its analysis says: “{first_sentence}”" if first_sentence and not third_party else "")
         + (" The verdict is the third-party listing's, reported with attribution, not an independent finding." if third_party else "")
         + " Follow the report for the full rationale, evidence and any later correction."
     )
@@ -138,7 +152,7 @@ def build_case(projection: dict, case_id: str, slug: str, image: str, image_sour
         "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
         "analysis_date": (projection.get("assessed_at") or "")[:10] or datetime.now(timezone.utc).date().isoformat(),
         "checked_at": datetime.now(timezone.utc).date().isoformat(),
-        "assessment": f"Fraudulent · {projection['risk_score']}/100",
+        "assessment": f"Fraudulent · {score}/100",
         "assessment_source": f"desenmascara.me · {basis}",
         "sources": [{"name": "desenmascara.me", "short": "Desenmascara", "role": f"Public report and archived capture; verdict basis: {basis}", "url": projection["report_url"]}],
         "audience": audience,
@@ -170,7 +184,7 @@ def _row_for(domain: str):
     return AnalyzedDomain.objects.filter(q).order_by("-date").first()
 
 
-def _assess(row, since_dispute: datetime | None = None) -> tuple[dict, str | None]:
+def _assess(row, since_dispute: datetime | None = None, check_basis: bool = True) -> tuple[dict, str | None]:
     from core.models import VerdictDispute
     from core.report_projection import build_report_projection
     from core.top_sites import get_reputation_rank
@@ -179,16 +193,18 @@ def _assess(row, since_dispute: datetime | None = None) -> tuple[dict, str | Non
     disputes = VerdictDispute.objects.filter(domain__iexact=domain)
     if since_dispute:
         disputes = disputes.filter(created_at__gte=since_dispute)
-    return projection, rejection_reason(projection, get_reputation_rank(domain), disputes.exists())
+    return projection, rejection_reason(projection, get_reputation_rank(domain), disputes.exists(), check_basis)
 
 
 def _candidates(since: datetime, limit: int):
     from django.db.models import Q
     from core.models import AnalyzedDomain
-    return (AnalyzedDomain.objects
-            .filter(Q(veredict="FRAUDULENT") | Q(manual_verdict="FRAUDULENT"), date__gte=since, public_id__isnull=False)
+    rows = (AnalyzedDomain.objects
+            .filter(Q(veredict="FRAUDULENT") | Q(manual_verdict="FRAUDULENT"), date__gte=since,
+                    public_id__isnull=False, assessed_by__in=CURATED_BASES)
             .exclude(screenshot_url__isnull=True).exclude(screenshot_url="")
             .order_by("-ai_score", "-date")[: limit * 20])
+    return sorted(rows, key=lambda row: CURATED_BASES.index(row.assessed_by))
 
 
 def _capture_source(row) -> Path | None:
@@ -237,15 +253,14 @@ def main() -> int:
     for case in [c for c in cases if c["id"] in curated]:
         row = _row_for(case["subject"])
         added = datetime.fromisoformat(case["checked_at"]).replace(tzinfo=timezone.utc)
-        reason = "report no longer found" if row is None else _assess(row, since_dispute=added)[1]
+        reason = "report no longer found" if row is None else _assess(row, since_dispute=added, check_basis=False)[1]
         if reason:
             withdrawals.append({"id": case["id"], "subject": case["subject"], "reason": reason, "at": now.isoformat()})
 
     # 2. Add new cases, one per fraud category per run.
-    since = max(filter(None, [
-        datetime.fromisoformat(state["last_checked_at"]) if state.get("last_checked_at") else None,
-        now - timedelta(hours=args.hours),
-    ]))
+    # Always the full window: already-published domains are deduplicated below,
+    # and a candidate skipped for a category clash gets another chance next run.
+    since = now - timedelta(hours=args.hours)
     withdrawn_ids = {w["id"] for w in withdrawals}
     kept = [c for c in cases if c["id"] not in withdrawn_ids]
     known = {c["subject"].lower() for c in cases} | {w["subject"] for w in state.get("withdrawn", [])}

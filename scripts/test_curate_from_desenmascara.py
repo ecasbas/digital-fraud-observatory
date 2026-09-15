@@ -16,8 +16,12 @@ def projection(**overrides):
 
 
 class RejectionTests(unittest.TestCase):
-    def test_accepts_attributable_fraud(self):
-        self.assertIsNone(cur.rejection_reason(projection(), rank=None, disputed=False))
+    def test_accepts_our_own_ai_verdict(self):
+        self.assertIsNone(cur.rejection_reason(projection(assessed_by="ai_reasoning"), rank=None, disputed=False))
+
+    def test_third_party_listings_not_curated(self):
+        for basis in ("phishdestroy_destroylist", "google_safe_browsing", "cloudflare_phishing"):
+            self.assertIn("basis", cur.rejection_reason(projection(assessed_by=basis), None, False))
 
     def test_published_verdict_decides_not_pipeline_column(self):
         # A human correction to LEGIT reaches the curator as the projection's verdict.
@@ -27,11 +31,14 @@ class RejectionTests(unittest.TestCase):
         self.assertIsNotNone(cur.rejection_reason(projection(status="pending", verdict=None), None, False))
 
     def test_well_known_domain_rejected(self):
-        self.assertIn("well-known", cur.rejection_reason(projection(), rank=168, disputed=False))
-        self.assertIsNone(cur.rejection_reason(projection(), rank=400_000, disputed=False))
+        self.assertIn("well-known", cur.rejection_reason(projection(assessed_by="ai_reasoning"), rank=168, disputed=False))
+        self.assertIsNone(cur.rejection_reason(projection(assessed_by="ai_reasoning"), rank=400_000, disputed=False))
+
+    def test_published_case_not_withdrawn_for_basis_alone(self):
+        self.assertIsNone(cur.rejection_reason(projection(), None, False, check_basis=False))
 
     def test_disputed_rejected(self):
-        self.assertIn("disputed", cur.rejection_reason(projection(), None, True))
+        self.assertIn("disputed", cur.rejection_reason(projection(assessed_by="ai_reasoning"), None, True))
 
     def test_regulator_and_unknown_basis_rejected(self):
         for basis in ("regulatory_warnings", "unknown", None):
@@ -43,6 +50,13 @@ class CaseTextTests(unittest.TestCase):
         case = cur.build_case(projection(), "SA-010", "x", "x.png", "https://desenmascara.me/screens/x.png")
         self.assertIn("PhishDestroy", case["assessment_source"])
         self.assertIn("not an independent finding", case["source_summary"])
+
+    def test_ai_case_quotes_first_sentence_and_whole_score(self):
+        p = projection(assessed_by="ai_reasoning", risk_score=94.0, explanation_language="en",
+                       explanation="The site promises guaranteed returns. More text.")
+        case = cur.build_case(p, "SA-010", "x", "x.png", "u")
+        self.assertEqual(case["assessment"], "Fraudulent · 94/100")
+        self.assertIn("“The site promises guaranteed returns.”", case["source_summary"])
 
     def test_own_name_is_not_impersonation(self):
         obs = cur.observations_from(projection(), "mantintransact.online")
