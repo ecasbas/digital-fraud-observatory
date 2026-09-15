@@ -60,12 +60,35 @@ CURATED_BASES = ("ai_reasoning", "manual_review", "heuristics")
 
 CATEGORY_RULES = [
     ("Investment", "High-return promise", ["invest", "trading", "broker", "forex", "cfd", "profit", "capital", "wealth"], "Retail investors", "Is this firm authorised to take your money?", "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.", "Big returns. No verifiable firm behind them."),
-    ("Crypto", "Crypto wallet or exchange lure", ["crypto", "bitcoin", "btc", "wallet", "token", "airdrop", "defi", "nft", "exchange"], "Crypto users and retail investors", "Who controls the wallet you are asked to connect?", "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.", "A crypto platform. A source says fraudulent."),
+    ("Crypto", "Crypto wallet or exchange lure", ["crypto", "cripto", "bitcoin", "btc", "wallet", "token", "airdrop", "defi", "nft", "exchange"], "Crypto users and retail investors", "Who controls the wallet you are asked to connect?", "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.", "A crypto platform. A source says fraudulent."),
     ("Banking", "Financial-service facade", ["bank", "login", "account", "card", "payment", "transfer", "transact"], "Bank customers and payment users", "Is this a bank any regulator has heard of?", "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.", "A bank website. No bank you can verify."),
     ("Shopping", "Deceptive storefront", ["shop", "store", "discount", "sale", "cart", "checkout", "shipping"], "Online shoppers", "Who operates this shop?", "Check who operates a shop before trusting its sale. A discount alone proves neither fraud nor legitimacy.", "A bargain storefront. A source says fraudulent."),
     ("Jobs", "Advance-fee request", ["job", "task", "salary", "commission", "withdraw", "earn"], "Job seekers and online task workers", "A displayed balance is not proof of withdrawable earnings", "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.", "Easy earnings. Pay first to withdraw."),
     ("Transport", "Manufactured credibility", ["logistics", "cargo", "parcel", "shipment", "delivery", "freight"], "Customers, shippers and business counterparties", "Does this carrier exist outside its website?", "A transport website does not establish that a carrier exists. Verify the company identity before entrusting it with money or goods.", "A carrier website. An identity still to verify."),
 ]
+#: Findings our analysis states in prose (ES or EN), rendered as English observations.
+#: Deterministic on purpose: writing this page never spends an AI call.
+PROSE_FINDINGS = [
+    (r"retornos? (diarios? )?(poco realistas|irreales|garantizados)|unrealistic (daily )?returns|guaranteed returns", "Promises returns that are unrealistic or guaranteed."),
+    (r"(perfiles|enlaces) (a perfiles )?reales en redes sociales|redes sociales que no apuntan|social (media )?(icons|links)[^.]*(real|genuine) profiles", "Social media icons do not lead to real profiles."),
+    (r"(falta|ausencia) de (informaci[oó]n legal|identidad legal|aviso legal)|no (mandatory )?legal (information|notice|identity)|lack of (verifiable )?legal identity", "No verifiable legal identity or mandatory legal information."),
+    (r"dominio (es )?reciente \((\d+) d[ií]as\)|domain [^.]*\((\d+) days\)", "The domain was only {n} days old when analysed."),
+    (r"(datos de contacto|contact (details|information))[^.]*(falsos|gen[eé]ricos|missing|fake|generic)|sin datos de contacto", "Contact details are missing or generic."),
+    (r"(pago|payment)[^.]*(cripto|crypto|bitcoin|transferencia bancaria|wire transfer)", "Asks for payment by crypto or bank transfer."),
+    (r"contenido (gen[eé]rico|plantilla)|generic (template )?content|template", "Content looks generic or templated."),
+]
+
+
+def prose_findings(explanation: str) -> list[str]:
+    out = []
+    for pattern, text in PROSE_FINDINGS:
+        match = re.search(pattern, explanation or "", re.I)
+        if match:
+            days = next((g for g in match.groups() if g and g.isdigit()), None)
+            out.append(text.format(n=days) if "{n}" in text else text)
+    return out
+
+
 GENERIC_CATEGORY = ("Website fraud", "Manufactured credibility", [], "People asked to trust a new website", "Who is behind this website?", "Treat a polished website as a claim, not proof. Verify the operator, source and payment path through independent records.", "A polished website. A source says fraudulent.")
 ALLOW_GENERIC = (os.getenv("OBSERVATORY_ALLOW_GENERIC") or "").lower() in {"1", "true", "yes", "on"}
 
@@ -116,7 +139,7 @@ def observations_from(projection: dict, domain: str) -> list[str]:
 
 
 def choose_category(projection: dict, domain: str) -> tuple:
-    fraud_type = re.search(r"Fraud type:\s*([^.]+)", projection.get("explanation") or "")
+    fraud_type = re.search(r"(?:Fraud type|Tipo de fraude):\s*([^.]+)", projection.get("explanation") or "")
     labels = " ".join(i.get("label") or "" for i in projection.get("evidence") or [])
     for haystack in (fraud_type.group(1) if fraud_type else "", f"{domain} {labels}"):
         for rule in CATEGORY_RULES:
@@ -129,7 +152,8 @@ def build_case(projection: dict, case_id: str, slug: str, image: str, image_sour
     domain = projection["domain"]
     category, technique, _kw, audience, counterclaim, lesson, title = choose_category(projection, domain)
     basis = ATTRIBUTION[projection["assessed_by"]]
-    observations = observations_from(projection, domain) or ["The source report records the domain as fraudulent."]
+    observations = (prose_findings(projection.get("explanation") or "") + observations_from(projection, domain))[:4] \
+        or ["The source report records the domain as fraudulent."]
     third_party = basis.startswith("attributed")
     score = int(round(float(projection["risk_score"])))
     first_sentence = ""
@@ -303,7 +327,8 @@ def main() -> int:
 
     for w in withdrawals:
         case = next(c for c in cases if c["id"] == w["id"])
-        (CAPTURES / case["image"]).unlink(missing_ok=True)
+        if case.get("image"):
+            (CAPTURES / case["image"]).unlink(missing_ok=True)
     for case, capture in additions:
         CAPTURES.mkdir(parents=True, exist_ok=True)
         shutil.copy2(capture, CAPTURES / case["image"])
@@ -322,6 +347,8 @@ def main() -> int:
     STATE_PATH.write_text(json.dumps(state, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
     if (withdrawals or additions) and args.build:
+        # build.py never clears dist/, so pages of withdrawn cases would linger.
+        shutil.rmtree(ROOT / "dist", ignore_errors=True)
         subprocess.run([sys.executable, str(ROOT / "scripts" / "build.py")], cwd=ROOT, check=True)
         subprocess.run([sys.executable, str(ROOT / "scripts" / "check.py")], cwd=ROOT, check=True)
     parts = [f"add {', '.join(c['id'] for c, _ in additions)}" if additions else "", f"withdraw {', '.join(sorted(withdrawn_ids))}" if withdrawals else ""]

@@ -58,6 +58,16 @@ class CaseTextTests(unittest.TestCase):
         self.assertEqual(case["assessment"], "Fraudulent · 94/100")
         self.assertIn("“The site promises guaranteed returns.”", case["source_summary"])
 
+    def test_spanish_analysis_becomes_english_observations(self):
+        es = ("El sitio presenta un esquema de inversión en criptomonedas con promesas de retornos diarios poco realistas. "
+              "Además, la falta de enlaces a perfiles reales en redes sociales y el hecho de que el dominio es reciente (124 días) "
+              "refuerzan la sospecha. Tipo de fraude: esquema de ganancias cripto.")
+        found = cur.prose_findings(es)
+        self.assertIn("Promises returns that are unrealistic or guaranteed.", found)
+        self.assertIn("Social media icons do not lead to real profiles.", found)
+        self.assertIn("The domain was only 124 days old when analysed.", found)
+        self.assertEqual(cur.choose_category({"explanation": es, "evidence": []}, "nobletechglobalinvesting.com")[0], "Crypto")
+
     def test_own_name_is_not_impersonation(self):
         obs = cur.observations_from(projection(), "mantintransact.online")
         self.assertFalse(any("impersonation" in o for o in obs))
