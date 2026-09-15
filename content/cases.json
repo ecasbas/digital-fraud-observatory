@@ -39,7 +39,8 @@
         "role": "Public report #11454 and archived capture",
         "url": "https://desenmascara.me/analisis/60ffed47-2000-40f5-add7-6afa08f66085"
       }
-    ]
+    ],
+    "audience": "Consumers buying insurance online"
   },
   {
     "id": "SA-005",
@@ -75,7 +76,8 @@
         "role": "Public report #152096 and archived capture; cites PhishDestroy as the verdict source",
         "url": "https://desenmascara.me/analisis/a59f7ad1-cace-4ed1-98e6-6e27a7b78615"
       }
-    ]
+    ],
+    "audience": "Customers, shippers and business counterparties"
   },
   {
     "id": "SA-002",
@@ -111,7 +113,8 @@
         "role": "Public report #88469 and archived capture",
         "url": "https://desenmascara.me/analisis/090b5a46-d486-4065-8790-aa5b59f0b725?src=gallery"
       }
-    ]
+    ],
+    "audience": "Crypto gamblers and retail investors"
   },
   {
     "id": "SA-001",
@@ -151,7 +154,8 @@
         "role": "Task-scam analysis and reporting context",
         "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight/2024/12/paying-get-paid-gamified-job-scams-drive-record-losses"
       }
-    ]
+    ],
+    "audience": "Job seekers and online task workers"
   },
   {
     "id": "SA-003",
@@ -187,7 +191,8 @@
         "role": "Public report #11604 and archived capture",
         "url": "https://desenmascara.me/analisis/dbe93ad9-fb73-47ca-8d2d-71a20f232e07"
       }
-    ]
+    ],
+    "audience": "Online shoppers"
   },
   {
     "id": "SA-006",
@@ -222,6 +227,54 @@
         "short": "Desenmascara",
         "role": "Public report and archived capture",
         "url": "https://desenmascara.me/analisis/549ed147-9c7e-429c-977f-69b31f8e0eba"
+      }
+    ],
+    "audience": "Retail investors"
+  },
+  {
+    "id": "SA-007",
+    "slug": "revolut-government-request-impersonation",
+    "title": "A lawful-looking request. A disclosure to the wrong party.",
+    "short_title": "The Revolut request impersonation",
+    "category": "Financial data",
+    "technique": "Government-request impersonation",
+    "kind": "incident",
+    "audience": "Banks, fintechs, legal and compliance teams; affected customers as data subjects",
+    "subject": "Revolut customer-data disclosure after fraudulent government-domain requests",
+    "summary": "Revolut confirmed that sensitive customer data was disclosed after fraudulent information requests were sent from a legitimate government-agency email domain.",
+    "lesson": "For regulated firms, a trusted domain is not enough. Sensitive data requests need independent requester verification, authority checks and escalation paths before records leave the institution.",
+    "claim": "Official information request",
+    "counterclaim": "Requester authority must be independently verified",
+    "observations": [
+      "The reported attack targeted a compliance workflow rather than a public scam landing page.",
+      "Revolut told TechCrunch the requests came from a legitimate government-agency email domain and were fraudulent.",
+      "Reportedly exposed data included identity and contact details, identity-document copies, and possibly selfies, statements and transaction histories.",
+      "Revolut said its systems and customer funds were unaffected, while affected customers were contacted directly."
+    ],
+    "source_summary": "TechCrunch reported on 12 September 2026 that Revolut confirmed a limited number of customers were impacted after fraudulent information requests were sent from a legitimate government-agency email domain. The Block separately reported that the incident involved KYC and account data, with possible Bitcoin transaction history exposure. The Financial Times later reported that nearly 700 customers were affected and that the UK Information Commissioner's Office had opened an investigation.",
+    "limits": "This case is based on public reporting and Revolut statements quoted by those outlets. The government agency, exact request documents, affected markets and final regulator findings were not publicly established in these sources. The incident should not be described as customer funds being stolen or Revolut's core systems being compromised unless later evidence supports that.",
+    "analysis_date": "2026-09-12",
+    "checked_at": "2026-09-15",
+    "assessment": "Confirmed data exposure · public reporting",
+    "assessment_source": "TechCrunch, The Block and Financial Times",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "short": "TechCrunch",
+        "role": "Initial report with Revolut confirmation · 12 September 2026",
+        "url": "https://techcrunch.com/2026/09/12/revolut-confirms-customer-data-breach-through-fake-government-requests/"
+      },
+      {
+        "name": "The Block",
+        "short": "The Block",
+        "role": "Follow-up report on KYC and transaction data exposure · 12 September 2026",
+        "url": "https://www.theblock.co/news/business/2026-09-12-revolut-says-customer-kyc-bitcoin-transaction-data-exposed-after-fake-request-from-govt-domain-414516"
+      },
+      {
+        "name": "Financial Times",
+        "short": "FT",
+        "role": "Follow-up reporting on affected-customer count and ICO investigation · 15 September 2026",
+        "url": "https://www.ft.com/content/e0fe28a8-bc8c-460d-a7f2-972f725c0d46"
       }
     ]
   }
