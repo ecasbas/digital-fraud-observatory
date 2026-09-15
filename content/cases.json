@@ -277,5 +277,80 @@
         "url": "https://www.ft.com/content/e0fe28a8-bc8c-460d-a7f2-972f725c0d46"
       }
     ]
+  },
+  {
+    "id": "SA-010",
+    "slug": "nobletechglobalinvesting-com",
+    "title": "A crypto platform. A source says fraudulent.",
+    "short_title": "The crypto website",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "nobletechglobalinvesting.com",
+    "summary": "nobletechglobalinvesting.com was captured while Desenmascara assessed it as fraudulent (AI-assisted analysis).",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "nobletechglobalinvesting-com.png",
+    "image_source": "https://desenmascara.me/screens/d51b7f1befec67b1.png",
+    "image_alt": "Archived capture of nobletechglobalinvesting.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "Promises returns that are unrealistic or guaranteed.",
+      "Social media icons do not lead to real profiles.",
+      "The domain was only 124 days old when analysed.",
+      "The source report records: hosted on an address where 127 of 176 domains we have analysed are flagged (72%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for nobletechglobalinvesting.com, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-03",
+    "checked_at": "2026-09-15",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/e7fa0168-0a43-4954-bbbd-876377aa5584"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-011",
+    "slug": "global-freightltd-com",
+    "title": "A carrier website. An identity still to verify.",
+    "short_title": "The transport website",
+    "category": "Transport",
+    "technique": "Manufactured credibility",
+    "kind": "capture",
+    "subject": "global-freightltd.com",
+    "summary": "global-freightltd.com was captured while Desenmascara assessed it as fraudulent (AI-assisted analysis).",
+    "lesson": "A transport website does not establish that a carrier exists. Verify the company identity before entrusting it with money or goods.",
+    "image": "global-freightltd-com.png",
+    "image_source": "https://desenmascara.me/screens/64507388f9c6be55.png",
+    "image_alt": "Archived capture of global-freightltd.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Does this carrier exist outside its website?",
+    "observations": [
+      "Social media icons do not lead to real profiles.",
+      "No verifiable legal identity or mandatory legal information.",
+      "The source report records: hosted on an address where 127 of 176 domains we have analysed are flagged (72%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 99/100 for global-freightltd.com, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-12",
+    "checked_at": "2026-09-15",
+    "assessment": "Fraudulent · 99/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/c4d5dc27-975f-499e-9d07-89f15b3c733b"
+      }
+    ],
+    "audience": "Customers, shippers and business counterparties"
   }
 ]
