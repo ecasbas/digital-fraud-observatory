@@ -209,11 +209,12 @@ def _auto_git(message: str) -> None:
         return
     # dist/ is gitignored: the Pages workflow builds it.
     subprocess.run(["git", "add", "-A", "content/cases.json", "assets/captures"], cwd=ROOT, check=True)
-    if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=ROOT).returncode == 0:
-        return
-    subprocess.run(["git", "commit", "-m", message], cwd=ROOT, check=True)
+    if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=ROOT).returncode != 0:
+        subprocess.run(["git", "commit", "-m", message], cwd=ROOT, check=True)
     if (os.getenv("OBSERVATORY_AUTO_PUSH") or "").lower() in {"1", "true", "yes", "on"}:
-        subprocess.run(["git", "push"], cwd=ROOT, check=True)
+        # Push whenever we are ahead, so a failed push is retried on the next run.
+        subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=ROOT, check=True)
+        subprocess.run(["git", "push", "origin", "HEAD:main"], cwd=ROOT, check=True)
 
 
 def main() -> int:
@@ -308,9 +309,8 @@ def main() -> int:
     if (withdrawals or additions) and args.build:
         subprocess.run([sys.executable, str(ROOT / "scripts" / "build.py")], cwd=ROOT, check=True)
         subprocess.run([sys.executable, str(ROOT / "scripts" / "check.py")], cwd=ROOT, check=True)
-    if withdrawals or additions:
-        parts = [f"add {', '.join(c['id'] for c, _ in additions)}" if additions else "", f"withdraw {', '.join(sorted(withdrawn_ids))}" if withdrawals else ""]
-        _auto_git("content: curator " + "; ".join(p for p in parts if p))
+    parts = [f"add {', '.join(c['id'] for c, _ in additions)}" if additions else "", f"withdraw {', '.join(sorted(withdrawn_ids))}" if withdrawals else ""]
+    _auto_git("content: curator " + "; ".join(p for p in parts if p))
 
     print(f"observatory-curator: added={len(additions)} withdrawn={len(withdrawals)} since={since.isoformat()}")
     for case, _ in additions:
