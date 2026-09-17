@@ -497,5 +497,76 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-016",
+    "slug": "chrysarinsoft-shop",
+    "title": "A bargain storefront. A source says fraudulent.",
+    "short_title": "The shopping website",
+    "category": "Shopping",
+    "technique": "Deceptive storefront",
+    "kind": "capture",
+    "subject": "chrysarinsoft.shop",
+    "summary": "chrysarinsoft.shop was captured while Desenmascara assessed it as fraudulent (AI-assisted analysis).",
+    "lesson": "Check who operates a shop before trusting its sale. A discount alone proves neither fraud nor legitimacy.",
+    "image": "chrysarinsoft-shop.png",
+    "image_source": "https://desenmascara.me/screens/1c358b3d80342c6a.png",
+    "image_alt": "Archived capture of chrysarinsoft.shop, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who operates this shop?",
+    "observations": [
+      "The source report records: hosted on an address where 63 of 63 domains we have analysed are flagged (100%).",
+      "The source report records: suspicious TLD (.shop)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 93/100 for chrysarinsoft.shop, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-16",
+    "checked_at": "2026-09-17",
+    "assessment": "Fraudulent · 93/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/e94c64eb-a399-47ff-81d9-f5194a765a2a"
+      }
+    ],
+    "audience": "Online shoppers"
+  },
+  {
+    "id": "SA-017",
+    "slug": "clairezontbankcards-sbs",
+    "title": "A bank website. No bank you can verify.",
+    "short_title": "The banking website",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "clairezontbankcards.sbs",
+    "summary": "clairezontbankcards.sbs was captured while Desenmascara assessed it as fraudulent (AI-assisted analysis).",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "clairezontbankcards-sbs.png",
+    "image_source": "https://desenmascara.me/screens/d0731c2b220c87b3.png",
+    "image_alt": "Archived capture of clairezontbankcards.sbs, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: hosted on an address where 63 of 63 domains we have analysed are flagged (100%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 91/100 for clairezontbankcards.sbs, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-16",
+    "checked_at": "2026-09-17",
+    "assessment": "Fraudulent · 91/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/14b80bac-06fe-4668-b264-fadd8854d79c"
+      }
+    ],
+    "audience": "Bank customers and payment users"
   }
 ]
