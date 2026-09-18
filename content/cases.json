@@ -568,5 +568,77 @@
       }
     ],
     "audience": "Bank customers and payment users"
+  },
+  {
+    "id": "SA-018",
+    "slug": "prestigiomarketdex-shop",
+    "title": "A bargain storefront. A source says fraudulent.",
+    "short_title": "The shopping website",
+    "category": "Shopping",
+    "technique": "Deceptive storefront",
+    "kind": "capture",
+    "subject": "prestigiomarketdex.shop",
+    "summary": "prestigiomarketdex.shop was captured while Desenmascara assessed it as fraudulent (AI-assisted analysis).",
+    "lesson": "Check who operates a shop before trusting its sale. A discount alone proves neither fraud nor legitimacy.",
+    "image": "prestigiomarketdex-shop.png",
+    "image_source": "https://desenmascara.me/screens/f7166d0ba0d506a7.png",
+    "image_alt": "Archived capture of prestigiomarketdex.shop, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who operates this shop?",
+    "observations": [
+      "The source report records: hosted on an address where 72 of 73 domains we have analysed are flagged (99%).",
+      "The source report records: suspicious TLD (.shop)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 93/100 for prestigiomarketdex.shop, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-16",
+    "checked_at": "2026-09-18",
+    "assessment": "Fraudulent · 93/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/2a7bb098-6895-4e31-b02b-6a9233d86249"
+      }
+    ],
+    "audience": "Online shoppers"
+  },
+  {
+    "id": "SA-019",
+    "slug": "paragonix-earn-tech-com",
+    "title": "Easy earnings. Pay first to withdraw.",
+    "short_title": "The jobs website",
+    "category": "Jobs",
+    "technique": "Advance-fee request",
+    "kind": "capture",
+    "subject": "paragonix-earn-tech.com",
+    "summary": "paragonix-earn-tech.com was captured while Desenmascara assessed it as fraudulent (AI-assisted analysis).",
+    "lesson": "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.",
+    "image": "paragonix-earn-tech-com.png",
+    "image_source": "https://desenmascara.me/screens/df5200bad4519104.png",
+    "image_alt": "Archived capture of paragonix-earn-tech.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "A displayed balance is not proof of withdrawable earnings",
+    "observations": [
+      "No verifiable legal identity or mandatory legal information.",
+      "The source report records: hosted on an address where 63 of 63 domains we have analysed are flagged (100%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 91/100 for paragonix-earn-tech.com, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-15",
+    "checked_at": "2026-09-18",
+    "assessment": "Fraudulent · 91/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/23f74d45-5ded-466d-b702-1daf825f3bcf"
+      }
+    ],
+    "audience": "Job seekers and online task workers"
   }
 ]
