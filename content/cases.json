@@ -281,13 +281,13 @@
   {
     "id": "SA-010",
     "slug": "nobletechglobalinvesting-com",
-    "title": "A crypto platform. A source says fraudulent.",
-    "short_title": "The crypto website",
+    "title": "Crypto earnings, on a site nobody stands behind.",
+    "short_title": "The wallet lure",
     "category": "Crypto",
     "technique": "Crypto wallet or exchange lure",
     "kind": "capture",
     "subject": "nobletechglobalinvesting.com",
-    "summary": "nobletechglobalinvesting.com was captured while Desenmascara assessed it as fraudulent (AI-assisted analysis).",
+    "summary": "Desenmascara flagged nobletechglobalinvesting.com as fraudulent (100/100). The site presented itself as a crypto platform.",
     "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
     "image": "nobletechglobalinvesting-com.png",
     "image_source": "https://desenmascara.me/screens/d51b7f1befec67b1.png",
@@ -298,7 +298,7 @@
       "Promises returns that are unrealistic or guaranteed.",
       "Social media icons do not lead to real profiles.",
       "The domain was only 124 days old when analysed.",
-      "The source report records: hosted on an address where 127 of 176 domains we have analysed are flagged (72%)."
+      "The source report records: hosted on an address where 135 of 199 domains we have analysed are flagged (68%)."
     ],
     "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for nobletechglobalinvesting.com, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
@@ -312,6 +312,12 @@
         "short": "Desenmascara",
         "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
         "url": "https://desenmascara.me/analisis/e7fa0168-0a43-4954-bbbd-876377aa5584"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-05-02 through Web4Africa Inc..",
+        "url": "https://lookup.icann.org/en/lookup?name=nobletechglobalinvesting.com"
       }
     ],
     "audience": "Crypto users and retail investors"
@@ -319,13 +325,13 @@
   {
     "id": "SA-011",
     "slug": "global-freightltd-com",
-    "title": "A carrier website. An identity still to verify.",
-    "short_title": "The transport website",
+    "title": "Cargo, tracking, a fleet: all claims, no carrier.",
+    "short_title": "The freight company",
     "category": "Transport",
     "technique": "Manufactured credibility",
     "kind": "capture",
     "subject": "global-freightltd.com",
-    "summary": "global-freightltd.com was captured while Desenmascara assessed it as fraudulent (AI-assisted analysis).",
+    "summary": "An archived look at global-freightltd.com, a logistics carrier assessed as fraudulent by Desenmascara (AI-assisted analysis, 99/100).",
     "lesson": "A transport website does not establish that a carrier exists. Verify the company identity before entrusting it with money or goods.",
     "image": "global-freightltd-com.png",
     "image_source": "https://desenmascara.me/screens/64507388f9c6be55.png",
@@ -335,7 +341,7 @@
     "observations": [
       "Social media icons do not lead to real profiles.",
       "No verifiable legal identity or mandatory legal information.",
-      "The source report records: hosted on an address where 127 of 176 domains we have analysed are flagged (72%)."
+      "The source report records: hosted on an address where 135 of 199 domains we have analysed are flagged (68%)."
     ],
     "source_summary": "Desenmascara publishes a Fraudulent assessment of 99/100 for global-freightltd.com, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
@@ -349,6 +355,12 @@
         "short": "Desenmascara",
         "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
         "url": "https://desenmascara.me/analisis/c4d5dc27-975f-499e-9d07-89f15b3c733b"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2025-11-02 through Global Domain Group LLC.",
+        "url": "https://lookup.icann.org/en/lookup?name=global-freightltd.com"
       }
     ],
     "audience": "Customers, shippers and business counterparties"
@@ -357,12 +369,12 @@
     "id": "SA-012",
     "slug": "cashclaimagilitybank-com",
     "title": "A bank website. No bank you can verify.",
-    "short_title": "The banking website",
+    "short_title": "The banking portal",
     "category": "Banking",
     "technique": "Financial-service facade",
     "kind": "capture",
     "subject": "cashclaimagilitybank.com",
-    "summary": "cashclaimagilitybank.com was captured while Desenmascara assessed it as fraudulent (AI-assisted analysis).",
+    "summary": "cashclaimagilitybank.com presented itself as a bank or financial service. Desenmascara rated it fraudulent (94/100) after AI-assisted analysis.",
     "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
     "image": "cashclaimagilitybank-com.png",
     "image_source": "https://desenmascara.me/screens/163bc9bc546e0bd8.png",
@@ -370,7 +382,7 @@
     "claim": "An operating online service",
     "counterclaim": "Is this a bank any regulator has heard of?",
     "observations": [
-      "The source report records: hosted on an address where 132 of 192 domains we have analysed are flagged (69%)."
+      "The source report records: hosted on an address where 135 of 199 domains we have analysed are flagged (68%)."
     ],
     "source_summary": "Desenmascara publishes a Fraudulent assessment of 94/100 for cashclaimagilitybank.com, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
@@ -384,6 +396,12 @@
         "short": "Desenmascara",
         "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
         "url": "https://desenmascara.me/analisis/07e5b799-69e5-481d-998a-52ce57770b88"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-04-03 through Name SRS AB.",
+        "url": "https://lookup.icann.org/en/lookup?name=cashclaimagilitybank.com"
       }
     ],
     "audience": "Bank customers and payment users"
@@ -391,13 +409,13 @@
   {
     "id": "SA-013",
     "slug": "repsolinvestt-shop",
-    "title": "Big returns. No verifiable firm behind them.",
-    "short_title": "The investment website",
+    "title": "A trading desk with no regulator on record.",
+    "short_title": "The returns promise",
     "category": "Investment",
     "technique": "High-return promise",
     "kind": "capture",
     "subject": "repsolinvestt.shop",
-    "summary": "repsolinvestt.shop was captured while Desenmascara assessed it as fraudulent (AI-assisted analysis).",
+    "summary": "Captured on 2026-09-15: repsolinvestt.shop, an investment or trading platform that Desenmascara's AI-assisted analysis rated fraudulent at 93/100.",
     "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
     "image": "repsolinvestt-shop.png",
     "image_source": "https://desenmascara.me/screens/80a38d2366cb9efa.png",
@@ -406,10 +424,10 @@
     "counterclaim": "Is this firm authorised to take your money?",
     "observations": [
       "No verifiable legal identity or mandatory legal information.",
-      "The source report records: hosted on an address where 48 of 48 domains we have analysed are flagged (100%).",
+      "The source report records: hosted on an address where 63 of 63 domains we have analysed are flagged (100%).",
       "The source report records: suspicious TLD (.shop)."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 93/100 for repsolinvestt.shop, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 93/100 for repsolinvestt.shop, based on AI-assisted analysis. 14 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-09-15",
     "checked_at": "2026-09-16",
@@ -421,6 +439,12 @@
         "short": "Desenmascara",
         "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
         "url": "https://desenmascara.me/analisis/83cba8a4-a20f-419c-b32d-cb1ecf1eb534"
+      },
+      {
+        "name": "VirusTotal",
+        "short": "VirusTotal",
+        "role": "Independent corroboration: 14 security vendors flagged the domain as malicious (checked 2026-09-16).",
+        "url": "https://www.virustotal.com/gui/domain/repsolinvestt.shop"
       }
     ],
     "audience": "Retail investors"
@@ -428,25 +452,25 @@
   {
     "id": "SA-014",
     "slug": "agosbitline-shop",
-    "title": "A bargain storefront. A source says fraudulent.",
-    "short_title": "The shopping website",
-    "category": "Shopping",
-    "technique": "Deceptive storefront",
+    "title": "Automated profits, promised by nobody you can find.",
+    "short_title": "The trading platform",
+    "category": "Investment",
+    "technique": "High-return promise",
     "kind": "capture",
     "subject": "agosbitline.shop",
-    "summary": "agosbitline.shop was captured while Desenmascara assessed it as fraudulent (AI-assisted analysis).",
-    "lesson": "Check who operates a shop before trusting its sale. A discount alone proves neither fraud nor legitimacy.",
+    "summary": "Desenmascara flagged agosbitline.shop as fraudulent (93/100). The site presented itself as an investment or trading platform.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
     "image": "agosbitline-shop.png",
     "image_source": "https://desenmascara.me/screens/a82827fd9df6ad15.png",
     "image_alt": "Archived capture of agosbitline.shop, a website assessed as fraudulent.",
     "claim": "An operating online service",
-    "counterclaim": "Who operates this shop?",
+    "counterclaim": "Is this firm authorised to take your money?",
     "observations": [
       "No verifiable legal identity or mandatory legal information.",
-      "The source report records: hosted on an address where 71 of 72 domains we have analysed are flagged (99%).",
+      "The source report records: hosted on an address where 72 of 73 domains we have analysed are flagged (99%).",
       "The source report records: suspicious TLD (.shop)."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 93/100 for agosbitline.shop, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 93/100 for agosbitline.shop, based on AI-assisted analysis. 14 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-09-16",
     "checked_at": "2026-09-17",
@@ -458,20 +482,26 @@
         "short": "Desenmascara",
         "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
         "url": "https://desenmascara.me/analisis/8f943989-787a-4834-95f3-2f02884678d2"
+      },
+      {
+        "name": "VirusTotal",
+        "short": "VirusTotal",
+        "role": "Independent corroboration: 14 security vendors flagged the domain as malicious (checked 2026-09-17).",
+        "url": "https://www.virustotal.com/gui/domain/agosbitline.shop"
       }
     ],
-    "audience": "Online shoppers"
+    "audience": "Retail investors"
   },
   {
     "id": "SA-015",
     "slug": "oldmutualaiinvest-shop",
     "title": "Big returns. No verifiable firm behind them.",
-    "short_title": "The investment website",
+    "short_title": "The investment offer",
     "category": "Investment",
     "technique": "High-return promise",
     "kind": "capture",
     "subject": "oldmutualaiinvest.shop",
-    "summary": "oldmutualaiinvest.shop was captured while Desenmascara assessed it as fraudulent (AI-assisted analysis).",
+    "summary": "An archived look at oldmutualaiinvest.shop, an investment or trading platform assessed as fraudulent by Desenmascara (AI-assisted analysis, 93/100).",
     "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
     "image": "oldmutualaiinvest-shop.png",
     "image_source": "https://desenmascara.me/screens/d46789ae95e9b1fc.png",
@@ -479,10 +509,10 @@
     "claim": "An operating online service",
     "counterclaim": "Is this firm authorised to take your money?",
     "observations": [
-      "The source report records: hosted on an address where 71 of 72 domains we have analysed are flagged (99%).",
+      "The source report records: hosted on an address where 72 of 73 domains we have analysed are flagged (99%).",
       "The source report records: suspicious TLD (.shop)."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 93/100 for oldmutualaiinvest.shop, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 93/100 for oldmutualaiinvest.shop, based on AI-assisted analysis. 14 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-09-16",
     "checked_at": "2026-09-17",
@@ -494,6 +524,12 @@
         "short": "Desenmascara",
         "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
         "url": "https://desenmascara.me/analisis/14fba8af-ab43-467e-b88d-0a319ead8b1e"
+      },
+      {
+        "name": "VirusTotal",
+        "short": "VirusTotal",
+        "role": "Independent corroboration: 14 security vendors flagged the domain as malicious (checked 2026-09-17).",
+        "url": "https://www.virustotal.com/gui/domain/oldmutualaiinvest.shop"
       }
     ],
     "audience": "Retail investors"
@@ -501,24 +537,24 @@
   {
     "id": "SA-016",
     "slug": "chrysarinsoft-shop",
-    "title": "A bargain storefront. A source says fraudulent.",
-    "short_title": "The shopping website",
-    "category": "Shopping",
-    "technique": "Deceptive storefront",
+    "title": "A trading desk with no regulator on record.",
+    "short_title": "The returns promise",
+    "category": "Investment",
+    "technique": "High-return promise",
     "kind": "capture",
     "subject": "chrysarinsoft.shop",
-    "summary": "chrysarinsoft.shop was captured while Desenmascara assessed it as fraudulent (AI-assisted analysis).",
-    "lesson": "Check who operates a shop before trusting its sale. A discount alone proves neither fraud nor legitimacy.",
+    "summary": "chrysarinsoft.shop presented itself as an investment or trading platform. Desenmascara rated it fraudulent (93/100) after AI-assisted analysis.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
     "image": "chrysarinsoft-shop.png",
     "image_source": "https://desenmascara.me/screens/1c358b3d80342c6a.png",
     "image_alt": "Archived capture of chrysarinsoft.shop, a website assessed as fraudulent.",
     "claim": "An operating online service",
-    "counterclaim": "Who operates this shop?",
+    "counterclaim": "Is this firm authorised to take your money?",
     "observations": [
       "The source report records: hosted on an address where 63 of 63 domains we have analysed are flagged (100%).",
       "The source report records: suspicious TLD (.shop)."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 93/100 for chrysarinsoft.shop, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 93/100 for chrysarinsoft.shop, based on AI-assisted analysis. 15 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-09-16",
     "checked_at": "2026-09-17",
@@ -530,30 +566,36 @@
         "short": "Desenmascara",
         "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
         "url": "https://desenmascara.me/analisis/e94c64eb-a399-47ff-81d9-f5194a765a2a"
+      },
+      {
+        "name": "VirusTotal",
+        "short": "VirusTotal",
+        "role": "Independent corroboration: 15 security vendors flagged the domain as malicious (checked 2026-09-17).",
+        "url": "https://www.virustotal.com/gui/domain/chrysarinsoft.shop"
       }
     ],
-    "audience": "Online shoppers"
+    "audience": "Retail investors"
   },
   {
     "id": "SA-017",
     "slug": "clairezontbankcards-sbs",
-    "title": "A bank website. No bank you can verify.",
-    "short_title": "The banking website",
-    "category": "Banking",
-    "technique": "Financial-service facade",
+    "title": "Automated profits, promised by nobody you can find.",
+    "short_title": "The trading platform",
+    "category": "Investment",
+    "technique": "High-return promise",
     "kind": "capture",
     "subject": "clairezontbankcards.sbs",
-    "summary": "clairezontbankcards.sbs was captured while Desenmascara assessed it as fraudulent (AI-assisted analysis).",
-    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "summary": "Captured on 2026-09-16: clairezontbankcards.sbs, an investment or trading platform that Desenmascara's AI-assisted analysis rated fraudulent at 91/100.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
     "image": "clairezontbankcards-sbs.png",
     "image_source": "https://desenmascara.me/screens/d0731c2b220c87b3.png",
     "image_alt": "Archived capture of clairezontbankcards.sbs, a website assessed as fraudulent.",
     "claim": "An operating online service",
-    "counterclaim": "Is this a bank any regulator has heard of?",
+    "counterclaim": "Is this firm authorised to take your money?",
     "observations": [
       "The source report records: hosted on an address where 63 of 63 domains we have analysed are flagged (100%)."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 91/100 for clairezontbankcards.sbs, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 91/100 for clairezontbankcards.sbs, based on AI-assisted analysis. 14 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-09-16",
     "checked_at": "2026-09-17",
@@ -565,26 +607,38 @@
         "short": "Desenmascara",
         "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
         "url": "https://desenmascara.me/analisis/14b80bac-06fe-4668-b264-fadd8854d79c"
+      },
+      {
+        "name": "VirusTotal",
+        "short": "VirusTotal",
+        "role": "Independent corroboration: 14 security vendors flagged the domain as malicious (checked 2026-09-17).",
+        "url": "https://www.virustotal.com/gui/domain/clairezontbankcards.sbs"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-02-17 through NETIM.",
+        "url": "https://lookup.icann.org/en/lookup?name=clairezontbankcards.sbs"
       }
     ],
-    "audience": "Bank customers and payment users"
+    "audience": "Retail investors"
   },
   {
     "id": "SA-018",
     "slug": "prestigiomarketdex-shop",
-    "title": "A bargain storefront. A source says fraudulent.",
-    "short_title": "The shopping website",
-    "category": "Shopping",
-    "technique": "Deceptive storefront",
+    "title": "Big returns. No verifiable firm behind them.",
+    "short_title": "The investment offer",
+    "category": "Investment",
+    "technique": "High-return promise",
     "kind": "capture",
     "subject": "prestigiomarketdex.shop",
-    "summary": "prestigiomarketdex.shop was captured while Desenmascara assessed it as fraudulent (AI-assisted analysis).",
-    "lesson": "Check who operates a shop before trusting its sale. A discount alone proves neither fraud nor legitimacy.",
+    "summary": "Desenmascara flagged prestigiomarketdex.shop as fraudulent (93/100). The site presented itself as an investment or trading platform.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
     "image": "prestigiomarketdex-shop.png",
     "image_source": "https://desenmascara.me/screens/f7166d0ba0d506a7.png",
     "image_alt": "Archived capture of prestigiomarketdex.shop, a website assessed as fraudulent.",
     "claim": "An operating online service",
-    "counterclaim": "Who operates this shop?",
+    "counterclaim": "Is this firm authorised to take your money?",
     "observations": [
       "The source report records: hosted on an address where 72 of 73 domains we have analysed are flagged (99%).",
       "The source report records: suspicious TLD (.shop)."
@@ -603,24 +657,24 @@
         "url": "https://desenmascara.me/analisis/2a7bb098-6895-4e31-b02b-6a9233d86249"
       }
     ],
-    "audience": "Online shoppers"
+    "audience": "Retail investors"
   },
   {
     "id": "SA-019",
     "slug": "paragonix-earn-tech-com",
-    "title": "Easy earnings. Pay first to withdraw.",
-    "short_title": "The jobs website",
-    "category": "Jobs",
-    "technique": "Advance-fee request",
+    "title": "A trading desk with no regulator on record.",
+    "short_title": "The returns promise",
+    "category": "Investment",
+    "technique": "High-return promise",
     "kind": "capture",
     "subject": "paragonix-earn-tech.com",
-    "summary": "paragonix-earn-tech.com was captured while Desenmascara assessed it as fraudulent (AI-assisted analysis).",
-    "lesson": "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.",
+    "summary": "An archived look at paragonix-earn-tech.com, an investment or trading platform assessed as fraudulent by Desenmascara (AI-assisted analysis, 91/100).",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
     "image": "paragonix-earn-tech-com.png",
     "image_source": "https://desenmascara.me/screens/df5200bad4519104.png",
     "image_alt": "Archived capture of paragonix-earn-tech.com, a website assessed as fraudulent.",
     "claim": "An operating online service",
-    "counterclaim": "A displayed balance is not proof of withdrawable earnings",
+    "counterclaim": "Is this firm authorised to take your money?",
     "observations": [
       "No verifiable legal identity or mandatory legal information.",
       "The source report records: hosted on an address where 63 of 63 domains we have analysed are flagged (100%)."
@@ -637,8 +691,14 @@
         "short": "Desenmascara",
         "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
         "url": "https://desenmascara.me/analisis/23f74d45-5ded-466d-b702-1daf825f3bcf"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2025-11-12 through MainReg Inc..",
+        "url": "https://lookup.icann.org/en/lookup?name=paragonix-earn-tech.com"
       }
     ],
-    "audience": "Job seekers and online task workers"
+    "audience": "Retail investors"
   }
 ]

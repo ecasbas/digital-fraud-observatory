@@ -81,6 +81,35 @@ class CaseTextTests(unittest.TestCase):
     def test_category_prefers_stated_fraud_type(self):
         self.assertEqual(cur.choose_category(projection(), "mantintransact.online")[0], "Banking")
 
+    def test_shop_tld_is_not_a_shop(self):
+        es = ("El sitio se presenta como una plataforma de trading automatizado, pero está alojado en una IP "
+              "de infraestructura fraudulenta. Tipo de fraude: suplantación bancaria.")
+        p = {"explanation": es, "evidence": [{"label": "Suspicious TLD (.shop)", "positive": False}]}
+        self.assertEqual(cur.choose_category(p, "chrysarinsoft.shop")[0], "Investment")
+        self.assertNotEqual(cur.choose_category({"explanation": "", "evidence": []}, "agosbitline.shop")[0], "Shopping")
+
+    def test_fake_store_is_shopping(self):
+        es = "El sitio se presenta como una tienda online de Nike con descuentos del 80% y pago con tarjeta. Tipo de fraude: tienda falsa."
+        self.assertEqual(cur.choose_category({"explanation": es, "evidence": []}, "nike-outlet-sale.top")[0], "Shopping")
+
+    def test_wording_varies_between_neighbouring_cases(self):
+        p = projection(assessed_by="ai_reasoning")
+        a, b = (cur.build_case(p, i, "x", "x.png", "u") for i in ("SA-020", "SA-021"))
+        self.assertNotEqual(a["summary"], b["summary"])
+        self.assertNotEqual(a["short_title"], b["short_title"])
+        self.assertEqual(a["summary"], cur.build_case(p, "SA-020", "y", "y.png", "u")["summary"])
+
+    def test_extra_sources_are_cited(self):
+        vt = {"name": "VirusTotal", "short": "VirusTotal", "role": "r", "url": "https://www.virustotal.com/gui/domain/x"}
+        case = cur.build_case(projection(assessed_by="ai_reasoning"), "SA-010", "x", "x.png", "u", [vt], 14)
+        self.assertEqual([s["name"] for s in case["sources"]], ["desenmascara.me", "VirusTotal"])
+        self.assertIn("14 security vendors", case["source_summary"])
+
+    def test_canned_no_ai_text_is_not_called_ai(self):
+        p = projection(assessed_by="ai_reasoning", explanation="What we found: extreme discounts. AI was not used (it is included in our paid plans).")
+        case = cur.build_case(p, "SA-020", "x", "x.png", "u")
+        self.assertEqual(case["assessment_source"], "desenmascara.me · heuristic analysis")
+
     def test_ids_never_reused_after_withdrawal(self):
         self.assertEqual(cur.next_id([{"id": "SA-008"}], high_water=9), "SA-010")
 

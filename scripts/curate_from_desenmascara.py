@@ -19,6 +19,7 @@ purpose, because a case here republishes an accusation in a public repository:
 from __future__ import annotations
 
 import argparse
+import hashlib
 from datetime import datetime, timedelta, timezone
 import json
 import os
@@ -58,14 +59,55 @@ ATTRIBUTION = {
 #: Verdict bases new cases may come from, in order of preference.
 CURATED_BASES = ("ai_reasoning", "manual_review", "heuristics")
 
+#: (category, technique, keywords, audience, counterclaim, lesson, titles).
+#: Keywords are word prefixes, so Spanish and English stems both work. Order
+#: matters: the first rule with a hit wins (Crypto before Investment: it is the
+#: more specific label). Shopping sits before Banking because
+#: fake-store analyses mention card payments; it needs store/brand/discount
+#: wording, never the ``.shop`` TLD (trading scams love that TLD).
 CATEGORY_RULES = [
-    ("Investment", "High-return promise", ["invest", "trading", "broker", "forex", "cfd", "profit", "capital", "wealth"], "Retail investors", "Is this firm authorised to take your money?", "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.", "Big returns. No verifiable firm behind them."),
-    ("Crypto", "Crypto wallet or exchange lure", ["crypto", "cripto", "bitcoin", "btc", "wallet", "token", "airdrop", "defi", "nft", "exchange"], "Crypto users and retail investors", "Who controls the wallet you are asked to connect?", "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.", "A crypto platform. A source says fraudulent."),
-    ("Banking", "Financial-service facade", ["bank", "login", "account", "card", "payment", "transfer", "transact"], "Bank customers and payment users", "Is this a bank any regulator has heard of?", "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.", "A bank website. No bank you can verify."),
-    ("Shopping", "Deceptive storefront", ["shop", "store", "discount", "sale", "cart", "checkout", "shipping"], "Online shoppers", "Who operates this shop?", "Check who operates a shop before trusting its sale. A discount alone proves neither fraud nor legitimacy.", "A bargain storefront. A source says fraudulent."),
-    ("Jobs", "Advance-fee request", ["job", "task", "salary", "commission", "withdraw", "earn"], "Job seekers and online task workers", "A displayed balance is not proof of withdrawable earnings", "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.", "Easy earnings. Pay first to withdraw."),
-    ("Transport", "Manufactured credibility", ["logistics", "cargo", "parcel", "shipment", "delivery", "freight"], "Customers, shippers and business counterparties", "Does this carrier exist outside its website?", "A transport website does not establish that a carrier exists. Verify the company identity before entrusting it with money or goods.", "A carrier website. An identity still to verify."),
+    ("Crypto", "Crypto wallet or exchange lure", ["crypto", "cripto", "bitcoin", "btc", "wallet", "billetera", "token", "airdrop", "defi", "nft"], "Crypto users and retail investors", "Who controls the wallet you are asked to connect?", "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+     ["A crypto platform. A wallet you should not connect.", "Crypto earnings, on a site nobody stands behind.", "The coins are real. The platform is not verifiable."]),
+    ("Investment", "High-return promise", ["invest", "invers", "trading", "trader", "broker", "bróker", "forex", "cfd", "profit", "rentabilidad", "wealth", "patrimonio"], "Retail investors", "Is this firm authorised to take your money?", "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+     ["Big returns. No verifiable firm behind them.", "A trading desk with no regulator on record.", "Automated profits, promised by nobody you can find."]),
+    ("Shopping", "Deceptive storefront", ["tienda", "store", "fake shop", "online shop", "ecommerce", "e-commerce", "comercio electr", "counterfeit", "falsificad", "réplica", "replica", "outlet", "descuento", "discount", "rebaja", "sneaker", "zapatill", "ropa", "clothing"], "Online shoppers", "Who operates this shop?", "Check who operates a shop before trusting its sale. A famous brand and a deep discount prove nothing about who takes your money.",
+     ["A famous brand. A price too good to be true.", "Deep discounts from a shop with no known owner.", "A familiar storefront. An unknown seller."]),
+    ("Banking", "Financial-service facade", ["bank", "banco", "bancari", "login", "credential", "credencial", "account", "cuenta", "card", "tarjeta", "payment", "transfer"], "Bank customers and payment users", "Is this a bank any regulator has heard of?", "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+     ["A bank website. No bank you can verify.", "Online banking from a bank nobody licensed.", "Cards and accounts, offered by no bank on record."]),
+    ("Jobs", "Advance-fee request", ["job", "empleo", "trabajo", "task", "tarea", "salary", "salario", "commission", "comisi", "withdraw", "retir", "earn"], "Job seekers and online task workers", "A displayed balance is not proof of withdrawable earnings", "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.",
+     ["Easy earnings. Pay first to withdraw.", "A job that asks you to pay in.", "Daily earnings that never leave the dashboard."]),
+    ("Transport", "Manufactured credibility", ["logistic", "logístic", "cargo", "parcel", "paquete", "shipment", "delivery", "freight", "mensajer", "courier"], "Customers, shippers and business counterparties", "Does this carrier exist outside its website?", "A transport website does not establish that a carrier exists. Verify the company identity before entrusting it with money or goods.",
+     ["A carrier website. An identity still to verify.", "A global freight company that exists only online.", "Cargo, tracking, a fleet: all claims, no carrier."]),
 ]
+#: Short card titles and what each kind of site presents itself as, for the
+#: varied summary lines, rotated by case number (see ``pick``).
+CATEGORY_VOICE = {
+    "Investment": (["The trading platform", "The investment offer", "The returns promise"], "an investment or trading platform"),
+    "Crypto": (["The crypto platform", "The crypto earnings site", "The wallet lure"], "a crypto platform"),
+    "Shopping": (["The discount shop", "The brand storefront", "The bargain store"], "an online shop"),
+    "Banking": (["The bank that isn't", "The banking portal", "The card offer"], "a bank or financial service"),
+    "Jobs": (["The earnings dashboard", "The online job", "The task platform"], "a way to earn money online"),
+    "Transport": (["The freight company", "The carrier website", "The logistics firm"], "a logistics carrier"),
+    "Website fraud": (["The polished website", "The unverified operator", "The convincing facade"], "a legitimate business"),
+}
+SUMMARY_TEMPLATES = [
+    "{domain} presented itself as {pitch}. Desenmascara rated it fraudulent ({score}/100) after {basis}.",
+    "Captured on {date}: {domain}, {pitch} that Desenmascara's {basis} rated fraudulent at {score}/100.",
+    "Desenmascara flagged {domain} as fraudulent ({score}/100). The site presented itself as {pitch}.",
+    "An archived look at {domain}, {pitch} assessed as fraudulent by Desenmascara ({basis}, {score}/100).",
+]
+#: Independent vendor detections needed before VirusTotal is cited as a source.
+#: Corroboration only: never timing or engine names (VirusTotal terms).
+VT_MIN_VENDORS = 3
+
+
+def pick(options: list[str], case_id: str, offset: int = 0) -> str:
+    """Rotate by case number, so neighbouring cases never share a phrasing and a case keeps its own."""
+    digits = re.sub(r"\D", "", case_id)
+    n = int(digits) if digits else int(hashlib.sha256(case_id.encode()).hexdigest(), 16)
+    return options[(n + offset) % len(options)]
+
+
 #: Findings our analysis states in prose (ES or EN), rendered as English observations.
 #: Deterministic on purpose: writing this page never spends an AI call.
 PROSE_FINDINGS = [
@@ -89,7 +131,7 @@ def prose_findings(explanation: str) -> list[str]:
     return out
 
 
-GENERIC_CATEGORY = ("Website fraud", "Manufactured credibility", [], "People asked to trust a new website", "Who is behind this website?", "Treat a polished website as a claim, not proof. Verify the operator, source and payment path through independent records.", "A polished website. A source says fraudulent.")
+GENERIC_CATEGORY = ("Website fraud", "Manufactured credibility", [], "People asked to trust a new website", "Who is behind this website?", "Treat a polished website as a claim, not proof. Verify the operator, source and payment path through independent records.", ["A polished website. Nobody behind it.", "Every detail looks right. The operator is missing."])
 ALLOW_GENERIC = (os.getenv("OBSERVATORY_ALLOW_GENERIC") or "").lower() in {"1", "true", "yes", "on"}
 
 
@@ -138,20 +180,48 @@ def observations_from(projection: dict, domain: str) -> list[str]:
     return out[:3]
 
 
+def _mentions(text: str, keywords: list[str]) -> bool:
+    return any(re.search(r"(?<![a-záéíóúñ])" + re.escape(k), text) for k in keywords)
+
+
 def choose_category(projection: dict, domain: str) -> tuple:
-    fraud_type = re.search(r"(?:Fraud type|Tipo de fraude):\s*([^.]+)", projection.get("explanation") or "")
-    labels = " ".join(i.get("label") or "" for i in projection.get("evidence") or [])
-    for haystack in (fraud_type.group(1) if fraud_type else "", f"{domain} {labels}"):
+    """What the site *is*: its own pitch first, then the stated fraud type, then its name.
+
+    The TLD and TLD-based findings are never read: a ``.shop`` trading scam is
+    not a shop.
+    """
+    explanation = (projection.get("explanation") or "").lower()
+    first_sentence = re.split(r"(?<=[.!?])\s", explanation.strip(), maxsplit=1)[0]
+    fraud_type = re.search(r"(?:fraud type|tipo de fraude):\s*([^.]+)", explanation)
+    for text in (first_sentence, fraud_type.group(1) if fraud_type else "", explanation):
         for rule in CATEGORY_RULES:
-            if any(keyword in haystack.lower() for keyword in rule[2]):
+            if _mentions(text, rule[2]):
                 return rule
+    name = host_of(domain).rsplit(".", 1)[0]
+    labels = " ".join(i.get("label") or "" for i in projection.get("evidence") or [] if "TLD" not in (i.get("label") or ""))
+    for rule in CATEGORY_RULES:
+        if any(k in name for k in rule[2]) or _mentions(labels.lower(), rule[2]):
+            return rule
     return GENERIC_CATEGORY
 
 
-def build_case(projection: dict, case_id: str, slug: str, image: str, image_source: str) -> dict:
+#: Our canned no-AI verdict text. A few rows are recorded as ``ai_reasoning``
+#: while carrying it; the case must not claim an AI analysis that never ran.
+NO_AI_TEXT = re.compile(r"AI was not used|no se (us|utiliz)[oó] la IA|la IA no se (us|utiliz)[oó]", re.I)
+
+
+def basis_of(projection: dict) -> str:
+    if projection.get("assessed_by") == "ai_reasoning" and NO_AI_TEXT.search(projection.get("explanation") or ""):
+        return ATTRIBUTION["heuristics"]
+    return ATTRIBUTION[projection["assessed_by"]]
+
+
+def build_case(projection: dict, case_id: str, slug: str, image: str, image_source: str,
+               extra_sources: list[dict] | None = None, vt_vendors: int = 0) -> dict:
     domain = projection["domain"]
-    category, technique, _kw, audience, counterclaim, lesson, title = choose_category(projection, domain)
-    basis = ATTRIBUTION[projection["assessed_by"]]
+    category, technique, _kw, audience, counterclaim, lesson, titles = choose_category(projection, domain)
+    short_titles, pitch = CATEGORY_VOICE[category]
+    basis = basis_of(projection)
     observations = (prose_findings(projection.get("explanation") or "") + observations_from(projection, domain))[:4] \
         or ["The source report records the domain as fraudulent."]
     third_party = basis.startswith("attributed")
@@ -163,22 +233,26 @@ def build_case(projection: dict, case_id: str, slug: str, image: str, image_sour
         f"Desenmascara publishes a Fraudulent assessment of {score}/100 for {domain}, based on {basis}."
         + (f" Its analysis says: “{first_sentence}”" if first_sentence and not third_party else "")
         + (" The verdict is the third-party listing's, reported with attribution, not an independent finding." if third_party else "")
+        + (f" {vt_vendors} security vendors on VirusTotal independently flag the domain as malicious." if vt_vendors else "")
         + " Follow the report for the full rationale, evidence and any later correction."
     )
+    analysis_date = (projection.get("assessed_at") or "")[:10] or datetime.now(timezone.utc).date().isoformat()
+    summary = pick(SUMMARY_TEMPLATES, case_id).format(
+        domain=domain, pitch=pitch, basis=basis, score=score, date=analysis_date)
     return {
-        "id": case_id, "slug": slug, "title": title, "short_title": f"The {category.lower()} website",
+        "id": case_id, "slug": slug, "title": pick(titles, case_id), "short_title": pick(short_titles, case_id, 1),
         "category": category, "technique": technique, "kind": "capture", "subject": domain,
-        "summary": f"{domain} was captured while Desenmascara assessed it as fraudulent ({basis}).",
+        "summary": summary,
         "lesson": lesson, "image": image, "image_source": image_source,
         "image_alt": f"Archived capture of {domain}, a website assessed as fraudulent.",
         "claim": "An operating online service", "counterclaim": counterclaim,
         "observations": observations, "source_summary": source_summary,
         "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
-        "analysis_date": (projection.get("assessed_at") or "")[:10] or datetime.now(timezone.utc).date().isoformat(),
+        "analysis_date": analysis_date,
         "checked_at": datetime.now(timezone.utc).date().isoformat(),
         "assessment": f"Fraudulent · {score}/100",
         "assessment_source": f"desenmascara.me · {basis}",
-        "sources": [{"name": "desenmascara.me", "short": "Desenmascara", "role": f"Public report and archived capture; verdict basis: {basis}", "url": projection["report_url"]}],
+        "sources": [{"name": "desenmascara.me", "short": "Desenmascara", "role": f"Public report and archived capture; verdict basis: {basis}", "url": projection["report_url"]}] + (extra_sources or []),
         "audience": audience,
     }
 
@@ -229,6 +303,27 @@ def _candidates(since: datetime, limit: int):
             .exclude(screenshot_url__isnull=True).exclude(screenshot_url="")
             .order_by("-ai_score", "-date")[: limit * 20])
     return sorted(rows, key=lambda row: CURATED_BASES.index(row.assessed_by))
+
+
+def _extra_sources(row, domain: str) -> tuple[list[dict], int]:
+    """Independent, publicly checkable sources beside our report, and the VT vendor count."""
+    from core.models import VtDetectionLag
+    sources, vendors = [], 0
+    lag = VtDetectionLag.objects.filter(domain__iexact=domain).order_by("-vt_last_checked_at").first()
+    if lag:
+        engines = [e for e in lag.vt_malicious_engines or [] if "desenmascara" not in str(e).lower()]
+        if len(engines) >= VT_MIN_VENDORS:
+            vendors = len(engines)
+            checked = (lag.vt_last_checked_at or lag.updated_at).date().isoformat()
+            sources.append({"name": "VirusTotal", "short": "VirusTotal",
+                            "role": f"Independent corroboration: {vendors} security vendors flagged the domain as malicious (checked {checked}).",
+                            "url": f"https://www.virustotal.com/gui/domain/{domain}"})
+    if row.whois_creation_date:
+        registrar = f" through {row.whois_registrar}" if row.whois_registrar else ""
+        sources.append({"name": "ICANN Registration Data Lookup", "short": "ICANN",
+                        "role": f"Public registration record. At analysis time it showed the domain registered on {row.whois_creation_date.date().isoformat()}{registrar}.",
+                        "url": f"https://lookup.icann.org/en/lookup?name={domain}"})
+    return sources, vendors
 
 
 def _capture_source(row) -> Path | None:
@@ -317,7 +412,8 @@ def main() -> int:
         if slug in {c["slug"] for c in pending}:
             slug = f"{slug}-{case_id.lower()}"
         image = f"{slug}{capture.suffix.lower()}"
-        additions.append((build_case(projection, case_id, slug, image, row.screenshot_url), capture))
+        extra, vendors = _extra_sources(row, domain)
+        additions.append((build_case(projection, case_id, slug, image, row.screenshot_url, extra, vendors), capture))
         known.add(domain)
         used_categories.add(category)
 
