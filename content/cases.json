@@ -789,5 +789,92 @@
       }
     ],
     "audience": "Bank customers and payment users"
+  },
+  {
+    "id": "SA-022",
+    "slug": "elitechain-finance-xyz",
+    "title": "A trading desk with no regulator on record.",
+    "short_title": "The returns promise",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "elitechain-finance.xyz",
+    "summary": "Desenmascara flagged elitechain-finance.xyz as fraudulent (100/100). The site presented itself as an investment or trading platform.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "elitechain-finance-xyz.png",
+    "image_source": "https://desenmascara.me/screens/f302711a97a27239.png",
+    "image_alt": "Archived capture of elitechain-finance.xyz, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "No verifiable legal identity or mandatory legal information.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 51 of 56 domains we have analysed are flagged (91%).",
+      "The source report records: domain registered 0 days ago."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for elitechain-finance.xyz, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-19",
+    "checked_at": "2026-09-19",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/e54ad2c0-342f-4da7-b9d0-63f2d4537c8d"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-09-19 through Sav.com, LLC.",
+        "url": "https://lookup.icann.org/en/lookup?name=elitechain-finance.xyz"
+      }
+    ],
+    "audience": "Retail investors"
+  },
+  {
+    "id": "SA-023",
+    "slug": "instantrefundresolution-online",
+    "title": "Cards and accounts, offered by no bank on record.",
+    "short_title": "The bank that isn't",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "instantrefundresolution.online",
+    "summary": "An archived look at instantrefundresolution.online, a bank or financial service assessed as fraudulent by Desenmascara (AI-assisted analysis, 100/100).",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "instantrefundresolution-online.png",
+    "image_source": "https://desenmascara.me/screens/8c0d9c124c6dca38.png",
+    "image_alt": "Archived capture of instantrefundresolution.online, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: hosted on an address where 51 of 56 domains we have analysed are flagged (91%).",
+      "The source report records: domain registered 1 days ago.",
+      "The source report records: suspicious TLD (.online)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for instantrefundresolution.online, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-19",
+    "checked_at": "2026-09-19",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/b6d92da7-2bad-443f-9903-fd7d4facd7d9"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-09-18 through Spaceship, Inc..",
+        "url": "https://lookup.icann.org/en/lookup?name=instantrefundresolution.online"
+      }
+    ],
+    "audience": "Bank customers and payment users"
   }
 ]
