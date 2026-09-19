@@ -700,5 +700,94 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-020",
+    "slug": "meghnamoorsoftware-com",
+    "title": "Automated profits, promised by nobody you can find.",
+    "short_title": "The trading platform",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "meghnamoorsoftware.com",
+    "summary": "meghnamoorsoftware.com presented itself as an investment or trading platform. Desenmascara rated it fraudulent (93/100) after AI-assisted analysis.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "meghnamoorsoftware-com.png",
+    "image_source": "https://desenmascara.me/screens/f8d1e333899ce477.png",
+    "image_alt": "Archived capture of meghnamoorsoftware.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "No verifiable legal identity or mandatory legal information.",
+      "The source report records: hosted on an address where 64 of 64 domains we have analysed are flagged (100%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 93/100 for meghnamoorsoftware.com, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-15",
+    "checked_at": "2026-09-19",
+    "assessment": "Fraudulent · 93/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/54b4324f-8d14-49d4-8bb8-dd50d301900b"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-04-14 through MAT BAO CORPORATION.",
+        "url": "https://lookup.icann.org/en/lookup?name=meghnamoorsoftware.com"
+      }
+    ],
+    "audience": "Retail investors"
+  },
+  {
+    "id": "SA-021",
+    "slug": "axel-fundriaplatform-com",
+    "title": "A bank website. No bank you can verify.",
+    "short_title": "The banking portal",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "axel-fundriaplatform.com",
+    "summary": "Captured on 2026-09-16: axel-fundriaplatform.com, a bank or financial service that Desenmascara's AI-assisted analysis rated fraudulent at 91/100.",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "axel-fundriaplatform-com.png",
+    "image_source": "https://desenmascara.me/screens/962eadb172d0e1aa.png",
+    "image_alt": "Archived capture of axel-fundriaplatform.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: hosted on an address where 64 of 64 domains we have analysed are flagged (100%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 91/100 for axel-fundriaplatform.com, based on AI-assisted analysis. 15 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-16",
+    "checked_at": "2026-09-19",
+    "assessment": "Fraudulent · 91/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/6930b180-6d20-48ec-93d9-bdb936292537"
+      },
+      {
+        "name": "VirusTotal",
+        "short": "VirusTotal",
+        "role": "Independent corroboration: 15 security vendors flagged the domain as malicious (checked 2026-09-17).",
+        "url": "https://www.virustotal.com/gui/domain/axel-fundriaplatform.com"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2025-12-01 through MainReg Inc..",
+        "url": "https://lookup.icann.org/en/lookup?name=axel-fundriaplatform.com"
+      }
+    ],
+    "audience": "Bank customers and payment users"
   }
 ]
