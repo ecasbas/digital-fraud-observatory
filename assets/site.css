@@ -69,3 +69,4 @@
 .incident-warning{border-color:#bfd58b;background:#fbfdf4}
 @media(max-width:850px){.incident-steps{grid-template-columns:1fr}.incident-step{min-height:0}}
 @media(max-width:600px){.incident-thumb{padding:22px;gap:6px}.incident-node{font-size:8px;padding:8px 7px}.incident-thumb p{font-size:10px}.audience-line{font-size:11px!important}.incident-full{padding:22px}.incident-heading h2{font-size:22px}.incident-heading p{font-size:13px}.incident-step{padding:17px}.incident-step strong{font-size:17px}}
+.tag-subject{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;background:#fff;border-color:#c3d0be;color:var(--ink);font-weight:600;overflow-wrap:anywhere}

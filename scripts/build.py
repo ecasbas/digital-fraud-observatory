@@ -65,13 +65,73 @@ def page_url(route=''):
     return CONFIG['base_url'].rstrip('/') + '/' + route
 
 
+DOMAIN_RE = re.compile(r'^(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z]{2,}$', re.I)
+
+
+def subject_domain(c):
+    """The case subject when it is a bare domain, else None.
+
+    Some subjects are prose ('Task scam pattern'), so this has to be a test and
+    not an assumption."""
+    subject = (c.get('subject') or '').strip()
+    return subject if DOMAIN_RE.fullmatch(subject) else None
+
+
+def seo_title(c):
+    """Page title for a case.
+
+    The curator reuses editorial titles across cases on purpose — five cases
+    share 'The returns promise'. Byte-identical titles make Google keep one page
+    and drop the rest, and they throw away the only term anyone actually
+    searches: the domain. So the domain leads the title when there is one."""
+    domain = subject_domain(c)
+    return f"{domain} — {c['short_title']}" if domain else c['short_title']
+
+
+def case_schema(c, canonical):
+    """Article schema for a case, so it can earn a rich result.
+
+    A generic WebPage says nothing about who wrote this, when, or what it is
+    about; an Article carries the dates and the subject."""
+    schema = {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        'headline': seo_title(c),
+        'alternativeHeadline': c['title'],
+        'description': c['summary'],
+        'url': canonical,
+        'mainEntityOfPage': {'@type': 'WebPage', '@id': canonical},
+        'datePublished': c['analysis_date'] or c['checked_at'],
+        'dateModified': c['checked_at'],
+        'inLanguage': 'en',
+        'isAccessibleForFree': True,
+        'author': {'@type': 'Organization', 'name': CONFIG['name'], 'url': CONFIG['base_url']},
+        'publisher': {
+            '@type': 'Organization',
+            'name': CONFIG['name'],
+            'url': CONFIG['base_url'],
+            'logo': {'@type': 'ImageObject', 'url': page_url('assets/favicon.svg')},
+        },
+        'about': {'@type': 'Thing', 'name': c['subject']},
+        'keywords': ', '.join([c['category'], c['technique'], c['audience']]),
+        'citation': [
+            {'@type': 'CreativeWork', 'name': s['name'], 'url': s['url']}
+            for s in c['sources']
+        ],
+    }
+    if c['kind'] == 'capture':
+        schema['image'] = page_url('assets/captures/' + c['image'])
+    return schema
+
+
 def write(path, text):
     target = OUT / path
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(text, encoding='utf-8')
 
 
-def frame(title, body, prefix='./', route='', active='', description=None):
+def frame(title, body, prefix='./', route='', active='', description=None,
+          schema=None, og_type='website', image=None):
     desc = description or CONFIG['description']
     canonical = page_url(route)
     brand = '<span class="brand-name">Digital Fraud<span>Observatory</span></span>' if CONFIG['name'] == 'Digital Fraud Observatory' else E(CONFIG['name'])
@@ -79,13 +139,15 @@ def frame(title, body, prefix='./', route='', active='', description=None):
     nav_html = ''.join(f'<a href="{E(link)}"'+(' aria-current="page"' if key == active else '')+f'>{E(label)}</a>' for label, link, key in nav)
     project_link = E(CONFIG['repository']) if CONFIG['repository'] else prefix + 'project-source.zip'
     project_label = 'GitHub' if CONFIG['repository'] else 'Project files'
-    schema = {'@context': 'https://schema.org', '@type': 'WebSite' if not route else 'WebPage', 'name': title, 'url': canonical, 'description': desc}
+    if schema is None:
+        schema = {'@context': 'https://schema.org', '@type': 'WebSite' if not route else 'WebPage', 'name': title, 'url': canonical, 'description': desc}
     schema_text = json.dumps(schema).replace('<', '\\u003c')
+    og_image = image or page_url('assets/social-card.png')
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="theme-color" content="#102528"><meta name="referrer" content="strict-origin-when-cross-origin">
 <title>{E(title)} · {E(CONFIG['name'])}</title><meta name="description" content="{E(desc)}"><meta name="robots" content="{'index,follow' if CONFIG['indexable'] else 'noindex,follow'}"><link rel="canonical" href="{E(canonical)}">
-<meta property="og:type" content="website"><meta property="og:title" content="{E(title)} · {E(CONFIG['name'])}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{E(canonical)}"><meta property="og:image" content="{E(page_url('assets/social-card.png'))}"><meta property="og:site_name" content="{E(CONFIG['name'])}"><meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="{prefix}assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="{prefix}assets/site.css?v=3"><script defer src="{prefix}assets/site.js?v=3"></script><script type="application/ld+json">{schema_text}</script></head>
+<meta property="og:type" content="{E(og_type)}"><meta property="og:title" content="{E(title)} · {E(CONFIG['name'])}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{E(canonical)}"><meta property="og:image" content="{E(og_image)}"><meta property="og:site_name" content="{E(CONFIG['name'])}"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="{prefix}assets/favicon.svg" type="image/svg+xml"><link rel="alternate" type="application/rss+xml" title="{E(CONFIG['name'])}" href="{prefix}feed.xml"><link rel="stylesheet" href="{prefix}assets/site.css?v=3"><script defer src="{prefix}assets/site.js?v=3"></script><script type="application/ld+json">{schema_text}</script></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="wrap header-inner"><a class="wordmark" href="{prefix}" aria-label="{E(CONFIG['name'])} home"><img src="{prefix}assets/favicon.svg" width="35" height="35" alt="">{brand}</a><nav class="desktop-nav" aria-label="Main">{nav_html}</nav><a class="btn header-action" href="{prefix}contribute/">Contribute {icon(size=15)}</a><button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">{icon('menu',20)}</button></div><nav class="wrap mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>{nav_html}<a href="{prefix}contribute/">Contribute an example</a></nav></header>
 <main id="main">{body}</main>
 <footer class="site-footer"><div class="wrap"><div class="footer-main"><div class="footer-brand"><a class="wordmark" href="{prefix}"><img src="{prefix}assets/favicon.svg" alt="" width="31" height="31">{brand}</a><p>{E(CONFIG['tagline'])}<br>Initiated by <a href="{E(CONFIG['founder_url'])}">{E(CONFIG['founder_name'])}</a>. Built to welcome everyone.</p></div><nav class="footer-links" aria-label="Footer"><a href="{prefix}about/">About</a><a href="{prefix}contribute/">Contribute</a><a href="{project_link}">{project_label}</a><a href="{prefix}privacy/">Privacy & reuse</a></nav></div><div class="footer-bottom"><span>Evidence is attributed. Claims can be challenged.</span><span>Original code: MIT · Editorial text: CC BY 4.0 · Screenshots retain their original rights.</span></div></div></footer></body></html>'''
@@ -135,7 +197,11 @@ def home():
 def case_page(c):
     prefix = '../../'
     kind = {'capture': 'Actual website capture', 'reconstruction': 'Educational reconstruction', 'incident': 'Documented incident'}[c['kind']]
-    lead = f'''<div class="wrap page-header"><div class="breadcrumb"><a href="{prefix}#library">Collection</a><span>/</span><span>{E(c['category'])}</span><span>/</span><span>{E(c['id'])}</span></div><div class="tags"><span class="tag">{E(c['technique'])}</span><span class="tag">{kind}</span></div><h1>{E(c['title'])}</h1><p class="lede">{E(c['summary'])}</p></div>'''
+    # The domain is what a worried reader types into a search box, so it has to
+    # be on the page in text, not only in the provenance rail further down.
+    domain = subject_domain(c)
+    subject_tag = f'<span class="tag tag-subject">{E(domain)}</span>' if domain else ''
+    lead = f'''<div class="wrap page-header"><div class="breadcrumb"><a href="{prefix}#library">Collection</a><span>/</span><span>{E(c['category'])}</span><span>/</span><span>{E(c['id'])}</span></div><div class="tags">{subject_tag}<span class="tag">{E(c['technique'])}</span><span class="tag">{kind}</span></div><h1>{E(c['title'])}</h1><p class="lede">{E(c['summary'])}</p></div>'''
     if c['kind'] == 'capture':
         figure = f'''<figure class="evidence-figure"><div class="evidence-frame"><button type="button" data-zoom aria-label="Enlarge the archived screenshot"><img src="{prefix}assets/captures/{E(c['image'])}" alt="{E(c['image_alt'])}" width="1366" height="768" fetchpriority="high"></button></div><figcaption class="figure-caption"><span>Unaltered historical capture. Website claims belong to the captured page.</span><a href="{prefix}assets/captures/{E(c['image'])}" target="_blank" rel="noopener">Full image {icon('external',12)}</a></figcaption></figure><dialog id="capture-dialog" aria-label="Archived website screenshot"><div class="dialog-top"><span>Original capture · {E(c['id'])}</span><button type="button" data-close-dialog>Close ✕</button></div><img class="zoom-image" src="{prefix}assets/captures/{E(c['image'])}" alt="{E(c['image_alt'])}" width="1366" height="768" loading="lazy"></dialog>'''
     elif c['kind'] == 'reconstruction':
@@ -148,7 +214,12 @@ def case_page(c):
     rail = f'''<aside class="source-panel" aria-label="Evidence and provenance"><h2>Follow the evidence.</h2>{sources}<dl class="record-info"><div><dt>Source assessment</dt><dd>{E(c['assessment'])}</dd><dd class="small muted">{E(c['assessment_source'])}</dd></div>{source_dates}<div><dt>Sources last checked</dt><dd>{fmt(c['checked_at'])}</dd></div><div><dt>Audience / at-risk group</dt><dd>{E(c['audience'])}</dd></div><div><dt>Subject</dt><dd>{E(c['subject'])}</dd></div></dl><a class="btn btn-dark" href="{prefix}contribute/?case={c['id']}">Improve this case {icon(size=14)}</a><a class="btn btn-outline" href="{prefix}downloads/{c['slug']}.md" download>Download case</a><p class="source-note">Source assessments stay attributed. Scores from different providers are not directly comparable.</p></aside>'''
     related = ''.join(card(other,prefix) for other in [x for x in CASES if x != c][:2])
     body = lead + f'''<div class="wrap detail-layout"><div>{figure}<div class="claim-comparison"><div><div class="eyebrow">What the example presents</div><strong>{E(c['claim'])}</strong></div><div><div class="eyebrow">What to examine</div><strong>{E(c['counterclaim'])}</strong></div></div><section class="editorial-section"><h2>Audience / at-risk group</h2><p>{E(c['audience'])}</p></section><section class="editorial-section"><h2>What you can notice</h2><ul>{observed}</ul></section><div class="takeaway"><h2>The takeaway</h2><p>{E(c['lesson'])}</p></div><section class="editorial-section"><h2>What the source reports</h2><p>{E(c['source_summary'])}</p></section><section class="editorial-section"><h2>What this evidence cannot tell us</h2><p>{E(c['limits'])}</p></section><div class="detail-actions"><button class="text-button" type="button" data-share>{icon('copy',15)} Copy case link</button><a class="text-button" href="{prefix}contribute/?case={c['id']}">Suggest a correction</a></div><p class="status" id="share-status" role="status"></p></div>{rail}</div><section class="wrap related"><div class="eyebrow" style="margin-bottom:12px">Keep exploring</div><h2>Different tactics. Useful lessons.</h2><div class="case-grid">{related}</div></section>'''
-    write(f'cases/{c["slug"]}/index.html', frame(c['short_title'], body, prefix, f'cases/{c["slug"]}/', description=c['summary']))
+    route = f'cases/{c["slug"]}/'
+    write(f'cases/{c["slug"]}/index.html', frame(
+        seo_title(c), body, prefix, route, description=c['summary'],
+        schema=case_schema(c, page_url(route)), og_type='article',
+        image=page_url('assets/captures/' + c['image']) if c['kind'] == 'capture' else None,
+    ))
     lines = [f'# {c["title"]}', '', f'ID: {c["id"]}', f'Type: {kind}', f'Audience / at-risk group: {c["audience"]}', f'Subject: {c["subject"]}', f'Sources checked: {c["checked_at"]}', '', '## Lesson', c['lesson'], '', '## Source findings', c['source_summary'], '', '## Limits', c['limits'], '', '## Sources']
     lines += [f'- [{s["name"]}]({s["url"]}) — {s["role"]}' for s in c['sources']]
     lines += ['', 'Original editorial text: CC BY 4.0. Third-party captures, source texts, names and logos retain their own rights.']
@@ -191,12 +262,48 @@ def build():
     contribute(); info_pages()
     write('data/cases.json', json.dumps(CASES, indent=2, ensure_ascii=False) + '\n')
     write('.nojekyll', '')
-    routes = ['', 'contribute/', 'about/', 'ai-era/', 'privacy/'] + [f'cases/{c["slug"]}/' for c in CASES]
-    write('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{E(page_url(r))}</loc></url>' for r in routes) + '</urlset>\n')
+    # <lastmod> on every entry: the collection grows every few hours and a
+    # sitemap of bare <loc>s gives a crawler no reason to come back for the new
+    # cases, or to leave the unchanged ones alone.
+    newest = max(c['checked_at'] for c in CASES)
+    routes = [('', newest), ('contribute/', newest), ('about/', newest),
+              ('ai-era/', newest), ('privacy/', newest)]
+    routes += [(f'cases/{c["slug"]}/', c['checked_at']) for c in CASES]
+    write('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{E(page_url(r))}</loc><lastmod>{E(lastmod)}</lastmod></url>' for r, lastmod in routes) + '</urlset>\n')
     write('robots.txt', 'User-agent: *\n' + ('Allow: /\n' if CONFIG['indexable'] else 'Disallow: /\n') + 'Sitemap: ' + page_url('sitemap.xml') + '\n')
+    feed()
     write('404.html', frame('Page not found', '<div class="wrap error-page"><div class="eyebrow" style="justify-content:center">404 / No case here</div><h1>Let’s get you back<br>to the evidence.</h1><p>This page may have moved, or the link is incomplete.</p><a class="btn btn-dark" href="' + E(CONFIG['base_url']) + '">Explore the collection →</a></div>', prefix=CONFIG['base_url'], route='404.html'))
     source_archive()
     print(f'Built {len(routes)} pages and {len(CASES)} cases in {OUT}')
+
+
+def feed():
+    """RSS for the collection.
+
+    Cases land every few hours from the curator. A feed is how aggregators,
+    researchers and readers find out without re-checking the page, and it gives
+    crawlers a second, cheap path to new URLs."""
+    recent = sorted(CASES, key=lambda c: (c['checked_at'], c['id']), reverse=True)[:40]
+    items = ''.join(
+        '<item>'
+        f'<title>{E(seo_title(c))}</title>'
+        f'<link>{E(page_url("cases/" + c["slug"] + "/"))}</link>'
+        f'<guid isPermaLink="true">{E(page_url("cases/" + c["slug"] + "/"))}</guid>'
+        f'<description>{E(c["summary"])}</description>'
+        f'<category>{E(c["category"])}</category>'
+        f'<pubDate>{date.fromisoformat(c["checked_at"]).strftime("%a, %d %b %Y")} 00:00:00 +0000</pubDate>'
+        '</item>'
+        for c in recent
+    )
+    write('feed.xml',
+          '<?xml version="1.0" encoding="UTF-8"?>\n'
+          '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>'
+          f'<title>{E(CONFIG["name"])}</title>'
+          f'<link>{E(CONFIG["base_url"])}</link>'
+          f'<description>{E(CONFIG["description"])}</description>'
+          '<language>en</language>'
+          f'<atom:link href="{E(page_url("feed.xml"))}" rel="self" type="application/rss+xml"/>'
+          f'{items}</channel></rss>\n')
 
 
 if __name__ == '__main__':
