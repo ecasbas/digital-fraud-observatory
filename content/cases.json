@@ -966,5 +966,46 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-026",
+    "slug": "259041-crypto-com",
+    "title": "The coins are real. The platform is not verifiable.",
+    "short_title": "The crypto platform",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "259041-crypto.com",
+    "summary": "Desenmascara flagged 259041-crypto.com as fraudulent (82/100). The site presented itself as a crypto platform.",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "259041-crypto-com.png",
+    "image_source": "https://desenmascara.me/screens/b99fd09269902dd1.png",
+    "image_alt": "Archived capture of 259041-crypto.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "The source report records: domain registered 3 days ago."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 82/100 for 259041-crypto.com, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-20",
+    "checked_at": "2026-09-21",
+    "assessment": "Fraudulent · 82/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/096093b8-a614-44f1-9a91-3f5c73669d6a"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-09-17 through Dynadot Inc.",
+        "url": "https://lookup.icann.org/en/lookup?name=259041-crypto.com"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
   }
 ]
