@@ -1007,5 +1007,89 @@
       }
     ],
     "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-027",
+    "slug": "remitmargin-com",
+    "title": "A famous brand. A price too good to be true.",
+    "short_title": "The brand storefront",
+    "category": "Shopping",
+    "technique": "Deceptive storefront",
+    "kind": "capture",
+    "subject": "remitmargin.com",
+    "summary": "An archived look at remitmargin.com, an online shop assessed as fraudulent by Desenmascara (heuristic analysis, 100/100).",
+    "lesson": "Check who operates a shop before trusting its sale. A famous brand and a deep discount prove nothing about who takes your money.",
+    "image": "remitmargin-com.png",
+    "image_source": "https://desenmascara.me/screens/325f15a78901820a.png",
+    "image_alt": "Archived capture of remitmargin.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who operates this shop?",
+    "observations": [
+      "The source report records: hosted on an address where 169 of 204 domains we have analysed are flagged (83%).",
+      "The source report records: domain registered 14 days ago."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for remitmargin.com, based on heuristic analysis. Its analysis says: “What we found: Its server hosts 216 known fraudulent sites; Domain registered 14 days ago; Extreme discounts detected.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-22",
+    "checked_at": "2026-09-22",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · heuristic analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: heuristic analysis",
+        "url": "https://desenmascara.me/analisis/4d4b3a66-5b3c-48bd-aadb-7a709cd2fba9"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-09-08 through NAMECHEAP INC.",
+        "url": "https://lookup.icann.org/en/lookup?name=remitmargin.com"
+      }
+    ],
+    "audience": "Online shoppers"
+  },
+  {
+    "id": "SA-028",
+    "slug": "mt-bank-us",
+    "title": "Online banking from a bank nobody licensed.",
+    "short_title": "The card offer",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "mt-bank.us",
+    "summary": "mt-bank.us presented itself as a bank or financial service. Desenmascara rated it fraudulent (85/100) after AI-assisted analysis.",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "mt-bank-us.png",
+    "image_source": "https://desenmascara.me/screens/a2d6f549289fd65e.png",
+    "image_alt": "Archived capture of mt-bank.us, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: hosted on an address where 169 of 204 domains we have analysed are flagged (83%).",
+      "The source report records: domain registered 0 days ago."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 85/100 for mt-bank.us, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-22",
+    "checked_at": "2026-09-22",
+    "assessment": "Fraudulent · 85/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/8e17b220-9146-40d0-ad4e-f94d5c3817cd"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-09-22 through PDR Ltd. d/b/a PublicDomainRegistry.com.",
+        "url": "https://lookup.icann.org/en/lookup?name=mt-bank.us"
+      }
+    ],
+    "audience": "Bank customers and payment users"
   }
 ]
