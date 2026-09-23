@@ -1091,5 +1091,48 @@
       }
     ],
     "audience": "Bank customers and payment users"
+  },
+  {
+    "id": "SA-029",
+    "slug": "fx-alphapgims-online",
+    "title": "Cards and accounts, offered by no bank on record.",
+    "short_title": "The bank that isn't",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "fx-alphapgims.online",
+    "summary": "Captured on 2026-09-22: fx-alphapgims.online, a bank or financial service that Desenmascara's AI-assisted analysis rated fraudulent at 100/100.",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "fx-alphapgims-online.png",
+    "image_source": "https://desenmascara.me/screens/513b5f55627e5a06.png",
+    "image_alt": "Archived capture of fx-alphapgims.online, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 71 of 84 domains we have analysed are flagged (85%).",
+      "The source report records: domain registered 0 days ago."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for fx-alphapgims.online, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-22",
+    "checked_at": "2026-09-23",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/209d982e-cb27-44de-88f2-62bf2fd5b511"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-09-22 through NameSilo, LLC.",
+        "url": "https://lookup.icann.org/en/lookup?name=fx-alphapgims.online"
+      }
+    ],
+    "audience": "Bank customers and payment users"
   }
 ]
