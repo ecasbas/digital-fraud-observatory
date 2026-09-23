@@ -1134,5 +1134,46 @@
       }
     ],
     "audience": "Bank customers and payment users"
+  },
+  {
+    "id": "SA-030",
+    "slug": "flavoradeextractsshop-com",
+    "title": "A famous brand. A price too good to be true.",
+    "short_title": "The brand storefront",
+    "category": "Shopping",
+    "technique": "Deceptive storefront",
+    "kind": "capture",
+    "subject": "flavoradeextractsshop.com",
+    "summary": "Desenmascara flagged flavoradeextractsshop.com as fraudulent (96/100). The site presented itself as an online shop.",
+    "lesson": "Check who operates a shop before trusting its sale. A famous brand and a deep discount prove nothing about who takes your money.",
+    "image": "flavoradeextractsshop-com.png",
+    "image_source": "https://desenmascara.me/screens/ea8c5ee51835bbfa.png",
+    "image_alt": "Archived capture of flavoradeextractsshop.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who operates this shop?",
+    "observations": [
+      "The source report records: hosted on an address where 32 of 46 domains we have analysed are flagged (70%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 96/100 for flavoradeextractsshop.com, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-23",
+    "checked_at": "2026-09-23",
+    "assessment": "Fraudulent · 96/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/9a4711e4-97ab-4697-804c-3421f4834152"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-03-27 through ENOM, INC..",
+        "url": "https://lookup.icann.org/en/lookup?name=flavoradeextractsshop.com"
+      }
+    ],
+    "audience": "Online shoppers"
   }
 ]
