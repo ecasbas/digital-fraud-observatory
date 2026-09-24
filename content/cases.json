@@ -1175,5 +1175,90 @@
       }
     ],
     "audience": "Online shoppers"
+  },
+  {
+    "id": "SA-031",
+    "slug": "diamondevercrest-com",
+    "title": "Deep discounts from a shop with no known owner.",
+    "short_title": "The bargain store",
+    "category": "Shopping",
+    "technique": "Deceptive storefront",
+    "kind": "capture",
+    "subject": "diamondevercrest.com",
+    "summary": "An archived look at diamondevercrest.com, an online shop assessed as fraudulent by Desenmascara (AI-assisted analysis, 93/100).",
+    "lesson": "Check who operates a shop before trusting its sale. A famous brand and a deep discount prove nothing about who takes your money.",
+    "image": "diamondevercrest-com.png",
+    "image_source": "https://desenmascara.me/screens/64b0b0dd9ccdcfef.png",
+    "image_alt": "Archived capture of diamondevercrest.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who operates this shop?",
+    "observations": [
+      "The source report records: hosted on an address where 63 of 87 domains we have analysed are flagged (72%).",
+      "The source report records: domain registered today."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 93/100 for diamondevercrest.com, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-23",
+    "checked_at": "2026-09-24",
+    "assessment": "Fraudulent · 93/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/899edcb2-b9ba-4da0-af19-e462c29ddfe9"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-09-23 through Dynadot Inc.",
+        "url": "https://lookup.icann.org/en/lookup?name=diamondevercrest.com"
+      }
+    ],
+    "audience": "Online shoppers"
+  },
+  {
+    "id": "SA-032",
+    "slug": "elvarionbank-com",
+    "title": "Cards and accounts, offered by no bank on record.",
+    "short_title": "The bank that isn't",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "elvarionbank.com",
+    "summary": "elvarionbank.com presented itself as a bank or financial service. Desenmascara rated it fraudulent (82/100) after AI-assisted analysis.",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "elvarionbank-com.png",
+    "image_source": "https://desenmascara.me/screens/4189a5042dc3fe82.png",
+    "image_alt": "Archived capture of elvarionbank.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 172 of 210 domains we have analysed are flagged (82%).",
+      "The source report records: domain registered 2 days ago."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 82/100 for elvarionbank.com, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-24",
+    "checked_at": "2026-09-24",
+    "assessment": "Fraudulent · 82/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/af9db94c-b9e7-4a1b-a4d3-5312da36eee8"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-09-22 through Dynadot Inc.",
+        "url": "https://lookup.icann.org/en/lookup?name=elvarionbank.com"
+      }
+    ],
+    "audience": "Bank customers and payment users"
   }
 ]
