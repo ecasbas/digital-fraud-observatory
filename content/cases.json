@@ -1303,5 +1303,49 @@
       }
     ],
     "audience": "Online shoppers"
+  },
+  {
+    "id": "SA-034",
+    "slug": "yappeakcappaid-top",
+    "title": "Crypto earnings, on a site nobody stands behind.",
+    "short_title": "The wallet lure",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "yappeakcappaid.top",
+    "summary": "Desenmascara flagged yappeakcappaid.top as fraudulent (99/100). The site presented itself as a crypto platform.",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "yappeakcappaid-top.png",
+    "image_source": "https://desenmascara.me/screens/8e08b5bfbe37b4c6.png",
+    "image_alt": "Archived capture of yappeakcappaid.top, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "No verifiable legal identity or mandatory legal information.",
+      "The source report records: hosted on an address where 18 of 34 domains we have analysed are flagged (53%).",
+      "The source report records: domain registered 5 days ago.",
+      "The source report records: suspicious TLD (.top)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 99/100 for yappeakcappaid.top, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-25",
+    "checked_at": "2026-09-25",
+    "assessment": "Fraudulent · 99/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/f6a7cc29-90f5-471a-b447-ec5666d27194"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-09-20 through NameSilo, LLC.",
+        "url": "https://lookup.icann.org/en/lookup?name=yappeakcappaid.top"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
   }
 ]
