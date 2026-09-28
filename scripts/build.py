@@ -18,6 +18,16 @@ OUT = ROOT / 'dist'
 E = lambda value: escape(str(value), quote=True)
 
 
+KIND_LABELS = {
+    'capture': 'Actual website capture',
+    'reconstruction': 'Educational reconstruction',
+    'incident': 'Documented incident',
+    # Fraud that the available evidence makes possible but that nobody has
+    # reported yet: the observatory looking ahead, not only back.
+    'emerging': 'Emerging threat · not yet observed',
+}
+
+
 def validate():
     ids, slugs = set(), set()
     assert CONFIG['name'] and CONFIG['contact_email']
@@ -28,7 +38,7 @@ def validate():
         assert re.fullmatch(r'SA-\d{3}', c['id']) and c['id'] not in ids
         assert re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', c['slug']) and c['slug'] not in slugs
         ids.add(c['id']); slugs.add(c['slug'])
-        assert c['kind'] in ('capture', 'reconstruction', 'incident') and c['sources']
+        assert c['kind'] in KIND_LABELS and c['sources']
         assert c['audience']
         date.fromisoformat(c['checked_at'])
         if c['analysis_date']: date.fromisoformat(c['analysis_date'])
@@ -41,6 +51,10 @@ def validate():
             assert (ROOT / 'assets/captures' / c['image']).is_file(), c['image']
         elif c['kind'] == 'reconstruction':
             assert c['message'] and 'invented' in c['limits'].lower()
+        elif c['kind'] == 'emerging':
+            # An anticipated fraud must say, in its own limits, that nobody has
+            # seen it yet — or the page reads as a documented case.
+            assert c['message'] and 'no known case' in c['limits'].lower()
 
 
 def icon(name='arrow', size=17):
@@ -155,12 +169,13 @@ def frame(title, body, prefix='./', route='', active='', description=None,
 
 def card(c, prefix='./'):
     url = prefix + 'cases/' + c['slug'] + '/'
-    labels = {'capture': 'Actual website capture', 'reconstruction': 'Educational reconstruction', 'incident': 'Documented incident'}
-    label = labels[c['kind']]
+    label = KIND_LABELS[c['kind']]
     if c['kind'] == 'capture':
         image = f'<img class="case-image" src="{prefix}assets/captures/{E(c["image"])}" alt="{E(c["image_alt"])}" width="1366" height="768" loading="lazy" decoding="async">'
     elif c['kind'] == 'reconstruction':
         image = '<div class="message-thumb"><div class="mini-message"><span class="mini-label">SUPPOSED TASK SUPPORT</span>Your balance is <strong>€184.</strong><br>To withdraw, <mark>deposit €60 first.</mark></div></div>'
+    elif c['kind'] == 'emerging':
+        image = f'<div class="message-thumb"><div class="mini-message"><span class="mini-label">ANTICIPATED · NOT YET SEEN</span>{E(c["claim"])}<br><mark>{E(c["counterclaim"])}</mark></div></div>'
     else:
         image = f'<div class="incident-thumb"><div class="incident-node">REQUEST</div><div class="incident-line"></div><div class="incident-node incident-alert">VERIFY</div><div class="incident-line"></div><div class="incident-node">DISCLOSE</div><p>{E(c["claim"])} → {E(c["counterclaim"])}</p></div>'
     sources = ' + '.join(dict.fromkeys(s['short'] for s in c['sources']))
@@ -188,7 +203,7 @@ def home():
     filters = ''.join(f'<button class="filter" type="button" data-filter="{E(cat)}" aria-pressed="{str(cat == "All").lower()}">{E(cat)}</button>' for cat in ['All'] + list(dict.fromkeys(c['category'] for c in CASES)))
     body = f'''<section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><div class="eyebrow"><span class="dot"></span>An open library for the AI era</div><h1>Fraud looks<br>convincing.<br><em>Look closer.</em></h1><p>Familiar faces. Impressive companies. Official-looking badges. Explore real examples and learn what to check.</p><div class="hero-actions"><a class="btn" href="#library">Explore the cases {icon()}</a><a class="btn btn-ghost" href="contribute/">Share an example {icon()}</a></div><div class="hero-note">Open to everyone. Built from credited evidence.</div></div>{showcase}</div></section>
 <div class="source-strip"><div class="wrap source-row"><p class="source-label">Evidence in this collection comes from</p><div class="source-list">{source_list}</div><span class="source-caption">Cited sources. Not sponsors or endorsements.</span></div></div>
-<section class="section wrap" id="library"><div class="section-top"><div><div class="eyebrow">The open collection</div><h2>See the pattern.<br>Keep the lesson.</h2></div><p>Explore actual website captures, documented incidents and clearly labeled reconstructions. Every case links back to its evidence.</p></div><div class="library-toolbar"><div class="filters" role="group" aria-label="Filter by category">{filters}</div><label class="search-box">{icon('search',17)}<span class="sr-only">Search cases</span><input id="case-search" type="search" placeholder="Search cases, sources, patterns…" autocomplete="off"></label></div><div class="library-meta"><span id="result-count" role="status">{len(CASES)} cases in the collection</span><span>{sum(c['kind'] == 'capture' for c in CASES)} real captures · {sum(c['kind'] == 'reconstruction' for c in CASES)} reconstruction · {sum(c['kind'] == 'incident' for c in CASES)} incident</span></div><div class="case-grid" id="case-grid">{''.join(card(c) for c in CASES)}</div><div class="empty-state" id="no-results" hidden><h3>No cases match yet.</h3><p class="muted">Try another term, or help us document a new example.</p><button class="btn btn-outline" type="button" id="reset-search">Clear filters</button></div><noscript><p class="no-js-message">All cases are shown. Enable JavaScript to use search and filters.</p></noscript></section>
+<section class="section wrap" id="library"><div class="section-top"><div><div class="eyebrow">The open collection</div><h2>See the pattern.<br>Keep the lesson.</h2></div><p>Explore actual website captures, documented incidents and clearly labeled reconstructions. Every case links back to its evidence.</p></div><div class="library-toolbar"><div class="filters" role="group" aria-label="Filter by category">{filters}</div><label class="search-box">{icon('search',17)}<span class="sr-only">Search cases</span><input id="case-search" type="search" placeholder="Search cases, sources, patterns…" autocomplete="off"></label></div><div class="library-meta"><span id="result-count" role="status">{len(CASES)} cases in the collection</span><span>{sum(c['kind'] == 'capture' for c in CASES)} real captures · {sum(c['kind'] == 'reconstruction' for c in CASES)} reconstruction · {sum(c['kind'] == 'incident' for c in CASES)} incident · {sum(c['kind'] == 'emerging' for c in CASES)} emerging threat</span></div><div class="case-grid" id="case-grid">{''.join(card(c) for c in CASES)}</div><div class="empty-state" id="no-results" hidden><h3>No cases match yet.</h3><p class="muted">Try another term, or help us document a new example.</p><button class="btn btn-outline" type="button" id="reset-search">Clear filters</button></div><noscript><p class="no-js-message">All cases are shown. Enable JavaScript to use search and filters.</p></noscript></section>
 <section class="principles"><div class="wrap section"><div class="section-top"><div><div class="eyebrow">Built on evidence, open to correction</div><h2>Useful because<br>you can check it.</h2></div><p>AI can change the voice, the face and the message. The need for evidence stays the same.</p></div><div class="principle-grid"><div><div class="principle-icon">{icon('evidence',22)}</div><h3>Show the source.</h3><p>Follow the original report. See what was captured, what a source concluded and what remains uncertain.</p></div><div><div class="principle-icon">{icon('people',22)}</div><h3>Make room for everyone.</h3><p>Researchers, security vendors, educators and everyday people can contribute. Credit stays with the source.</p></div><div><div class="principle-icon">{icon('refresh',22)}</div><h3>Keep learning.</h3><p>Improve an explanation, add evidence or challenge a claim. AI involvement is stated only when the evidence supports it.</p></div></div><p style="margin-top:30px"><a href="ai-era/" class="text-button">What changes in the AI era {icon(size=15)}</a></p></div></section>
 <section class="section wrap"><div class="contribute-callout"><div><div class="eyebrow"><span class="dot"></span>A small contribution. A shared defense.</div><h2>You found a pattern.<br>Help someone else see it.</h2><p>A public report and a few words are enough to start. No code, technical format or screenshot required.</p></div><div><div class="contribution-steps"><div class="contribution-step"><span class="step-num">01</span><div class="step-copy"><strong>Link to a public report.</strong><span>Any credible source. Any vendor.</span></div></div><div class="contribution-step"><span class="step-num">02</span><div class="step-copy"><strong>Explain the lesson.</strong><span>What should someone notice or verify?</span></div></div><div class="contribution-step"><span class="step-num">03</span><div class="step-copy"><strong>Send it for review.</strong><span>We check the evidence before adding a case.</span></div></div></div><a class="btn" href="contribute/">Contribute an example {icon()}</a></div></div></section>'''
     write('index.html', frame('Real examples. Learn to spot online fraud.', body, active='library'))
@@ -196,7 +211,7 @@ def home():
 
 def case_page(c):
     prefix = '../../'
-    kind = {'capture': 'Actual website capture', 'reconstruction': 'Educational reconstruction', 'incident': 'Documented incident'}[c['kind']]
+    kind = KIND_LABELS[c['kind']]
     # The domain is what a worried reader types into a search box, so it has to
     # be on the page in text, not only in the provenance rail further down.
     domain = subject_domain(c)
@@ -206,6 +221,8 @@ def case_page(c):
         figure = f'''<figure class="evidence-figure"><div class="evidence-frame"><button type="button" data-zoom aria-label="Enlarge the archived screenshot"><img src="{prefix}assets/captures/{E(c['image'])}" alt="{E(c['image_alt'])}" width="1366" height="768" fetchpriority="high"></button></div><figcaption class="figure-caption"><span>Unaltered historical capture. Website claims belong to the captured page.</span><a href="{prefix}assets/captures/{E(c['image'])}" target="_blank" rel="noopener">Full image {icon('external',12)}</a></figcaption></figure><dialog id="capture-dialog" aria-label="Archived website screenshot"><div class="dialog-top"><span>Original capture · {E(c['id'])}</span><button type="button" data-close-dialog>Close ✕</button></div><img class="zoom-image" src="{prefix}assets/captures/{E(c['image'])}" alt="{E(c['image_alt'])}" width="1366" height="768" loading="lazy"></dialog>'''
     elif c['kind'] == 'reconstruction':
         figure = f'''<figure class="evidence-figure"><div class="message-full"><div class="small">FICTIONAL RECONSTRUCTION / SUPPOSED TASK SUPPORT</div><blockquote>{E(c['message'])}</blockquote></div><figcaption class="figure-caption">Illustrative wording and amounts. No actual person or business is depicted.</figcaption></figure>'''
+    elif c['kind'] == 'emerging':
+        figure = f'''<figure class="evidence-figure"><div class="message-full"><div class="small">EMERGING THREAT / ANTICIPATED MESSAGE — NOT OBSERVED IN THE WILD</div><blockquote>{E(c['message'])}</blockquote></div><figcaption class="figure-caption">Written by the observatory to show what this fraud could look like. It is not a real message, and no such attack has been reported yet.</figcaption></figure>'''
     else:
         figure = f'''<figure class="evidence-figure"><div class="incident-full"><div class="incident-heading"><div class="eyebrow">Incident pathway</div><h2>How a trusted request can become a data disclosure</h2><p>Each step can look routine. The control point is independent verification before sensitive records are released.</p></div><div class="incident-steps"><div class="incident-step"><span>1</span><div><small>REQUEST</small><strong>Official-looking request</strong><p>The request appears to come through a legitimate government channel.</p></div></div><div class="incident-step incident-warning"><span>2</span><div><small>VERIFY</small><strong>Verify the requester</strong><p>Confirm identity, legal authority and scope through an independent route.</p></div></div><div class="incident-step"><span>3</span><div><small>DISCLOSE</small><strong>Disclosure risk</strong><p>Sensitive customer records can leave through a normal compliance process.</p></div></div></div></div><figcaption class="figure-caption">Documented public incident. No live system or private customer record is embedded here.</figcaption></figure>'''
     observed = ''.join(f'<li>{E(t)}</li>' for t in c['observations'])

@@ -1,5 +1,41 @@
 [
   {
+    "id": "SA-037",
+    "slug": "phishing-that-knows-your-trip",
+    "title": "It knows the train you took. That is what makes it dangerous.",
+    "short_title": "The phishing that knows your trip",
+    "category": "Transport",
+    "technique": "Breach-fed personalisation",
+    "kind": "emerging",
+    "subject": "Renfe and Adif data breach, 2026",
+    "summary": "A leak that links passengers to real journeys could let fraudsters write refund or booking messages that mention trips you actually made. No such attack has been reported yet.",
+    "lesson": "A message that knows real details of your life is not proof that it is genuine. Leaked data can supply those details. Check any refund or booking incident by opening the operator's app or website yourself, never through the link or number in the message.",
+    "message": "Hello [your name], we are contacting you about your journey Madrid – Valencia on 14 September, seat 7C. Due to the service incident on that route you are entitled to a €38.40 refund. To receive it, confirm your details and your card within 24 hours: [link]",
+    "claim": "Your 14 September trip: €38.40 refund",
+    "counterclaim": "Real trip details, from leaked data",
+    "observations": [
+      "The attacker opens with facts the victim recognises: their name, a real route and date, perhaps a seat.",
+      "The pretext fits the travel: a refund for a disrupted journey, or an incident with a booking.",
+      "Familiar details lower suspicion, so the request for card or identity data at the end feels routine.",
+      "Unlike generic phishing, each message can be different and personal, which makes it harder to recognise as a campaign."
+    ],
+    "source_summary": "Xataka, drawing on an El Mundo analysis confirmed by Adif, reports that a cyberattack on Adif reached interconnected Renfe systems and exposed about 500 GB and over 150 million records: identity data (names, national ID numbers, phone numbers, emails, dates of birth, postal addresses) and about 100 million nominative ticket records that can be cross-referenced to reconstruct passengers' travel. The article itself warns that an attacker could use this to write credible messages about a supposed ticket refund or a booking incident. It states that bank and payment data were not compromised.",
+    "limits": "This is an anticipated scenario, not a documented case: there is no known case of this fraud yet. The message is invented by the observatory for illustration; its route, date, seat and amount are fictional, and it does not reproduce any real message or any real person's data. The breach figures are those reported by the cited source and are not independently verified here. Nothing here suggests that Renfe or Adif send such messages.",
+    "analysis_date": null,
+    "checked_at": "2026-09-28",
+    "assessment": "Emerging threat · possible, not yet observed",
+    "assessment_source": "Digital Fraud Observatory, from Xataka reporting",
+    "sources": [
+      {
+        "name": "Xataka",
+        "short": "Xataka",
+        "role": "Reporting on the scope of the Renfe and Adif breach and its phishing risk · 28 September 2026",
+        "url": "https://www.xataka.com/seguridad/creiamos-que-hackeo-renfe-habia-expuesto-correos-nombres-eso-solo-era-punta-iceberg"
+      }
+    ],
+    "audience": "Rail passengers in Spain, and anyone whose travel records have leaked"
+  },
+  {
     "id": "SA-004",
     "slug": "insurance-clone",
     "title": "A regulatory badge. A very different reality.",
