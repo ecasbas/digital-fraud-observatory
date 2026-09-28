@@ -35,7 +35,8 @@ for path in DIST.rglob('*.html'):
     if path.name == 'social-card.html': continue
     assert page.title and page.description and page.canonical, path
     pages[path.resolve()] = page
-expected_pages = 6 + len(json.loads((ROOT/'content/cases.json').read_text()))
+_cases = json.loads((ROOT/'content/cases.json').read_text())
+expected_pages = 6 + len(_cases) + sum(1 for c in _cases if c.get('es'))
 assert len(pages) == expected_pages, f'Expected {expected_pages} pages, got {len(pages)}'
 homepage = pages[(DIST/'index.html').resolve()]
 base = homepage.canonical

@@ -28,6 +28,43 @@ KIND_LABELS = {
 }
 
 
+KIND_LABELS_ES = {
+    'capture': 'Captura real de la web',
+    'reconstruction': 'Reconstrucción educativa',
+    'incident': 'Incidente documentado',
+    'emerging': 'Amenaza emergente · aún no observada',
+}
+
+# Fixed page text for a case page. A case is published in Spanish too when it
+# carries an `es` block with its own translated fields.
+UI = {
+    'en': {
+        'collection': 'Collection', 'follow': 'Follow the evidence.', 'read_source': 'Read original source',
+        'assessment': 'Source assessment', 'analysis_date': 'Analysis date', 'checked': 'Sources last checked',
+        'audience': 'Audience / at-risk group', 'subject': 'Subject', 'improve': 'Improve this case',
+        'download': 'Download case', 'source_note': 'Source assessments stay attributed. Scores from different providers are not directly comparable.',
+        'presents': 'What the example presents', 'examine': 'What to examine', 'notice': 'What you can notice',
+        'takeaway': 'The takeaway', 'reports': 'What the source reports', 'cannot': 'What this evidence cannot tell us',
+        'copy': 'Copy case link', 'correction': 'Suggest a correction', 'explore': 'Keep exploring',
+        'related': 'Different tactics. Useful lessons.', 'provenance': 'Evidence and provenance',
+        'other_lang': 'Leer en español', 'emerging_head': 'EMERGING THREAT / ANTICIPATED MESSAGE — NOT OBSERVED IN THE WILD',
+        'emerging_caption': 'Written by the observatory to show what this fraud could look like. It is not a real message, and no such attack has been reported yet.',
+    },
+    'es': {
+        'collection': 'Colección', 'follow': 'Sigue la evidencia.', 'read_source': 'Leer la fuente original',
+        'assessment': 'Evaluación de la fuente', 'analysis_date': 'Fecha del análisis', 'checked': 'Fuentes revisadas por última vez',
+        'audience': 'Público / grupo en riesgo', 'subject': 'Asunto', 'improve': 'Mejorar este caso',
+        'download': 'Descargar el caso', 'source_note': 'Las evaluaciones se atribuyen a su fuente. Las puntuaciones de proveedores distintos no son directamente comparables.',
+        'presents': 'Lo que presenta el ejemplo', 'examine': 'Lo que hay que examinar', 'notice': 'En qué puedes fijarte',
+        'takeaway': 'La lección', 'reports': 'Lo que dice la fuente', 'cannot': 'Lo que esta evidencia no puede decirnos',
+        'copy': 'Copiar el enlace del caso', 'correction': 'Proponer una corrección', 'explore': 'Sigue explorando',
+        'related': 'Tácticas distintas. Lecciones útiles.', 'provenance': 'Evidencia y procedencia',
+        'other_lang': 'Read in English', 'emerging_head': 'AMENAZA EMERGENTE / MENSAJE ANTICIPADO — NO OBSERVADO EN LA REALIDAD',
+        'emerging_caption': 'Escrito por el observatorio para mostrar cómo podría ser este fraude. No es un mensaje real y aún no se ha denunciado ningún ataque así.',
+    },
+}
+
+
 def labels(c):
     """Filter labels of a case: its category, plus 'Emerging' for an
     anticipated threat. Derived from `kind`, never stored, so the two cannot
@@ -78,8 +115,14 @@ def icon(name='arrow', size=17):
     return f'<svg width="{size}" height="{size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{paths[name]}</svg>'
 
 
-def fmt(value):
-    return date.fromisoformat(value).strftime('%d %b %Y').lstrip('0')
+_MONTHS_ES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sept', 'oct', 'nov', 'dic']
+
+
+def fmt(value, lang='en'):
+    d = date.fromisoformat(value)
+    if lang == 'es':
+        return f'{d.day} {_MONTHS_ES[d.month - 1]} {d.year}'
+    return d.strftime('%d %b %Y').lstrip('0')
 
 
 def page_url(route=''):
@@ -152,7 +195,7 @@ def write(path, text):
 
 
 def frame(title, body, prefix='./', route='', active='', description=None,
-          schema=None, og_type='website', image=None):
+          schema=None, og_type='website', image=None, lang='en', alternates=None):
     desc = description or CONFIG['description']
     canonical = page_url(route)
     brand = '<span class="brand-name">Digital Fraud<span>Observatory</span></span>' if CONFIG['name'] == 'Digital Fraud Observatory' else E(CONFIG['name'])
@@ -165,8 +208,8 @@ def frame(title, body, prefix='./', route='', active='', description=None,
     schema_text = json.dumps(schema).replace('<', '\\u003c')
     og_image = image or page_url('assets/social-card.png')
     return f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="theme-color" content="#102528"><meta name="referrer" content="strict-origin-when-cross-origin">
-<title>{E(title)} · {E(CONFIG['name'])}</title><meta name="description" content="{E(desc)}"><meta name="robots" content="{'index,follow' if CONFIG['indexable'] else 'noindex,follow'}"><link rel="canonical" href="{E(canonical)}">
+<html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="theme-color" content="#102528"><meta name="referrer" content="strict-origin-when-cross-origin">
+<title>{E(title)} · {E(CONFIG['name'])}</title><meta name="description" content="{E(desc)}"><meta name="robots" content="{'index,follow' if CONFIG['indexable'] else 'noindex,follow'}"><link rel="canonical" href="{E(canonical)}">{''.join(f'<link rel="alternate" hreflang="{l}" href="{E(page_url(r))}">' for l, r in (alternates or {}).items())}
 <meta property="og:type" content="{E(og_type)}"><meta property="og:title" content="{E(title)} · {E(CONFIG['name'])}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{E(canonical)}"><meta property="og:image" content="{E(og_image)}"><meta property="og:site_name" content="{E(CONFIG['name'])}"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{prefix}assets/favicon.svg" type="image/svg+xml"><link rel="alternate" type="application/rss+xml" title="{E(CONFIG['name'])}" href="{prefix}feed.xml"><link rel="stylesheet" href="{prefix}assets/site.css?v=3"><script defer src="{prefix}assets/site.js?v=4"></script><script type="application/ld+json">{schema_text}</script></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="wrap header-inner"><a class="wordmark" href="{prefix}" aria-label="{E(CONFIG['name'])} home"><img src="{prefix}assets/favicon.svg" width="35" height="35" alt="">{brand}</a><nav class="desktop-nav" aria-label="Main">{nav_html}</nav><a class="btn header-action" href="{prefix}contribute/">Contribute {icon(size=15)}</a><button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">{icon('menu',20)}</button></div><nav class="wrap mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>{nav_html}<a href="{prefix}contribute/">Contribute an example</a></nav></header>
@@ -216,34 +259,44 @@ def home():
     write('index.html', frame('Real examples. Learn to spot online fraud.', body, active='library'))
 
 
-def case_page(c):
-    prefix = '../../'
-    kind = KIND_LABELS[c['kind']]
+def case_page(c, lang='en'):
+    t = UI[lang]
+    en_route = f'cases/{c["slug"]}/'
+    es_route = en_route + 'es/'
+    alternates = {'en': en_route, 'es': es_route} if c.get('es') else None
+    if lang == 'es':
+        c = {**c, **c['es']}
+    prefix = '../../' if lang == 'en' else '../../../'
+    kind = (KIND_LABELS if lang == 'en' else KIND_LABELS_ES)[c['kind']]
+    lang_link = f'<a class="tag" href="{"es/" if lang == "en" else "../"}" hreflang="{"es" if lang == "en" else "en"}">{t["other_lang"]}</a>' if alternates else ''
     # The domain is what a worried reader types into a search box, so it has to
     # be on the page in text, not only in the provenance rail further down.
     domain = subject_domain(c)
     subject_tag = f'<span class="tag tag-subject">{E(domain)}</span>' if domain else ''
-    lead = f'''<div class="wrap page-header"><div class="breadcrumb"><a href="{prefix}#library">Collection</a><span>/</span><span>{E(c['category'])}</span><span>/</span><span>{E(c['id'])}</span></div><div class="tags">{subject_tag}<span class="tag">{E(c['technique'])}</span><span class="tag">{kind}</span></div><h1>{E(c['title'])}</h1><p class="lede">{E(c['summary'])}</p></div>'''
+    lead = f'''<div class="wrap page-header"><div class="breadcrumb"><a href="{prefix}#library">{t['collection']}</a><span>/</span><span>{E(c['category'])}</span><span>/</span><span>{E(c['id'])}</span></div><div class="tags">{subject_tag}<span class="tag">{E(c['technique'])}</span><span class="tag">{kind}</span>{lang_link}</div><h1>{E(c['title'])}</h1><p class="lede">{E(c['summary'])}</p></div>'''
     if c['kind'] == 'capture':
         figure = f'''<figure class="evidence-figure"><div class="evidence-frame"><button type="button" data-zoom aria-label="Enlarge the archived screenshot"><img src="{prefix}assets/captures/{E(c['image'])}" alt="{E(c['image_alt'])}" width="1366" height="768" fetchpriority="high"></button></div><figcaption class="figure-caption"><span>Unaltered historical capture. Website claims belong to the captured page.</span><a href="{prefix}assets/captures/{E(c['image'])}" target="_blank" rel="noopener">Full image {icon('external',12)}</a></figcaption></figure><dialog id="capture-dialog" aria-label="Archived website screenshot"><div class="dialog-top"><span>Original capture · {E(c['id'])}</span><button type="button" data-close-dialog>Close ✕</button></div><img class="zoom-image" src="{prefix}assets/captures/{E(c['image'])}" alt="{E(c['image_alt'])}" width="1366" height="768" loading="lazy"></dialog>'''
     elif c['kind'] == 'reconstruction':
         figure = f'''<figure class="evidence-figure"><div class="message-full"><div class="small">FICTIONAL RECONSTRUCTION / SUPPOSED TASK SUPPORT</div><blockquote>{E(c['message'])}</blockquote></div><figcaption class="figure-caption">Illustrative wording and amounts. No actual person or business is depicted.</figcaption></figure>'''
     elif c['kind'] == 'emerging':
-        figure = f'''<figure class="evidence-figure"><div class="message-full"><div class="small">EMERGING THREAT / ANTICIPATED MESSAGE — NOT OBSERVED IN THE WILD</div><blockquote>{E(c['message'])}</blockquote></div><figcaption class="figure-caption">Written by the observatory to show what this fraud could look like. It is not a real message, and no such attack has been reported yet.</figcaption></figure>'''
+        figure = f'''<figure class="evidence-figure"><div class="message-full"><div class="small">{t['emerging_head']}</div><blockquote>{E(c['message'])}</blockquote></div><figcaption class="figure-caption">{t['emerging_caption']}</figcaption></figure>'''
     else:
         figure = f'''<figure class="evidence-figure"><div class="incident-full"><div class="incident-heading"><div class="eyebrow">Incident pathway</div><h2>How a trusted request can become a data disclosure</h2><p>Each step can look routine. The control point is independent verification before sensitive records are released.</p></div><div class="incident-steps"><div class="incident-step"><span>1</span><div><small>REQUEST</small><strong>Official-looking request</strong><p>The request appears to come through a legitimate government channel.</p></div></div><div class="incident-step incident-warning"><span>2</span><div><small>VERIFY</small><strong>Verify the requester</strong><p>Confirm identity, legal authority and scope through an independent route.</p></div></div><div class="incident-step"><span>3</span><div><small>DISCLOSE</small><strong>Disclosure risk</strong><p>Sensitive customer records can leave through a normal compliance process.</p></div></div></div></div><figcaption class="figure-caption">Documented public incident. No live system or private customer record is embedded here.</figcaption></figure>'''
     observed = ''.join(f'<li>{E(t)}</li>' for t in c['observations'])
-    sources = ''.join(f'''<div class="source-item"><strong>{E(s['name'])}</strong><p>{E(s['role'])}</p><a href="{E(s['url'])}" target="_blank" rel="noopener">Read original source {icon('external',13)}</a></div>''' for s in c['sources'])
-    source_dates = f'<div><dt>Analysis date</dt><dd>{fmt(c["analysis_date"])}</dd></div>' if c['analysis_date'] else ''
-    rail = f'''<aside class="source-panel" aria-label="Evidence and provenance"><h2>Follow the evidence.</h2>{sources}<dl class="record-info"><div><dt>Source assessment</dt><dd>{E(c['assessment'])}</dd><dd class="small muted">{E(c['assessment_source'])}</dd></div>{source_dates}<div><dt>Sources last checked</dt><dd>{fmt(c['checked_at'])}</dd></div><div><dt>Audience / at-risk group</dt><dd>{E(c['audience'])}</dd></div><div><dt>Subject</dt><dd>{E(c['subject'])}</dd></div></dl><a class="btn btn-dark" href="{prefix}contribute/?case={c['id']}">Improve this case {icon(size=14)}</a><a class="btn btn-outline" href="{prefix}downloads/{c['slug']}.md" download>Download case</a><p class="source-note">Source assessments stay attributed. Scores from different providers are not directly comparable.</p></aside>'''
+    sources = ''.join(f'''<div class="source-item"><strong>{E(s['name'])}</strong><p>{E(s['role'])}</p><a href="{E(s['url'])}" target="_blank" rel="noopener">{t['read_source']} {icon('external',13)}</a></div>''' for s in c['sources'])
+    source_dates = f'<div><dt>{t["analysis_date"]}</dt><dd>{fmt(c["analysis_date"], lang)}</dd></div>' if c['analysis_date'] else ''
+    rail = f'''<aside class="source-panel" aria-label="{t['provenance']}"><h2>{t['follow']}</h2>{sources}<dl class="record-info"><div><dt>{t['assessment']}</dt><dd>{E(c['assessment'])}</dd><dd class="small muted">{E(c['assessment_source'])}</dd></div>{source_dates}<div><dt>{t['checked']}</dt><dd>{fmt(c['checked_at'], lang)}</dd></div><div><dt>{t['audience']}</dt><dd>{E(c['audience'])}</dd></div><div><dt>{t['subject']}</dt><dd>{E(c['subject'])}</dd></div></dl><a class="btn btn-dark" href="{prefix}contribute/?case={c['id']}">{t['improve']} {icon(size=14)}</a><a class="btn btn-outline" href="{prefix}downloads/{c['slug']}.md" download>{t['download']}</a><p class="source-note">{t['source_note']}</p></aside>'''
     related = ''.join(card(other,prefix) for other in [x for x in CASES if x != c][:2])
-    body = lead + f'''<div class="wrap detail-layout"><div>{figure}<div class="claim-comparison"><div><div class="eyebrow">What the example presents</div><strong>{E(c['claim'])}</strong></div><div><div class="eyebrow">What to examine</div><strong>{E(c['counterclaim'])}</strong></div></div><section class="editorial-section"><h2>Audience / at-risk group</h2><p>{E(c['audience'])}</p></section><section class="editorial-section"><h2>What you can notice</h2><ul>{observed}</ul></section><div class="takeaway"><h2>The takeaway</h2><p>{E(c['lesson'])}</p></div><section class="editorial-section"><h2>What the source reports</h2><p>{E(c['source_summary'])}</p></section><section class="editorial-section"><h2>What this evidence cannot tell us</h2><p>{E(c['limits'])}</p></section><div class="detail-actions"><button class="text-button" type="button" data-share>{icon('copy',15)} Copy case link</button><a class="text-button" href="{prefix}contribute/?case={c['id']}">Suggest a correction</a></div><p class="status" id="share-status" role="status"></p></div>{rail}</div><section class="wrap related"><div class="eyebrow" style="margin-bottom:12px">Keep exploring</div><h2>Different tactics. Useful lessons.</h2><div class="case-grid">{related}</div></section>'''
-    route = f'cases/{c["slug"]}/'
-    write(f'cases/{c["slug"]}/index.html', frame(
-        seo_title(c), body, prefix, route, description=c['summary'],
+    body = lead + f'''<div class="wrap detail-layout"><div>{figure}<div class="claim-comparison"><div><div class="eyebrow">{t['presents']}</div><strong>{E(c['claim'])}</strong></div><div><div class="eyebrow">{t['examine']}</div><strong>{E(c['counterclaim'])}</strong></div></div><section class="editorial-section"><h2>{t['audience']}</h2><p>{E(c['audience'])}</p></section><section class="editorial-section"><h2>{t['notice']}</h2><ul>{observed}</ul></section><div class="takeaway"><h2>{t['takeaway']}</h2><p>{E(c['lesson'])}</p></div><section class="editorial-section"><h2>{t['reports']}</h2><p>{E(c['source_summary'])}</p></section><section class="editorial-section"><h2>{t['cannot']}</h2><p>{E(c['limits'])}</p></section><div class="detail-actions"><button class="text-button" type="button" data-share>{icon('copy',15)} {t['copy']}</button><a class="text-button" href="{prefix}contribute/?case={c['id']}">{t['correction']}</a></div><p class="status" id="share-status" role="status"></p></div>{rail}</div><section class="wrap related"><div class="eyebrow" style="margin-bottom:12px">{t['explore']}</div><h2>{t['related']}</h2><div class="case-grid">{related}</div></section>'''
+    route = en_route if lang == 'en' else es_route
+    write(route + 'index.html', frame(
+        seo_title(c) if lang == 'en' else c['title'], body, prefix, route, description=c['summary'],
         schema=case_schema(c, page_url(route)), og_type='article',
         image=page_url('assets/captures/' + c['image']) if c['kind'] == 'capture' else None,
+        lang=lang, alternates=alternates,
     ))
+    if lang == 'es':
+        return
     lines = [f'# {c["title"]}', '', f'ID: {c["id"]}', f'Type: {kind}', f'Audience / at-risk group: {c["audience"]}', f'Subject: {c["subject"]}', f'Sources checked: {c["checked_at"]}', '', '## Lesson', c['lesson'], '', '## Source findings', c['source_summary'], '', '## Limits', c['limits'], '', '## Sources']
     lines += [f'- [{s["name"]}]({s["url"]}) — {s["role"]}' for s in c['sources']]
     lines += ['', 'Original editorial text: CC BY 4.0. Third-party captures, source texts, names and logos retain their own rights.']
@@ -282,7 +335,9 @@ def build():
     OUT.mkdir(exist_ok=True)
     shutil.copytree(ROOT / 'assets', OUT / 'assets', dirs_exist_ok=True)
     home()
-    for c in CASES: case_page(c)
+    for c in CASES:
+        case_page(c)
+        if c.get('es'): case_page(c, 'es')
     contribute(); info_pages()
     write('data/cases.json', json.dumps(CASES, indent=2, ensure_ascii=False) + '\n')
     write('.nojekyll', '')
@@ -293,6 +348,7 @@ def build():
     routes = [('', newest), ('contribute/', newest), ('about/', newest),
               ('ai-era/', newest), ('privacy/', newest)]
     routes += [(f'cases/{c["slug"]}/', c['checked_at']) for c in CASES]
+    routes += [(f'cases/{c["slug"]}/es/', c['checked_at']) for c in CASES if c.get('es')]
     write('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{E(page_url(r))}</loc><lastmod>{E(lastmod)}</lastmod></url>' for r, lastmod in routes) + '</urlset>\n')
     write('robots.txt', 'User-agent: *\n' + ('Allow: /\n' if CONFIG['indexable'] else 'Disallow: /\n') + 'Sitemap: ' + page_url('sitemap.xml') + '\n')
     feed()

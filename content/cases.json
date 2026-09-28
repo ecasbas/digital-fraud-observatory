@@ -33,7 +33,38 @@
         "url": "https://www.xataka.com/seguridad/creiamos-que-hackeo-renfe-habia-expuesto-correos-nombres-eso-solo-era-punta-iceberg"
       }
     ],
-    "audience": "Rail passengers in Spain, and anyone whose travel records have leaked"
+    "audience": "Rail passengers in Spain, and anyone whose travel records have leaked",
+    "es": {
+      "title": "Sabe qué tren cogiste. Eso es lo que lo hace peligroso.",
+      "short_title": "El phishing que conoce tu viaje",
+      "category": "Transporte",
+      "technique": "Personalización con datos filtrados",
+      "subject": "Filtración de datos de Renfe y Adif, 2026",
+      "summary": "Una filtración que vincula a los pasajeros con viajes reales permitiría a los estafadores escribir mensajes sobre devoluciones o reservas que mencionan trayectos que de verdad hiciste. De momento no hay constancia de ningún ataque así.",
+      "lesson": "Que un mensaje conozca detalles reales de tu vida no demuestra que sea auténtico: los datos filtrados pueden aportar esos detalles. Comprueba cualquier devolución o incidencia con una reserva entrando tú mismo en la app o la web del operador, nunca a través del enlace o el teléfono del mensaje.",
+      "message": "Hola [tu nombre], te escribimos por tu viaje Madrid – Valencia del 14 de septiembre, plaza 7C. Por la incidencia en el servicio de esa ruta tienes derecho a un reembolso de 38,40 €. Para recibirlo, confirma tus datos y tu tarjeta en las próximas 24 horas: [enlace]",
+      "claim": "Tu viaje del 14 de septiembre: reembolso de 38,40 €",
+      "counterclaim": "Datos reales del viaje, sacados de una filtración",
+      "observations": [
+        "El atacante empieza con datos que la víctima reconoce: su nombre, una ruta y una fecha reales, quizá hasta la plaza.",
+        "El pretexto encaja con el viaje: el reembolso de un trayecto con incidencias, o un problema con una reserva.",
+        "Los detalles conocidos bajan la guardia, y la petición final de la tarjeta o de datos personales parece un trámite.",
+        "A diferencia del phishing genérico, cada mensaje puede ser distinto y personal, lo que hace más difícil reconocerlo como una campaña."
+      ],
+      "source_summary": "Xataka, a partir de un análisis de El Mundo confirmado por Adif, informa de que un ciberataque contra Adif alcanzó sistemas interconectados de Renfe y expuso unos 500 GB y más de 150 millones de registros: datos de identidad (nombres, DNI, teléfonos, correos electrónicos, fechas de nacimiento, direcciones postales) y unos 100 millones de registros de billetes nominativos que pueden cruzarse para reconstruir los viajes de los pasajeros. El propio artículo advierte de que un atacante podría usarlo para escribir mensajes creíbles sobre una supuesta devolución de un billete o una incidencia con una reserva. Según el artículo, los datos bancarios y de pago no se vieron comprometidos.",
+      "limits": "Es un escenario anticipado, no un caso documentado: todavía no hay constancia de este fraude. El mensaje lo ha escrito el observatorio como ilustración; la ruta, la fecha, la plaza y el importe son ficticios, y no reproduce ningún mensaje real ni datos de ninguna persona real. Las cifras de la filtración son las que publica la fuente citada y no se han verificado de forma independiente aquí. Nada de lo que aquí se dice indica que Renfe o Adif envíen mensajes así.",
+      "assessment": "Amenaza emergente · posible, aún no observada",
+      "assessment_source": "Digital Fraud Observatory, a partir de lo publicado por Xataka",
+      "audience": "Viajeros de tren en España y cualquier persona cuyos datos de viaje se hayan filtrado",
+      "sources": [
+        {
+          "name": "Xataka",
+          "short": "Xataka",
+          "role": "Información sobre el alcance de la filtración de Renfe y Adif y su riesgo de phishing · 28 de septiembre de 2026",
+          "url": "https://www.xataka.com/seguridad/creiamos-que-hackeo-renfe-habia-expuesto-correos-nombres-eso-solo-era-punta-iceberg"
+        }
+      ]
+    }
   },
   {
     "id": "SA-004",
