@@ -28,6 +28,13 @@ KIND_LABELS = {
 }
 
 
+def labels(c):
+    """Filter labels of a case: its category, plus 'Emerging' for an
+    anticipated threat. Derived from `kind`, never stored, so the two cannot
+    disagree."""
+    return (['Emerging'] if c['kind'] == 'emerging' else []) + [c['category']]
+
+
 def validate():
     ids, slugs = set(), set()
     assert CONFIG['name'] and CONFIG['contact_email']
@@ -127,7 +134,7 @@ def case_schema(c, canonical):
             'logo': {'@type': 'ImageObject', 'url': page_url('assets/favicon.svg')},
         },
         'about': {'@type': 'Thing', 'name': c['subject']},
-        'keywords': ', '.join([c['category'], c['technique'], c['audience']]),
+        'keywords': ', '.join(labels(c) + [c['technique'], c['audience']]),
         'citation': [
             {'@type': 'CreativeWork', 'name': s['name'], 'url': s['url']}
             for s in c['sources']
@@ -161,7 +168,7 @@ def frame(title, body, prefix='./', route='', active='', description=None,
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="theme-color" content="#102528"><meta name="referrer" content="strict-origin-when-cross-origin">
 <title>{E(title)} · {E(CONFIG['name'])}</title><meta name="description" content="{E(desc)}"><meta name="robots" content="{'index,follow' if CONFIG['indexable'] else 'noindex,follow'}"><link rel="canonical" href="{E(canonical)}">
 <meta property="og:type" content="{E(og_type)}"><meta property="og:title" content="{E(title)} · {E(CONFIG['name'])}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{E(canonical)}"><meta property="og:image" content="{E(og_image)}"><meta property="og:site_name" content="{E(CONFIG['name'])}"><meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="{prefix}assets/favicon.svg" type="image/svg+xml"><link rel="alternate" type="application/rss+xml" title="{E(CONFIG['name'])}" href="{prefix}feed.xml"><link rel="stylesheet" href="{prefix}assets/site.css?v=3"><script defer src="{prefix}assets/site.js?v=3"></script><script type="application/ld+json">{schema_text}</script></head>
+<link rel="icon" href="{prefix}assets/favicon.svg" type="image/svg+xml"><link rel="alternate" type="application/rss+xml" title="{E(CONFIG['name'])}" href="{prefix}feed.xml"><link rel="stylesheet" href="{prefix}assets/site.css?v=3"><script defer src="{prefix}assets/site.js?v=4"></script><script type="application/ld+json">{schema_text}</script></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="wrap header-inner"><a class="wordmark" href="{prefix}" aria-label="{E(CONFIG['name'])} home"><img src="{prefix}assets/favicon.svg" width="35" height="35" alt="">{brand}</a><nav class="desktop-nav" aria-label="Main">{nav_html}</nav><a class="btn header-action" href="{prefix}contribute/">Contribute {icon(size=15)}</a><button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">{icon('menu',20)}</button></div><nav class="wrap mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>{nav_html}<a href="{prefix}contribute/">Contribute an example</a></nav></header>
 <main id="main">{body}</main>
 <footer class="site-footer"><div class="wrap"><div class="footer-main"><div class="footer-brand"><a class="wordmark" href="{prefix}"><img src="{prefix}assets/favicon.svg" alt="" width="31" height="31">{brand}</a><p>{E(CONFIG['tagline'])}<br>Initiated by <a href="{E(CONFIG['founder_url'])}">{E(CONFIG['founder_name'])}</a>. Built to welcome everyone.</p></div><nav class="footer-links" aria-label="Footer"><a href="{prefix}about/">About</a><a href="{prefix}contribute/">Contribute</a><a href="{project_link}">{project_label}</a><a href="{prefix}privacy/">Privacy & reuse</a></nav></div><div class="footer-bottom"><span>Evidence is attributed. Claims can be challenged.</span><span>Original code: MIT · Editorial text: CC BY 4.0 · Screenshots retain their original rights.</span></div></div></footer></body></html>'''
@@ -179,8 +186,8 @@ def card(c, prefix='./'):
     else:
         image = f'<div class="incident-thumb"><div class="incident-node">REQUEST</div><div class="incident-line"></div><div class="incident-node incident-alert">VERIFY</div><div class="incident-line"></div><div class="incident-node">DISCLOSE</div><p>{E(c["claim"])} → {E(c["counterclaim"])}</p></div>'
     sources = ' + '.join(dict.fromkeys(s['short'] for s in c['sources']))
-    search = ' '.join([c['title'], c['category'], c['technique'], c['audience'], c['summary'], sources]).lower()
-    return f'''<article class="case-card" data-category="{E(c['category'])}" data-search="{E(search)}"><a class="case-image-link" href="{url}" tabindex="-1" aria-hidden="true">{image}<span class="image-label">{label}</span></a><div class="case-body"><div class="card-meta"><span class="category-label">{E(c['category'])} / {E(c['technique'])}</span><span class="case-number">{E(c['id'])}</span></div><h3><a href="{url}">{E(c['short_title'])}</a></h3><p>{E(c['summary'])}</p><p class="audience-line"><strong>Audience:</strong> {E(c['audience'])}</p><div class="card-bottom"><span class="source-credit">Source: {E(sources)}</span><a href="{url}" aria-label="Read {E(c['short_title'])}">Read case {icon(size=15)}</a></div></div></article>'''
+    search = ' '.join([c['title'], *labels(c), c['technique'], c['audience'], c['summary'], sources]).lower()
+    return f'''<article class="case-card" data-category="{E('|'.join(labels(c)))}" data-search="{E(search)}"><a class="case-image-link" href="{url}" tabindex="-1" aria-hidden="true">{image}<span class="image-label">{label}</span></a><div class="case-body"><div class="card-meta"><span class="category-label">{E(' · '.join(labels(c)))} / {E(c['technique'])}</span><span class="case-number">{E(c['id'])}</span></div><h3><a href="{url}">{E(c['short_title'])}</a></h3><p>{E(c['summary'])}</p><p class="audience-line"><strong>Audience:</strong> {E(c['audience'])}</p><div class="card-bottom"><span class="source-credit">Source: {E(sources)}</span><a href="{url}" aria-label="Read {E(c['short_title'])}">Read case {icon(size=15)}</a></div></div></article>'''
 
 
 def home():
@@ -200,7 +207,7 @@ def home():
     cited = Counter(s['short'] for c in CASES for s in {x['short']: x for x in c['sources']}.values())
     order = sorted(cited, key=lambda n: (n != 'Desenmascara', -cited[n], n))
     source_list = ''.join(f"<span>{E('desenmascara.me' if n == 'Desenmascara' else n)}</span>" for n in order)
-    filters = ''.join(f'<button class="filter" type="button" data-filter="{E(cat)}" aria-pressed="{str(cat == "All").lower()}">{E(cat)}</button>' for cat in ['All'] + list(dict.fromkeys(c['category'] for c in CASES)))
+    filters = ''.join(f'<button class="filter" type="button" data-filter="{E(cat)}" aria-pressed="{str(cat == "All").lower()}">{E(cat)}</button>' for cat in ['All'] + list(dict.fromkeys(l for c in CASES for l in labels(c))))
     body = f'''<section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><div class="eyebrow"><span class="dot"></span>An open library for the AI era</div><h1>Fraud looks<br>convincing.<br><em>Look closer.</em></h1><p>Familiar faces. Impressive companies. Official-looking badges. Explore real examples and learn what to check.</p><div class="hero-actions"><a class="btn" href="#library">Explore the cases {icon()}</a><a class="btn btn-ghost" href="contribute/">Share an example {icon()}</a></div><div class="hero-note">Open to everyone. Built from credited evidence.</div></div>{showcase}</div></section>
 <div class="source-strip"><div class="wrap source-row"><p class="source-label">Evidence in this collection comes from</p><div class="source-list">{source_list}</div><span class="source-caption">Cited sources. Not sponsors or endorsements.</span></div></div>
 <section class="section wrap" id="library"><div class="section-top"><div><div class="eyebrow">The open collection</div><h2>See the pattern.<br>Keep the lesson.</h2></div><p>Explore actual website captures, documented incidents and clearly labeled reconstructions. Every case links back to its evidence.</p></div><div class="library-toolbar"><div class="filters" role="group" aria-label="Filter by category">{filters}</div><label class="search-box">{icon('search',17)}<span class="sr-only">Search cases</span><input id="case-search" type="search" placeholder="Search cases, sources, patterns…" autocomplete="off"></label></div><div class="library-meta"><span id="result-count" role="status">{len(CASES)} cases in the collection</span><span>{sum(c['kind'] == 'capture' for c in CASES)} real captures · {sum(c['kind'] == 'reconstruction' for c in CASES)} reconstruction · {sum(c['kind'] == 'incident' for c in CASES)} incident · {sum(c['kind'] == 'emerging' for c in CASES)} emerging threat</span></div><div class="case-grid" id="case-grid">{''.join(card(c) for c in CASES)}</div><div class="empty-state" id="no-results" hidden><h3>No cases match yet.</h3><p class="muted">Try another term, or help us document a new example.</p><button class="btn btn-outline" type="button" id="reset-search">Clear filters</button></div><noscript><p class="no-js-message">All cases are shown. Enable JavaScript to use search and filters.</p></noscript></section>
@@ -307,7 +314,7 @@ def feed():
         f'<link>{E(page_url("cases/" + c["slug"] + "/"))}</link>'
         f'<guid isPermaLink="true">{E(page_url("cases/" + c["slug"] + "/"))}</guid>'
         f'<description>{E(c["summary"])}</description>'
-        f'<category>{E(c["category"])}</category>'
+        f'{"".join(f"<category>{E(l)}</category>" for l in labels(c))}'
         f'<pubDate>{date.fromisoformat(c["checked_at"]).strftime("%a, %d %b %Y")} 00:00:00 +0000</pubDate>'
         '</item>'
         for c in recent

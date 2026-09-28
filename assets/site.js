@@ -30,7 +30,7 @@ function applyFilters() {
   const words = (search ? search.value : '').toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);
   let count = 0;
   cards.forEach(function (card) {
-    const shown = (category === 'All' || card.dataset.category === category) && words.every(function (word) { return card.dataset.search.includes(word); });
+    const shown = (category === 'All' || card.dataset.category.split('|').includes(category)) && words.every(function (word) { return card.dataset.search.includes(word); });
     card.hidden = !shown;
     if (shown) count++;
   });
