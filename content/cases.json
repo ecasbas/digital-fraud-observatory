@@ -1347,5 +1347,89 @@
       }
     ],
     "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-035",
+    "slug": "tesladealer-co-za",
+    "title": "The coins are real. The platform is not verifiable.",
+    "short_title": "The crypto platform",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "tesladealer.co.za",
+    "summary": "An archived look at tesladealer.co.za, a crypto platform assessed as fraudulent by Desenmascara (AI-assisted analysis, 100/100).",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "tesladealer-co-za.png",
+    "image_source": "https://desenmascara.me/screens/2a3c350f64c5c2ae.png",
+    "image_alt": "Archived capture of tesladealer.co.za, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "The source report records: hosted on an address where 165 of 302 domains we have analysed are flagged (55%).",
+      "The source report records: domain registered 1 day ago."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for tesladealer.co.za, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-28",
+    "checked_at": "2026-09-28",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/d1fc7cb2-9c1c-41a8-bab8-fc518cf3a34a"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-09-27 through PDR Ltd..",
+        "url": "https://lookup.icann.org/en/lookup?name=tesladealer.co.za"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-036",
+    "slug": "primecrestoptions-com",
+    "title": "A famous brand. A price too good to be true.",
+    "short_title": "The brand storefront",
+    "category": "Shopping",
+    "technique": "Deceptive storefront",
+    "kind": "capture",
+    "subject": "primecrestoptions.com",
+    "summary": "primecrestoptions.com presented itself as an online shop. Desenmascara rated it fraudulent (91/100) after heuristic analysis.",
+    "lesson": "Check who operates a shop before trusting its sale. A famous brand and a deep discount prove nothing about who takes your money.",
+    "image": "primecrestoptions-com.png",
+    "image_source": "https://desenmascara.me/screens/22f146c0e1e4008a.png",
+    "image_alt": "Archived capture of primecrestoptions.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who operates this shop?",
+    "observations": [
+      "The source report records: hosted on an address where 165 of 302 domains we have analysed are flagged (55%).",
+      "The source report records: domain registered today."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 91/100 for primecrestoptions.com, based on heuristic analysis. Its analysis says: “What we found: Domain registered today; Extreme discounts detected; Financial theme detected.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-28",
+    "checked_at": "2026-09-28",
+    "assessment": "Fraudulent · 91/100",
+    "assessment_source": "desenmascara.me · heuristic analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: heuristic analysis",
+        "url": "https://desenmascara.me/analisis/a082bc04-0e82-4554-bf83-af89b4bc054c"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-09-28 through Dynadot Inc.",
+        "url": "https://lookup.icann.org/en/lookup?name=primecrestoptions.com"
+      }
+    ],
+    "audience": "Online shoppers"
   }
 ]
