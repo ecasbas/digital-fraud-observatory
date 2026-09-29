@@ -67,9 +67,10 @@ UI = {
 
 def labels(c):
     """Filter labels of a case: its category, plus 'Emerging' for an
-    anticipated threat. Derived from `kind`, never stored, so the two cannot
-    disagree."""
-    return (['Emerging'] if c['kind'] == 'emerging' else []) + [c['category']]
+    anticipated threat or 'Incident' for a documented incident. Derived from
+    `kind`, never stored, so the two cannot disagree."""
+    kind_label = {'emerging': 'Emerging', 'incident': 'Incident'}.get(c['kind'])
+    return ([kind_label] if kind_label else []) + [c['category']]
 
 
 def validate():
@@ -255,7 +256,7 @@ def home():
     cited = Counter(s['short'] for c in CASES for s in {x['short']: x for x in c['sources']}.values())
     order = sorted(cited, key=lambda n: (n != 'Desenmascara', -cited[n], n))
     source_list = ''.join(f"<span>{E('desenmascara.me' if n == 'Desenmascara' else n)}</span>" for n in order)
-    filters = ''.join(f'<button class="filter" type="button" data-filter="{E(cat)}" aria-pressed="{str(cat == "All").lower()}">{E(cat)}</button>' for cat in ['All'] + list(dict.fromkeys(l for c in CASES for l in labels(c))))
+    filters = ''.join(f'<button class="filter" type="button" data-filter="{E(cat)}" aria-pressed="{str(cat == "All").lower()}">{E(cat)}</button>' for cat in ['All', 'Emerging', 'Incident'] + list(dict.fromkeys(l for c in CASES for l in labels(c) if l not in ('Emerging', 'Incident'))))
     body = f'''<section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><div class="eyebrow"><span class="dot"></span>An open library for the AI era</div><h1>Fraud looks<br>convincing.<br><em>Look closer.</em></h1><p>Familiar faces. Impressive companies. Official-looking badges. Explore real examples and learn what to check.</p><div class="hero-actions"><a class="btn" href="#library">Explore the cases {icon()}</a><a class="btn btn-ghost" href="contribute/">Share an example {icon()}</a></div><div class="hero-note">Open to everyone. Built from credited evidence.</div></div>{showcase}</div></section>
 <div class="source-strip"><div class="wrap source-row"><p class="source-label">Evidence in this collection comes from</p><div class="source-list">{source_list}</div><span class="source-caption">Cited sources. Not sponsors or endorsements.</span></div></div>
 <section class="section wrap" id="library"><div class="section-top"><div><div class="eyebrow">The open collection</div><h2>See the pattern.<br>Keep the lesson.</h2></div><p>Explore actual website captures, documented incidents and clearly labeled reconstructions. Every case links back to its evidence.</p></div><div class="library-toolbar"><div class="filters" role="group" aria-label="Filter by category">{filters}</div><label class="search-box">{icon('search',17)}<span class="sr-only">Search cases</span><input id="case-search" type="search" placeholder="Search cases, sources, patterns…" autocomplete="off"></label></div><div class="library-meta"><span id="result-count" role="status">{len(CASES)} cases in the collection</span><span>{sum(c['kind'] == 'capture' for c in CASES)} real captures · {sum(c['kind'] == 'reconstruction' for c in CASES)} reconstruction · {sum(c['kind'] == 'incident' for c in CASES)} incidents · {sum(c['kind'] == 'emerging' for c in CASES)} emerging threat</span></div><div class="case-grid" id="case-grid">{''.join(card(c) for c in CASES)}</div><div class="empty-state" id="no-results" hidden><h3>No cases match yet.</h3><p class="muted">Try another term, or help us document a new example.</p><button class="btn btn-outline" type="button" id="reset-search">Clear filters</button></div><noscript><p class="no-js-message">All cases are shown. Enable JavaScript to use search and filters.</p></noscript></section>
