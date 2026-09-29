@@ -242,7 +242,7 @@ def card(c, prefix='./'):
 def home():
     by_slug = {c['slug']: c for c in CASES}
     selections = [
-        ('celebrity-casino', 'A famous face', 'A familiar face. An unverified endorsement.', 'The source flags celebrity impersonation and unverified partnership claims.'),
+        ('tesladealer-co-za', 'A famous face', 'Tesla. SpaceX. Elon Musk. Nothing shows they are behind it.', 'A crypto investment page borrows famous brands and a famous face. The source reports a domain registered one day earlier and assesses it as fraudulent.'),
         ('logistics-company-facade', 'A global carrier', 'A cargo port. But who is the carrier?', 'A polished logistics page. The source reports an operator whose legal identity could not be verified.'),
         ('insurance-clone', 'Insurance clone', 'It says regulated. The regulator says clone.', 'The FCA identifies this insurance website as a clone of an authorised firm.')
     ]
