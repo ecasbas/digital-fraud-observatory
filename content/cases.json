@@ -1,5 +1,70 @@
 [
   {
+    "id": "SA-038",
+    "slug": "cloned-voice-ceo-transfer-fideuram",
+    "title": "A message from the CEO. A call from the lawyer. Neither was real.",
+    "short_title": "The €95 million cloned-voice transfer",
+    "category": "Banking",
+    "technique": "Executive impersonation with an AI-cloned voice",
+    "kind": "incident",
+    "audience": "Executives, treasury and finance teams, and anyone who can authorise a payment on someone else's instruction",
+    "subject": "Fideuram (Intesa Sanpaolo group) transfer fraud, February 2026",
+    "summary": "According to Reuters, fraudsters posing as Intesa Sanpaolo's chief executive on WhatsApp, then as a law-firm partner on a call with an AI-cloned voice, got the chairman of its private-banking arm Fideuram to order about €95 million in transfers abroad. About €36 million is still missing.",
+    "lesson": "Seniority and a familiar voice are not authorisation. An urgent, confidential transfer request must be confirmed by calling the person back on a number you already hold, and pass the normal dual-approval process, however senior the requester and however convincing the second voice that 'confirms' it.",
+    "claim": "The CEO's urgent, confidential transfer",
+    "counterclaim": "Call back on a number you already hold",
+    "observations": [
+      "The first contact came through WhatsApp, a channel outside the bank's own systems, from someone presenting as the group's chief executive.",
+      "The request carried the classic pressure of CEO fraud: urgent help with an overseas transaction.",
+      "A second, apparently independent party then 'confirmed' the instruction by phone: a caller presenting as a senior partner at a prominent law firm, whose voice Reuters says was replicated with AI.",
+      "The victim was himself a senior executive, and the order went through his own finance department: authority inside the organisation carried the fraud past the usual checks.",
+      "The money went mainly to accounts in China and Hong Kong and, according to Reuters, part of it was converted into cryptocurrency."
+    ],
+    "source_summary": "Reuters reported on 25 September 2026, citing sources, that the fraud began in February 2026, when the then-chairman of Fideuram received a WhatsApp message that appeared to come from Intesa Sanpaolo's CEO asking for urgent help with an overseas transaction, followed by a call from someone posing as a senior partner at a prominent law firm, whose voice was replicated with AI. He instructed the finance department to make a series of transfers, mainly to China and Hong Kong, totalling about €95 million. About €53 million was recovered through cooperation between authorities in China, Portugal and Italy; about €36 million has not been traced after passing through overseas accounts and being converted into cryptocurrency. Milan prosecutors have placed a foreign national living outside Europe under investigation for computer fraud; no Fideuram executive is under investigation. The chairman resigned in March 2026 citing personal reasons. Intesa Sanpaolo and Fideuram declined to comment. Il Sole 24 Ore separately reports the same amounts (€40 million recovered from a Chinese bank and €13 million from a Portuguese one) and the use of AI to replicate the lawyer's voice.",
+    "limits": "This case rests on press reports based on unnamed sources; Intesa Sanpaolo and Fideuram declined to comment, and no court has ruled. The AI voice cloning is as described by the reporting, not verified here, and neither source publishes the messages or the recording. It is not established how the voice sample was obtained or whether other institutions were targeted. Nothing here suggests that the executives impersonated were involved; they were the identities the fraudsters borrowed.",
+    "analysis_date": "2026-09-25",
+    "checked_at": "2026-09-29",
+    "assessment": "Documented fraud · press reporting from unnamed sources",
+    "assessment_source": "Reuters; Il Sole 24 Ore",
+    "sources": [
+      {
+        "name": "Reuters (as republished by Global Banking & Finance Review)",
+        "short": "Reuters",
+        "role": "Original report, citing sources, on the scam, the amounts and the investigation · 25 September 2026",
+        "url": "https://www.globalbankingandfinance.com/ai-messaging-scam-costs-italys-top-bank-intesa-millions/"
+      },
+      {
+        "name": "Il Sole 24 Ore",
+        "short": "Il Sole 24 Ore",
+        "role": "Separate report on the recovered amounts and the cloned voice · September 2026",
+        "url": "https://en.ilsole24ore.com/art/the-former-boss-of-fideuram-was-scammed-via-whatsapp-and-36-million-have-gone-missing-AJXuauOB"
+      }
+    ],
+    "pathway": {
+      "heading": "How a borrowed voice can move a bank's money",
+      "intro": "The fraud used real authority twice: a chief executive's name to create urgency, and a lawyer's cloned voice to confirm it. The control point is a call-back you start yourself.",
+      "steps": [
+        {
+          "label": "IMPERSONATE",
+          "title": "A message 'from the CEO'",
+          "text": "A WhatsApp message asks for urgent help with a confidential overseas transaction."
+        },
+        {
+          "label": "CONFIRM",
+          "title": "A cloned voice 'confirms'",
+          "text": "A call from a supposed law-firm partner, with an AI-replicated voice, backs up the instruction. Call back on a known number instead.",
+          "warning": true
+        },
+        {
+          "label": "TRANSFER",
+          "title": "The money leaves",
+          "text": "Transfers to accounts in China and Hong Kong; part is converted into cryptocurrency."
+        }
+      ],
+      "caption": "Documented public incident, as reported by the press. No message, recording or private record is reproduced here."
+    }
+  },
+  {
     "id": "SA-037",
     "slug": "phishing-that-knows-your-trip",
     "title": "It knows the train you took. That is what makes it dangerous.",
@@ -343,7 +408,30 @@
         "role": "Follow-up reporting on affected-customer count and ICO investigation · 15 September 2026",
         "url": "https://www.ft.com/content/e0fe28a8-bc8c-460d-a7f2-972f725c0d46"
       }
-    ]
+    ],
+    "pathway": {
+      "heading": "How a trusted request can become a data disclosure",
+      "intro": "Each step can look routine. The control point is independent verification before sensitive records are released.",
+      "steps": [
+        {
+          "label": "REQUEST",
+          "title": "Official-looking request",
+          "text": "The request appears to come through a legitimate government channel."
+        },
+        {
+          "label": "VERIFY",
+          "title": "Verify the requester",
+          "text": "Confirm identity, legal authority and scope through an independent route.",
+          "warning": true
+        },
+        {
+          "label": "DISCLOSE",
+          "title": "Disclosure risk",
+          "text": "Sensitive customer records can leave through a normal compliance process."
+        }
+      ],
+      "caption": "Documented public incident. No live system or private customer record is embedded here."
+    }
   },
   {
     "id": "SA-010",
