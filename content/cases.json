@@ -1586,5 +1586,91 @@
       }
     ],
     "audience": "Online shoppers"
+  },
+  {
+    "id": "SA-039",
+    "slug": "psychedelicsx-com",
+    "title": "A famous brand. A price too good to be true.",
+    "short_title": "The brand storefront",
+    "category": "Shopping",
+    "technique": "Deceptive storefront",
+    "kind": "capture",
+    "subject": "psychedelicsx.com",
+    "summary": "An archived look at psychedelicsx.com, an online shop assessed as fraudulent by Desenmascara (heuristic analysis, 99/100).",
+    "lesson": "Check who operates a shop before trusting its sale. A famous brand and a deep discount prove nothing about who takes your money.",
+    "image": "psychedelicsx-com.png",
+    "image_source": "https://desenmascara.me/screens/11189f9ee1ab51a2.png",
+    "image_alt": "Archived capture of psychedelicsx.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who operates this shop?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 24 of 46 domains we have analysed are flagged (52%).",
+      "The source report records: domain registered 22 days ago."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 99/100 for psychedelicsx.com, based on heuristic analysis. Its analysis says: “What we found: Its server hosts 23 known fraudulent sites; Domain registered 22 days ago; Extreme discounts detected.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-29",
+    "checked_at": "2026-09-29",
+    "assessment": "Fraudulent · 99/100",
+    "assessment_source": "desenmascara.me · heuristic analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: heuristic analysis",
+        "url": "https://desenmascara.me/analisis/2c317b5c-b12e-4082-83b7-40ad1e734f13"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-09-07 through NICENIC INTERNATIONAL GROUP CO., LIMITED.",
+        "url": "https://lookup.icann.org/en/lookup?name=psychedelicsx.com"
+      }
+    ],
+    "audience": "Online shoppers"
+  },
+  {
+    "id": "SA-040",
+    "slug": "elonxinvest-com",
+    "title": "A trading desk with no regulator on record.",
+    "short_title": "The returns promise",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "elonxinvest.com",
+    "summary": "elonxinvest.com presented itself as an investment or trading platform. Desenmascara rated it fraudulent (93/100) after heuristic analysis.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "elonxinvest-com.png",
+    "image_source": "https://desenmascara.me/screens/47df95afa5099bcf.png",
+    "image_alt": "Archived capture of elonxinvest.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 43 of 55 domains we have analysed are flagged (78%).",
+      "The source report records: domain registered today."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 93/100 for elonxinvest.com, based on heuristic analysis. Its analysis says: “What we found: Its server hosts 120 known fraudulent sites; Domain registered today; Financial theme detected.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-29",
+    "checked_at": "2026-09-29",
+    "assessment": "Fraudulent · 93/100",
+    "assessment_source": "desenmascara.me · heuristic analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: heuristic analysis",
+        "url": "https://desenmascara.me/analisis/cefd246c-7669-4450-b65e-3957f7ede3a2"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-09-29 through TuringSign Inc. d/b/a Cosmotown.",
+        "url": "https://lookup.icann.org/en/lookup?name=elonxinvest.com"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
