@@ -1672,5 +1672,89 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-041",
+    "slug": "thelansbankse-com",
+    "title": "Cards and accounts, offered by no bank on record.",
+    "short_title": "The bank that isn't",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "thelansbankse.com",
+    "summary": "Captured on 2026-09-30: thelansbankse.com, a bank or financial service that Desenmascara's heuristic analysis rated fraudulent at 90/100.",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "thelansbankse-com.png",
+    "image_source": "https://desenmascara.me/screens/508211945c910b6c.png",
+    "image_alt": "Archived capture of thelansbankse.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: hosted on an address where 83 of 140 domains we have analysed are flagged (59%).",
+      "The source report records: domain registered 1 day ago."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 90/100 for thelansbankse.com, based on heuristic analysis. Its analysis says: “What we found: Its server hosts 164 known fraudulent sites; Domain registered 1 day ago; Financial theme detected.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-30",
+    "checked_at": "2026-10-01",
+    "assessment": "Fraudulent · 90/100",
+    "assessment_source": "desenmascara.me · heuristic analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: heuristic analysis",
+        "url": "https://desenmascara.me/analisis/f02944cc-02c7-464b-891c-f724c14ef70a"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-09-29 through PDR Ltd. d/b/a PublicDomainRegistry.com.",
+        "url": "https://lookup.icann.org/en/lookup?name=thelansbankse.com"
+      }
+    ],
+    "audience": "Bank customers and payment users"
+  },
+  {
+    "id": "SA-042",
+    "slug": "gemspins-net",
+    "title": "A crypto platform. A wallet you should not connect.",
+    "short_title": "The crypto earnings site",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "gemspins.net",
+    "summary": "Desenmascara flagged gemspins.net as fraudulent (84/100). The site presented itself as a crypto platform.",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "gemspins-net.png",
+    "image_source": "https://desenmascara.me/screens/61e9d73e6a6b2ddc.png",
+    "image_alt": "Archived capture of gemspins.net, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "Asks for payment by crypto or bank transfer.",
+      "The source report records: domain registered 14 days ago."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 84/100 for gemspins.net, based on heuristic analysis. Its analysis says: “What we found: Domain registered 14 days ago; Financial theme detected; Accepted payment methods: bank transfer, cryptocurrency.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-09-30",
+    "checked_at": "2026-10-01",
+    "assessment": "Fraudulent · 84/100",
+    "assessment_source": "desenmascara.me · heuristic analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: heuristic analysis",
+        "url": "https://desenmascara.me/analisis/e2254811-7f44-48f9-b508-894c01a48e26"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-09-16 through DYNADOT LLC.",
+        "url": "https://lookup.icann.org/en/lookup?name=gemspins.net"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
   }
 ]
