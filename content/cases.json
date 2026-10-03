@@ -1841,5 +1841,89 @@
       }
     ],
     "audience": "Online shoppers"
+  },
+  {
+    "id": "SA-045",
+    "slug": "spacexaccess-co",
+    "title": "A famous brand. A price too good to be true.",
+    "short_title": "The brand storefront",
+    "category": "Shopping",
+    "technique": "Deceptive storefront",
+    "kind": "capture",
+    "subject": "spacexaccess.co",
+    "summary": "Captured on 2026-10-02: spacexaccess.co, an online shop that Desenmascara's heuristic analysis rated fraudulent at 87/100.",
+    "lesson": "Check who operates a shop before trusting its sale. A famous brand and a deep discount prove nothing about who takes your money.",
+    "image": "spacexaccess-co.png",
+    "image_source": "https://desenmascara.me/screens/4cc96b960648efc5.png",
+    "image_alt": "Archived capture of spacexaccess.co, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who operates this shop?",
+    "observations": [
+      "The source report records: hosted on an address where 190 of 377 domains we have analysed are flagged (50%).",
+      "The source report records: domain registered today."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 87/100 for spacexaccess.co, based on heuristic analysis. Its analysis says: “What we found: Its server hosts 168 known fraudulent sites; Domain registered today; Extreme discounts detected.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-02",
+    "checked_at": "2026-10-03",
+    "assessment": "Fraudulent · 87/100",
+    "assessment_source": "desenmascara.me · heuristic analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: heuristic analysis",
+        "url": "https://desenmascara.me/analisis/51cf10f3-6b74-43c4-8a04-3cd6f58b216b"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-10-02 through Dynadot Inc.",
+        "url": "https://lookup.icann.org/en/lookup?name=spacexaccess.co"
+      }
+    ],
+    "audience": "Online shoppers"
+  },
+  {
+    "id": "SA-046",
+    "slug": "bonavisbank-com",
+    "title": "Online banking from a bank nobody licensed.",
+    "short_title": "The card offer",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "bonavisbank.com",
+    "summary": "Desenmascara flagged bonavisbank.com as fraudulent (82/100). The site presented itself as a bank or financial service.",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "bonavisbank-com.png",
+    "image_source": "https://desenmascara.me/screens/8ee1d2f29edd983f.png",
+    "image_alt": "Archived capture of bonavisbank.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: hosted on an address where 178 of 251 domains we have analysed are flagged (71%).",
+      "The source report records: domain registered 1 day ago."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 82/100 for bonavisbank.com, based on heuristic analysis. Its analysis says: “What we found: Its server hosts 239 known fraudulent sites; Domain registered 1 day ago; Financial theme detected.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-02",
+    "checked_at": "2026-10-03",
+    "assessment": "Fraudulent · 82/100",
+    "assessment_source": "desenmascara.me · heuristic analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: heuristic analysis",
+        "url": "https://desenmascara.me/analisis/65c62052-8d7d-493f-8651-b9d4280231f8"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-10-01 through PDR Ltd. d/b/a PublicDomainRegistry.com.",
+        "url": "https://lookup.icann.org/en/lookup?name=bonavisbank.com"
+      }
+    ],
+    "audience": "Bank customers and payment users"
   }
 ]
