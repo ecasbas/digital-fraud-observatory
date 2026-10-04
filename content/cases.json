@@ -1925,5 +1925,89 @@
       }
     ],
     "audience": "Bank customers and payment users"
+  },
+  {
+    "id": "SA-047",
+    "slug": "copy-intere-wallet-org",
+    "title": "A familiar storefront. An unknown seller.",
+    "short_title": "The discount shop",
+    "category": "Shopping",
+    "technique": "Deceptive storefront",
+    "kind": "capture",
+    "subject": "copy.intere-wallet.org",
+    "summary": "An archived look at copy.intere-wallet.org, an online shop assessed as fraudulent by Desenmascara (heuristic analysis, 92/100).",
+    "lesson": "Check who operates a shop before trusting its sale. A famous brand and a deep discount prove nothing about who takes your money.",
+    "image": "copy-intere-wallet-org.png",
+    "image_source": "https://desenmascara.me/screens/04f1eb1ecdb10e3f.png",
+    "image_alt": "Archived capture of copy.intere-wallet.org, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who operates this shop?",
+    "observations": [
+      "The source report records: hosted on an address where 174 of 377 domains we have analysed are flagged (46%).",
+      "The source report records: domain registered today."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 92/100 for copy.intere-wallet.org, based on heuristic analysis. Its analysis says: “What we found: Its server hosts 180 known fraudulent sites; Domain registered today; Extreme discounts detected.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-03",
+    "checked_at": "2026-10-04",
+    "assessment": "Fraudulent · 92/100",
+    "assessment_source": "desenmascara.me · heuristic analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: heuristic analysis",
+        "url": "https://desenmascara.me/analisis/ef5cc640-89c8-4796-b260-b86a3a46d66f"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-10-03 through Name.com, Inc..",
+        "url": "https://lookup.icann.org/en/lookup?name=copy.intere-wallet.org"
+      }
+    ],
+    "audience": "Online shoppers"
+  },
+  {
+    "id": "SA-048",
+    "slug": "merionpay-com-intere-wallet-org",
+    "title": "A crypto platform. A wallet you should not connect.",
+    "short_title": "The crypto earnings site",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "merionpay.com.intere-wallet.org",
+    "summary": "merionpay.com.intere-wallet.org presented itself as a crypto platform. Desenmascara rated it fraudulent (88/100) after heuristic analysis.",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "merionpay-com-intere-wallet-org.png",
+    "image_source": "https://desenmascara.me/screens/9f77428f0e090b3a.png",
+    "image_alt": "Archived capture of merionpay.com.intere-wallet.org, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "The source report records: hosted on an address where 174 of 377 domains we have analysed are flagged (46%).",
+      "The source report records: domain registered today."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 88/100 for merionpay.com.intere-wallet.org, based on heuristic analysis. Its analysis says: “What we found: Its server hosts 179 known fraudulent sites; Domain registered today; Financial theme detected.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-03",
+    "checked_at": "2026-10-04",
+    "assessment": "Fraudulent · 88/100",
+    "assessment_source": "desenmascara.me · heuristic analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: heuristic analysis",
+        "url": "https://desenmascara.me/analisis/aa201187-07ab-4564-87ee-1ddd7077a251"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-10-03 through Name.com, Inc..",
+        "url": "https://lookup.icann.org/en/lookup?name=merionpay.com.intere-wallet.org"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
   }
 ]
