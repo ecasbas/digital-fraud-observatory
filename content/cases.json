@@ -2009,5 +2009,92 @@
       }
     ],
     "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-049",
+    "slug": "segurosoat-mundial-top",
+    "title": "Online banking from a bank nobody licensed.",
+    "short_title": "The card offer",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "segurosoat-mundial.top",
+    "summary": "Captured on 2026-10-05: segurosoat-mundial.top, a bank or financial service that Desenmascara's AI-assisted analysis rated fraudulent at 98/100.",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "segurosoat-mundial-top.png",
+    "image_source": "https://desenmascara.me/screens/58a7d33f7ad9f8da.png",
+    "image_alt": "Archived capture of segurosoat-mundial.top, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "Social media icons do not lead to real profiles.",
+      "The source report records: hosted on an address where 17 of 18 domains we have analysed are flagged (94%).",
+      "The source report records: domain registered 4 days ago.",
+      "The source report records: suspicious TLD (.top)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 98/100 for segurosoat-mundial.top, based on AI-assisted analysis. Its analysis says: “The site claims to offer SOAT insurance services but is hosted on a very recent domain (only 4 days old) associated with a high-risk fraud infrastructure cluster.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-05",
+    "checked_at": "2026-10-05",
+    "assessment": "Fraudulent · 98/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/186b5c64-bfb5-48a8-8f98-f1d5ee9b4c81"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-10-01 through NICENIC INTERNATIONAL GROUP CO., LIMITED.",
+        "url": "https://lookup.icann.org/en/lookup?name=segurosoat-mundial.top"
+      }
+    ],
+    "audience": "Bank customers and payment users"
+  },
+  {
+    "id": "SA-050",
+    "slug": "bancodealimentocol-top",
+    "title": "A familiar storefront. An unknown seller.",
+    "short_title": "The discount shop",
+    "category": "Shopping",
+    "technique": "Deceptive storefront",
+    "kind": "capture",
+    "subject": "bancodealimentocol.top",
+    "summary": "Desenmascara flagged bancodealimentocol.top as fraudulent (97/100). The site presented itself as an online shop.",
+    "lesson": "Check who operates a shop before trusting its sale. A famous brand and a deep discount prove nothing about who takes your money.",
+    "image": "bancodealimentocol-top.png",
+    "image_source": "https://desenmascara.me/screens/06032e03590cef0a.png",
+    "image_alt": "Archived capture of bancodealimentocol.top, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who operates this shop?",
+    "observations": [
+      "The source report records: hosted on an address where 17 of 18 domains we have analysed are flagged (94%).",
+      "The source report records: domain registered 4 days ago.",
+      "The source report records: suspicious TLD (.top)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 97/100 for bancodealimentocol.top, based on heuristic analysis. Its analysis says: “What we found: Domain registered 4 days ago; Suspicious TLD (.top); Extreme discounts detected.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-05",
+    "checked_at": "2026-10-05",
+    "assessment": "Fraudulent · 97/100",
+    "assessment_source": "desenmascara.me · heuristic analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: heuristic analysis",
+        "url": "https://desenmascara.me/analisis/b1e91ffd-9b19-45ba-bc34-288ea6d1c1bb"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-10-01 through NICENIC INTERNATIONAL GROUP CO., LIMITED.",
+        "url": "https://lookup.icann.org/en/lookup?name=bancodealimentocol.top"
+      }
+    ],
+    "audience": "Online shoppers"
   }
 ]
