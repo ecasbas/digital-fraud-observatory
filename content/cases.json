@@ -2096,5 +2096,47 @@
       }
     ],
     "audience": "Online shoppers"
+  },
+  {
+    "id": "SA-051",
+    "slug": "metachore-net",
+    "title": "A famous brand. A price too good to be true.",
+    "short_title": "The brand storefront",
+    "category": "Shopping",
+    "technique": "Deceptive storefront",
+    "kind": "capture",
+    "subject": "metachore.net",
+    "summary": "An archived look at metachore.net, an online shop assessed as fraudulent by Desenmascara (heuristic analysis, 100/100).",
+    "lesson": "Check who operates a shop before trusting its sale. A famous brand and a deep discount prove nothing about who takes your money.",
+    "image": "metachore-net.png",
+    "image_source": "https://desenmascara.me/screens/dbc8bd3413cb7ead.png",
+    "image_alt": "Archived capture of metachore.net, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who operates this shop?",
+    "observations": [
+      "The source report records: hosted on an address where 10 of 16 domains we have analysed are flagged (62%).",
+      "The source report records: domain registered 5 days ago."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for metachore.net, based on heuristic analysis. Its analysis says: “What we found: Its server hosts 34 known fraudulent sites; Domain registered 5 days ago; Extreme discounts detected.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-06",
+    "checked_at": "2026-10-06",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · heuristic analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: heuristic analysis",
+        "url": "https://desenmascara.me/analisis/fea2bb10-80b8-4200-9069-d3685ffaace9"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-10-01 through TuringSign Inc. d/b/a Cosmotown.",
+        "url": "https://lookup.icann.org/en/lookup?name=metachore.net"
+      }
+    ],
+    "audience": "Online shoppers"
   }
 ]
