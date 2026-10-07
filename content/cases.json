@@ -2138,5 +2138,48 @@
       }
     ],
     "audience": "Online shoppers"
+  },
+  {
+    "id": "SA-052",
+    "slug": "creatorscashpage-online",
+    "title": "Deep discounts from a shop with no known owner.",
+    "short_title": "The bargain store",
+    "category": "Shopping",
+    "technique": "Deceptive storefront",
+    "kind": "capture",
+    "subject": "creatorscashpage.online",
+    "summary": "creatorscashpage.online presented itself as an online shop. Desenmascara rated it fraudulent (95/100) after AI-assisted analysis.",
+    "lesson": "Check who operates a shop before trusting its sale. A famous brand and a deep discount prove nothing about who takes your money.",
+    "image": "creatorscashpage-online.png",
+    "image_source": "https://desenmascara.me/screens/c6a19c1a19e84e3d.png",
+    "image_alt": "Archived capture of creatorscashpage.online, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who operates this shop?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 183 of 400 domains we have analysed are flagged (46%).",
+      "The source report records: domain registered today."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for creatorscashpage.online, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-06",
+    "checked_at": "2026-10-07",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/2dd92c97-8f14-4dd7-b85e-589e3408a5ea"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-10-06 through Dynadot Inc.",
+        "url": "https://lookup.icann.org/en/lookup?name=creatorscashpage.online"
+      }
+    ],
+    "audience": "Online shoppers"
   }
 ]
