@@ -51,6 +51,22 @@ class RejectionTests(unittest.TestCase):
 
 
 class CaseTextTests(unittest.TestCase):
+    def test_destroylist_label_does_not_decide_the_category(self):
+        p = projection(assessed_by="heuristics", explanation="What we found: domain registered 12 days ago.",
+                       evidence=[{"label": "Listed on DestroyList, the curated phishing feed maintained by PhishDestroy", "positive": False}])
+        self.assertNotEqual(cur.choose_category(p, "myxtrade.cc")[0], "Phishing")
+
+    def test_own_first_lead_is_not_read_as_the_pitch(self):
+        p = cur.split_own_first_lead(projection(
+            assessed_by="ai_reasoning", explanation_language="en",
+            explanation="We detected it first: our analysis rated x.top fraudulent on 2026-10-05 at 09:24 UTC. PhishDestroy later added it.\n\nThe site presents itself as a cryptocurrency trading platform."))
+        self.assertTrue(p["own_first"])
+        self.assertTrue(p["explanation"].startswith("The site presents itself"))
+        self.assertEqual(cur.choose_category(p, "x.top")[0], "Crypto")
+        case = cur.build_case(p, "SA-060", "x", "x.png", "https://desenmascara.me/screens/x.png")
+        self.assertIn("before PhishDestroy", case["observations"][0])
+        self.assertNotIn("not an independent finding", case["source_summary"])
+
     def test_safe_browsing_and_regulator_cases_are_attributed(self):
         for basis, name in (("google_safe_browsing", "Google Safe Browsing"), ("regulatory_warnings", "regulator")):
             case = cur.build_case(projection(assessed_by=basis), "SA-010", "x", "x.png", "https://desenmascara.me/screens/x.png")

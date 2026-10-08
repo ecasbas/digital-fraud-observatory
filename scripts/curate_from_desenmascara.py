@@ -203,7 +203,8 @@ def choose_category(projection: dict, domain: str) -> tuple:
     """What the site *is*: its own pitch first, then the stated fraud type, then its name.
 
     The TLD and TLD-based findings are never read: a ``.shop`` trading scam is
-    not a shop.
+    not a shop. Nor is a DestroyList listing ("phishing feed"): it says who
+    listed the site, not what the site is (myxtrade.cc filed as Phishing).
     """
     explanation = (projection.get("explanation") or "").lower()
     first_sentence = re.split(r"(?<=[.!?])\s", explanation.strip(), maxsplit=1)[0]
@@ -213,7 +214,7 @@ def choose_category(projection: dict, domain: str) -> tuple:
             if _mentions(text, rule[2]):
                 return rule
     name = host_of(domain).rsplit(".", 1)[0]
-    labels = " ".join(i.get("label") or "" for i in projection.get("evidence") or [] if "TLD" not in (i.get("label") or ""))
+    labels = " ".join(i.get("label") or "" for i in projection.get("evidence") or [] if "TLD" not in (i.get("label") or "") and "DestroyList" not in (i.get("label") or ""))
     for rule in CATEGORY_RULES:
         if any(k in name for k in rule[2]) or _mentions(labels.lower(), rule[2]):
             return rule
@@ -223,6 +224,19 @@ def choose_category(projection: dict, domain: str) -> tuple:
 #: Our canned no-AI verdict text. A few rows are recorded as ``ai_reasoning``
 #: while carrying it; the case must not claim an AI analysis that never ran.
 NO_AI_TEXT = re.compile(r"AI was not used|no se (us|utiliz)[oó] la IA|la IA no se (us|utiliz)[oó]", re.I)
+
+
+#: The lead the report puts before our own reasoning when a feed listed the
+#: domain after we did (backend, 2026-10-08). It is not the site's pitch.
+OWN_FIRST_LEAD = re.compile(r"^(We detected it first|Lo detectamos nosotros primero)\b[^\n]*\n+", re.I)
+
+
+def split_own_first_lead(projection: dict) -> dict:
+    explanation = projection.get("explanation") or ""
+    match = OWN_FIRST_LEAD.match(explanation)
+    if match:
+        projection = dict(projection, explanation=explanation[match.end():], own_first=True)
+    return projection
 
 
 def basis_of(projection: dict) -> str:
@@ -237,7 +251,9 @@ def build_case(projection: dict, case_id: str, slug: str, image: str, image_sour
     category, technique, _kw, audience, counterclaim, lesson, titles = choose_category(projection, domain)
     short_titles, pitch = CATEGORY_VOICE[category]
     basis = basis_of(projection)
-    observations = (prose_findings(projection.get("explanation") or "") + observations_from(projection, domain))[:4] \
+    observations = (
+        (["Desenmascara rated it fraudulent before PhishDestroy's DestroyList listed it."] if projection.get("own_first") else [])
+        + prose_findings(projection.get("explanation") or "") + observations_from(projection, domain))[:4] \
         or ["The source report records the domain as fraudulent."]
     third_party = basis.startswith("attributed")
     score = int(round(float(projection["risk_score"])))
@@ -302,7 +318,7 @@ def _assess(row, since_dispute: datetime | None = None, check_basis: bool = True
     from core.models import VerdictDispute
     from core.report_projection import build_report_projection
     from core.top_sites import get_reputation_rank
-    projection = build_report_projection(row, lang="en")
+    projection = split_own_first_lead(build_report_projection(row, lang="en"))
     domain = projection.get("domain") or host_of(row.domain)
     disputes = VerdictDispute.objects.filter(domain__iexact=domain)
     if since_dispute:
@@ -315,10 +331,13 @@ def _candidates(since: datetime, limit: int):
     from core.models import AnalyzedDomain
     rows = (AnalyzedDomain.objects
             .filter(Q(veredict="FRAUDULENT") | Q(manual_verdict="FRAUDULENT"), date__gte=since,
-                    public_id__isnull=False, assessed_by__in=CURATED_BASES)
+                    public_id__isnull=False, assessed_by__in=CURATED_BASES + ("phishdestroy_destroylist",))
             .exclude(screenshot_url__isnull=True).exclude(screenshot_url="")
             .order_by("-ai_score", "-date")[: limit * 20])
-    return sorted(rows, key=lambda row: CURATED_BASES.index(row.assessed_by))
+    # A row labelled with the feed may still be ours (we caught it first); the
+    # projection decides, and pure feed verdicts are rejected there.
+    order = CURATED_BASES + ("phishdestroy_destroylist",)
+    return sorted(rows, key=lambda row: order.index(row.assessed_by))
 
 
 def _extra_sources(row, domain: str) -> tuple[list[dict], int]:
