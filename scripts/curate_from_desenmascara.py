@@ -7,11 +7,13 @@ purpose, because a case here republishes an accusation in a public repository:
 
 * It reads the verdict a visitor is served — the same projection the MCP tools
   use, where a human correction outranks the pipeline — never the raw column.
-* It skips well-known domains, domains with a verdict dispute on file, and
-  verdicts that rest on a regulator notice (a licence question, not fraud).
-* It showcases our own work: only verdicts our AI reasoned over the corpus
-  (then human review, then heuristics). Third-party listings such as
-  PhishDestroy are not curated (owner's rule, 2026-09-15).
+* It skips well-known domains and domains with a verdict dispute on file.
+* It showcases our own work first: verdicts our AI reasoned over the corpus,
+  then human review, then heuristics. Google Safe Browsing and financial
+  regulator warnings are also curated, always attributed (owner's decision,
+  2026-10-08). PhishDestroy listings are not (owner's rule, 2026-09-15). A
+  regulator notice only reaches FRAUDULENT for a clone/impersonation or with
+  independent hard evidence; "not authorised" alone is SUSPICIOUS upstream.
 * It follows retractions: a case it added is withdrawn once the published
   verdict stops being FRAUDULENT or the operator disputes it. Hand-written
   cases are never touched.
@@ -44,20 +46,20 @@ SCREEN_DIR = BACKEND_ROOT / "media" / "screens"
 PROTECTED_RANK = 100_000
 
 #: What decided the verdict -> how the case attributes it. A basis missing from
-#: this map is skipped: regulator notices say "not authorised", which is a
-#: licence question; reputation/trust-seal/prior paths never yield FRAUDULENT;
-#: an unknown basis cannot be attributed honestly.
+#: this map is skipped: reputation/trust-seal/prior paths never yield
+#: FRAUDULENT; an unknown basis cannot be attributed honestly.
 ATTRIBUTION = {
     "phishdestroy_destroylist": "attributed PhishDestroy DestroyList match",
     "google_safe_browsing": "attributed Google Safe Browsing match",
     "cloudflare_phishing": "attributed Cloudflare phishing warning",
+    "regulatory_warnings": "attributed financial regulator warning",
     "manual_review": "human review",
     "ai_reasoning": "AI-assisted analysis",
     "heuristics": "heuristic analysis",
 }
 
 #: Verdict bases new cases may come from, in order of preference.
-CURATED_BASES = ("ai_reasoning", "manual_review", "heuristics")
+CURATED_BASES = ("ai_reasoning", "manual_review", "heuristics", "google_safe_browsing", "regulatory_warnings")
 
 #: (category, technique, keywords, audience, counterclaim, lesson, titles).
 #: Keywords are word prefixes, so Spanish and English stems both work. Order
@@ -78,6 +80,9 @@ CATEGORY_RULES = [
      ["Easy earnings. Pay first to withdraw.", "A job that asks you to pay in.", "Daily earnings that never leave the dashboard."]),
     ("Transport", "Manufactured credibility", ["logistic", "logístic", "cargo", "parcel", "paquete", "shipment", "delivery", "freight", "mensajer", "courier"], "Customers, shippers and business counterparties", "Does this carrier exist outside its website?", "A transport website does not establish that a carrier exists. Verify the company identity before entrusting it with money or goods.",
      ["A carrier website. An identity still to verify.", "A global freight company that exists only online.", "Cargo, tracking, a fleet: all claims, no carrier."]),
+    # Last: what a Safe Browsing listing says when the site's pitch is unknown.
+    ("Phishing", "Credential phishing", ["phishing", "ingeniería social", "ingenieria social", "social engineering"], "Anyone asked to sign in or confirm details", "Is this the real service's own address?", "Open a service from its official app or a saved address, never from a link you were sent, before entering a password or payment details.",
+     ["A familiar page. The wrong address.", "A login form that belongs to someone else.", "The brand is borrowed. The form is the trap."]),
 ]
 #: Short card titles and what each kind of site presents itself as, for the
 #: varied summary lines, rotated by case number (see ``pick``).
@@ -88,6 +93,7 @@ CATEGORY_VOICE = {
     "Banking": (["The bank that isn't", "The banking portal", "The card offer"], "a bank or financial service"),
     "Jobs": (["The earnings dashboard", "The online job", "The task platform"], "a way to earn money online"),
     "Transport": (["The freight company", "The carrier website", "The logistics firm"], "a logistics carrier"),
+    "Phishing": (["The phishing page", "The lookalike login", "The credential trap"], "a familiar online service"),
     "Website fraud": (["The polished website", "The unverified operator", "The convincing facade"], "a legitimate business"),
 }
 SUMMARY_TEMPLATES = [
@@ -96,6 +102,15 @@ SUMMARY_TEMPLATES = [
     "Desenmascara flagged {domain} as fraudulent ({score}/100). The site presented itself as {pitch}.",
     "An archived look at {domain}, {pitch} assessed as fraudulent by Desenmascara ({basis}, {score}/100).",
 ]
+#: Third-party verdicts: the summary names who listed the site and never
+#: describes the site's pitch, which we did not read ourselves.
+THIRD_PARTY_SOURCE = {
+    "phishdestroy_destroylist": "PhishDestroy's DestroyList",
+    "google_safe_browsing": "Google Safe Browsing",
+    "cloudflare_phishing": "Cloudflare",
+    "regulatory_warnings": "a financial regulator",
+}
+THIRD_PARTY_SUMMARY = "{domain} is flagged by {source}. Desenmascara publishes it as fraudulent ({score}/100) on that attribution, not as its own finding (captured on {date})."
 #: Independent vendor detections needed before VirusTotal is cited as a source.
 #: Corroboration only: never timing or engine names (VirusTotal terms).
 VT_MIN_VENDORS = 3
@@ -237,8 +252,9 @@ def build_case(projection: dict, case_id: str, slug: str, image: str, image_sour
         + " Follow the report for the full rationale, evidence and any later correction."
     )
     analysis_date = (projection.get("assessed_at") or "")[:10] or datetime.now(timezone.utc).date().isoformat()
-    summary = pick(SUMMARY_TEMPLATES, case_id).format(
-        domain=domain, pitch=pitch, basis=basis, score=score, date=analysis_date)
+    template = THIRD_PARTY_SUMMARY if third_party else pick(SUMMARY_TEMPLATES, case_id)
+    summary = template.format(domain=domain, pitch=pitch, basis=basis, score=score, date=analysis_date,
+                              source=THIRD_PARTY_SOURCE.get(projection.get("assessed_by"), "a third-party source"))
     return {
         "id": case_id, "slug": slug, "title": pick(titles, case_id), "short_title": pick(short_titles, case_id, 1),
         "category": category, "technique": technique, "kind": "capture", "subject": domain,

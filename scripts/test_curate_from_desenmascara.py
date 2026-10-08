@@ -19,9 +19,14 @@ class RejectionTests(unittest.TestCase):
     def test_accepts_our_own_ai_verdict(self):
         self.assertIsNone(cur.rejection_reason(projection(assessed_by="ai_reasoning"), rank=None, disputed=False))
 
-    def test_third_party_listings_not_curated(self):
-        for basis in ("phishdestroy_destroylist", "google_safe_browsing", "cloudflare_phishing"):
+    def test_phishdestroy_and_cloudflare_not_curated(self):
+        for basis in ("phishdestroy_destroylist", "cloudflare_phishing"):
             self.assertIn("basis", cur.rejection_reason(projection(assessed_by=basis), None, False))
+
+    def test_safe_browsing_and_regulator_curated(self):
+        # Owner's decision 2026-10-08: both in scope, always attributed.
+        for basis in ("google_safe_browsing", "regulatory_warnings"):
+            self.assertIsNone(cur.rejection_reason(projection(assessed_by=basis), None, False))
 
     def test_published_verdict_decides_not_pipeline_column(self):
         # A human correction to LEGIT reaches the curator as the projection's verdict.
@@ -40,12 +45,25 @@ class RejectionTests(unittest.TestCase):
     def test_disputed_rejected(self):
         self.assertIn("disputed", cur.rejection_reason(projection(assessed_by="ai_reasoning"), None, True))
 
-    def test_regulator_and_unknown_basis_rejected(self):
-        for basis in ("regulatory_warnings", "unknown", None):
+    def test_unknown_basis_rejected(self):
+        for basis in ("unknown", None):
             self.assertIn("basis", cur.rejection_reason(projection(assessed_by=basis), None, False))
 
 
 class CaseTextTests(unittest.TestCase):
+    def test_safe_browsing_and_regulator_cases_are_attributed(self):
+        for basis, name in (("google_safe_browsing", "Google Safe Browsing"), ("regulatory_warnings", "regulator")):
+            case = cur.build_case(projection(assessed_by=basis), "SA-010", "x", "x.png", "https://desenmascara.me/screens/x.png")
+            self.assertIn(name, case["assessment_source"])
+            self.assertIn("not an independent finding", case["source_summary"])
+            self.assertIn(name, case["summary"])
+            self.assertNotIn("Desenmascara's", case["summary"])
+
+    def test_safe_browsing_text_files_under_phishing(self):
+        p = projection(assessed_by="google_safe_browsing", domain="wetransfer-smoky.vercel.app",
+                       explanation="Google Safe Browsing clasifica esta URL como maliciosa (phishing / ingeniería social). Damos el sitio por fraudulento según esa fuente.")
+        self.assertEqual(cur.choose_category(p, p["domain"])[0], "Phishing")
+
     def test_third_party_listing_is_attributed(self):
         case = cur.build_case(projection(), "SA-010", "x", "x.png", "https://desenmascara.me/screens/x.png")
         self.assertIn("PhishDestroy", case["assessment_source"])
