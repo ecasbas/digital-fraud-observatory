@@ -2269,5 +2269,76 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-055",
+    "slug": "globalfirstclasstraders-live",
+    "title": "Crypto earnings, on a site nobody stands behind.",
+    "short_title": "The wallet lure",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "globalfirstclasstraders.live",
+    "summary": "An archived look at globalfirstclasstraders.live, a crypto platform assessed as fraudulent by Desenmascara (AI-assisted analysis, 88/100).",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "globalfirstclasstraders-live.png",
+    "image_source": "https://desenmascara.me/screens/5a238e8c6f64c4f7.png",
+    "image_alt": "Archived capture of globalfirstclasstraders.live, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "The source report records: hosted on an address where 171 of 388 domains we have analysed are flagged (44%).",
+      "The source report records: suspicious TLD (.live)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 88/100 for globalfirstclasstraders.live, based on AI-assisted analysis. Its analysis says: “The site presents itself as a financial investment platform offering forex, binary options, and cryptocurrency services, which is a common facade for scams.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-09",
+    "checked_at": "2026-10-09",
+    "assessment": "Fraudulent · 88/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/de10ecac-26db-4c7e-9acc-0fd863435aeb"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-056",
+    "slug": "plataformadeinvestimentos-net",
+    "title": "Automated profits, promised by nobody you can find.",
+    "short_title": "The trading platform",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "plataformadeinvestimentos.net",
+    "summary": "plataformadeinvestimentos.net presented itself as an investment or trading platform. Desenmascara rated it fraudulent (83/100) after AI-assisted analysis.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "plataformadeinvestimentos-net.png",
+    "image_source": "https://desenmascara.me/screens/7e4478d530fc54b1.png",
+    "image_alt": "Archived capture of plataformadeinvestimentos.net, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: hosted on an address where 90 of 107 domains we have analysed are flagged (84%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 83/100 for plataformadeinvestimentos.net, based on AI-assisted analysis. Its analysis says: “The site presents itself as an investment platform promising daily earnings through trading, which is a common tactic in fraudulent schemes.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-09",
+    "checked_at": "2026-10-09",
+    "assessment": "Fraudulent · 83/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/f1c01f31-22e9-47f6-956f-20b32db6dbcc"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
