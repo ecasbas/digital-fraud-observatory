@@ -2181,5 +2181,93 @@
       }
     ],
     "audience": "Online shoppers"
+  },
+  {
+    "id": "SA-053",
+    "slug": "pagodetarjetastuya-top",
+    "title": "The brand is borrowed. The form is the trap.",
+    "short_title": "The phishing page",
+    "category": "Phishing",
+    "technique": "Credential phishing",
+    "kind": "capture",
+    "subject": "pagodetarjetastuya.top",
+    "summary": "Captured on 2026-10-05: pagodetarjetastuya.top, a familiar online service that Desenmascara's AI-assisted analysis rated fraudulent at 97/100.",
+    "lesson": "Open a service from its official app or a saved address, never from a link you were sent, before entering a password or payment details.",
+    "image": "pagodetarjetastuya-top.png",
+    "image_source": "https://desenmascara.me/screens/76b052e47c25c71b.png",
+    "image_alt": "Archived capture of pagodetarjetastuya.top, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this the real service's own address?",
+    "observations": [
+      "Desenmascara rated it fraudulent before PhishDestroy's DestroyList listed it.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 17 of 18 domains we have analysed are flagged (94%).",
+      "The source report records: suspicious TLD (.top)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 97/100 for pagodetarjetastuya.top, based on AI-assisted analysis. Its analysis says: “This domain (pagodetarjetastuya.top) carries the brand name 'Tuya' inside the domain name alongside extra terms, on a low-reputation .top TLD — the structure typical of brand-impersonation phishing/smishing kits, not the brand's official site.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-05",
+    "checked_at": "2026-10-09",
+    "assessment": "Fraudulent · 97/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/212bbe8d-66c7-4d7d-9b51-56a34ebcb09b"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-02-14 through NICENIC INTERNATIONAL GROUP CO., LIMITED.",
+        "url": "https://lookup.icann.org/en/lookup?name=pagodetarjetastuya.top"
+      }
+    ],
+    "audience": "Anyone asked to sign in or confirm details"
+  },
+  {
+    "id": "SA-054",
+    "slug": "wealthpasselltd-cc",
+    "title": "Big returns. No verifiable firm behind them.",
+    "short_title": "The investment offer",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "wealthpasselltd.cc",
+    "summary": "Desenmascara flagged wealthpasselltd.cc as fraudulent (95/100). The site presented itself as an investment or trading platform.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "wealthpasselltd-cc.png",
+    "image_source": "https://desenmascara.me/screens/05b426e30f3d96a6.png",
+    "image_alt": "Archived capture of wealthpasselltd.cc, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "Desenmascara rated it fraudulent before PhishDestroy's DestroyList listed it.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 88 of 143 domains we have analysed are flagged (62%).",
+      "The source report records: domain registered 1 day ago."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for wealthpasselltd.cc, based on heuristic analysis. Its analysis says: “What we found: Page identical to 30 sites already classified as fraudulent; Its server hosts 429 known fraudulent sites; Domain registered 1 day ago.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-07",
+    "checked_at": "2026-10-09",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · heuristic analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: heuristic analysis",
+        "url": "https://desenmascara.me/analisis/4271ce34-a998-4aab-8ec5-36f29befe92b"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-10-06 through NameSilo, LLC.",
+        "url": "https://lookup.icann.org/en/lookup?name=wealthpasselltd.cc"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
