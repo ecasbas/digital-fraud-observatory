@@ -2340,5 +2340,79 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-057",
+    "slug": "assetscommercebank-com",
+    "title": "A bank website. No bank you can verify.",
+    "short_title": "The banking portal",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "assetscommercebank.com",
+    "summary": "Captured on 2026-10-09: assetscommercebank.com, a bank or financial service that Desenmascara's AI-assisted analysis rated fraudulent at 95/100.",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "assetscommercebank-com.png",
+    "image_source": "https://desenmascara.me/screens/52ec0ab4e080f5cc.png",
+    "image_alt": "Archived capture of assetscommercebank.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "Desenmascara rated it fraudulent before PhishDestroy's DestroyList listed it.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 92 of 152 domains we have analysed are flagged (61%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for assetscommercebank.com, based on AI-assisted analysis. Its analysis says: “The site impersonates a banking institution, claiming to be 'Assets Commerce Bank – Global Financial Services', but there are significant concerns regarding its legitimacy.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-09",
+    "checked_at": "2026-10-10",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/f5250f34-bd15-4e6e-8273-435a25a36075"
+      }
+    ],
+    "audience": "Bank customers and payment users"
+  },
+  {
+    "id": "SA-058",
+    "slug": "investment24profit-top",
+    "title": "A trading desk with no regulator on record.",
+    "short_title": "The returns promise",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "investment24profit.top",
+    "summary": "Desenmascara flagged investment24profit.top as fraudulent (92/100). The site presented itself as an investment or trading platform.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "investment24profit-top.png",
+    "image_source": "https://desenmascara.me/screens/6b41dda28d65c205.png",
+    "image_alt": "Archived capture of investment24profit.top, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "No verifiable legal identity or mandatory legal information.",
+      "The source report records: hosted on an address where 87 of 155 domains we have analysed are flagged (56%).",
+      "The source report records: suspicious TLD (.top)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 92/100 for investment24profit.top, based on AI-assisted analysis. Its analysis says: “The site Investment24profit presents itself as a CFD trading platform, but it is newly registered with a domain age of 0 days, which is a significant risk signal.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-10",
+    "checked_at": "2026-10-10",
+    "assessment": "Fraudulent · 92/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/051eb731-33dd-42e8-96bc-b1a1dcbe5067"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
