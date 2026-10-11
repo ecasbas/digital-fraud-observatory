@@ -2414,5 +2414,77 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-059",
+    "slug": "luminexcapitalstrade-com",
+    "title": "Automated profits, promised by nobody you can find.",
+    "short_title": "The trading platform",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "luminexcapitalstrade.com",
+    "summary": "An archived look at luminexcapitalstrade.com, an investment or trading platform assessed as fraudulent by Desenmascara (AI-assisted analysis, 93/100).",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "luminexcapitalstrade-com.png",
+    "image_source": "https://desenmascara.me/screens/3a56722da7c5c231.png",
+    "image_alt": "Archived capture of luminexcapitalstrade.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "No verifiable legal identity or mandatory legal information.",
+      "The source report records: hosted on an address where 156 of 366 domains we have analysed are flagged (43%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 93/100 for luminexcapitalstrade.com, based on AI-assisted analysis. Its analysis says: “The site presents itself as a trading platform for CFDs, but it is registered for only 0 days, indicating a very recent creation, which is a significant risk signal.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-11",
+    "checked_at": "2026-10-11",
+    "assessment": "Fraudulent · 93/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/6149fd01-4903-4ac7-9b10-3a0c57798b2f"
+      }
+    ],
+    "audience": "Retail investors"
+  },
+  {
+    "id": "SA-060",
+    "slug": "diamondwealths-com",
+    "title": "A crypto platform. A wallet you should not connect.",
+    "short_title": "The crypto earnings site",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "diamondwealths.com",
+    "summary": "diamondwealths.com presented itself as a crypto platform. Desenmascara rated it fraudulent (91/100) after AI-assisted analysis.",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "diamondwealths-com.png",
+    "image_source": "https://desenmascara.me/screens/d4a8dc7b893bd310.png",
+    "image_alt": "Archived capture of diamondwealths.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "No verifiable legal identity or mandatory legal information.",
+      "The source report records: hosted on an address where 18 of 18 domains we have analysed are flagged (100%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 91/100 for diamondwealths.com, based on AI-assisted analysis. Its analysis says: “The site presents itself as a cryptocurrency trading and asset management company but shows multiple red flags indicative of a scam.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-11",
+    "checked_at": "2026-10-11",
+    "assessment": "Fraudulent · 91/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/659cea58-0a40-4f03-b462-65fc922d78e6"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
   }
 ]
