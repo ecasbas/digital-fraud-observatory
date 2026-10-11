@@ -2486,5 +2486,77 @@
       }
     ],
     "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-061",
+    "slug": "tradeplus24-live",
+    "title": "A trading desk with no regulator on record.",
+    "short_title": "The returns promise",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "tradeplus24.live",
+    "summary": "tradeplus24.live is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-11).",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "tradeplus24-live.png",
+    "image_source": "https://desenmascara.me/screens/ae58720252358401.png",
+    "image_alt": "Archived capture of tradeplus24.live, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: official warning from Australian Securities and Investments Commission (Australia) naming TradePlus24 (tradeplus24.live).",
+      "The source report records: suspicious TLD (.live)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for tradeplus24.live, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-11",
+    "checked_at": "2026-10-11",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "url": "https://desenmascara.me/analisis/700ad782-680b-4a06-a200-6f75d0dd4332"
+      }
+    ],
+    "audience": "Retail investors"
+  },
+  {
+    "id": "SA-062",
+    "slug": "btcknotusv154-live",
+    "title": "The coins are real. The platform is not verifiable.",
+    "short_title": "The crypto platform",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "btcknotusv154.live",
+    "summary": "btcknotusv154.live is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-11).",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "btcknotusv154-live.png",
+    "image_source": "https://desenmascara.me/screens/1d0a253bc03862e4.png",
+    "image_alt": "Archived capture of btcknotusv154.live, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "The source report records: official warning from Australian Securities and Investments Commission (Australia) naming BTC Knotus V15.4 (btcknotusv154.live).",
+      "The source report records: suspicious TLD (.live)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for btcknotusv154.live, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-11",
+    "checked_at": "2026-10-11",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "url": "https://desenmascara.me/analisis/e63b1d32-8f80-4ee8-9ada-3cb9416f2ff4"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
   }
 ]
