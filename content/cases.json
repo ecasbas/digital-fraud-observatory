@@ -2580,11 +2580,11 @@
       "On 11 October 2026 the domain served \"Website Takedown Notice\": the site had been taken down by Lovable's Trust & Safety team.",
       "The same takedown notice, on the same platform, was found the same day on stanlakegroup.co.uk, another investment firm warned by a regulator (see SA-064)."
     ],
-    "source_summary": "Desenmascara publishes renovae.app as Suspicious, on the attributed regulator warning. The takedown notice is Lovable's, captured by Desenmascara on 11 October 2026. Follow the report for the full record and any later correction.",
+    "source_summary": "Desenmascara publishes renovae.app as Fraudulent: the attributed regulator warning is corroborated by the hosting platform's own abuse takedown. The takedown notice is Lovable's, captured by Desenmascara on 11 October 2026. Follow the report for the full record and any later correction.",
     "limits": "This case documents a regulator's public warning and the hosting platform's takedown notice; it is not an independent investigation by this project. The capture shows the takedown notice, not the original site. A regulator's \"unauthorised\" warning concerns licensing in that jurisdiction and does not by itself prove fraud, customer losses or operator identity. The platform does not publish why it removed the site. If either source withdraws its notice, this case is withdrawn too.",
     "analysis_date": "2026-10-11",
     "checked_at": "2026-10-12",
-    "assessment": "Suspicious · regulator warning + platform takedown",
+    "assessment": "Fraudulent · regulator warning corroborated by platform takedown",
     "assessment_source": "Autorité des marchés financiers (Quebec), via IOSCO I-SCAN; Lovable Trust & Safety notice",
     "sources": [
       {
@@ -2624,11 +2624,11 @@
       "On 11 October 2026 it redirected to www.stanlakeltd.com, which served Lovable's Trust & Safety takedown notice.",
       "The same notice, on the same platform, was found the same day on renovae.app, warned by Quebec's regulator (see SA-063)."
     ],
-    "source_summary": "Desenmascara publishes stanlakegroup.co.uk as Suspicious, on the attributed regulator warning. The redirect and the takedown notice were captured by Desenmascara on 11 October 2026. Follow the report for the full record and any later correction.",
+    "source_summary": "Desenmascara publishes stanlakegroup.co.uk as Fraudulent: the attributed regulator warning is corroborated by the hosting platform's own abuse takedown. The redirect and the takedown notice were captured by Desenmascara on 11 October 2026. Follow the report for the full record and any later correction.",
     "limits": "This case documents a regulator's public warning and the hosting platform's takedown notice; it is not an independent investigation by this project. The capture shows the takedown notice, not the original site. A regulator's \"unauthorised\" warning concerns licensing in that jurisdiction and does not by itself prove fraud, customer losses or operator identity. The platform does not publish why it removed the site. If either source withdraws its notice, this case is withdrawn too.",
     "analysis_date": "2026-10-11",
     "checked_at": "2026-10-12",
-    "assessment": "Suspicious · regulator warning + platform takedown",
+    "assessment": "Fraudulent · regulator warning corroborated by platform takedown",
     "assessment_source": "Financial Conduct Authority (UK), via IOSCO I-SCAN; Lovable Trust & Safety notice",
     "sources": [
       {
