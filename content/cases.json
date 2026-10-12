@@ -2558,5 +2558,92 @@
       }
     ],
     "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-063",
+    "slug": "renovae-app-ai-builder-takedown",
+    "title": "Built with an AI website builder. Warned by a regulator. Taken down by the platform.",
+    "short_title": "The investment site the builder removed",
+    "category": "Investment",
+    "technique": "Investment platform built on an AI website builder",
+    "kind": "capture",
+    "subject": "renovae.app",
+    "summary": "renovae.app presented an investment service under the name Renovae. Quebec's financial regulator, the Autorité des marchés financiers, warned on 24 August 2026 that Renovae is not authorised. When desenmascara.me analysed the domain on 11 October 2026, the site was gone: it served a takedown notice from Lovable's Trust & Safety team, the AI website builder it was built on.",
+    "lesson": "A professional-looking investment website can be built in an afternoon with an AI website builder. Before you send money, look the firm up in your own country's financial regulator register, and treat a site that disappears behind a platform's takedown notice as a warning about every other site run by the same people.",
+    "image": "renovae-app.png",
+    "image_source": "https://desenmascara.me/screens/257a3331375e8312.png",
+    "image_alt": "Capture of renovae.app on 11 October 2026: a Lovable Trust & Safety website takedown notice.",
+    "claim": "An investment platform",
+    "counterclaim": "Is the firm in your regulator's register?",
+    "observations": [
+      "Official warning from the Autorité des marchés financiers (Quebec) naming Renovae, dated 24 August 2026, as published through IOSCO's I-SCAN alerts.",
+      "On 11 October 2026 the domain served \"Website Takedown Notice\": the site had been taken down by Lovable's Trust & Safety team.",
+      "The same takedown notice, on the same platform, was found the same day on stanlakegroup.co.uk, another investment firm warned by a regulator (see SA-064)."
+    ],
+    "source_summary": "Desenmascara publishes renovae.app as Suspicious, on the attributed regulator warning. The takedown notice is Lovable's, captured by Desenmascara on 11 October 2026. Follow the report for the full record and any later correction.",
+    "limits": "This case documents a regulator's public warning and the hosting platform's takedown notice; it is not an independent investigation by this project. The capture shows the takedown notice, not the original site. A regulator's \"unauthorised\" warning concerns licensing in that jurisdiction and does not by itself prove fraud, customer losses or operator identity. The platform does not publish why it removed the site. If either source withdraws its notice, this case is withdrawn too.",
+    "analysis_date": "2026-10-11",
+    "checked_at": "2026-10-12",
+    "assessment": "Suspicious · regulator warning + platform takedown",
+    "assessment_source": "Autorité des marchés financiers (Quebec), via IOSCO I-SCAN; Lovable Trust & Safety notice",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and capture of the takedown notice · 11 October 2026",
+        "url": "https://desenmascara.me/analisis/acdb114f-1f65-46ee-82b8-4b75b75198bf"
+      },
+      {
+        "name": "IOSCO I-SCAN",
+        "short": "IOSCO",
+        "role": "International alerts network republishing the AMF (Quebec) warning on Renovae · 24 August 2026",
+        "url": "https://www.iosco.org/i-scan/"
+      }
+    ],
+    "audience": "Retail investors and anyone offered an online investment account"
+  },
+  {
+    "id": "SA-064",
+    "slug": "stanlake-group-ai-builder-takedown",
+    "title": "Two domains, one warning, the same takedown notice.",
+    "short_title": "The firm that moved domains",
+    "category": "Investment",
+    "technique": "Investment platform built on an AI website builder",
+    "kind": "capture",
+    "subject": "stanlakegroup.co.uk",
+    "summary": "stanlakegroup.co.uk presented an investment firm called Stanlake Group. The UK Financial Conduct Authority warned on 6 August 2026 that Stanlake Group is not authorised. On 11 October 2026 the domain redirected to a second domain, stanlakeltd.com, and both ended at a takedown notice from Lovable's Trust & Safety team.",
+    "lesson": "A professional-looking investment website can be built in an afternoon with an AI website builder. Before you send money, look the firm up in your own country's financial regulator register, and treat a site that disappears behind a platform's takedown notice as a warning about every other site run by the same people.",
+    "image": "stanlakegroup-co-uk.png",
+    "image_source": "https://desenmascara.me/screens/7153071635429b2c.png",
+    "image_alt": "Capture of stanlakegroup.co.uk on 11 October 2026: a Lovable Trust & Safety website takedown notice.",
+    "claim": "An established investment group",
+    "counterclaim": "Why does it need a second domain?",
+    "observations": [
+      "Official warning from the Financial Conduct Authority (United Kingdom) naming Stanlake Group, dated 6 August 2026, as published through IOSCO's I-SCAN alerts.",
+      "The .co.uk domain was registered on 21 January 2026, according to its registry record.",
+      "On 11 October 2026 it redirected to www.stanlakeltd.com, which served Lovable's Trust & Safety takedown notice.",
+      "The same notice, on the same platform, was found the same day on renovae.app, warned by Quebec's regulator (see SA-063)."
+    ],
+    "source_summary": "Desenmascara publishes stanlakegroup.co.uk as Suspicious, on the attributed regulator warning. The redirect and the takedown notice were captured by Desenmascara on 11 October 2026. Follow the report for the full record and any later correction.",
+    "limits": "This case documents a regulator's public warning and the hosting platform's takedown notice; it is not an independent investigation by this project. The capture shows the takedown notice, not the original site. A regulator's \"unauthorised\" warning concerns licensing in that jurisdiction and does not by itself prove fraud, customer losses or operator identity. The platform does not publish why it removed the site. If either source withdraws its notice, this case is withdrawn too.",
+    "analysis_date": "2026-10-11",
+    "checked_at": "2026-10-12",
+    "assessment": "Suspicious · regulator warning + platform takedown",
+    "assessment_source": "Financial Conduct Authority (UK), via IOSCO I-SCAN; Lovable Trust & Safety notice",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and capture of the takedown notice · 11 October 2026",
+        "url": "https://desenmascara.me/analisis/7b32aa04-9e7a-4078-8304-0c2c2c1c400d"
+      },
+      {
+        "name": "IOSCO I-SCAN",
+        "short": "IOSCO",
+        "role": "International alerts network republishing the FCA warning on Stanlake Group · 6 August 2026",
+        "url": "https://www.iosco.org/i-scan/"
+      }
+    ],
+    "audience": "Retail investors and anyone offered an online investment account"
   }
 ]
