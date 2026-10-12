@@ -2728,5 +2728,50 @@
       }
     ],
     "audience": "Job seekers and online task workers"
+  },
+  {
+    "id": "SA-067",
+    "slug": "circleglobalrecruitment-com",
+    "title": "The recruiter who charges the candidate.",
+    "short_title": "The flattering headhunter",
+    "category": "Jobs",
+    "technique": "Recruitment fee scam",
+    "kind": "capture",
+    "subject": "circleglobalrecruitment.com",
+    "summary": "circleglobalrecruitment.com presents an international recruitment agency. Its contact comes as an unsolicited email from a Gmail address in the company's name, praising the recipient's career in detail and offering an unnamed senior role. The site's real destination is a payment page where the candidate types in an amount set by their \"representative\" for CV writing priced from $300 to $995.",
+    "lesson": "Genuine recruiters are paid by the employer, never by the candidate. A flattering message that knows your CV but names no job, followed by a fee for rewriting your CV, is the pattern of a recruitment scam. Do not pay to be considered for a job.",
+    "image": "circleglobalrecruitment-com.png",
+    "image_source": "https://desenmascara.me/screens/52fa6ffe2fe5578a.png",
+    "image_alt": "Capture of circleglobalrecruitment.com on 12 October 2026: a recruitment agency home page, 'Connecting the right people with the right roles'.",
+    "claim": "A recruiter who found you a senior role",
+    "counterclaim": "Why does the candidate pay?",
+    "observations": [
+      "The outreach email, received on 12 October 2026, came from a Gmail address in the company's name, not from the site's own domain. It summarised the recipient's public professional profile and named no employer and no position.",
+      "The site's payment page reads: \"Please enter the exact payment amount provided by your Circle Global Recruitment representative.\"",
+      "Services offered to candidates on that page: New Resume Writing $995; Resume Rewrite $300, $500 or $700; Cover Letter $300. Payments go through Paystack, a Nigerian payment gateway, and the currencies include the Nigerian naira.",
+      "The refund policy states that fees are non-refundable once the \"service\" has started.",
+      "The site names no company, registration number or address. The domain was about 100 days old when analysed."
+    ],
+    "source_summary": "Desenmascara publishes circleglobalrecruitment.com as Fraudulent after a manual review on 12 October 2026, with verbatim fragments of the payment and refund pages as public evidence. Follow the report for the full record and any later correction.",
+    "limits": "This case documents the site's own pages and one unsolicited message; it does not prove customer losses or identify the operator. The Gmail address is not published on the site, so the link between the message and the domain rests on the company name and on the site's payment page relying on a \"representative\" who contacts candidates. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-12",
+    "checked_at": "2026-10-12",
+    "assessment": "Fraudulent · manual review",
+    "assessment_source": "desenmascara.me · human review with verbatim site evidence",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report, archived capture and manual review with verbatim evidence",
+        "url": "https://desenmascara.me/analisis/8178434e-d1df-4d98-98e8-1e24999ac3c4"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record (registered through NameCheap, Inc.).",
+        "url": "https://lookup.icann.org/en/lookup?name=circleglobalrecruitment.com"
+      }
+    ],
+    "audience": "Job seekers and professionals contacted by recruiters"
   }
 ]
