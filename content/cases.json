@@ -2773,5 +2773,87 @@
       }
     ],
     "audience": "Job seekers and professionals contacted by recruiters"
+  },
+  {
+    "id": "SA-068",
+    "slug": "dipb-gov-org",
+    "title": "Daily earnings that never leave the dashboard.",
+    "short_title": "The earnings dashboard",
+    "category": "Jobs",
+    "technique": "Advance-fee request",
+    "kind": "capture",
+    "subject": "dipb-gov.org",
+    "summary": "dipb-gov.org is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-12).",
+    "lesson": "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.",
+    "image": "dipb-gov-org.png",
+    "image_source": "https://desenmascara.me/screens/db1419b49dc85f99.png",
+    "image_alt": "Archived capture of dipb-gov.org, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "A displayed balance is not proof of withdrawable earnings",
+    "observations": [
+      "The source report records: official warning from Securities and Exchange Commission (United States of America) naming Department of Interagency Protection Bureau."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for dipb-gov.org, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-12",
+    "checked_at": "2026-10-13",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "url": "https://desenmascara.me/analisis/9f0dcbd4-1205-41ee-9c69-49e7bb29ccd5"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-03-12 through Stichting Registrar of Last Resort Foundation.",
+        "url": "https://lookup.icann.org/en/lookup?name=dipb-gov.org"
+      }
+    ],
+    "audience": "Job seekers and online task workers"
+  },
+  {
+    "id": "SA-069",
+    "slug": "bgwealthsharing-com",
+    "title": "Big returns. No verifiable firm behind them.",
+    "short_title": "The investment offer",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "bgwealthsharing.com",
+    "summary": "bgwealthsharing.com is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-12).",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "bgwealthsharing-com.png",
+    "image_source": "https://desenmascara.me/screens/e33a0e2fabec0a69.png",
+    "image_alt": "Archived capture of bgwealthsharing.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: official warning from Ontario Securities Commission (Ontario) naming BG Wealth Sharing Ltd. (DSJ Exchange)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for bgwealthsharing.com, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-12",
+    "checked_at": "2026-10-13",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "url": "https://desenmascara.me/analisis/990c6f19-e9aa-4e62-88d1-5dfc12ae800b"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2025-01-14 through GoDaddy.com, LLC.",
+        "url": "https://lookup.icann.org/en/lookup?name=bgwealthsharing.com"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
