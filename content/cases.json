@@ -2647,48 +2647,6 @@
     "audience": "Retail investors and anyone offered an online investment account"
   },
   {
-    "id": "SA-065",
-    "slug": "marginaltrading-net",
-    "title": "The brand is borrowed. The form is the trap.",
-    "short_title": "The phishing page",
-    "category": "Phishing",
-    "technique": "Credential phishing",
-    "kind": "capture",
-    "subject": "marginaltrading.net",
-    "summary": "marginaltrading.net is flagged by Google Safe Browsing. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-11).",
-    "lesson": "Open a service from its official app or a saved address, never from a link you were sent, before entering a password or payment details.",
-    "image": "marginaltrading-net.png",
-    "image_source": "https://desenmascara.me/screens/2fb56fef0d48f727.png",
-    "image_alt": "Archived capture of marginaltrading.net, a website assessed as fraudulent.",
-    "claim": "An operating online service",
-    "counterclaim": "Is this the real service's own address?",
-    "observations": [
-      "The source report records: official warning from Financial Conduct Authority (United Kingdom) naming marginaltrading.net.",
-      "The source report records: hosted on an address where 33 of 61 domains we have analysed are flagged (54%)."
-    ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for marginaltrading.net, based on attributed Google Safe Browsing match. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
-    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
-    "analysis_date": "2026-10-11",
-    "checked_at": "2026-10-12",
-    "assessment": "Fraudulent · 100/100",
-    "assessment_source": "desenmascara.me · attributed Google Safe Browsing match",
-    "sources": [
-      {
-        "name": "desenmascara.me",
-        "short": "Desenmascara",
-        "role": "Public report and archived capture; verdict basis: attributed Google Safe Browsing match",
-        "url": "https://desenmascara.me/analisis/5e3a76fe-3b8b-4722-b718-9d937e44ee2d"
-      },
-      {
-        "name": "ICANN Registration Data Lookup",
-        "short": "ICANN",
-        "role": "Public registration record. At analysis time it showed the domain registered on 2026-01-13 through Global Domain Group LLC.",
-        "url": "https://lookup.icann.org/en/lookup?name=marginaltrading.net"
-      }
-    ],
-    "audience": "Anyone asked to sign in or confirm details"
-  },
-  {
     "id": "SA-066",
     "slug": "fpiugov-org",
     "title": "Easy earnings. Pay first to withdraw.",
@@ -2852,6 +2810,88 @@
         "short": "ICANN",
         "role": "Public registration record. At analysis time it showed the domain registered on 2025-01-14 through GoDaddy.com, LLC.",
         "url": "https://lookup.icann.org/en/lookup?name=bgwealthsharing.com"
+      }
+    ],
+    "audience": "Retail investors"
+  },
+  {
+    "id": "SA-070",
+    "slug": "maygroupsolution-com",
+    "title": "A job that asks you to pay in.",
+    "short_title": "The task platform",
+    "category": "Jobs",
+    "technique": "Advance-fee request",
+    "kind": "capture",
+    "subject": "maygroupsolution.com",
+    "summary": "maygroupsolution.com is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-13).",
+    "lesson": "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.",
+    "image": "maygroupsolution-com.png",
+    "image_source": "https://desenmascara.me/screens/3b5590a04f3c6571.png",
+    "image_alt": "Archived capture of maygroupsolution.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "A displayed balance is not proof of withdrawable earnings",
+    "observations": [
+      "The source report records: official warning from Securities and Exchange Commission (United States of America) naming May Capital Group."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for maygroupsolution.com, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-13",
+    "checked_at": "2026-10-13",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "url": "https://desenmascara.me/analisis/46e32bbe-a8eb-443b-a4e7-ffce061fd3d7"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2023-01-26 through NameCheap, Inc..",
+        "url": "https://lookup.icann.org/en/lookup?name=maygroupsolution.com"
+      }
+    ],
+    "audience": "Job seekers and online task workers"
+  },
+  {
+    "id": "SA-071",
+    "slug": "firagov-org",
+    "title": "Automated profits, promised by nobody you can find.",
+    "short_title": "The trading platform",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "firagov.org",
+    "summary": "firagov.org is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-13).",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "firagov-org.png",
+    "image_source": "https://desenmascara.me/screens/86ee1bd7a9f7242e.png",
+    "image_alt": "Archived capture of firagov.org, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: official warning from Securities and Exchange Commission (United States of America) naming Fraud Investigation and Repatriation Authority."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for firagov.org, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-13",
+    "checked_at": "2026-10-13",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "url": "https://desenmascara.me/analisis/05b6c98b-15e9-4818-906b-3e1467930987"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-03-12 through Stichting Registrar of Last Resort Foundation.",
+        "url": "https://lookup.icann.org/en/lookup?name=firagov.org"
       }
     ],
     "audience": "Retail investors"
