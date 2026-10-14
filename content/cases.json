@@ -2971,5 +2971,69 @@
       }
     ],
     "audience": "Job seekers and online task workers"
+  },
+  {
+    "id": "SA-074",
+    "slug": "en-html-org-dead-domain-link-harvesting",
+    "title": "A dead website's name. Someone else's business behind it.",
+    "short_title": "The dead-domain link harvest",
+    "category": "Impersonation",
+    "technique": "Dead-domain owner impersonation",
+    "kind": "incident",
+    "audience": "Bloggers, librarians, Wikipedia editors and anyone who maintains old web pages with links",
+    "subject": "en-html.org",
+    "summary": "Emails written as if from the owners of defunct websites ask site administrators to swap old links for \"mirror\" copies on en-html.org. The copies are named after closed charities, archives and local history projects, and now redirect to commercial hotel sites.",
+    "lesson": "A request to update an old link is not proof that it comes from the original owner. Check the new address before changing anything. If the original site is gone, link to an archive.org copy instead of a \"mirror\" offered by a stranger.",
+    "claim": "We are the owners of the site you link to",
+    "counterclaim": "Why does the new link end on a hotel website?",
+    "observations": [
+      "On 9 October 2026 a site administrator reported receiving emails from people posing as the legitimate owners of expired domains he had linked to, asking him to point those links to copies hosted on en-html.org.",
+      "On 14 October 2026 the en-html.org home page showed \"Under Maintenance\" and linked to 23 subdomains named after defunct organisations, such as sharksavers, minneapolishistorical, ancient-egypt and fairmountpark.",
+      "On the same day sharksavers.en-html.org answered with a permanent redirect (HTTP 301) to a page on beachhotel.net titled \"Shark Savers: Protecting the Oceans, One Shark at a Time | Beachhotel.net\", and minneapolishistorical.en-html.org redirected to a page on hotelsdowntown.info.",
+      "en-html.org was registered on 28 April 2025 through Spaceship, Inc."
+    ],
+    "source_summary": "Russell Coker documented the emails and the en-html.org mirrors on his blog on 9 October 2026 and recommends replacing such links with archive.org copies. The redirects to hotel websites were observed by the Digital Fraud Observatory on 14 October 2026.",
+    "limits": "The aim of building search ranking from old links is the source's inference; it is not confirmed by the operator. This case does not show that anyone lost money or that the hotel sites commissioned the scheme. The redirects can change at any time; they are described as they stood on 14 October 2026.",
+    "analysis_date": "2026-10-09",
+    "checked_at": "2026-10-14",
+    "assessment": "Deceptive practice · independent report and direct observation",
+    "assessment_source": "Russell Coker's blog; Digital Fraud Observatory",
+    "sources": [
+      {
+        "name": "Russell Coker's blog (etbe)",
+        "short": "etbe",
+        "role": "Original report of the emails and the en-html.org mirrors · 9 October 2026",
+        "url": "https://etbe.coker.com.au/2026/10/09/en-html-org-scam-site/"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record (registered through Spaceship, Inc.).",
+        "url": "https://lookup.icann.org/en/lookup?name=en-html.org"
+      }
+    ],
+    "pathway": {
+      "heading": "How an old link becomes someone else's traffic",
+      "intro": "Each step looks like a helpful correction. The control point is checking where the new link really ends before you change it.",
+      "steps": [
+        {
+          "label": "REQUEST",
+          "title": "\"We own the site you link to\"",
+          "text": "An email claims to come from the owners of a website that has closed, and offers a \"mirror\" copy."
+        },
+        {
+          "label": "VERIFY",
+          "title": "Open the new link first",
+          "text": "See where it really ends. If the original site is gone, link to an archive.org copy instead.",
+          "warning": true
+        },
+        {
+          "label": "REDIRECT",
+          "title": "The link ends elsewhere",
+          "text": "The \"mirror\" redirects to an unrelated commercial site, which inherits the trust of your old link."
+        }
+      ],
+      "caption": "Documented from a public report and from the redirects observed on 14 October 2026. No live page from these sites is embedded here."
+    }
   }
 ]
