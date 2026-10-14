@@ -148,5 +148,27 @@ class CaseTextTests(unittest.TestCase):
         self.assertEqual(cur.next_id([{"id": "SA-008"}], high_water=9), "SA-010")
 
 
+
+
+class PublishLocalTests(unittest.TestCase):
+    def test_swaps_the_build_into_place_and_drops_stale_pages(self):
+        import tempfile
+        from pathlib import Path
+        with tempfile.TemporaryDirectory() as tmp:
+            dist = Path(tmp) / "dist"
+            (dist / "cases" / "new").mkdir(parents=True)
+            (dist / "index.html").write_text("new")
+            target = Path(tmp) / "site"
+            (target / "cases" / "withdrawn").mkdir(parents=True)
+            (target / "index.html").write_text("old")
+            cur.publish_local(dist, str(target))
+            self.assertEqual((target / "index.html").read_text(), "new")
+            self.assertTrue((target / "cases" / "new").is_dir())
+            self.assertFalse((target / "cases" / "withdrawn").exists())
+            self.assertFalse((Path(tmp) / "site.old").exists())
+            self.assertEqual((target / "index.html").stat().st_mode & 0o777, 0o644)
+            self.assertEqual(target.stat().st_mode & 0o777, 0o755)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -20,10 +20,9 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
       - name: Build
-        env:
-          SITE_URL: ${{ steps.pages.outputs.base_url }}
-          REPOSITORY_URL: ${{ github.server_url }}/${{ github.repository }}
-        run: python3 scripts/build.py --base-url "$SITE_URL" --repository "$REPOSITORY_URL" --indexable
+        # The canonical URL is desenmascara.me (site.json), so this GitHub copy
+        # passes its search signals to the main domain instead of competing.
+        run: python3 scripts/build.py
       - run: python3 scripts/check.py
       - uses: actions/upload-pages-artifact@v4
         with:

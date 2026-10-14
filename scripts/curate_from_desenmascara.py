@@ -374,6 +374,34 @@ def _load(path: Path, default):
         return default
 
 
+# desenmascara.me serves the observatory itself (canonical URL in site.json), so
+# every build is copied there; GitHub Pages is the mirror.
+PUBLISH_DIR = os.environ.get(
+    "OBSERVATORY_PUBLISH_DIR", "/home/deploy/desenmascarame-backend/media/deception-observatory"
+)
+
+
+def publish_local(dist: Path = ROOT / "dist", target: str = PUBLISH_DIR) -> None:
+    """Swap the built site into place, so a reader never sees a half-copied tree."""
+    if not target:
+        return
+    target_path = Path(target)
+    staging = target_path.with_name(target_path.name + ".new")
+    old = target_path.with_name(target_path.name + ".old")
+    shutil.rmtree(staging, ignore_errors=True)
+    shutil.rmtree(old, ignore_errors=True)
+    shutil.copytree(dist, staging)
+    # nginx reads this tree as "other": the build runs under umask 027, and the
+    # media folder's default ACL names www-data with no read, which would win.
+    subprocess.run(["setfacl", "-R", "-b", str(staging)], check=False)
+    for path in [staging, *staging.rglob("*")]:
+        path.chmod(0o755 if path.is_dir() else 0o644)
+    if target_path.exists():
+        target_path.rename(old)
+    staging.rename(target_path)
+    shutil.rmtree(old, ignore_errors=True)
+
+
 def _auto_git(message: str) -> None:
     if (os.getenv("OBSERVATORY_AUTO_GIT") or "").lower() not in {"1", "true", "yes", "on"}:
         return
@@ -482,6 +510,7 @@ def main() -> int:
         shutil.rmtree(ROOT / "dist", ignore_errors=True)
         subprocess.run([sys.executable, str(ROOT / "scripts" / "build.py")], cwd=ROOT, check=True)
         subprocess.run([sys.executable, str(ROOT / "scripts" / "check.py")], cwd=ROOT, check=True)
+        publish_local()
     parts = [f"add {', '.join(c['id'] for c, _ in additions)}" if additions else "", f"withdraw {', '.join(sorted(withdrawn_ids))}" if withdrawals else ""]
     _auto_git("content: curator " + "; ".join(p for p in parts if p))
 
