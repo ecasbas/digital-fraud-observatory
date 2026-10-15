@@ -3035,5 +3035,93 @@
       ],
       "caption": "Documented from a public report and from the redirects observed on 14 October 2026. No live page from these sites is embedded here."
     }
+  },
+  {
+    "id": "SA-075",
+    "slug": "teslastock-pro",
+    "title": "Big returns. No verifiable firm behind them.",
+    "short_title": "The investment offer",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "teslastock.pro",
+    "summary": "teslastock.pro is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-14).",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "teslastock-pro.png",
+    "image_source": "https://desenmascara.me/screens/51421692db45c14a.png",
+    "image_alt": "Archived capture of teslastock.pro, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: official warning from Australian Securities and Investments Commission (Australia) naming Tesla Stocks (teslastock.pro)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for teslastock.pro, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 10 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-14",
+    "checked_at": "2026-10-15",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "url": "https://desenmascara.me/analisis/bdb655a9-d4e3-429c-af1b-b95d856f74e5"
+      },
+      {
+        "name": "VirusTotal",
+        "short": "VirusTotal",
+        "role": "Independent corroboration: 10 security vendors flagged the domain as malicious (checked 2026-10-14).",
+        "url": "https://www.virustotal.com/gui/domain/teslastock.pro"
+      }
+    ],
+    "audience": "Retail investors"
+  },
+  {
+    "id": "SA-076",
+    "slug": "obsidian-group-org",
+    "title": "A job that asks you to pay in.",
+    "short_title": "The task platform",
+    "category": "Jobs",
+    "technique": "Advance-fee request",
+    "kind": "capture",
+    "subject": "obsidian-group.org",
+    "summary": "obsidian-group.org is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-14).",
+    "lesson": "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.",
+    "image": "obsidian-group-org.png",
+    "image_source": "https://desenmascara.me/screens/7cb6437cf308f507.png",
+    "image_alt": "Archived capture of obsidian-group.org, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "A displayed balance is not proof of withdrawable earnings",
+    "observations": [
+      "The source report records: official warning from Cyprus Securities and Exchange Commission (Cyprus) naming obsidian-group.org."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for obsidian-group.org, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 9 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-14",
+    "checked_at": "2026-10-15",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "url": "https://desenmascara.me/analisis/5c33a83d-54c9-4b34-aa7a-90a6d6d1354d"
+      },
+      {
+        "name": "VirusTotal",
+        "short": "VirusTotal",
+        "role": "Independent corroboration: 9 security vendors flagged the domain as malicious (checked 2026-10-14).",
+        "url": "https://www.virustotal.com/gui/domain/obsidian-group.org"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2025-11-19 through NameSilo, LLC.",
+        "url": "https://lookup.icann.org/en/lookup?name=obsidian-group.org"
+      }
+    ],
+    "audience": "Job seekers and online task workers"
   }
 ]
