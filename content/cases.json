@@ -3212,5 +3212,91 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-079",
+    "slug": "sterlingcrestmarketsllc-top",
+    "title": "Crypto earnings, on a site nobody stands behind.",
+    "short_title": "The wallet lure",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "sterlingcrestmarketsllc.top",
+    "summary": "An archived look at sterlingcrestmarketsllc.top, a crypto platform assessed as fraudulent by Desenmascara (AI-assisted analysis, 100/100).",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "sterlingcrestmarketsllc-top.png",
+    "image_source": "https://desenmascara.me/screens/3ed2b45d76f47eb0.png",
+    "image_alt": "Archived capture of sterlingcrestmarketsllc.top, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "No verifiable legal identity or mandatory legal information.",
+      "The source report records: hosted on an address where 76 of 130 domains we have analysed are flagged (58%).",
+      "The source report records: domain registered 2 days ago.",
+      "The source report records: suspicious TLD (.top)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for sterlingcrestmarketsllc.top, based on AI-assisted analysis. Its analysis says: “The site presents itself as a trading platform for various financial instruments, including cryptocurrencies, but is hosted on a very recently registered domain that is part of a known fraud-infrastructure cluster.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-15",
+    "checked_at": "2026-10-16",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/1cccbf71-41c7-468e-b770-83df7a8dea5a"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-10-13 through Global Domain Group LLC.",
+        "url": "https://lookup.icann.org/en/lookup?name=sterlingcrestmarketsllc.top"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-080",
+    "slug": "globalpairtrade-com",
+    "title": "Automated profits, promised by nobody you can find.",
+    "short_title": "The trading platform",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "globalpairtrade.com",
+    "summary": "globalpairtrade.com presented itself as an investment or trading platform. Desenmascara rated it fraudulent (100/100) after AI-assisted analysis.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "globalpairtrade-com.png",
+    "image_source": "https://desenmascara.me/screens/8fa0c0d4d109f865.png",
+    "image_alt": "Archived capture of globalpairtrade.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: hosted on an address where 27 of 31 domains we have analysed are flagged (87%).",
+      "The source report records: domain registered 1 day ago."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for globalpairtrade.com, based on AI-assisted analysis. Its analysis says: “The site presents itself as a trading platform with promises of high returns and low commissions, which is a common tactic in fraudulent investment schemes.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-15",
+    "checked_at": "2026-10-16",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/8cea0baf-c992-4af1-a61d-782a7fa88e2f"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-10-14 through Dynadot Inc.",
+        "url": "https://lookup.icann.org/en/lookup?name=globalpairtrade.com"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
