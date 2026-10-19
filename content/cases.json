@@ -3562,5 +3562,91 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-087",
+    "slug": "point72asset-trade-com",
+    "title": "A crypto platform. A wallet you should not connect.",
+    "short_title": "The crypto earnings site",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "point72asset-trade.com",
+    "summary": "An archived look at point72asset-trade.com, a crypto platform assessed as fraudulent by Desenmascara (AI-assisted analysis, 100/100).",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "point72asset-trade-com.png",
+    "image_source": "https://desenmascara.me/screens/639b02ed68a3bc7c.png",
+    "image_alt": "Archived capture of point72asset-trade.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 26 of 27 domains we have analysed are flagged (96%).",
+      "The source report records: domain registered 3 days ago."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for point72asset-trade.com, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-18",
+    "checked_at": "2026-10-19",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/b73c3c6e-8bdf-4b34-955c-7ba0a43cb50c"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-10-15 through TuringSign Inc. d/b/a Cosmotown.",
+        "url": "https://lookup.icann.org/en/lookup?name=point72asset-trade.com"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-088",
+    "slug": "zaltyieldsecuritiesplatform-com",
+    "title": "A trading desk with no regulator on record.",
+    "short_title": "The returns promise",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "zaltyieldsecuritiesplatform.com",
+    "summary": "zaltyieldsecuritiesplatform.com presented itself as an investment or trading platform. Desenmascara rated it fraudulent (95/100) after AI-assisted analysis.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "zaltyieldsecuritiesplatform-com.png",
+    "image_source": "https://desenmascara.me/screens/9ecb430d8b101cf3.png",
+    "image_alt": "Archived capture of zaltyieldsecuritiesplatform.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 104 of 105 domains we have analysed are flagged (99%).",
+      "The source report records: domain registered 18 days ago."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for zaltyieldsecuritiesplatform.com, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-18",
+    "checked_at": "2026-10-19",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/22c15a4c-c60c-46c5-98e6-b8bf403c4c3a"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-09-30 through Dynadot Inc.",
+        "url": "https://lookup.icann.org/en/lookup?name=zaltyieldsecuritiesplatform.com"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
