@@ -3894,5 +3894,93 @@
       }
     ],
     "audience": "Job seekers and online task workers"
+  },
+  {
+    "id": "SA-095",
+    "slug": "xcloudmultixpro-com",
+    "title": "Daily earnings that never leave the dashboard.",
+    "short_title": "The earnings dashboard",
+    "category": "Jobs",
+    "technique": "Advance-fee request",
+    "kind": "capture",
+    "subject": "xcloudmultixpro.com",
+    "summary": "xcloudmultixpro.com is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-21).",
+    "lesson": "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.",
+    "image": "xcloudmultixpro-com.png",
+    "image_source": "https://desenmascara.me/screens/3ba116c895c7ee81.png",
+    "image_alt": "Archived capture of xcloudmultixpro.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "A displayed balance is not proof of withdrawable earnings",
+    "observations": [
+      "The source report records: official warning from Financial Conduct Authority (United Kingdom) naming xcloudmultixpro.com."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for xcloudmultixpro.com, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-21",
+    "checked_at": "2026-10-21",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "url": "https://desenmascara.me/analisis/c256e693-649d-4b62-83b4-92f982d7839f"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2025-02-05 through Web4Africa Inc..",
+        "url": "https://lookup.icann.org/en/lookup?name=xcloudmultixpro.com"
+      }
+    ],
+    "audience": "Job seekers and online task workers"
+  },
+  {
+    "id": "SA-096",
+    "slug": "investaroprofit-com",
+    "title": "Big returns. No verifiable firm behind them.",
+    "short_title": "The investment offer",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "investaroprofit.com",
+    "summary": "investaroprofit.com is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "investaroprofit-com.png",
+    "image_source": "https://desenmascara.me/screens/82e3b71804fef91b.png",
+    "image_alt": "Archived capture of investaroprofit.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: official warning from Financial Conduct Authority (United Kingdom) naming investaroprofit.com."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for investaroprofit.com, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 11 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-20",
+    "checked_at": "2026-10-21",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "url": "https://desenmascara.me/analisis/53ad7d0d-0eb9-43a0-adf7-fb5c59851270"
+      },
+      {
+        "name": "VirusTotal",
+        "short": "VirusTotal",
+        "role": "Independent corroboration: 11 security vendors flagged the domain as malicious (checked 2026-10-20).",
+        "url": "https://www.virustotal.com/gui/domain/investaroprofit.com"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2025-11-30 through Atak Domain.",
+        "url": "https://lookup.icann.org/en/lookup?name=investaroprofit.com"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
