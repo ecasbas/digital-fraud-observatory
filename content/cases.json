@@ -3982,5 +3982,87 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-097",
+    "slug": "ccamarkets-com",
+    "title": "A job that asks you to pay in.",
+    "short_title": "The task platform",
+    "category": "Jobs",
+    "technique": "Advance-fee request",
+    "kind": "capture",
+    "subject": "ccamarkets.com",
+    "summary": "ccamarkets.com is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-22).",
+    "lesson": "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.",
+    "image": "ccamarkets-com.png",
+    "image_source": "https://desenmascara.me/screens/866ac492ba82db4a.png",
+    "image_alt": "Archived capture of ccamarkets.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "A displayed balance is not proof of withdrawable earnings",
+    "observations": [
+      "The source report records: official warning from British Columbia Securities Commission (British Columbia) naming CCAMarkets."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for ccamarkets.com, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-22",
+    "checked_at": "2026-10-22",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "url": "https://desenmascara.me/analisis/e2773e30-752b-4100-b7da-2963d96392c1"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-07-01 through NETIM.",
+        "url": "https://lookup.icann.org/en/lookup?name=ccamarkets.com"
+      }
+    ],
+    "audience": "Job seekers and online task workers"
+  },
+  {
+    "id": "SA-098",
+    "slug": "traderspasvaultso-info",
+    "title": "Automated profits, promised by nobody you can find.",
+    "short_title": "The trading platform",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "traderspasvaultso.info",
+    "summary": "traderspasvaultso.info is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "traderspasvaultso-info.png",
+    "image_source": "https://desenmascara.me/screens/335ca3c89deb9404.png",
+    "image_alt": "Archived capture of traderspasvaultso.info, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: official warning from Financial Conduct Authority (United Kingdom) naming traderspasvaultso.info."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for traderspasvaultso.info, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 13 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-20",
+    "checked_at": "2026-10-22",
+    "assessment": "Fraudulent · 100/100",
+    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "url": "https://desenmascara.me/analisis/e887a237-4d0a-4875-8ca8-18e9ceaf499c"
+      },
+      {
+        "name": "VirusTotal",
+        "short": "VirusTotal",
+        "role": "Independent corroboration: 13 security vendors flagged the domain as malicious (checked 2026-10-20).",
+        "url": "https://www.virustotal.com/gui/domain/traderspasvaultso.info"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
