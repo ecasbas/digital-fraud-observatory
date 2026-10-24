@@ -294,7 +294,7 @@ def build_case(projection: dict, case_id: str, slug: str, image: str, image_sour
     analysis_date = (projection.get("assessed_at") or "")[:10] or datetime.now(timezone.utc).date().isoformat()
     template = THIRD_PARTY_SUMMARY if third_party else pick(SUMMARY_TEMPLATES, case_id)
     summary = template.format(domain=domain, pitch=pitch, basis=basis, score=score, date=analysis_date,
-                              source=(" and by ".join(outside_sources(projection, 2)) if len(outside_sources(projection)) >= 2
+                              source=(", and by ".join(outside_sources(projection, 2)) if len(outside_sources(projection)) >= 2
                                       else THIRD_PARTY_SOURCE.get(projection.get("assessed_by"), "a third-party source")))
     return {
         "id": case_id, "slug": slug, "title": pick(titles, case_id), "short_title": pick(short_titles, case_id, 1),
