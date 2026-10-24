@@ -243,21 +243,21 @@ def split_own_first_lead(projection: dict) -> dict:
 #: `_attach_all_sources_lead`, 2026-10-24): the case names them all, not only
 #: the one that "decided" (a Cloudflare-blocked site read "regulator warning").
 ALL_SOURCES_LEAD = re.compile(r"^(?:Several independent sources flag this site|Varias fuentes independientes señalan este sitio): ([^.]+)\.")
-SOURCE_NAMES = [
-    (r"Cloudflare", "Cloudflare phishing block"),
-    (r"Google Safe Browsing", "Google Safe Browsing listing"),
-    (r"PhishDestroy", "PhishDestroy listing"),
-    (r"warned about it|advirtió sobre él", "financial regulator warning"),
-    (r"taken it down|lo ha retirado", "hosting platform takedown"),
-    (r"seized|incautado", "law-enforcement seizure"),
+SOURCE_NAMES = [  # (pattern, attribution label, who says it, for the summary)
+    (r"Cloudflare", "Cloudflare phishing block", "Cloudflare, which blocks it as phishing"),
+    (r"Google Safe Browsing", "Google Safe Browsing listing", "Google Safe Browsing"),
+    (r"PhishDestroy", "PhishDestroy listing", "PhishDestroy's DestroyList"),
+    (r"warned about it|advirtió sobre él", "financial regulator warning", "a financial regulator"),
+    (r"taken it down|lo ha retirado", "hosting platform takedown", "its hosting platform, which took it down"),
+    (r"seized|incautado", "law-enforcement seizure", "law enforcement, which seized it"),
 ]
 
 
-def outside_sources(projection: dict) -> list[str]:
+def outside_sources(projection: dict, field: int = 1) -> list[str]:
     match = ALL_SOURCES_LEAD.match((projection.get("explanation") or "").strip())
     if not match:
         return []
-    return [name for pattern, name in SOURCE_NAMES if re.search(pattern, match.group(1), re.I)]
+    return [entry[field] for entry in SOURCE_NAMES if re.search(entry[0], match.group(1), re.I)]
 
 
 def basis_of(projection: dict) -> str:
@@ -294,7 +294,7 @@ def build_case(projection: dict, case_id: str, slug: str, image: str, image_sour
     analysis_date = (projection.get("assessed_at") or "")[:10] or datetime.now(timezone.utc).date().isoformat()
     template = THIRD_PARTY_SUMMARY if third_party else pick(SUMMARY_TEMPLATES, case_id)
     summary = template.format(domain=domain, pitch=pitch, basis=basis, score=score, date=analysis_date,
-                              source=(" and ".join(outside_sources(projection)) if len(outside_sources(projection)) >= 2
+                              source=(" and by ".join(outside_sources(projection, 2)) if len(outside_sources(projection)) >= 2
                                       else THIRD_PARTY_SOURCE.get(projection.get("assessed_by"), "a third-party source")))
     return {
         "id": case_id, "slug": slug, "title": pick(titles, case_id), "short_title": pick(short_titles, case_id, 1),

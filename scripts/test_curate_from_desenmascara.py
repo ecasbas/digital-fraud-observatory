@@ -180,7 +180,7 @@ class OutsideSourcesTests(unittest.TestCase):
             "Securities Commission warned about it on 2026-10-19. The primary reason..."))
         self.assertEqual(cur.basis_of(p), "attributed Cloudflare phishing block and financial regulator warning")
         case = cur.build_case(dict(p, report_url="https://desenmascara.me/analisis/x"), "SA-200", "x", "x.png", "")
-        self.assertIn("Cloudflare phishing block and financial regulator warning", case["summary"])
+        self.assertIn("flagged by Cloudflare, which blocks it as phishing, and by a financial regulator", case["summary"])
 
     def test_single_source_keeps_its_attribution(self):
         p = projection(assessed_by="regulatory_warnings", explanation="The primary reason is an official regulatory warning.")
