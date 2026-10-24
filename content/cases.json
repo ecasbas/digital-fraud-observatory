@@ -4234,5 +4234,77 @@
       }
     ],
     "audience": "Job seekers and online task workers"
+  },
+  {
+    "id": "SA-103",
+    "slug": "viaxisglobal-com",
+    "title": "A global freight company that exists only online.",
+    "short_title": "The logistics firm",
+    "category": "Transport",
+    "technique": "Manufactured credibility",
+    "kind": "capture",
+    "subject": "viaxisglobal.com",
+    "summary": "An archived look at viaxisglobal.com, a logistics carrier assessed as fraudulent by Desenmascara (AI-assisted analysis, 95/100).",
+    "lesson": "A transport website does not establish that a carrier exists. Verify the company identity before entrusting it with money or goods.",
+    "image": "viaxisglobal-com.png",
+    "image_source": "https://desenmascara.me/screens/18c4fd4b9bd750b0.png",
+    "image_alt": "Archived capture of viaxisglobal.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Does this carrier exist outside its website?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 81 of 117 domains we have analysed are flagged (69%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for viaxisglobal.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated viaxisglobal.com fraudulent on 2026-10-23 at 03:23 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-23",
+    "checked_at": "2026-10-24",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/eada6661-0873-49ff-a22f-8bdebf51c16e"
+      }
+    ],
+    "audience": "Customers, shippers and business counterparties"
+  },
+  {
+    "id": "SA-104",
+    "slug": "westerncapitalslimited-ltd",
+    "title": "The coins are real. The platform is not verifiable.",
+    "short_title": "The crypto platform",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "westerncapitalslimited.ltd",
+    "summary": "westerncapitalslimited.ltd presented itself as a crypto platform. Desenmascara rated it fraudulent (95/100) after AI-assisted analysis.",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "westerncapitalslimited-ltd.png",
+    "image_source": "https://desenmascara.me/screens/e8f4c3ec95862ea8.png",
+    "image_alt": "Archived capture of westerncapitalslimited.ltd, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 5 of 5 domains we have analysed are flagged (100%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for westerncapitalslimited.ltd, based on AI-assisted analysis. Its analysis says: “Our analysis rated westerncapitalslimited.ltd fraudulent on 2026-10-23 at 03:22 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-23",
+    "checked_at": "2026-10-24",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/f0f10287-3bfe-46b3-8ab2-9fd57bd0fb19"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
   }
 ]
