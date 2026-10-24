@@ -239,9 +239,33 @@ def split_own_first_lead(projection: dict) -> dict:
     return projection
 
 
+#: The report's lead when several outside sources flag the site (backend
+#: `_attach_all_sources_lead`, 2026-10-24): the case names them all, not only
+#: the one that "decided" (a Cloudflare-blocked site read "regulator warning").
+ALL_SOURCES_LEAD = re.compile(r"^(?:Several independent sources flag this site|Varias fuentes independientes señalan este sitio): ([^.]+)\.")
+SOURCE_NAMES = [
+    (r"Cloudflare", "Cloudflare phishing block"),
+    (r"Google Safe Browsing", "Google Safe Browsing listing"),
+    (r"PhishDestroy", "PhishDestroy listing"),
+    (r"warned about it|advirtió sobre él", "financial regulator warning"),
+    (r"taken it down|lo ha retirado", "hosting platform takedown"),
+    (r"seized|incautado", "law-enforcement seizure"),
+]
+
+
+def outside_sources(projection: dict) -> list[str]:
+    match = ALL_SOURCES_LEAD.match((projection.get("explanation") or "").strip())
+    if not match:
+        return []
+    return [name for pattern, name in SOURCE_NAMES if re.search(pattern, match.group(1), re.I)]
+
+
 def basis_of(projection: dict) -> str:
     if projection.get("assessed_by") == "ai_reasoning" and NO_AI_TEXT.search(projection.get("explanation") or ""):
         return ATTRIBUTION["heuristics"]
+    names = outside_sources(projection)
+    if len(names) >= 2:
+        return "attributed " + ", ".join(names[:-1]) + " and " + names[-1]
     return ATTRIBUTION[projection["assessed_by"]]
 
 
@@ -270,7 +294,8 @@ def build_case(projection: dict, case_id: str, slug: str, image: str, image_sour
     analysis_date = (projection.get("assessed_at") or "")[:10] or datetime.now(timezone.utc).date().isoformat()
     template = THIRD_PARTY_SUMMARY if third_party else pick(SUMMARY_TEMPLATES, case_id)
     summary = template.format(domain=domain, pitch=pitch, basis=basis, score=score, date=analysis_date,
-                              source=THIRD_PARTY_SOURCE.get(projection.get("assessed_by"), "a third-party source"))
+                              source=(" and ".join(outside_sources(projection)) if len(outside_sources(projection)) >= 2
+                                      else THIRD_PARTY_SOURCE.get(projection.get("assessed_by"), "a third-party source")))
     return {
         "id": case_id, "slug": slug, "title": pick(titles, case_id), "short_title": pick(short_titles, case_id, 1),
         "category": category, "technique": technique, "kind": "capture", "subject": domain,
@@ -422,6 +447,8 @@ def main() -> int:
     parser.add_argument("--min-score", type=float, default=float(os.getenv("OBSERVATORY_MIN_SCORE", "75")))
     parser.add_argument("--build", action="store_true", help="Rebuild and check the static site after changes.")
     parser.add_argument("--dry-run", action="store_true", help="Report what would change; write nothing.")
+    parser.add_argument("--refresh-text", action="store_true",
+                        help="Rebuild the text of this curator's published cases from today's reports (same id, slug, image).")
     args = parser.parse_args()
     _setup_django()
 
@@ -429,6 +456,37 @@ def main() -> int:
     cases = _load(CASES_PATH, [])
     curated = set(state.get("curated_ids", []))
     now = datetime.now(timezone.utc)
+
+    if args.refresh_text:
+        changed = []
+        for i, case in enumerate(cases):
+            if case["id"] not in curated:
+                continue
+            row = _row_for(case["subject"])
+            if row is None:
+                continue
+            projection, reason = _assess(row, check_basis=False)
+            if reason:
+                continue  # retractions are step 1's business
+            extra, vendors = _extra_sources(row, case["subject"])
+            try:
+                fresh = build_case(projection, case["id"], case["slug"], case["image"], case.get("image_source", ""), extra, vendors)
+            except KeyError:
+                continue  # a basis this page cannot attribute: leave the case as written
+            fresh["checked_at"] = case.get("checked_at", fresh["checked_at"])
+            # Only where the attribution changed: re-wording every case would churn the history.
+            if fresh["assessment_source"] != case.get("assessment_source"):
+                changed.append(f"{case['id']} {case['subject']}: {case.get('assessment_source')} -> {fresh['assessment_source']}")
+                cases[i] = fresh
+        print("\n".join(changed) or "nothing to refresh")
+        if changed and not args.dry_run:
+            CASES_PATH.write_text(json.dumps(cases, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+            if args.build:
+                shutil.rmtree(ROOT / "dist", ignore_errors=True)
+                subprocess.run([sys.executable, str(ROOT / "scripts" / "build.py")], cwd=ROOT, check=True)
+                subprocess.run([sys.executable, str(ROOT / "scripts" / "check.py")], cwd=ROOT, check=True)
+                publish_local()
+        return 0
 
     # 1. Follow retractions for the cases this curator added.
     withdrawals = []

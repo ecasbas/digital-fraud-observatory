@@ -2934,34 +2934,40 @@
   {
     "id": "SA-073",
     "slug": "advancedstocksonline-com",
-    "title": "A job that asks you to pay in.",
-    "short_title": "The task platform",
-    "category": "Jobs",
-    "technique": "Advance-fee request",
+    "title": "A login form that belongs to someone else.",
+    "short_title": "The credential trap",
+    "category": "Phishing",
+    "technique": "Credential phishing",
     "kind": "capture",
     "subject": "advancedstocksonline.com",
-    "summary": "advancedstocksonline.com is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-14).",
-    "lesson": "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.",
+    "summary": "advancedstocksonline.com is flagged by Cloudflare phishing block and financial regulator warning. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-14).",
+    "lesson": "Open a service from its official app or a saved address, never from a link you were sent, before entering a password or payment details.",
     "image": "advancedstocksonline-com.png",
     "image_source": "https://desenmascara.me/screens/573bd3c7821365c4.png",
     "image_alt": "Archived capture of advancedstocksonline.com, a website assessed as fraudulent.",
     "claim": "An operating online service",
-    "counterclaim": "A displayed balance is not proof of withdrawable earnings",
+    "counterclaim": "Is this the real service's own address?",
     "observations": [
       "The source report records: official warning from Financial Conduct Authority (United Kingdom) naming Advanced Stocks."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for advancedstocksonline.com, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for advancedstocksonline.com, based on attributed Cloudflare phishing block and financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 9 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-10-14",
     "checked_at": "2026-10-14",
     "assessment": "Fraudulent · 100/100",
-    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "assessment_source": "desenmascara.me · attributed Cloudflare phishing block and financial regulator warning",
     "sources": [
       {
         "name": "desenmascara.me",
         "short": "Desenmascara",
-        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "role": "Public report and archived capture; verdict basis: attributed Cloudflare phishing block and financial regulator warning",
         "url": "https://desenmascara.me/analisis/405aaf88-8b2e-4c7f-b93f-06bd18236a30"
+      },
+      {
+        "name": "VirusTotal",
+        "short": "VirusTotal",
+        "role": "Independent corroboration: 9 security vendors flagged the domain as malicious (checked 2026-10-14).",
+        "url": "https://www.virustotal.com/gui/domain/advancedstocksonline.com"
       },
       {
         "name": "ICANN Registration Data Lookup",
@@ -2970,7 +2976,7 @@
         "url": "https://lookup.icann.org/en/lookup?name=advancedstocksonline.com"
       }
     ],
-    "audience": "Job seekers and online task workers"
+    "audience": "Anyone asked to sign in or confirm details"
   },
   {
     "id": "SA-074",
@@ -3045,7 +3051,7 @@
     "technique": "High-return promise",
     "kind": "capture",
     "subject": "teslastock.pro",
-    "summary": "teslastock.pro is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-14).",
+    "summary": "teslastock.pro is flagged by Cloudflare phishing block and financial regulator warning. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-14).",
     "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
     "image": "teslastock-pro.png",
     "image_source": "https://desenmascara.me/screens/51421692db45c14a.png",
@@ -3055,17 +3061,17 @@
     "observations": [
       "The source report records: official warning from Australian Securities and Investments Commission (Australia) naming Tesla Stocks (teslastock.pro)."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for teslastock.pro, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 10 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for teslastock.pro, based on attributed Cloudflare phishing block and financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 10 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-10-14",
     "checked_at": "2026-10-15",
     "assessment": "Fraudulent · 100/100",
-    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "assessment_source": "desenmascara.me · attributed Cloudflare phishing block and financial regulator warning",
     "sources": [
       {
         "name": "desenmascara.me",
         "short": "Desenmascara",
-        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "role": "Public report and archived capture; verdict basis: attributed Cloudflare phishing block and financial regulator warning",
         "url": "https://desenmascara.me/analisis/bdb655a9-d4e3-429c-af1b-b95d856f74e5"
       },
       {
@@ -3086,7 +3092,7 @@
     "technique": "Advance-fee request",
     "kind": "capture",
     "subject": "obsidian-group.org",
-    "summary": "obsidian-group.org is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-14).",
+    "summary": "obsidian-group.org is flagged by Cloudflare phishing block and financial regulator warning. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-14).",
     "lesson": "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.",
     "image": "obsidian-group-org.png",
     "image_source": "https://desenmascara.me/screens/7cb6437cf308f507.png",
@@ -3096,17 +3102,17 @@
     "observations": [
       "The source report records: official warning from Cyprus Securities and Exchange Commission (Cyprus) naming obsidian-group.org."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for obsidian-group.org, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 9 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for obsidian-group.org, based on attributed Cloudflare phishing block and financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 9 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-10-14",
     "checked_at": "2026-10-15",
     "assessment": "Fraudulent · 100/100",
-    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "assessment_source": "desenmascara.me · attributed Cloudflare phishing block and financial regulator warning",
     "sources": [
       {
         "name": "desenmascara.me",
         "short": "Desenmascara",
-        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "role": "Public report and archived capture; verdict basis: attributed Cloudflare phishing block and financial regulator warning",
         "url": "https://desenmascara.me/analisis/5c33a83d-54c9-4b34-aa7a-90a6d6d1354d"
       },
       {
@@ -3181,7 +3187,7 @@
     "technique": "High-return promise",
     "kind": "capture",
     "subject": "grihasthafinance.com",
-    "summary": "grihasthafinance.com is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-15).",
+    "summary": "grihasthafinance.com is flagged by Cloudflare phishing block and financial regulator warning. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-15).",
     "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
     "image": "grihasthafinance-com.png",
     "image_source": "https://desenmascara.me/screens/f85b5b97bb79dca3.png",
@@ -3191,17 +3197,17 @@
     "observations": [
       "The source report records: official warning from Australian Securities and Investments Commission (Australia) naming MBB Finance (grihasthafinance.com)."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for grihasthafinance.com, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for grihasthafinance.com, based on attributed Cloudflare phishing block and financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-10-15",
     "checked_at": "2026-10-15",
     "assessment": "Fraudulent · 100/100",
-    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "assessment_source": "desenmascara.me · attributed Cloudflare phishing block and financial regulator warning",
     "sources": [
       {
         "name": "desenmascara.me",
         "short": "Desenmascara",
-        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "role": "Public report and archived capture; verdict basis: attributed Cloudflare phishing block and financial regulator warning",
         "url": "https://desenmascara.me/analisis/a84bdc37-605e-468a-b784-a477d0474c33"
       },
       {
@@ -3351,7 +3357,7 @@
     "technique": "Advance-fee request",
     "kind": "capture",
     "subject": "vsccapitals.com",
-    "summary": "vsccapitals.com is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-15).",
+    "summary": "vsccapitals.com is flagged by Cloudflare phishing block and financial regulator warning. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-15).",
     "lesson": "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.",
     "image": "vsccapitals-com.png",
     "image_source": "https://desenmascara.me/screens/21edf943f5b540d6.png",
@@ -3361,17 +3367,17 @@
     "observations": [
       "The source report records: official warning from British Columbia Securities Commission (British Columbia) naming VSCCapitals Ltd.."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for vsccapitals.com, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 6 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for vsccapitals.com, based on attributed Cloudflare phishing block and financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 6 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-10-15",
     "checked_at": "2026-10-17",
     "assessment": "Fraudulent · 100/100",
-    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "assessment_source": "desenmascara.me · attributed Cloudflare phishing block and financial regulator warning",
     "sources": [
       {
         "name": "desenmascara.me",
         "short": "Desenmascara",
-        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "role": "Public report and archived capture; verdict basis: attributed Cloudflare phishing block and financial regulator warning",
         "url": "https://desenmascara.me/analisis/6fef149c-b39f-4ec4-a433-405efd125dd0"
       },
       {
@@ -3440,7 +3446,7 @@
     "technique": "High-return promise",
     "kind": "capture",
     "subject": "birdeye23.com",
-    "summary": "birdeye23.com is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-15).",
+    "summary": "birdeye23.com is flagged by Cloudflare phishing block and financial regulator warning. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-15).",
     "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
     "image": "birdeye23-com.png",
     "image_source": "https://desenmascara.me/screens/10f8e2eca2f231f4.png",
@@ -3450,17 +3456,17 @@
     "observations": [
       "The source report records: official warning from Australian Securities and Investments Commission (Australia) naming Birdeye23 (birdeye23.com)."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for birdeye23.com, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 13 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for birdeye23.com, based on attributed Cloudflare phishing block and financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 13 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-10-15",
     "checked_at": "2026-10-17",
     "assessment": "Fraudulent · 100/100",
-    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "assessment_source": "desenmascara.me · attributed Cloudflare phishing block and financial regulator warning",
     "sources": [
       {
         "name": "desenmascara.me",
         "short": "Desenmascara",
-        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "role": "Public report and archived capture; verdict basis: attributed Cloudflare phishing block and financial regulator warning",
         "url": "https://desenmascara.me/analisis/58c7139e-41d9-4065-87d1-5bf71e0505d8"
       },
       {
@@ -3731,34 +3737,35 @@
   {
     "id": "SA-091",
     "slug": "lexledger-capital-com",
-    "title": "A job that asks you to pay in.",
-    "short_title": "The task platform",
-    "category": "Jobs",
-    "technique": "Advance-fee request",
+    "title": "A login form that belongs to someone else.",
+    "short_title": "The credential trap",
+    "category": "Phishing",
+    "technique": "Credential phishing",
     "kind": "capture",
     "subject": "lexledger-capital.com",
-    "summary": "lexledger-capital.com is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
-    "lesson": "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.",
+    "summary": "lexledger-capital.com is flagged by PhishDestroy listing and financial regulator warning. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
+    "lesson": "Open a service from its official app or a saved address, never from a link you were sent, before entering a password or payment details.",
     "image": "lexledger-capital-com.png",
     "image_source": "https://desenmascara.me/screens/93c9fe3ccae89f72.png",
     "image_alt": "Archived capture of lexledger-capital.com, a website assessed as fraudulent.",
     "claim": "An operating online service",
-    "counterclaim": "A displayed balance is not proof of withdrawable earnings",
+    "counterclaim": "Is this the real service's own address?",
     "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
       "The source report records: official warning from Financial Conduct Authority (United Kingdom) naming lexledger-capital.com.",
-      "The source report records: hosted on an address where 31 of 31 domains we have analysed are flagged (100%)."
+      "The source report records: hosted on an address where 29 of 29 domains we have analysed are flagged (100%)."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for lexledger-capital.com, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for lexledger-capital.com, based on attributed PhishDestroy listing and financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-10-20",
     "checked_at": "2026-10-20",
     "assessment": "Fraudulent · 100/100",
-    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "assessment_source": "desenmascara.me · attributed PhishDestroy listing and financial regulator warning",
     "sources": [
       {
         "name": "desenmascara.me",
         "short": "Desenmascara",
-        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "role": "Public report and archived capture; verdict basis: attributed PhishDestroy listing and financial regulator warning",
         "url": "https://desenmascara.me/analisis/d65bde61-424f-454a-9523-7cad59f2e4f9"
       },
       {
@@ -3768,40 +3775,46 @@
         "url": "https://lookup.icann.org/en/lookup?name=lexledger-capital.com"
       }
     ],
-    "audience": "Job seekers and online task workers"
+    "audience": "Anyone asked to sign in or confirm details"
   },
   {
     "id": "SA-092",
     "slug": "bitcoinminingcity-top",
-    "title": "The coins are real. The platform is not verifiable.",
-    "short_title": "The crypto platform",
-    "category": "Crypto",
-    "technique": "Crypto wallet or exchange lure",
+    "title": "The brand is borrowed. The form is the trap.",
+    "short_title": "The phishing page",
+    "category": "Phishing",
+    "technique": "Credential phishing",
     "kind": "capture",
     "subject": "bitcoinminingcity.top",
-    "summary": "bitcoinminingcity.top is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
-    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "summary": "bitcoinminingcity.top is flagged by Cloudflare phishing block and financial regulator warning. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
+    "lesson": "Open a service from its official app or a saved address, never from a link you were sent, before entering a password or payment details.",
     "image": "bitcoinminingcity-top.png",
     "image_source": "https://desenmascara.me/screens/fe602ed1414cffd8.png",
     "image_alt": "Archived capture of bitcoinminingcity.top, a website assessed as fraudulent.",
     "claim": "An operating online service",
-    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "counterclaim": "Is this the real service's own address?",
     "observations": [
       "The source report records: official warning from Financial Conduct Authority (United Kingdom) naming bitcoinminingcity.top.",
       "The source report records: suspicious TLD (.top)."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for bitcoinminingcity.top, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for bitcoinminingcity.top, based on attributed Cloudflare phishing block and financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 12 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-10-20",
     "checked_at": "2026-10-20",
     "assessment": "Fraudulent · 100/100",
-    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "assessment_source": "desenmascara.me · attributed Cloudflare phishing block and financial regulator warning",
     "sources": [
       {
         "name": "desenmascara.me",
         "short": "Desenmascara",
-        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "role": "Public report and archived capture; verdict basis: attributed Cloudflare phishing block and financial regulator warning",
         "url": "https://desenmascara.me/analisis/90cf5f61-2590-4fbd-aef6-2b0c6205efa4"
+      },
+      {
+        "name": "VirusTotal",
+        "short": "VirusTotal",
+        "role": "Independent corroboration: 12 security vendors flagged the domain as malicious (checked 2026-10-20).",
+        "url": "https://www.virustotal.com/gui/domain/bitcoinminingcity.top"
       },
       {
         "name": "ICANN Registration Data Lookup",
@@ -3810,7 +3823,7 @@
         "url": "https://lookup.icann.org/en/lookup?name=bitcoinminingcity.top"
       }
     ],
-    "audience": "Crypto users and retail investors"
+    "audience": "Anyone asked to sign in or confirm details"
   },
   {
     "id": "SA-093",
@@ -3850,34 +3863,34 @@
   {
     "id": "SA-094",
     "slug": "rmdprtcl-online",
-    "title": "A job that asks you to pay in.",
-    "short_title": "The task platform",
-    "category": "Jobs",
-    "technique": "Advance-fee request",
+    "title": "A login form that belongs to someone else.",
+    "short_title": "The credential trap",
+    "category": "Phishing",
+    "technique": "Credential phishing",
     "kind": "capture",
     "subject": "rmdprtcl.online",
-    "summary": "rmdprtcl.online is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
-    "lesson": "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.",
+    "summary": "rmdprtcl.online is flagged by Cloudflare phishing block and financial regulator warning. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
+    "lesson": "Open a service from its official app or a saved address, never from a link you were sent, before entering a password or payment details.",
     "image": "rmdprtcl-online.png",
     "image_source": "https://desenmascara.me/screens/2cf4cf063af9e205.png",
     "image_alt": "Archived capture of rmdprtcl.online, a website assessed as fraudulent.",
     "claim": "An operating online service",
-    "counterclaim": "A displayed balance is not proof of withdrawable earnings",
+    "counterclaim": "Is this the real service's own address?",
     "observations": [
       "The source report records: official warning from Financial Conduct Authority (United Kingdom) naming rmdprtcl.online.",
       "The source report records: suspicious TLD (.online)."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for rmdprtcl.online, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 14 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for rmdprtcl.online, based on attributed Cloudflare phishing block and financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 14 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-10-20",
     "checked_at": "2026-10-21",
     "assessment": "Fraudulent · 100/100",
-    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "assessment_source": "desenmascara.me · attributed Cloudflare phishing block and financial regulator warning",
     "sources": [
       {
         "name": "desenmascara.me",
         "short": "Desenmascara",
-        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "role": "Public report and archived capture; verdict basis: attributed Cloudflare phishing block and financial regulator warning",
         "url": "https://desenmascara.me/analisis/df326d44-1d99-43c8-b2ed-a0c178443007"
       },
       {
@@ -3893,38 +3906,38 @@
         "url": "https://lookup.icann.org/en/lookup?name=rmdprtcl.online"
       }
     ],
-    "audience": "Job seekers and online task workers"
+    "audience": "Anyone asked to sign in or confirm details"
   },
   {
     "id": "SA-095",
     "slug": "xcloudmultixpro-com",
-    "title": "Daily earnings that never leave the dashboard.",
-    "short_title": "The earnings dashboard",
-    "category": "Jobs",
-    "technique": "Advance-fee request",
+    "title": "The brand is borrowed. The form is the trap.",
+    "short_title": "The phishing page",
+    "category": "Phishing",
+    "technique": "Credential phishing",
     "kind": "capture",
     "subject": "xcloudmultixpro.com",
-    "summary": "xcloudmultixpro.com is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-21).",
-    "lesson": "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.",
+    "summary": "xcloudmultixpro.com is flagged by Cloudflare phishing block and financial regulator warning. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-21).",
+    "lesson": "Open a service from its official app or a saved address, never from a link you were sent, before entering a password or payment details.",
     "image": "xcloudmultixpro-com.png",
     "image_source": "https://desenmascara.me/screens/3ba116c895c7ee81.png",
     "image_alt": "Archived capture of xcloudmultixpro.com, a website assessed as fraudulent.",
     "claim": "An operating online service",
-    "counterclaim": "A displayed balance is not proof of withdrawable earnings",
+    "counterclaim": "Is this the real service's own address?",
     "observations": [
       "The source report records: official warning from Financial Conduct Authority (United Kingdom) naming xcloudmultixpro.com."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for xcloudmultixpro.com, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for xcloudmultixpro.com, based on attributed Cloudflare phishing block and financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-10-21",
     "checked_at": "2026-10-21",
     "assessment": "Fraudulent · 100/100",
-    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "assessment_source": "desenmascara.me · attributed Cloudflare phishing block and financial regulator warning",
     "sources": [
       {
         "name": "desenmascara.me",
         "short": "Desenmascara",
-        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "role": "Public report and archived capture; verdict basis: attributed Cloudflare phishing block and financial regulator warning",
         "url": "https://desenmascara.me/analisis/c256e693-649d-4b62-83b4-92f982d7839f"
       },
       {
@@ -3934,38 +3947,38 @@
         "url": "https://lookup.icann.org/en/lookup?name=xcloudmultixpro.com"
       }
     ],
-    "audience": "Job seekers and online task workers"
+    "audience": "Anyone asked to sign in or confirm details"
   },
   {
     "id": "SA-096",
     "slug": "investaroprofit-com",
-    "title": "Big returns. No verifiable firm behind them.",
-    "short_title": "The investment offer",
-    "category": "Investment",
-    "technique": "High-return promise",
+    "title": "A familiar page. The wrong address.",
+    "short_title": "The lookalike login",
+    "category": "Phishing",
+    "technique": "Credential phishing",
     "kind": "capture",
     "subject": "investaroprofit.com",
-    "summary": "investaroprofit.com is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
-    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "summary": "investaroprofit.com is flagged by Cloudflare phishing block and financial regulator warning. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
+    "lesson": "Open a service from its official app or a saved address, never from a link you were sent, before entering a password or payment details.",
     "image": "investaroprofit-com.png",
     "image_source": "https://desenmascara.me/screens/82e3b71804fef91b.png",
     "image_alt": "Archived capture of investaroprofit.com, a website assessed as fraudulent.",
     "claim": "An operating online service",
-    "counterclaim": "Is this firm authorised to take your money?",
+    "counterclaim": "Is this the real service's own address?",
     "observations": [
       "The source report records: official warning from Financial Conduct Authority (United Kingdom) naming investaroprofit.com."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for investaroprofit.com, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 11 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for investaroprofit.com, based on attributed Cloudflare phishing block and financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 11 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-10-20",
     "checked_at": "2026-10-21",
     "assessment": "Fraudulent · 100/100",
-    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "assessment_source": "desenmascara.me · attributed Cloudflare phishing block and financial regulator warning",
     "sources": [
       {
         "name": "desenmascara.me",
         "short": "Desenmascara",
-        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "role": "Public report and archived capture; verdict basis: attributed Cloudflare phishing block and financial regulator warning",
         "url": "https://desenmascara.me/analisis/53ad7d0d-0eb9-43a0-adf7-fb5c59851270"
       },
       {
@@ -3981,7 +3994,7 @@
         "url": "https://lookup.icann.org/en/lookup?name=investaroprofit.com"
       }
     ],
-    "audience": "Retail investors"
+    "audience": "Anyone asked to sign in or confirm details"
   },
   {
     "id": "SA-097",
@@ -3992,7 +4005,7 @@
     "technique": "Advance-fee request",
     "kind": "capture",
     "subject": "ccamarkets.com",
-    "summary": "ccamarkets.com is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-22).",
+    "summary": "ccamarkets.com is flagged by Cloudflare phishing block and financial regulator warning. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-22).",
     "lesson": "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.",
     "image": "ccamarkets-com.png",
     "image_source": "https://desenmascara.me/screens/866ac492ba82db4a.png",
@@ -4002,18 +4015,24 @@
     "observations": [
       "The source report records: official warning from British Columbia Securities Commission (British Columbia) naming CCAMarkets."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for ccamarkets.com, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for ccamarkets.com, based on attributed Cloudflare phishing block and financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 13 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-10-22",
     "checked_at": "2026-10-22",
     "assessment": "Fraudulent · 100/100",
-    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "assessment_source": "desenmascara.me · attributed Cloudflare phishing block and financial regulator warning",
     "sources": [
       {
         "name": "desenmascara.me",
         "short": "Desenmascara",
-        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "role": "Public report and archived capture; verdict basis: attributed Cloudflare phishing block and financial regulator warning",
         "url": "https://desenmascara.me/analisis/e2773e30-752b-4100-b7da-2963d96392c1"
+      },
+      {
+        "name": "VirusTotal",
+        "short": "VirusTotal",
+        "role": "Independent corroboration: 13 security vendors flagged the domain as malicious (checked 2026-10-23).",
+        "url": "https://www.virustotal.com/gui/domain/ccamarkets.com"
       },
       {
         "name": "ICANN Registration Data Lookup",
@@ -4027,33 +4046,33 @@
   {
     "id": "SA-098",
     "slug": "traderspasvaultso-info",
-    "title": "Automated profits, promised by nobody you can find.",
-    "short_title": "The trading platform",
-    "category": "Investment",
-    "technique": "High-return promise",
+    "title": "The brand is borrowed. The form is the trap.",
+    "short_title": "The phishing page",
+    "category": "Phishing",
+    "technique": "Credential phishing",
     "kind": "capture",
     "subject": "traderspasvaultso.info",
-    "summary": "traderspasvaultso.info is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
-    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "summary": "traderspasvaultso.info is flagged by Cloudflare phishing block and financial regulator warning. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
+    "lesson": "Open a service from its official app or a saved address, never from a link you were sent, before entering a password or payment details.",
     "image": "traderspasvaultso-info.png",
     "image_source": "https://desenmascara.me/screens/335ca3c89deb9404.png",
     "image_alt": "Archived capture of traderspasvaultso.info, a website assessed as fraudulent.",
     "claim": "An operating online service",
-    "counterclaim": "Is this firm authorised to take your money?",
+    "counterclaim": "Is this the real service's own address?",
     "observations": [
       "The source report records: official warning from Financial Conduct Authority (United Kingdom) naming traderspasvaultso.info."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for traderspasvaultso.info, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 13 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for traderspasvaultso.info, based on attributed Cloudflare phishing block and financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 13 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-10-20",
     "checked_at": "2026-10-22",
     "assessment": "Fraudulent · 100/100",
-    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "assessment_source": "desenmascara.me · attributed Cloudflare phishing block and financial regulator warning",
     "sources": [
       {
         "name": "desenmascara.me",
         "short": "Desenmascara",
-        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "role": "Public report and archived capture; verdict basis: attributed Cloudflare phishing block and financial regulator warning",
         "url": "https://desenmascara.me/analisis/e887a237-4d0a-4875-8ca8-18e9ceaf499c"
       },
       {
@@ -4063,38 +4082,38 @@
         "url": "https://www.virustotal.com/gui/domain/traderspasvaultso.info"
       }
     ],
-    "audience": "Retail investors"
+    "audience": "Anyone asked to sign in or confirm details"
   },
   {
     "id": "SA-099",
     "slug": "valoryfxmarket-com",
-    "title": "Easy earnings. Pay first to withdraw.",
-    "short_title": "The online job",
-    "category": "Jobs",
-    "technique": "Advance-fee request",
+    "title": "A familiar page. The wrong address.",
+    "short_title": "The lookalike login",
+    "category": "Phishing",
+    "technique": "Credential phishing",
     "kind": "capture",
     "subject": "valoryfxmarket.com",
-    "summary": "valoryfxmarket.com is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
-    "lesson": "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.",
+    "summary": "valoryfxmarket.com is flagged by Cloudflare phishing block and financial regulator warning. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
+    "lesson": "Open a service from its official app or a saved address, never from a link you were sent, before entering a password or payment details.",
     "image": "valoryfxmarket-com.png",
     "image_source": "https://desenmascara.me/screens/de741610eea03d2e.png",
     "image_alt": "Archived capture of valoryfxmarket.com, a website assessed as fraudulent.",
     "claim": "An operating online service",
-    "counterclaim": "A displayed balance is not proof of withdrawable earnings",
+    "counterclaim": "Is this the real service's own address?",
     "observations": [
       "The source report records: official warning from Financial Conduct Authority (United Kingdom) naming valoryfxmarket.com."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for valoryfxmarket.com, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for valoryfxmarket.com, based on attributed Cloudflare phishing block and financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-10-20",
     "checked_at": "2026-10-23",
     "assessment": "Fraudulent · 100/100",
-    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "assessment_source": "desenmascara.me · attributed Cloudflare phishing block and financial regulator warning",
     "sources": [
       {
         "name": "desenmascara.me",
         "short": "Desenmascara",
-        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "role": "Public report and archived capture; verdict basis: attributed Cloudflare phishing block and financial regulator warning",
         "url": "https://desenmascara.me/analisis/764e85fe-2489-428b-9ee3-07e41374c0ba"
       },
       {
@@ -4104,38 +4123,38 @@
         "url": "https://lookup.icann.org/en/lookup?name=valoryfxmarket.com"
       }
     ],
-    "audience": "Job seekers and online task workers"
+    "audience": "Anyone asked to sign in or confirm details"
   },
   {
     "id": "SA-100",
     "slug": "tzelkagrun-btc-com",
-    "title": "Crypto earnings, on a site nobody stands behind.",
-    "short_title": "The wallet lure",
-    "category": "Crypto",
-    "technique": "Crypto wallet or exchange lure",
+    "title": "A trading desk with no regulator on record.",
+    "short_title": "The returns promise",
+    "category": "Investment",
+    "technique": "High-return promise",
     "kind": "capture",
     "subject": "tzelkagrun-btc.com",
-    "summary": "tzelkagrun-btc.com is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
-    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "summary": "tzelkagrun-btc.com is flagged by Cloudflare phishing block and financial regulator warning. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
     "image": "tzelkagrun-btc-com.png",
     "image_source": "https://desenmascara.me/screens/cf3eeebe18a4251f.png",
     "image_alt": "Archived capture of tzelkagrun-btc.com, a website assessed as fraudulent.",
     "claim": "An operating online service",
-    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "counterclaim": "Is this firm authorised to take your money?",
     "observations": [
       "The source report records: official warning from Australian Securities and Investments Commission (Australia) naming Tzelkagrun BTC (tzelkagrun-btc.com)."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for tzelkagrun-btc.com, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for tzelkagrun-btc.com, based on attributed Cloudflare phishing block and financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-10-20",
     "checked_at": "2026-10-23",
     "assessment": "Fraudulent · 100/100",
-    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "assessment_source": "desenmascara.me · attributed Cloudflare phishing block and financial regulator warning",
     "sources": [
       {
         "name": "desenmascara.me",
         "short": "Desenmascara",
-        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "role": "Public report and archived capture; verdict basis: attributed Cloudflare phishing block and financial regulator warning",
         "url": "https://desenmascara.me/analisis/b00719e5-9537-435f-91ed-9e9a3114e2d5"
       },
       {
@@ -4145,7 +4164,7 @@
         "url": "https://lookup.icann.org/en/lookup?name=tzelkagrun-btc.com"
       }
     ],
-    "audience": "Crypto users and retail investors"
+    "audience": "Retail investors"
   },
   {
     "id": "SA-101",
@@ -4156,7 +4175,7 @@
     "technique": "High-return promise",
     "kind": "capture",
     "subject": "sterlingfundpro.io",
-    "summary": "sterlingfundpro.io is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
+    "summary": "sterlingfundpro.io is flagged by Cloudflare phishing block and financial regulator warning. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
     "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
     "image": "sterlingfundpro-io.png",
     "image_source": "https://desenmascara.me/screens/7c4bbf0e94c35569.png",
@@ -4166,17 +4185,17 @@
     "observations": [
       "The source report records: official warning from Australian Securities and Investments Commission (Australia) naming Sterling Fund Pro (sterlingfundpro.io)."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for sterlingfundpro.io, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for sterlingfundpro.io, based on attributed Cloudflare phishing block and financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-10-20",
     "checked_at": "2026-10-23",
     "assessment": "Fraudulent · 100/100",
-    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "assessment_source": "desenmascara.me · attributed Cloudflare phishing block and financial regulator warning",
     "sources": [
       {
         "name": "desenmascara.me",
         "short": "Desenmascara",
-        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "role": "Public report and archived capture; verdict basis: attributed Cloudflare phishing block and financial regulator warning",
         "url": "https://desenmascara.me/analisis/da41eef4-5344-4088-a9ef-d0b13ec8ef8e"
       },
       {
@@ -4197,7 +4216,7 @@
     "technique": "Advance-fee request",
     "kind": "capture",
     "subject": "peppermintschnaps.com",
-    "summary": "peppermintschnaps.com is flagged by a financial regulator. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
+    "summary": "peppermintschnaps.com is flagged by Cloudflare phishing block and financial regulator warning. Desenmascara publishes it as fraudulent (100/100) on that attribution, not as its own finding (captured on 2026-10-20).",
     "lesson": "A number on a dashboard does not prove that withdrawable earnings exist. Do not send money to release supposed wages.",
     "image": "peppermintschnaps-com.png",
     "image_source": "https://desenmascara.me/screens/17e86ae9957fcfbc.png",
@@ -4207,17 +4226,17 @@
     "observations": [
       "The source report records: official warning from British Columbia Securities Commission (British Columbia) naming Pepperstone Markets (no relation to Pepperstone Group Limited)."
     ],
-    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for peppermintschnaps.com, based on attributed financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 7 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 100/100 for peppermintschnaps.com, based on attributed Cloudflare phishing block and financial regulator warning. The verdict is the third-party listing's, reported with attribution, not an independent finding. 7 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
     "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
     "analysis_date": "2026-10-20",
     "checked_at": "2026-10-23",
     "assessment": "Fraudulent · 100/100",
-    "assessment_source": "desenmascara.me · attributed financial regulator warning",
+    "assessment_source": "desenmascara.me · attributed Cloudflare phishing block and financial regulator warning",
     "sources": [
       {
         "name": "desenmascara.me",
         "short": "Desenmascara",
-        "role": "Public report and archived capture; verdict basis: attributed financial regulator warning",
+        "role": "Public report and archived capture; verdict basis: attributed Cloudflare phishing block and financial regulator warning",
         "url": "https://desenmascara.me/analisis/f469f490-5bd7-4626-9ad1-104068530446"
       },
       {

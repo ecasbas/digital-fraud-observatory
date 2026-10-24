@@ -170,5 +170,22 @@ class PublishLocalTests(unittest.TestCase):
             self.assertEqual(target.stat().st_mode & 0o777, 0o755)
 
 
+class OutsideSourcesTests(unittest.TestCase):
+    """2026-10-24: a site Cloudflare blocks as phishing and a regulator warned
+    about was published as a regulator case over Cloudflare's warning page."""
+
+    def test_every_outside_source_is_named(self):
+        p = projection(assessed_by="regulatory_warnings", explanation=(
+            "Several independent sources flag this site: Cloudflare blocks it as phishing; British Columbia "
+            "Securities Commission warned about it on 2026-10-19. The primary reason..."))
+        self.assertEqual(cur.basis_of(p), "attributed Cloudflare phishing block and financial regulator warning")
+        case = cur.build_case(dict(p, report_url="https://desenmascara.me/analisis/x"), "SA-200", "x", "x.png", "")
+        self.assertIn("Cloudflare phishing block and financial regulator warning", case["summary"])
+
+    def test_single_source_keeps_its_attribution(self):
+        p = projection(assessed_by="regulatory_warnings", explanation="The primary reason is an official regulatory warning.")
+        self.assertEqual(cur.basis_of(p), "attributed financial regulator warning")
+
+
 if __name__ == "__main__":
     unittest.main()
