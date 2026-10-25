@@ -4325,5 +4325,78 @@
       }
     ],
     "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-105",
+    "slug": "synergytradealliance-com",
+    "title": "A crypto platform. A wallet you should not connect.",
+    "short_title": "The crypto earnings site",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "synergytradealliance.com",
+    "summary": "Captured on 2026-10-24: synergytradealliance.com, a crypto platform that Desenmascara's AI-assisted analysis rated fraudulent at 95/100.",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "synergytradealliance-com.png",
+    "image_source": "https://desenmascara.me/screens/404cc846ed9877e4.png",
+    "image_alt": "Archived capture of synergytradealliance.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 30 of 45 domains we have analysed are flagged (67%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for synergytradealliance.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated synergytradealliance.com fraudulent on 2026-10-24 at 03:34 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-24",
+    "checked_at": "2026-10-25",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/89355900-5cff-4dce-ae36-4f6b1b9440de"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-106",
+    "slug": "zenoxchain-com",
+    "title": "A trading desk with no regulator on record.",
+    "short_title": "The returns promise",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "zenoxchain.com",
+    "summary": "Desenmascara flagged zenoxchain.com as fraudulent (95/100). The site presented itself as an investment or trading platform.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "zenoxchain-com.png",
+    "image_source": "https://desenmascara.me/screens/6adc7dbf3a381aef.png",
+    "image_alt": "Archived capture of zenoxchain.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "Content looks generic or templated.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 59 of 99 domains we have analysed are flagged (60%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for zenoxchain.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated zenoxchain.com fraudulent on 2026-10-23 at 03:21 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-23",
+    "checked_at": "2026-10-25",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/6cf5bbc9-7ee7-47a4-965f-8eeecc838eec"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
