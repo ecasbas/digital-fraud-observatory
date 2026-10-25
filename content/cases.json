@@ -4398,5 +4398,78 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-107",
+    "slug": "coinassetltd-uk",
+    "title": "The coins are real. The platform is not verifiable.",
+    "short_title": "The crypto platform",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "coinassetltd.uk",
+    "summary": "An archived look at coinassetltd.uk, a crypto platform assessed as fraudulent by Desenmascara (AI-assisted analysis, 95/100).",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "coinassetltd-uk.png",
+    "image_source": "https://desenmascara.me/screens/a1f55ab577fbe2df.png",
+    "image_alt": "Archived capture of coinassetltd.uk, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "Promises returns that are unrealistic or guaranteed.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 59 of 99 domains we have analysed are flagged (60%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for coinassetltd.uk, based on AI-assisted analysis. Its analysis says: “Our analysis rated coinassetltd.uk fraudulent on 2026-10-23 at 03:20 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-23",
+    "checked_at": "2026-10-25",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/ce7599b5-48c4-4e19-b9c2-dfc6bdd0d01d"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-108",
+    "slug": "trustcoin-fx-net",
+    "title": "Big returns. No verifiable firm behind them.",
+    "short_title": "The investment offer",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "trustcoin-fx.net",
+    "summary": "trustcoin-fx.net presented itself as an investment or trading platform. Desenmascara rated it fraudulent (95/100) after AI-assisted analysis.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "trustcoin-fx-net.png",
+    "image_source": "https://desenmascara.me/screens/56ea5130ebebcd6e.png",
+    "image_alt": "Archived capture of trustcoin-fx.net, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 79 of 115 domains we have analysed are flagged (69%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for trustcoin-fx.net, based on AI-assisted analysis. Its analysis says: “Our analysis rated trustcoin-fx.net fraudulent on 2026-10-23 at 03:12 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-23",
+    "checked_at": "2026-10-25",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/04c10346-a622-4b15-a998-a1ab62093157"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
