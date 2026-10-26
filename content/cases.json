@@ -4471,5 +4471,77 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-109",
+    "slug": "maybankinvestment-net",
+    "title": "A trading desk with no regulator on record.",
+    "short_title": "The returns promise",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "maybankinvestment.net",
+    "summary": "Captured on 2026-10-26: maybankinvestment.net, an investment or trading platform that Desenmascara's AI-assisted analysis rated fraudulent at 95/100.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "maybankinvestment-net.png",
+    "image_source": "https://desenmascara.me/screens/4df1b4c5cc3d0698.png",
+    "image_alt": "Archived capture of maybankinvestment.net, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 93 of 94 domains we have analysed are flagged (99%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for maybankinvestment.net, based on AI-assisted analysis. Its analysis says: “Our analysis rated maybankinvestment.net fraudulent on 2026-10-26 at 03:19 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-26",
+    "checked_at": "2026-10-26",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/cfa7e058-5a98-4fb7-a5ef-5f11bef7272e"
+      }
+    ],
+    "audience": "Retail investors"
+  },
+  {
+    "id": "SA-110",
+    "slug": "primeexpressdelivery-com",
+    "title": "Cargo, tracking, a fleet: all claims, no carrier.",
+    "short_title": "The freight company",
+    "category": "Transport",
+    "technique": "Manufactured credibility",
+    "kind": "capture",
+    "subject": "primeexpressdelivery.com",
+    "summary": "Desenmascara flagged primeexpressdelivery.com as fraudulent (95/100). The site presented itself as a logistics carrier.",
+    "lesson": "A transport website does not establish that a carrier exists. Verify the company identity before entrusting it with money or goods.",
+    "image": "primeexpressdelivery-com.png",
+    "image_source": "https://desenmascara.me/screens/c36179612c037077.png",
+    "image_alt": "Archived capture of primeexpressdelivery.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Does this carrier exist outside its website?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 20 of 20 domains we have analysed are flagged (100%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for primeexpressdelivery.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated primeexpressdelivery.com fraudulent on 2026-10-25 at 03:43 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-25",
+    "checked_at": "2026-10-26",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/ecc69ff9-86de-4e2b-b5c5-9bedb417eba4"
+      }
+    ],
+    "audience": "Customers, shippers and business counterparties"
   }
 ]
