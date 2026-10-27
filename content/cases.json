@@ -4615,5 +4615,76 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-113",
+    "slug": "vninternationaltrade-com",
+    "title": "The coins are real. The platform is not verifiable.",
+    "short_title": "The crypto platform",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "vninternationaltrade.com",
+    "summary": "Captured on 2026-10-26: vninternationaltrade.com, a crypto platform that Desenmascara's AI-assisted analysis rated fraudulent at 95/100.",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "vninternationaltrade-com.png",
+    "image_source": "https://desenmascara.me/screens/aa3a712b3fd594b1.png",
+    "image_alt": "Archived capture of vninternationaltrade.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "Promises returns that are unrealistic or guaranteed.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for vninternationaltrade.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated vninternationaltrade.com fraudulent on 2026-10-26 at 03:29 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-26",
+    "checked_at": "2026-10-27",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/8963adec-f6c6-4b63-a566-5f31f33bda3d"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-114",
+    "slug": "cityprimetrustfinance-org",
+    "title": "A bank website. No bank you can verify.",
+    "short_title": "The banking portal",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "cityprimetrustfinance.org",
+    "summary": "Desenmascara flagged cityprimetrustfinance.org as fraudulent (88/100). The site presented itself as a bank or financial service.",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "cityprimetrustfinance-org.png",
+    "image_source": "https://desenmascara.me/screens/4dd653c6ee39994f.png",
+    "image_alt": "Archived capture of cityprimetrustfinance.org, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: hosted on an address where 38 of 42 domains we have analysed are flagged (90%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 88/100 for cityprimetrustfinance.org, based on AI-assisted analysis. Its analysis says: “This is a newly registered English-language banking and credit-union landing page impersonating a financial institution called City Prime Trust, with login and account-opening functions, deposit products, loans, credit cards, and promotional APY offers.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-26",
+    "checked_at": "2026-10-27",
+    "assessment": "Fraudulent · 88/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/1763edb7-6f65-45a7-8043-ec55e376c971"
+      }
+    ],
+    "audience": "Bank customers and payment users"
   }
 ]
