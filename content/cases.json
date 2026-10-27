@@ -4543,5 +4543,77 @@
       }
     ],
     "audience": "Customers, shippers and business counterparties"
+  },
+  {
+    "id": "SA-111",
+    "slug": "litecoinsofficialtrade-cc",
+    "title": "A crypto platform. A wallet you should not connect.",
+    "short_title": "The crypto earnings site",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "litecoinsofficialtrade.cc",
+    "summary": "An archived look at litecoinsofficialtrade.cc, a crypto platform assessed as fraudulent by Desenmascara (AI-assisted analysis, 95/100).",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "litecoinsofficialtrade-cc.png",
+    "image_source": "https://desenmascara.me/screens/a65c29bbd45ad43c.png",
+    "image_alt": "Archived capture of litecoinsofficialtrade.cc, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 25 of 37 domains we have analysed are flagged (68%).",
+      "The source report records: suspicious TLD (.cc)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for litecoinsofficialtrade.cc, based on AI-assisted analysis. Its analysis says: “Our analysis rated litecoinsofficialtrade.cc fraudulent on 2026-10-26 at 03:20 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-26",
+    "checked_at": "2026-10-27",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/07886aa2-9c15-4fee-82fa-191b3ae49b06"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-112",
+    "slug": "guruswiftmarkets-com",
+    "title": "A trading desk with no regulator on record.",
+    "short_title": "The returns promise",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "guruswiftmarkets.com",
+    "summary": "guruswiftmarkets.com presented itself as an investment or trading platform. Desenmascara rated it fraudulent (89/100) after AI-assisted analysis.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "guruswiftmarkets-com.png",
+    "image_source": "https://desenmascara.me/screens/1255da6047449389.png",
+    "image_alt": "Archived capture of guruswiftmarkets.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: hosted on an address where 77 of 178 domains we have analysed are flagged (43%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 89/100 for guruswiftmarkets.com, based on AI-assisted analysis. Its analysis says: “This is a newly registered investment and CFD trading platform presenting itself as “Guru Swift Markets,” with account creation, login, funding methods, copy trading, and claims of regulated, secure professional services.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-24",
+    "checked_at": "2026-10-27",
+    "assessment": "Fraudulent · 89/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/c9f87ea2-1d3e-4844-b343-ed929bf419aa"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
