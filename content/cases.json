@@ -4686,5 +4686,77 @@
       }
     ],
     "audience": "Bank customers and payment users"
+  },
+  {
+    "id": "SA-115",
+    "slug": "quantumbridgemarkets-com",
+    "title": "A trading desk with no regulator on record.",
+    "short_title": "The returns promise",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "quantumbridgemarkets.com",
+    "summary": "An archived look at quantumbridgemarkets.com, an investment or trading platform assessed as fraudulent by Desenmascara (AI-assisted analysis, 95/100).",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "quantumbridgemarkets-com.png",
+    "image_source": "https://desenmascara.me/screens/6d27d88bc48a1f0a.png",
+    "image_alt": "Archived capture of quantumbridgemarkets.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 13 of 15 domains we have analysed are flagged (87%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for quantumbridgemarkets.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated quantumbridgemarkets.com fraudulent on 2026-10-27 at 03:52 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-27",
+    "checked_at": "2026-10-28",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/31b53740-be36-4fa1-9b27-e2d282a27c9d"
+      }
+    ],
+    "audience": "Retail investors"
+  },
+  {
+    "id": "SA-116",
+    "slug": "southerntradex-com",
+    "title": "The coins are real. The platform is not verifiable.",
+    "short_title": "The crypto platform",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "southerntradex.com",
+    "summary": "southerntradex.com presented itself as a crypto platform. Desenmascara rated it fraudulent (95/100) after AI-assisted analysis.",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "southerntradex-com.png",
+    "image_source": "https://desenmascara.me/screens/8fc20b6fae68ee90.png",
+    "image_alt": "Archived capture of southerntradex.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 76 of 112 domains we have analysed are flagged (68%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for southerntradex.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated southerntradex.com fraudulent on 2026-10-27 at 03:40 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-27",
+    "checked_at": "2026-10-28",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/dbf90650-7e6e-4fab-b96d-4c05421e28e4"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
   }
 ]
