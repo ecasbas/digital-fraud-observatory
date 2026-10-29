@@ -4829,5 +4829,77 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-119",
+    "slug": "officialgoldexchange-ltd",
+    "title": "Automated profits, promised by nobody you can find.",
+    "short_title": "The trading platform",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "officialgoldexchange.ltd",
+    "summary": "An archived look at officialgoldexchange.ltd, an investment or trading platform assessed as fraudulent by Desenmascara (AI-assisted analysis, 95/100).",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "officialgoldexchange-ltd.png",
+    "image_source": "https://desenmascara.me/screens/ba76caeb0a7b7f47.png",
+    "image_alt": "Archived capture of officialgoldexchange.ltd, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "Promises returns that are unrealistic or guaranteed.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 32 of 33 domains we have analysed are flagged (97%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for officialgoldexchange.ltd, based on AI-assisted analysis. Its analysis says: “Our analysis rated officialgoldexchange.ltd fraudulent on 2026-10-27 at 03:19 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-27",
+    "checked_at": "2026-10-29",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/d380e15a-d8fc-4dd4-87c1-43847d88cf95"
+      }
+    ],
+    "audience": "Retail investors"
+  },
+  {
+    "id": "SA-120",
+    "slug": "trusttrade-ltd",
+    "title": "A crypto platform. A wallet you should not connect.",
+    "short_title": "The crypto earnings site",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "trusttrade.ltd",
+    "summary": "trusttrade.ltd presented itself as a crypto platform. Desenmascara rated it fraudulent (95/100) after AI-assisted analysis.",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "trusttrade-ltd.png",
+    "image_source": "https://desenmascara.me/screens/fe189a0a4e5b5a38.png",
+    "image_alt": "Archived capture of trusttrade.ltd, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for trusttrade.ltd, based on AI-assisted analysis. Its analysis says: “Our analysis rated trusttrade.ltd fraudulent on 2026-10-26 at 03:14 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-26",
+    "checked_at": "2026-10-29",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/bccd4e50-ec3d-49bb-a9b8-16172e69f679"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
   }
 ]
