@@ -4758,5 +4758,76 @@
       }
     ],
     "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-117",
+    "slug": "stockskick-ru",
+    "title": "A famous brand. A price too good to be true.",
+    "short_title": "The brand storefront",
+    "category": "Shopping",
+    "technique": "Deceptive storefront",
+    "kind": "capture",
+    "subject": "stockskick.ru",
+    "summary": "Captured on 2026-10-27: stockskick.ru, an online shop that Desenmascara's AI-assisted analysis rated fraudulent at 95/100.",
+    "lesson": "Check who operates a shop before trusting its sale. A famous brand and a deep discount prove nothing about who takes your money.",
+    "image": "stockskick-ru.png",
+    "image_source": "https://desenmascara.me/screens/d30b1f03b6ed26cb.png",
+    "image_alt": "Archived capture of stockskick.ru, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who operates this shop?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for stockskick.ru, based on AI-assisted analysis. Its analysis says: “Our analysis rated stockskick.ru fraudulent on 2026-10-27 at 03:34 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-27",
+    "checked_at": "2026-10-29",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/e254a60c-ea9a-4971-90e9-015323a91fd5"
+      }
+    ],
+    "audience": "Online shoppers"
+  },
+  {
+    "id": "SA-118",
+    "slug": "tradexclubpro-com",
+    "title": "A trading desk with no regulator on record.",
+    "short_title": "The returns promise",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "tradexclubpro.com",
+    "summary": "Desenmascara flagged tradexclubpro.com as fraudulent (95/100). The site presented itself as an investment or trading platform.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "tradexclubpro-com.png",
+    "image_source": "https://desenmascara.me/screens/3c9c1fc7f62d65e8.png",
+    "image_alt": "Archived capture of tradexclubpro.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 17 of 17 domains we have analysed are flagged (100%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for tradexclubpro.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated tradexclubpro.com fraudulent on 2026-10-27 at 03:27 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-27",
+    "checked_at": "2026-10-29",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/bb705bc7-dc27-4e1a-85df-83aa3691dbda"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
