@@ -5044,5 +5044,78 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-125",
+    "slug": "spacelinkcapital-com",
+    "title": "The coins are real. The platform is not verifiable.",
+    "short_title": "The crypto platform",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "spacelinkcapital.com",
+    "summary": "Captured on 2026-10-30: spacelinkcapital.com, a crypto platform that Desenmascara's AI-assisted analysis rated fraudulent at 95/100.",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "spacelinkcapital-com.png",
+    "image_source": "https://desenmascara.me/screens/fe2cc321da17ebea.png",
+    "image_alt": "Archived capture of spacelinkcapital.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "Content looks generic or templated.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 57 of 97 domains we have analysed are flagged (59%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for spacelinkcapital.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated spacelinkcapital.com fraudulent on 2026-10-30 at 03:44 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-30",
+    "checked_at": "2026-10-31",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/be86677f-efbd-492a-a488-8e93077525d7"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-126",
+    "slug": "teslastockmarktltd-com",
+    "title": "Big returns. No verifiable firm behind them.",
+    "short_title": "The investment offer",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "teslastockmarktltd.com",
+    "summary": "Desenmascara flagged teslastockmarktltd.com as fraudulent (95/100). The site presented itself as an investment or trading platform.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "teslastockmarktltd-com.png",
+    "image_source": "https://desenmascara.me/screens/429f7954fee38507.png",
+    "image_alt": "Archived capture of teslastockmarktltd.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 35 of 35 domains we have analysed are flagged (100%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for teslastockmarktltd.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated teslastockmarktltd.com fraudulent on 2026-10-30 at 03:39 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-30",
+    "checked_at": "2026-10-31",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/0655057c-86ee-453d-826d-f9cebcda63b1"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
