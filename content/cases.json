@@ -5117,5 +5117,78 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-127",
+    "slug": "skyprivatecapital-com",
+    "title": "Online banking from a bank nobody licensed.",
+    "short_title": "The card offer",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "skyprivatecapital.com",
+    "summary": "An archived look at skyprivatecapital.com, a bank or financial service assessed as fraudulent by Desenmascara (AI-assisted analysis, 95/100).",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "skyprivatecapital-com.png",
+    "image_source": "https://desenmascara.me/screens/7353182dd07c627c.png",
+    "image_alt": "Archived capture of skyprivatecapital.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 33 of 33 domains we have analysed are flagged (100%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for skyprivatecapital.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated skyprivatecapital.com fraudulent on 2026-10-31 at 03:40 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-31",
+    "checked_at": "2026-11-01",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/e1d4f221-4d5c-4aeb-a637-41d430c849f4"
+      }
+    ],
+    "audience": "Bank customers and payment users"
+  },
+  {
+    "id": "SA-128",
+    "slug": "spring-trader-com",
+    "title": "Automated profits, promised by nobody you can find.",
+    "short_title": "The trading platform",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "spring-trader.com",
+    "summary": "spring-trader.com presented itself as an investment or trading platform. Desenmascara rated it fraudulent (95/100) after AI-assisted analysis.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "spring-trader-com.png",
+    "image_source": "https://desenmascara.me/screens/d62cce42859d2c58.png",
+    "image_alt": "Archived capture of spring-trader.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "Asks for payment by crypto or bank transfer.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 54 of 54 domains we have analysed are flagged (100%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for spring-trader.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated spring-trader.com fraudulent on 2026-10-31 at 03:39 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-10-31",
+    "checked_at": "2026-11-01",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/c0d5cbbc-034f-44d1-b098-bf680ea9a463"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
