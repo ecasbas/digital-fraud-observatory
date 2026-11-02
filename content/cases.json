@@ -5262,5 +5262,79 @@
       }
     ],
     "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-131",
+    "slug": "swiftscost-net",
+    "title": "Automated profits, promised by nobody you can find.",
+    "short_title": "The trading platform",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "swiftscost.net",
+    "summary": "An archived look at swiftscost.net, an investment or trading platform assessed as fraudulent by Desenmascara (AI-assisted analysis, 95/100).",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "swiftscost-net.png",
+    "image_source": "https://desenmascara.me/screens/045250c81c215630.png",
+    "image_alt": "Archived capture of swiftscost.net, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "Content looks generic or templated.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 55 of 91 domains we have analysed are flagged (60%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for swiftscost.net, based on AI-assisted analysis. Its analysis says: “Our analysis rated swiftscost.net fraudulent on 2026-11-01 at 03:35 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-01",
+    "checked_at": "2026-11-02",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/5abefc44-a4eb-4b13-831a-649487de69c6"
+      }
+    ],
+    "audience": "Retail investors"
+  },
+  {
+    "id": "SA-132",
+    "slug": "assetsmarket-live",
+    "title": "A crypto platform. A wallet you should not connect.",
+    "short_title": "The crypto earnings site",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "assetsmarket.live",
+    "summary": "assetsmarket.live presented itself as a crypto platform. Desenmascara rated it fraudulent (95/100) after AI-assisted analysis.",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "assetsmarket-live.png",
+    "image_source": "https://desenmascara.me/screens/488bc51a2c12cb12.png",
+    "image_alt": "Archived capture of assetsmarket.live, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 17 of 17 domains we have analysed are flagged (100%).",
+      "The source report records: suspicious TLD (.live)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for assetsmarket.live, based on AI-assisted analysis. Its analysis says: “Our analysis rated assetsmarket.live fraudulent on 2026-11-01 at 03:19 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-01",
+    "checked_at": "2026-11-02",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/3d5095da-7625-4f03-a655-3c48e9739485"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
   }
 ]
