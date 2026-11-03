@@ -5336,5 +5336,77 @@
       }
     ],
     "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-133",
+    "slug": "sinoprimelogistics-com",
+    "title": "A global freight company that exists only online.",
+    "short_title": "The logistics firm",
+    "category": "Transport",
+    "technique": "Manufactured credibility",
+    "kind": "capture",
+    "subject": "sinoprimelogistics.com",
+    "summary": "Captured on 2026-11-02: sinoprimelogistics.com, a logistics carrier that Desenmascara's AI-assisted analysis rated fraudulent at 95/100.",
+    "lesson": "A transport website does not establish that a carrier exists. Verify the company identity before entrusting it with money or goods.",
+    "image": "sinoprimelogistics-com.png",
+    "image_source": "https://desenmascara.me/screens/bde9fbc9b424b6ab.png",
+    "image_alt": "Archived capture of sinoprimelogistics.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Does this carrier exist outside its website?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 47 of 52 domains we have analysed are flagged (90%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for sinoprimelogistics.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated sinoprimelogistics.com fraudulent on 2026-11-02 at 03:41 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-02",
+    "checked_at": "2026-11-03",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/4a57aa54-c14e-4d5b-9dc4-a38649c2f6d4"
+      }
+    ],
+    "audience": "Customers, shippers and business counterparties"
+  },
+  {
+    "id": "SA-134",
+    "slug": "spectreglobalbk-org",
+    "title": "Cards and accounts, offered by no bank on record.",
+    "short_title": "The bank that isn't",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "spectreglobalbk.org",
+    "summary": "Desenmascara flagged spectreglobalbk.org as fraudulent (95/100). The site presented itself as a bank or financial service.",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "spectreglobalbk-org.png",
+    "image_source": "https://desenmascara.me/screens/5e08330acf7cfa87.png",
+    "image_alt": "Archived capture of spectreglobalbk.org, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 50 of 66 domains we have analysed are flagged (76%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for spectreglobalbk.org, based on AI-assisted analysis. Its analysis says: “Our analysis rated spectreglobalbk.org fraudulent on 2026-11-02 at 03:40 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-02",
+    "checked_at": "2026-11-03",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/fecf0351-bd67-4267-9a1a-9d9a385895f5"
+      }
+    ],
+    "audience": "Bank customers and payment users"
   }
 ]
