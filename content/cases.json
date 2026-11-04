@@ -5408,5 +5408,77 @@
       }
     ],
     "audience": "Bank customers and payment users"
+  },
+  {
+    "id": "SA-135",
+    "slug": "swiftequora-com",
+    "title": "A bank website. No bank you can verify.",
+    "short_title": "The banking portal",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "swiftequora.com",
+    "summary": "An archived look at swiftequora.com, a bank or financial service assessed as fraudulent by Desenmascara (AI-assisted analysis, 95/100).",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "swiftequora-com.png",
+    "image_source": "https://desenmascara.me/screens/fa09a10626edfd19.png",
+    "image_alt": "Archived capture of swiftequora.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 47 of 52 domains we have analysed are flagged (90%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for swiftequora.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated swiftequora.com fraudulent on 2026-11-02 at 03:37 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-02",
+    "checked_at": "2026-11-04",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/7ba57522-e684-48fe-b6d8-110354657af9"
+      }
+    ],
+    "audience": "Bank customers and payment users"
+  },
+  {
+    "id": "SA-136",
+    "slug": "synapznft-com",
+    "title": "Crypto earnings, on a site nobody stands behind.",
+    "short_title": "The wallet lure",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "synapznft.com",
+    "summary": "synapznft.com presented itself as a crypto platform. Desenmascara rated it fraudulent (95/100) after AI-assisted analysis.",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "synapznft-com.png",
+    "image_source": "https://desenmascara.me/screens/ae380290131cf08f.png",
+    "image_alt": "Archived capture of synapznft.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 4 of 5 domains we have analysed are flagged (80%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for synapznft.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated synapznft.com fraudulent on 2026-11-02 at 03:36 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-02",
+    "checked_at": "2026-11-04",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/19978b55-7b78-47bd-b96f-3325d60deab8"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
   }
 ]
