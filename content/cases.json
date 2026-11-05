@@ -5518,5 +5518,77 @@
       }
     ],
     "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-139",
+    "slug": "vastfinance-site",
+    "title": "Online banking from a bank nobody licensed.",
+    "short_title": "The card offer",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "vastfinance.site",
+    "summary": "An archived look at vastfinance.site, a bank or financial service assessed as fraudulent by Desenmascara (AI-assisted analysis, 95/100).",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "vastfinance-site.png",
+    "image_source": "https://desenmascara.me/screens/57ba7ba446769dc0.png",
+    "image_alt": "Archived capture of vastfinance.site, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for vastfinance.site, based on AI-assisted analysis. Its analysis says: “Our analysis rated vastfinance.site fraudulent on 2026-11-03 at 03:23 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-03",
+    "checked_at": "2026-11-05",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/d1806261-da43-48d7-83bb-a5c75b059330"
+      }
+    ],
+    "audience": "Bank customers and payment users"
+  },
+  {
+    "id": "SA-140",
+    "slug": "yokofinance-com",
+    "title": "Automated profits, promised by nobody you can find.",
+    "short_title": "The trading platform",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "yokofinance.com",
+    "summary": "yokofinance.com presented itself as an investment or trading platform. Desenmascara rated it fraudulent (95/100) after AI-assisted analysis.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "yokofinance-com.png",
+    "image_source": "https://desenmascara.me/screens/dc585ee9cb7f4552.png",
+    "image_alt": "Archived capture of yokofinance.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for yokofinance.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated yokofinance.com fraudulent on 2026-11-03 at 03:21 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-03",
+    "checked_at": "2026-11-05",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/debb762b-f8a2-4897-b012-2263cc35e9e5"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
