@@ -5673,5 +5673,95 @@
       }
     ],
     "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-143",
+    "slug": "stonecredholm-app-click",
+    "title": "Automated profits, promised by nobody you can find.",
+    "short_title": "The trading platform",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "stonecredholm-app.click",
+    "summary": "An archived look at stonecredholm-app.click, an investment or trading platform assessed as fraudulent by Desenmascara (AI-assisted analysis, 93/100).",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "stonecredholm-app-click.png",
+    "image_source": "https://desenmascara.me/screens/d15801060357903b.png",
+    "image_alt": "Archived capture of stonecredholm-app.click, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: hosted on an address where 21 of 21 domains people asked us about are flagged (100%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 93/100 for stonecredholm-app.click, based on AI-assisted analysis. 12 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-04",
+    "checked_at": "2026-11-06",
+    "assessment": "Fraudulent · 93/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/5c7e2969-6bb0-4747-8199-770f341d94bb"
+      },
+      {
+        "name": "VirusTotal",
+        "short": "VirusTotal",
+        "role": "Independent corroboration: 12 security vendors flagged the domain as malicious (checked 2026-11-04).",
+        "url": "https://www.virustotal.com/gui/domain/stonecredholm-app.click"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-06-07 through Spaceship, Inc..",
+        "url": "https://lookup.icann.org/en/lookup?name=stonecredholm-app.click"
+      }
+    ],
+    "audience": "Retail investors"
+  },
+  {
+    "id": "SA-144",
+    "slug": "bangbet-fr-ds8898-cc",
+    "title": "A bank website. No bank you can verify.",
+    "short_title": "The banking portal",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "bangbet-fr.ds8898.cc",
+    "summary": "bangbet-fr.ds8898.cc presented itself as a bank or financial service. Desenmascara rated it fraudulent (91/100) after AI-assisted analysis.",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "bangbet-fr-ds8898-cc.png",
+    "image_source": "https://desenmascara.me/screens/f8a30bb9f494154e.png",
+    "image_alt": "Archived capture of bangbet-fr.ds8898.cc, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: domain registered 23 days ago.",
+      "The source report records: suspicious TLD (.cc)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 91/100 for bangbet-fr.ds8898.cc, based on AI-assisted analysis. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-06",
+    "checked_at": "2026-11-06",
+    "assessment": "Fraudulent · 91/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/fe87a9d2-cd3c-4218-8ddf-8eb17f6669a4"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-10-14 through Gname.com Pte. Ltd..",
+        "url": "https://lookup.icann.org/en/lookup?name=bangbet-fr.ds8898.cc"
+      }
+    ],
+    "audience": "Bank customers and payment users"
   }
 ]
