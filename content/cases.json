@@ -5763,5 +5763,91 @@
       }
     ],
     "audience": "Bank customers and payment users"
+  },
+  {
+    "id": "SA-145",
+    "slug": "kogundop-vip",
+    "title": "Deep discounts from a shop with no known owner.",
+    "short_title": "The bargain store",
+    "category": "Shopping",
+    "technique": "Deceptive storefront",
+    "kind": "capture",
+    "subject": "kogundop.vip",
+    "summary": "Captured on 2026-11-03: kogundop.vip, an online shop that Desenmascara's AI-assisted analysis rated fraudulent at 95/100.",
+    "lesson": "Check who operates a shop before trusting its sale. A famous brand and a deep discount prove nothing about who takes your money.",
+    "image": "kogundop-vip.png",
+    "image_source": "https://desenmascara.me/screens/8b2d78195f53f8f3.png",
+    "image_alt": "Archived capture of kogundop.vip, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who operates this shop?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: domain registered 1 day ago."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for kogundop.vip, based on AI-assisted analysis. Its analysis says: “Our analysis rated kogundop.vip fraudulent on 2026-11-03 at 19:50 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-03",
+    "checked_at": "2026-11-07",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/4c2c9c84-275a-4150-bae6-2d581d65af07"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-11-02 through DNSPod, Inc..",
+        "url": "https://lookup.icann.org/en/lookup?name=kogundop.vip"
+      }
+    ],
+    "audience": "Online shoppers"
+  },
+  {
+    "id": "SA-146",
+    "slug": "nextchainai-shop",
+    "title": "Automated profits, promised by nobody you can find.",
+    "short_title": "The trading platform",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "nextchainai.shop",
+    "summary": "Desenmascara flagged nextchainai.shop as fraudulent (93/100). The site presented itself as an investment or trading platform.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "nextchainai-shop.png",
+    "image_source": "https://desenmascara.me/screens/64dd71f94f802a80.png",
+    "image_alt": "Archived capture of nextchainai.shop, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: hosted on an address where 11 of 11 domains people asked us about are flagged (100%).",
+      "The source report records: suspicious TLD (.shop)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 93/100 for nextchainai.shop, based on AI-assisted analysis. 14 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-04",
+    "checked_at": "2026-11-07",
+    "assessment": "Fraudulent · 93/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/34583f23-8cc2-4867-b261-a0932685037f"
+      },
+      {
+        "name": "VirusTotal",
+        "short": "VirusTotal",
+        "role": "Independent corroboration: 14 security vendors flagged the domain as malicious (checked 2026-11-04).",
+        "url": "https://www.virustotal.com/gui/domain/nextchainai.shop"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
