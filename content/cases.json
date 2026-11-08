@@ -5927,5 +5927,77 @@
       }
     ],
     "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-149",
+    "slug": "optionsmarketspro-com",
+    "title": "Automated profits, promised by nobody you can find.",
+    "short_title": "The trading platform",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "optionsmarketspro.com",
+    "summary": "Captured on 2026-11-08: optionsmarketspro.com, an investment or trading platform that Desenmascara's AI-assisted analysis rated fraudulent at 95/100.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "optionsmarketspro-com.png",
+    "image_source": "https://desenmascara.me/screens/c5c14b03b2549d46.png",
+    "image_alt": "Archived capture of optionsmarketspro.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for optionsmarketspro.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated optionsmarketspro.com fraudulent on 2026-11-08 at 03:17 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-08",
+    "checked_at": "2026-11-08",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/9327ab99-d3be-4706-8661-ed942830f04c"
+      }
+    ],
+    "audience": "Retail investors"
+  },
+  {
+    "id": "SA-150",
+    "slug": "bluehavencapitalbank-com",
+    "title": "A bank website. No bank you can verify.",
+    "short_title": "The banking portal",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "bluehavencapitalbank.com",
+    "summary": "Desenmascara flagged bluehavencapitalbank.com as fraudulent (95/100). The site presented itself as a bank or financial service.",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "bluehavencapitalbank-com.png",
+    "image_source": "https://desenmascara.me/screens/23a21505849efda3.png",
+    "image_alt": "Archived capture of bluehavencapitalbank.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for bluehavencapitalbank.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated bluehavencapitalbank.com fraudulent on 2026-11-08 at 03:21 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-08",
+    "checked_at": "2026-11-08",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/afa6c936-7184-4100-8210-0c37f90e2731"
+      }
+    ],
+    "audience": "Bank customers and payment users"
   }
 ]
