@@ -6152,5 +6152,77 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-155",
+    "slug": "provenfinancebanking-com",
+    "title": "Cards and accounts, offered by no bank on record.",
+    "short_title": "The bank that isn't",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "provenfinancebanking.com",
+    "summary": "An archived look at provenfinancebanking.com, a bank or financial service assessed as fraudulent by Desenmascara (AI-assisted analysis, 95/100).",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "provenfinancebanking-com.png",
+    "image_source": "https://desenmascara.me/screens/de67210f0c8eab01.png",
+    "image_alt": "Archived capture of provenfinancebanking.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for provenfinancebanking.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated provenfinancebanking.com fraudulent on 2026-11-09 at 03:18 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-09",
+    "checked_at": "2026-11-10",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/027b09c6-e564-4467-9309-59a0ec63f895"
+      }
+    ],
+    "audience": "Bank customers and payment users"
+  },
+  {
+    "id": "SA-156",
+    "slug": "regencyglobaltrust-com",
+    "title": "Big returns. No verifiable firm behind them.",
+    "short_title": "The investment offer",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "regencyglobaltrust.com",
+    "summary": "regencyglobaltrust.com presented itself as an investment or trading platform. Desenmascara rated it fraudulent (95/100) after AI-assisted analysis.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "regencyglobaltrust-com.png",
+    "image_source": "https://desenmascara.me/screens/f7ced103af695c37.png",
+    "image_alt": "Archived capture of regencyglobaltrust.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for regencyglobaltrust.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated regencyglobaltrust.com fraudulent on 2026-11-09 at 03:17 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-09",
+    "checked_at": "2026-11-10",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/3114fca3-c6ac-4bd1-a1a7-6681cd4cfd75"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
