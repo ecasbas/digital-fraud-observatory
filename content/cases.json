@@ -6224,5 +6224,79 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-157",
+    "slug": "std-asset-live",
+    "title": "A trading desk with no regulator on record.",
+    "short_title": "The returns promise",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "std-asset.live",
+    "summary": "Captured on 2026-11-10: std-asset.live, an investment or trading platform that Desenmascara's AI-assisted analysis rated fraudulent at 95/100.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "std-asset-live.png",
+    "image_source": "https://desenmascara.me/screens/4b3fc5d38e587137.png",
+    "image_alt": "Archived capture of std-asset.live, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: suspicious TLD (.live)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for std-asset.live, based on AI-assisted analysis. Its analysis says: “Our analysis rated std-asset.live fraudulent on 2026-11-10 at 03:42 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-10",
+    "checked_at": "2026-11-11",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/425d6bae-83fe-433b-8afb-483660bf2e23"
+      }
+    ],
+    "audience": "Retail investors"
+  },
+  {
+    "id": "SA-158",
+    "slug": "trueglobalvest-com",
+    "title": "The coins are real. The platform is not verifiable.",
+    "short_title": "The crypto platform",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "trueglobalvest.com",
+    "summary": "Desenmascara flagged trueglobalvest.com as fraudulent (95/100). The site presented itself as a crypto platform.",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "trueglobalvest-com.png",
+    "image_source": "https://desenmascara.me/screens/43f2736328121be1.png",
+    "image_alt": "Archived capture of trueglobalvest.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "Promises returns that are unrealistic or guaranteed.",
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for trueglobalvest.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated trueglobalvest.com fraudulent on 2026-11-10 at 03:25 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-10",
+    "checked_at": "2026-11-11",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/7b8f66c0-e270-48b0-a55e-851d0732a55e"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
   }
 ]
