@@ -6371,5 +6371,76 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-161",
+    "slug": "stockmtrade-com",
+    "title": "The coins are real. The platform is not verifiable.",
+    "short_title": "The crypto platform",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "stockmtrade.com",
+    "summary": "Captured on 2026-11-09: stockmtrade.com, a crypto platform that Desenmascara's AI-assisted analysis rated fraudulent at 95/100.",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "stockmtrade-com.png",
+    "image_source": "https://desenmascara.me/screens/7d99ddfb49cde9d3.png",
+    "image_alt": "Archived capture of stockmtrade.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for stockmtrade.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated stockmtrade.com fraudulent on 2026-11-09 at 03:17 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-09",
+    "checked_at": "2026-11-12",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/8652bf57-4f4f-4f07-a9de-9e2e9e423929"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-162",
+    "slug": "ticketmarketdata-com",
+    "title": "A famous brand. A price too good to be true.",
+    "short_title": "The brand storefront",
+    "category": "Shopping",
+    "technique": "Deceptive storefront",
+    "kind": "capture",
+    "subject": "ticketmarketdata.com",
+    "summary": "Desenmascara flagged ticketmarketdata.com as fraudulent (92/100). The site presented itself as an online shop.",
+    "lesson": "Check who operates a shop before trusting its sale. A famous brand and a deep discount prove nothing about who takes your money.",
+    "image": "ticketmarketdata-com.png",
+    "image_source": "https://desenmascara.me/screens/ac74fccee72a28b8.png",
+    "image_alt": "Archived capture of ticketmarketdata.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who operates this shop?",
+    "observations": [
+      "The source report records the domain as fraudulent."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 92/100 for ticketmarketdata.com, based on AI-assisted analysis. Its analysis says: “This is an English-language ticket-market data page presenting concert, sports, and theater listings with resale prices, marketplace names, and event-level ticket availability.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-12",
+    "checked_at": "2026-11-12",
+    "assessment": "Fraudulent · 92/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/2e3ca980-de63-40cf-8a19-f18b8cf29de1"
+      }
+    ],
+    "audience": "Online shoppers"
   }
 ]
