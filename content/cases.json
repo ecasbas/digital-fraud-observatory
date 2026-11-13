@@ -6442,5 +6442,79 @@
       }
     ],
     "audience": "Online shoppers"
+  },
+  {
+    "id": "SA-163",
+    "slug": "xtracapitals-online",
+    "title": "Online banking from a bank nobody licensed.",
+    "short_title": "The card offer",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "xtracapitals.online",
+    "summary": "An archived look at xtracapitals.online, a bank or financial service assessed as fraudulent by Desenmascara (AI-assisted analysis, 95/100).",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "xtracapitals-online.png",
+    "image_source": "https://desenmascara.me/screens/db96b64c5f5d5f2c.png",
+    "image_alt": "Archived capture of xtracapitals.online, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: suspicious TLD (.online)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for xtracapitals.online, based on AI-assisted analysis. Its analysis says: “Our analysis rated xtracapitals.online fraudulent on 2026-11-12 at 03:27 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-12",
+    "checked_at": "2026-11-13",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/97d3bbcc-8871-4c75-b676-838abd300b58"
+      }
+    ],
+    "audience": "Bank customers and payment users"
+  },
+  {
+    "id": "SA-164",
+    "slug": "zenvetrade-org",
+    "title": "Automated profits, promised by nobody you can find.",
+    "short_title": "The trading platform",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "zenvetrade.org",
+    "summary": "zenvetrade.org presented itself as an investment or trading platform. Desenmascara rated it fraudulent (95/100) after AI-assisted analysis.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "zenvetrade-org.png",
+    "image_source": "https://desenmascara.me/screens/b6d21ec8acd58249.png",
+    "image_alt": "Archived capture of zenvetrade.org, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "Promises returns that are unrealistic or guaranteed.",
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for zenvetrade.org, based on AI-assisted analysis. Its analysis says: “Our analysis rated zenvetrade.org fraudulent on 2026-11-12 at 03:24 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-12",
+    "checked_at": "2026-11-13",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/db0fa0d5-e205-4c07-9c09-5b21a5084d1b"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
