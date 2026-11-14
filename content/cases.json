@@ -1,5 +1,142 @@
 [
   {
+    "id": "SA-168",
+    "slug": "ai-cloned-ceo-fake-lawyer-confidential-deal-129-million",
+    "title": "The CEO called about a secret deal. Then a lawyer from a top firm asked for the wire.",
+    "short_title": "The $129 million cloned-CEO and fake-lawyer scheme",
+    "category": "Corporate payments",
+    "technique": "CEO fraud with AI-imitated voice and image, impersonated law-firm lawyers and a fake confidential acquisition",
+    "kind": "incident",
+    "audience": "Finance, accounting and treasury staff who can approve wires, executives whose voice and face are public, law firms, and the banks that process large outgoing transfers",
+    "subject": "US indictment over an alleged $129 million AI impersonation scheme, November 2026",
+    "summary": "US federal prosecutors in New York have charged three men with a scheme that, they allege, took about $129 million from companies between July 2024 and February 2026. According to the charges as reported, employees who could approve large wires received an e-signature email apparently from their CEO about a confidential deal, signed an NDA, and then took calls where AI was allegedly used to imitate the executive's voice and sometimes appearance, before a fake lawyer from a real top-50 law firm told them where to send the money.",
+    "lesson": "Secrecy plus urgency plus a new bank account is the signature of CEO fraud, whatever the voice on the line sounds like. A familiar voice or face on a call is no longer proof of who is speaking. Before any wire for a 'confidential deal', call the executive back on a number you already had, confirm the law firm and the lawyer through the firm's own switchboard, and require a second person to approve any first payment to a new beneficiary. In this case, one bank's back office stopped a $2.85 million attempt before it went out.",
+    "claim": "Your CEO and the deal's lawyers, on the phone",
+    "counterclaim": "An NDA, an AI-imitated voice and a mule account",
+    "observations": [
+      "According to the indictment as described by Gizmodo and CyberScoop, contact often began with an email through an electronic signature service such as DocuSign, apparently from the employee's own chief executive, saying a confidential transaction (often an acquisition) was under way and asking them to sign an NDA.",
+      "The employee was then told to contact a lawyer for a 'compliance call'; the fake lawyer often borrowed the identity of a real lawyer in the European office of one of the world's 50 largest law firms. Help Net Security reports that one defendant, who mostly played UK attorneys, used a handwritten script titled 'Lawyer Call'.",
+      "On later calls, prosecutors allege, the conspirators used AI to imitate the executive's voice and sometimes appearance; the US Attorney's announcement talks of 'super intelligence', while Gizmodo reports that the indictment itself says 'artificial intelligence'.",
+      "Losses described in the charges include about $11.58 million at a UK fintech, $5.24 million at a Florida pet food company, $4.83 million at a Missouri hospital system, $4.64 million at a Massachusetts mutual fund, $2.97 million at a California hospital system and $2.68 million at a Rhode Island bank. The victims are not named.",
+      "The money went to accounts in the US, Spain, Portugal, Greece, the UAE, Singapore, Austria, Slovakia and China, and was converted to cryptocurrency and split among the conspirators, according to prosecutors. Two of the men were arrested in Spain and one in the UK; extradition requests are pending (Gizmodo)."
+    ],
+    "source_summary": "The US Attorney's Office for the Southern District of New York announced in early November 2026 the unsealing of an indictment charging Jacob Soall (41, of Marbella, Spain), Sharon Hazan (54, of Israel) and Guy Sheetrit (42, of Israel and the UAE) with seven counts each, including conspiracy to commit wire fraud, wire fraud, aggravated identity theft and money laundering (CyberScoop, Gizmodo, Help Net Security). Prosecutors allege the scheme ran from about July 2024 to February 2026, targeted thousands of companies and obtained about $129 million by having impersonated CEOs steer accounting staff to impersonated lawyers, who gave the wire instructions. According to CyberScoop and Gizmodo, Soall was arrested in Spain on 17 June, Hazan in Spain on 5 August and Sheetrit in the UK on 7 September. CyberScoop reports that Hazan allegedly boasted of laundering money since 1994, and that Sheetrit's lawyers said he 'has no connection to this matter' and 'maintains his complete innocence'. US Attorney Jamie McDonald said the public should recognise that some 'seek to use this emerging technology to pursue criminal goals'; FBI Assistant Director in Charge James C. Barnacle Jr. said the case shows how advanced technology can be exploited to commit large-scale fraud. Gizmodo describes an October 2024 attempt to have a major New York investment bank wire about $2.85 million that the bank's back office stopped; CyberScoop lists a New York investment company as having lost $2.8 million.",
+    "limits": "This is an indictment: the charges are accusations, the three men are presumed innocent, no court has ruled, and one of them, through his lawyers, denies any involvement. The facts come from press reporting of the prosecutors' announcement and the indictment; we could not read the indictment text ourselves. The use of AI is alleged by prosecutors; the sources do not publish recordings or describe which tools were used, and 'deepfake' is the press's word, not a quoted official one. Sources disagree on whether the New York attempt of about $2.8 million was stopped (Gizmodo) or lost (CyberScoop). The arrest dates are reported without a year. The impersonated executives, law firms and lawyers were victims of the impersonation, not participants, and the victim companies are not named.",
+    "analysis_date": "2026-11-06",
+    "checked_at": "2026-11-14",
+    "assessment": "Documented fraud allegation · federal indictment as reported by the press",
+    "assessment_source": "US Attorney's Office SDNY via CyberScoop, Gizmodo and Help Net Security",
+    "sources": [
+      {
+        "name": "CyberScoop",
+        "short": "CyberScoop",
+        "role": "Charges, the e-signature and NDA opening, victim losses, arrest dates and places, Sheetrit's denial, quotes from the US Attorney and the FBI · 6 November 2026",
+        "url": "https://cyberscoop.com/ai-deepfakes-impersonate-ceo-lawyer-defraud-companies/"
+      },
+      {
+        "name": "Gizmodo",
+        "short": "Gizmodo",
+        "role": "Step-by-step mechanism from the indictment (DocuSign email, 'compliance call', real lawyers' identities), dated losses, the stopped New York wire, pending extradition · 7 November 2026",
+        "url": "https://gizmodo.com/doj-says-deepfaked-ceos-and-lawyers-helped-steal-129-million-from-hospitals-banks-and-others-2000836456"
+      },
+      {
+        "name": "Help Net Security",
+        "short": "Help Net Security",
+        "role": "The 'Lawyer Call' script, combined hospital losses, the countries where money landed and the conversion to crypto · 9 November 2026",
+        "url": "https://www.helpnetsecurity.com/2026/11/09/deepfake-ceo-fraud-129-million-indictment/"
+      }
+    ],
+    "pathway": {
+      "heading": "How a 'confidential deal' became a wire to a mule account",
+      "intro": "The employee was never asked to break a rule: they were told a secret deal needed their help. The control point is the payment itself, before it leaves.",
+      "steps": [
+        {
+          "label": "HOOK",
+          "title": "An NDA from 'the CEO'",
+          "text": "An e-signature email, apparently from the chief executive, brings the employee into a confidential acquisition and asks them to sign an NDA."
+        },
+        {
+          "label": "CONVINCE",
+          "title": "Calls with the 'CEO' and the 'lawyer'",
+          "text": "Allegedly AI-imitated calls from the executive, and a fake lawyer using the name of a real lawyer at a top-50 firm, set up a 'compliance call'."
+        },
+        {
+          "label": "PAY",
+          "title": "A wire to a new account",
+          "text": "The 'lawyer' gives the bank details. Call the CEO back on a known number and get a second approval: one bank's back office stopped a $2.85 million attempt here.",
+          "warning": true
+        }
+      ],
+      "caption": "Documented public case, as described in a US indictment and press reporting. The charges are unproven. No private record is reproduced here."
+    },
+    "es": {
+      "title": "El consejero delegado llamó por una operación secreta. Luego un abogado de un gran bufete pidió la transferencia.",
+      "short_title": "El fraude de 129 millones con directivos clonados y falsos abogados",
+      "category": "Pagos corporativos",
+      "technique": "Fraude del CEO con voz e imagen imitadas por IA, abogados de bufetes suplantados y una falsa adquisición confidencial",
+      "subject": "Acusación en EE. UU. por un presunto fraude de suplantación con IA de 129 millones de dólares, noviembre de 2026",
+      "summary": "La fiscalía federal de Nueva York ha acusado a tres hombres de un esquema que, según sostiene, sacó unos 129 millones de dólares a empresas entre julio de 2024 y febrero de 2026. Según la acusación tal como la recoge la prensa, empleados con poder para aprobar transferencias grandes recibían un correo de firma electrónica aparentemente de su consejero delegado sobre una operación confidencial, firmaban un acuerdo de confidencialidad y después mantenían llamadas en las que presuntamente se usaba IA para imitar la voz y a veces la imagen del directivo, hasta que un falso abogado de un bufete real del top 50 les decía adónde enviar el dinero.",
+      "lesson": "Secreto, prisa y una cuenta bancaria nueva son la firma del fraude del CEO, suene como suene la voz al teléfono. Una voz o una cara conocidas en una llamada ya no prueban quién habla. Antes de cualquier transferencia para una «operación confidencial», llama al directivo a un número que ya tenías, confirma el bufete y el abogado a través de la centralita del propio bufete, y exige la aprobación de una segunda persona para el primer pago a cualquier beneficiario nuevo. En este caso, el back office de un banco paró un intento de 2,85 millones de dólares antes de que saliera.",
+      "claim": "Tu consejero delegado y los abogados de la operación, al teléfono",
+      "counterclaim": "Un acuerdo de confidencialidad, una voz imitada con IA y una cuenta mula",
+      "audience": "Personal de finanzas, contabilidad y tesorería que puede aprobar transferencias, directivos cuya voz e imagen son públicas, bufetes de abogados y los bancos que procesan transferencias salientes grandes",
+      "observations": [
+        "Según la acusación tal como la describen Gizmodo y CyberScoop, el contacto solía empezar con un correo enviado a través de un servicio de firma electrónica como DocuSign, aparentemente del propio consejero delegado del empleado, que anunciaba una operación confidencial en marcha (a menudo una adquisición) y le pedía firmar un acuerdo de confidencialidad.",
+        "Después se le indicaba que contactara con un abogado para una «llamada de cumplimiento»; el falso abogado solía usar la identidad de un abogado real de la oficina europea de uno de los 50 mayores bufetes del mundo. Help Net Security cuenta que uno de los acusados, que hacía sobre todo de abogado británico, usaba un guion escrito a mano titulado «Lawyer Call».",
+        "En llamadas posteriores, sostiene la fiscalía, los implicados usaron IA para imitar la voz del directivo y a veces su aspecto; el comunicado del fiscal habla de «superinteligencia», mientras que Gizmodo señala que la propia acusación dice «inteligencia artificial».",
+        "Entre las pérdidas que describe la acusación figuran unos 11,58 millones de dólares de una fintech británica, 5,24 millones de una empresa de comida para mascotas de Florida, 4,83 millones de un sistema hospitalario de Misuri, 4,64 millones de un fondo de inversión de Massachusetts, 2,97 millones de un sistema hospitalario de California y 2,68 millones de un banco de Rhode Island. No se nombra a las víctimas.",
+        "El dinero fue a cuentas en EE. UU., España, Portugal, Grecia, Emiratos Árabes Unidos, Singapur, Austria, Eslovaquia y China, y se convirtió en criptomonedas que se repartieron los implicados, según la fiscalía. Dos de los hombres fueron detenidos en España y uno en el Reino Unido; las solicitudes de extradición están pendientes (Gizmodo)."
+      ],
+      "source_summary": "La Fiscalía Federal del Distrito Sur de Nueva York anunció a principios de noviembre de 2026 el levantamiento del secreto de una acusación formal contra Jacob Soall (41 años, residente en Marbella), Sharon Hazan (54, de Israel) y Guy Sheetrit (42, de Israel y Emiratos), con siete cargos cada uno, entre ellos conspiración para cometer fraude electrónico, fraude electrónico, usurpación de identidad agravada y blanqueo de capitales (CyberScoop, Gizmodo, Help Net Security). La fiscalía sostiene que el esquema funcionó aproximadamente de julio de 2024 a febrero de 2026, apuntó a miles de empresas y obtuvo unos 129 millones de dólares haciendo que falsos consejeros delegados derivaran al personal de contabilidad hacia falsos abogados, que daban las instrucciones de la transferencia. Según CyberScoop y Gizmodo, Soall fue detenido en España el 17 de junio, Hazan en España el 5 de agosto y Sheetrit en el Reino Unido el 7 de septiembre. CyberScoop informa de que Hazan presuntamente presumía de blanquear dinero desde 1994, y de que los abogados de Sheetrit dijeron que «no tiene ninguna relación con este asunto» y que «mantiene su total inocencia». El fiscal Jamie McDonald dijo que el público debe saber que hay quien «busca usar esta tecnología emergente con fines delictivos»; el subdirector del FBI al frente de la oficina de Nueva York, James C. Barnacle Jr., dijo que el caso muestra cómo la tecnología avanzada puede explotarse para cometer fraudes a gran escala. Gizmodo describe un intento de octubre de 2024 de que un gran banco de inversión de Nueva York transfiriera unos 2,85 millones de dólares que el back office del banco detuvo; CyberScoop presenta a una empresa de inversión neoyorquina como si hubiera perdido 2,8 millones.",
+      "limits": "Se trata de una acusación formal: los cargos son acusaciones, los tres hombres se presumen inocentes, ningún tribunal se ha pronunciado y uno de ellos niega, a través de sus abogados, cualquier participación. Los hechos proceden de cómo la prensa recoge el comunicado de la fiscalía y la acusación; no hemos podido leer nosotros mismos el texto de la acusación. El uso de IA lo sostiene la fiscalía; las fuentes no publican grabaciones ni describen qué herramientas se usaron, y «deepfake» es una palabra de la prensa, no una cita oficial. Las fuentes discrepan sobre si el intento neoyorquino de unos 2,8 millones se detuvo (Gizmodo) o se perdió (CyberScoop). Las fechas de detención se publican sin año. Los directivos, bufetes y abogados suplantados fueron víctimas de la suplantación, no participantes, y no se nombra a las empresas afectadas.",
+      "assessment": "Presunto fraude documentado · acusación federal tal como la recoge la prensa",
+      "assessment_source": "Fiscalía Federal del Distrito Sur de Nueva York vía CyberScoop, Gizmodo y Help Net Security",
+      "sources": [
+        {
+          "name": "CyberScoop",
+          "short": "CyberScoop",
+          "role": "Cargos, el arranque con firma electrónica y acuerdo de confidencialidad, pérdidas de las víctimas, fechas y lugares de detención, la negativa de Sheetrit y declaraciones del fiscal y del FBI · 6 de noviembre de 2026",
+          "url": "https://cyberscoop.com/ai-deepfakes-impersonate-ceo-lawyer-defraud-companies/"
+        },
+        {
+          "name": "Gizmodo",
+          "short": "Gizmodo",
+          "role": "Mecanismo paso a paso según la acusación (correo de DocuSign, «llamada de cumplimiento», identidades de abogados reales), pérdidas fechadas, la transferencia detenida en Nueva York y la extradición pendiente · 7 de noviembre de 2026",
+          "url": "https://gizmodo.com/doj-says-deepfaked-ceos-and-lawyers-helped-steal-129-million-from-hospitals-banks-and-others-2000836456"
+        },
+        {
+          "name": "Help Net Security",
+          "short": "Help Net Security",
+          "role": "El guion «Lawyer Call», las pérdidas conjuntas de los hospitales, los países donde acabó el dinero y su conversión a cripto · 9 de noviembre de 2026",
+          "url": "https://www.helpnetsecurity.com/2026/11/09/deepfake-ceo-fraud-129-million-indictment/"
+        }
+      ],
+      "pathway": {
+        "heading": "Cómo una «operación confidencial» acabó en una transferencia a una cuenta mula",
+        "intro": "Nunca se pidió al empleado que se saltara una norma: se le dijo que una operación secreta necesitaba su ayuda. El punto de control es el propio pago, antes de que salga.",
+        "steps": [
+          {
+            "label": "ANZUELO",
+            "title": "Un acuerdo de confidencialidad del «CEO»",
+            "text": "Un correo de firma electrónica, aparentemente del consejero delegado, mete al empleado en una adquisición confidencial y le pide firmar un acuerdo de confidencialidad."
+          },
+          {
+            "label": "CONVENCER",
+            "title": "Llamadas con el «CEO» y el «abogado»",
+            "text": "Llamadas del directivo presuntamente imitado con IA y un falso abogado con el nombre de uno real de un bufete del top 50 preparan una «llamada de cumplimiento»."
+          },
+          {
+            "label": "PAGAR",
+            "title": "Una transferencia a una cuenta nueva",
+            "text": "El «abogado» da los datos bancarios. Llama al CEO a un número conocido y pide una segunda aprobación: el back office de un banco paró aquí un intento de 2,85 millones de dólares.",
+            "warning": true
+          }
+        ],
+        "caption": "Caso público documentado, tal como lo describen una acusación de EE. UU. y la prensa. Los cargos no están probados. No se reproduce aquí ningún registro privado."
+      }
+    }
+  },
+  {
     "id": "SA-167",
     "slug": "arkea-fake-iban-instant-transfer-heist",
     "title": "Nobody tricked a customer. The bank paid itself out.",
