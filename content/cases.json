@@ -1,5 +1,154 @@
 [
   {
+    "id": "SA-167",
+    "slug": "arkea-fake-iban-instant-transfer-heist",
+    "title": "Nobody tricked a customer. The bank paid itself out.",
+    "short_title": "The €100 million fake-IBAN heist",
+    "category": "Banking",
+    "technique": "Supplier breach, fake IBANs and instant transfers",
+    "kind": "incident",
+    "audience": "Bank security, payments and fraud teams, companies that give suppliers access to their systems, and anyone who reads 'AI heist' headlines",
+    "subject": "Crédit Mutuel Arkéa cyberattack, November 2026",
+    "summary": "According to its chair, attackers who entered Crédit Mutuel Arkéa through a compromised supplier created fake IBANs at its online bank Fortuneo and sent about €100 million from the bank's own account by instant transfer to accounts at other European banks, then into crypto. He says the attack was very probably assisted by advanced AI; no evidence of that has been published.",
+    "lesson": "A supplier breach is your breach until proven otherwise: cut and review every access the supplier had, not just the link you saw. Instant transfers settle before anyone looks, so new beneficiaries and unusual outflows from an institution's own accounts need limits and a human check. And 'AI-enabled' in a headline is a claim, not a finding: the documented mechanism here is old-fashioned access, fake accounts and mule accounts opened in advance.",
+    "claim": "A heist 'of a new kind', run by AI",
+    "counterclaim": "Supplier access, fake IBANs, instant transfers",
+    "observations": [
+      "On 27 October the bank detected signs that a supplier's information system was compromised and cut the link between the two systems; at that point, the chair says, nothing suggested the attackers could reach the bank.",
+      "From Sunday 1 November, the attackers generated fake IBANs in the name of Fortuneo, the group's online bank, to trigger payment orders from Crédit Mutuel Arkéa's own account, not from client accounts.",
+      "They chose instant transfers which, the chair notes, by nature carry fewer checks than ordinary transfers, and a weekend start.",
+      "The money went first to real accounts opened in advance at other European banks, then to crypto platforms to blur the trail; the chair reads the advance account opening as a sign the attack was long prepared.",
+      "Crypto specialists noticed abnormal transactions on the Sunday and Monday, and the investigator ZachXBT made the fraud public, but the bank only measured the scale on the Tuesday morning and then cut all external access."
+    ],
+    "source_summary": "Crédit Mutuel Arkéa announced on 4 November 2026 that a 'sophisticated attack coming from the outside' had caused fraudulent transfers of around €100 million from its own account to other banks, that the attack was contained and that clients suffered no losses (AFP). The Paris prosecutor opened an investigation into an attack on an automated data processing system by an organised group. Le Télégramme reported a higher figure (133 million), which the bank did not confirm. In an AFP interview on 13 November, reported by Silicon.fr and INCYBER, chair Julien Carmona described the timeline: supplier compromise detected on 27 October; fake Fortuneo IBANs used from 1 November to trigger payment orders from the bank's own account; instant transfers to real accounts at other European banks, then crypto platforms; discovery of the scale on 3 November. He put the loss at about €100 million, around 1% of the group's equity, said part of the money had been recovered or frozen, called the attack unprecedented in sophistication and 'very probably' assisted by advanced artificial intelligence, and said the perpetrators are unknown.",
+    "limits": "This case rests on the bank's own statements and press reporting; no court has ruled and the perpetrators are unidentified. The role of artificial intelligence is the chair's assessment ('very probably'), and none of the sources publishes evidence of what, if anything, AI did; the headline figure of $110 million is a currency conversion of about €100 million, and the gross amount diverted may be higher. It is not public how the supplier was breached or how the fake IBANs were accepted. Nothing here suggests that Fortuneo or Crédit Mutuel Arkéa customers lost money; they were not the targets.",
+    "analysis_date": "2026-11-13",
+    "checked_at": "2026-11-14",
+    "assessment": "Documented fraud · victim's own statements and press reporting",
+    "assessment_source": "Crédit Mutuel Arkéa via AFP; Silicon.fr; INCYBER",
+    "sources": [
+      {
+        "name": "Silicon.fr (from the chair's AFP interview)",
+        "short": "Silicon.fr",
+        "role": "Julien Carmona's account of the timeline, the supplier breach, the fake Fortuneo IBANs and the probable AI assistance · 13 November 2026",
+        "url": "https://www.silicon.fr/cybersecurite-1371/credit-mutuel-arkea-le-president-decrit-une-cyberattaque-inedite-230275"
+      },
+      {
+        "name": "INCYBER News",
+        "short": "INCYBER",
+        "role": "Carmona's statements on the start date, the accounts opened in advance and the partial recovery · 14 November 2026",
+        "url": "https://incyber.org/article/president-credit-mutuel-detaille-piratage/"
+      },
+      {
+        "name": "AFP (as published by France 24)",
+        "short": "AFP",
+        "role": "The bank's first statement: about €100 million, contained, no client losses, Paris prosecutor's investigation · 4 November 2026",
+        "url": "https://www.france24.com/en/live-news/20261104-french-regional-bank-says-cyberattack-caused-fraudulent-transactions"
+      },
+      {
+        "name": "PC Gamer",
+        "short": "PC Gamer",
+        "role": "English-language coverage that framed it as an AI-enabled heist of about $110 million · November 2026",
+        "url": "https://www.pcgamer.com/software/ai/heist-of-a-new-kind-ai-enabled-scam-reportedly-managed-to-steal-usd110-million-from-french-bank/"
+      }
+    ],
+    "pathway": {
+      "heading": "How a supplier's breach became the bank's transfers",
+      "intro": "No customer was deceived. The attackers used access, fake accounts and the speed of instant payments. The control points are the supplier link and the transfer itself.",
+      "steps": [
+        {
+          "label": "ENTER",
+          "title": "Through a supplier",
+          "text": "A supplier's system is compromised; the bank cuts the link it knows about on 27 October."
+        },
+        {
+          "label": "FORGE",
+          "title": "Fake Fortuneo IBANs",
+          "text": "Fake accounts in the name of the group's online bank trigger payment orders from the bank's own account. New beneficiaries need a human check.",
+          "warning": true
+        },
+        {
+          "label": "CASH OUT",
+          "title": "Instant transfers, then crypto",
+          "text": "Money goes to accounts opened in advance at other European banks, then to crypto platforms."
+        }
+      ],
+      "caption": "Documented public incident, as described by the bank and the press. No private record is reproduced here."
+    },
+    "es": {
+      "title": "No engañaron a ningún cliente. El banco se pagó a sí mismo.",
+      "short_title": "El atraco de 100 millones con IBAN falsos",
+      "category": "Banca",
+      "technique": "Proveedor comprometido, IBAN falsos y transferencias inmediatas",
+      "subject": "Ciberataque contra Crédit Mutuel Arkéa, noviembre de 2026",
+      "summary": "Según su presidente, unos atacantes que entraron en Crédit Mutuel Arkéa a través de un proveedor comprometido crearon IBAN falsos de su banco online Fortuneo y sacaron unos 100 millones de euros de la cuenta propia del banco con transferencias inmediatas a cuentas en otros bancos europeos, y de ahí a criptomonedas. Dice que el ataque estuvo muy probablemente ayudado por IA avanzada; no se ha publicado ninguna prueba de ello.",
+      "lesson": "La brecha de un proveedor es tu brecha mientras no se demuestre lo contrario: corta y revisa todos los accesos que tenía, no solo el enlace que has visto. Las transferencias inmediatas se liquidan antes de que nadie mire, así que los beneficiarios nuevos y las salidas inusuales de las cuentas propias de una entidad necesitan límites y una comprobación humana. Y «con IA» en un titular es una afirmación, no un hallazgo: el mecanismo documentado aquí es de toda la vida — accesos, cuentas falsas y cuentas mula abiertas de antemano.",
+      "claim": "Un atraco «de nuevo tipo», hecho por IA",
+      "counterclaim": "Acceso de proveedor, IBAN falsos, transferencias inmediatas",
+      "audience": "Equipos de seguridad, pagos y fraude de bancos, empresas que dan acceso a sus sistemas a proveedores, y cualquiera que lea titulares de «atraco con IA»",
+      "observations": [
+        "El 27 de octubre el banco detectó indicios de que el sistema de información de un proveedor estaba comprometido y cortó la conexión entre ambos; en ese momento, dice el presidente, nada hacía pensar que los atacantes pudieran llegar al banco.",
+        "Desde el domingo 1 de noviembre, los atacantes generaron IBAN falsos a nombre de Fortuneo, el banco online del grupo, para lanzar órdenes de pago desde la cuenta propia de Crédit Mutuel Arkéa, no desde cuentas de clientes.",
+        "Eligieron transferencias inmediatas, que según el presidente llevan por naturaleza menos controles que las ordinarias, y empezaron en fin de semana.",
+        "El dinero fue primero a cuentas reales abiertas de antemano en otros bancos europeos y después a plataformas de criptomonedas para borrar el rastro; el presidente ve en esas cuentas previas la señal de un ataque preparado con mucho tiempo.",
+        "Especialistas en cripto vieron transacciones anómalas el domingo y el lunes, y el investigador ZachXBT hizo público el fraude, pero el banco no midió el alcance hasta la mañana del martes, cuando cortó todos los accesos externos."
+      ],
+      "source_summary": "Crédit Mutuel Arkéa anunció el 4 de noviembre de 2026 que un «ataque sofisticado procedente del exterior» había provocado transferencias fraudulentas de unos 100 millones de euros desde su cuenta propia hacia otros bancos, que el ataque estaba contenido y que los clientes no sufrieron pérdidas (AFP). La fiscalía de París abrió una investigación por ataque a un sistema de tratamiento automatizado de datos por banda organizada. Le Télégramme publicó una cifra mayor (133 millones), que el banco no confirmó. En una entrevista con AFP el 13 de noviembre, recogida por Silicon.fr e INCYBER, el presidente Julien Carmona describió la cronología: compromiso del proveedor detectado el 27 de octubre; IBAN falsos de Fortuneo usados desde el 1 de noviembre para lanzar órdenes de pago desde la cuenta propia del banco; transferencias inmediatas a cuentas reales en otros bancos europeos y después a plataformas cripto; descubrimiento del alcance el 3 de noviembre. Cifró la pérdida en unos 100 millones de euros, en torno al 1 % de los fondos propios del grupo, dijo que parte del dinero se ha recuperado o congelado, calificó el ataque de inédito en sofisticación y «muy probablemente» ayudado por inteligencia artificial avanzada, y dijo que se desconoce a los autores.",
+      "limits": "Este caso se apoya en las declaraciones del propio banco y en la prensa; ningún tribunal se ha pronunciado y los autores no están identificados. El papel de la inteligencia artificial es una valoración del presidente («muy probablemente»), y ninguna fuente publica pruebas de qué hizo la IA, si es que hizo algo; los 110 millones de dólares del titular son la conversión de unos 100 millones de euros, y el importe bruto desviado podría ser mayor. No se ha hecho público cómo se comprometió al proveedor ni cómo se aceptaron los IBAN falsos. Nada de lo que aquí se dice indica que clientes de Fortuneo o de Crédit Mutuel Arkéa perdieran dinero; no eran el objetivo.",
+      "assessment": "Fraude documentado · declaraciones de la víctima y prensa",
+      "assessment_source": "Crédit Mutuel Arkéa vía AFP; Silicon.fr; INCYBER",
+      "sources": [
+        {
+          "name": "Silicon.fr (a partir de la entrevista del presidente con AFP)",
+          "short": "Silicon.fr",
+          "role": "Relato de Julien Carmona sobre la cronología, el proveedor comprometido, los IBAN falsos de Fortuneo y la probable ayuda de IA · 13 de noviembre de 2026",
+          "url": "https://www.silicon.fr/cybersecurite-1371/credit-mutuel-arkea-le-president-decrit-une-cyberattaque-inedite-230275"
+        },
+        {
+          "name": "INCYBER News",
+          "short": "INCYBER",
+          "role": "Declaraciones de Carmona sobre la fecha de inicio, las cuentas abiertas de antemano y la recuperación parcial · 14 de noviembre de 2026",
+          "url": "https://incyber.org/article/president-credit-mutuel-detaille-piratage/"
+        },
+        {
+          "name": "AFP (publicado por France 24)",
+          "short": "AFP",
+          "role": "Primer comunicado del banco: unos 100 millones de euros, ataque contenido, sin pérdidas para clientes, investigación de la fiscalía de París · 4 de noviembre de 2026",
+          "url": "https://www.france24.com/en/live-news/20261104-french-regional-bank-says-cyberattack-caused-fraudulent-transactions"
+        },
+        {
+          "name": "PC Gamer",
+          "short": "PC Gamer",
+          "role": "Cobertura en inglés que lo presentó como un atraco con IA de unos 110 millones de dólares · noviembre de 2026",
+          "url": "https://www.pcgamer.com/software/ai/heist-of-a-new-kind-ai-enabled-scam-reportedly-managed-to-steal-usd110-million-from-french-bank/"
+        }
+      ],
+      "pathway": {
+        "heading": "Cómo la brecha de un proveedor acabó en transferencias del banco",
+        "intro": "No se engañó a ningún cliente. Los atacantes usaron accesos, cuentas falsas y la rapidez de los pagos inmediatos. Los puntos de control son la conexión con el proveedor y la propia transferencia.",
+        "steps": [
+          {
+            "label": "ENTRAR",
+            "title": "A través de un proveedor",
+            "text": "El sistema de un proveedor está comprometido; el banco corta la conexión que conoce el 27 de octubre."
+          },
+          {
+            "label": "FALSIFICAR",
+            "title": "IBAN falsos de Fortuneo",
+            "text": "Cuentas falsas a nombre del banco online del grupo lanzan órdenes de pago desde la cuenta propia del banco. Un beneficiario nuevo necesita una comprobación humana.",
+            "warning": true
+          },
+          {
+            "label": "COBRAR",
+            "title": "Transferencias inmediatas y cripto",
+            "text": "El dinero va a cuentas abiertas de antemano en otros bancos europeos y después a plataformas de criptomonedas."
+          }
+        ],
+        "caption": "Incidente público documentado, tal como lo describen el banco y la prensa. No se reproduce aquí ningún registro privado."
+      }
+    }
+  },
+  {
     "id": "SA-038",
     "slug": "cloned-voice-ceo-transfer-fideuram",
     "title": "A message from the CEO. A call from the lawyer. Neither was real.",
