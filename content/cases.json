@@ -6875,5 +6875,77 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-169",
+    "slug": "ravenfundmere-pro",
+    "title": "A trading desk with no regulator on record.",
+    "short_title": "The returns promise",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "ravenfundmere.pro",
+    "summary": "Captured on 2026-11-14: ravenfundmere.pro, an investment or trading platform that Desenmascara's AI-assisted analysis rated fraudulent at 95/100.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "ravenfundmere-pro.png",
+    "image_source": "https://desenmascara.me/screens/f7accfb72ef748ea.png",
+    "image_alt": "Archived capture of ravenfundmere.pro, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for ravenfundmere.pro, based on AI-assisted analysis. Its analysis says: “Our analysis rated ravenfundmere.pro fraudulent on 2026-11-14 at 03:58 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-14",
+    "checked_at": "2026-11-14",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/51ae701a-d612-4f57-8e39-8565989a2af4"
+      }
+    ],
+    "audience": "Retail investors"
+  },
+  {
+    "id": "SA-170",
+    "slug": "switchglobaldropbk-com",
+    "title": "Cards and accounts, offered by no bank on record.",
+    "short_title": "The bank that isn't",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "switchglobaldropbk.com",
+    "summary": "Desenmascara flagged switchglobaldropbk.com as fraudulent (95/100). The site presented itself as a bank or financial service.",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "switchglobaldropbk-com.png",
+    "image_source": "https://desenmascara.me/screens/cd7c487f193e9698.png",
+    "image_alt": "Archived capture of switchglobaldropbk.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for switchglobaldropbk.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated switchglobaldropbk.com fraudulent on 2026-11-14 at 03:46 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-14",
+    "checked_at": "2026-11-14",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/987d98b4-8c94-40e0-8cf1-0538d529573a"
+      }
+    ],
+    "audience": "Bank customers and payment users"
   }
 ]
