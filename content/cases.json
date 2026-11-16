@@ -1,5 +1,166 @@
 [
   {
+    "id": "SA-175",
+    "slug": "imessage-courier-reply-y-wallet-phishing-singapore",
+    "title": "The parcel was never late. The point was getting you to reply \"Y\".",
+    "short_title": "The iMessage parcel scam that comes back",
+    "category": "Phishing",
+    "technique": "Courier impersonation over iMessage, fake re-delivery fee and OTP theft",
+    "kind": "incident",
+    "audience": "iPhone users, anyone expecting a parcel, banks and card issuers that send one-time codes for adding cards to mobile wallets, and courier companies",
+    "subject": "Courier-impersonation phishing over Apple iMessage, Singapore, June–November 2026",
+    "summary": "Singapore Police warned on 3 November 2026 of a resurgence of iMessage messages posing as couriers: a failed delivery, a deadline, a lookalike link, a small re-delivery fee, then card details and the one-time code. In August police had put losses from the same campaign at about S$2.2 million since June and said they had disrupted more than 30,000 iMessage accounts linked to it. iMessage sits outside the SMS filters and sender-ID registry that protect text messages in Singapore.",
+    "lesson": "A courier that cannot deliver does not write to you from a foreign number or a random email address on iMessage; in Singapore, police say couriers and government agencies do not use iMessage at all. Never reply \"Y\" or \"1\" to a message from an unknown sender: that reply is what makes the link clickable. Check a parcel only in the courier's own app or the site you type yourself. And read what a one-time code is for before you give it: if it says it adds your card to a phone or registers a new device, it is not paying a €2 fee.",
+    "claim": "Your parcel could not be delivered: update your address and pay a small fee",
+    "counterclaim": "A lookalike site that takes your card and the code that adds it to the scammer's phone",
+    "observations": [
+      "The messages arrive on Apple iMessage, not as ordinary SMS, from overseas numbers (police list codes such as +855, +84, +63, +1, +212 and +44) or from email addresses made of random letters and numbers.",
+      "They say a delivery failed because of an invalid or incomplete address and set a deadline, for example by 6 pm or within 12 to 24 hours; some include the courier's real customer-support number to look genuine.",
+      "Some ask the recipient to reply \"Y\" or \"1\" to get a working link; police say this gets round iMessage's protection that keeps links from unknown senders unclickable.",
+      "The link resembles the courier's real address and leads to a copy of its site that asks for a small re-delivery fee, then card or online-banking details and the one-time password.",
+      "In the August advisory police said some victims' codes were used to add their cards to Google Pay or Apple Pay or to register bank security tokens on unfamiliar devices; victims found out from unauthorised transactions."
+    ],
+    "source_summary": "On 5 August 2026 the Singapore Police Force reported at least 251 cases and more than S$1.2 million lost since 24 June to iMessage messages impersonating couriers such as DHL, NinjaVan, J&T Express and SingPost. On 20 August it raised the loss estimate to about S$2.2 million, named NinjaVan, J&T Express and SPX Express among the impersonated firms, and said its Cyber Command had detected and disrupted more than 30,000 iMessage accounts linked to the campaign; it explained that iMessage, running on Apple's own system, is not covered by the network-level anti-scam filters and the SMS Sender ID registry. TechNode reported the same figures (US$1.7 million) and noted Singapore's new codes of practice for messaging platforms, including iMessage. On 3 November 2026 police warned of a resurgence, this time naming TracX Logis, uParcel and Park N Parcel, with the same script: failed delivery, deadline, lookalike link, re-delivery fee, banking details and OTP. AsiaOne reported on 15 November that a police release of 14 November put losses from courier-impersonation iMessages at more than $31,000 since 31 October and mentioned a variant posing as SingHealth polyclinics with unpaid bills; police said the method stays the same whatever entity is impersonated.",
+    "limits": "This case rests on Singapore Police Force advisories and press reports of them; no court has ruled and no perpetrators have been identified or charged in these sources. Victim counts are given only for the June–August phase (at least 251 cases); the November figure of more than $31,000 comes from AsiaOne's report of a 14 November police release that we did not read directly. Police do not say who disrupted the 30,000 accounts beyond their own Cyber Command, and do not report any action by Apple. The courier companies, SingHealth and Apple were impersonated or used as a channel; nothing suggests they were involved.",
+    "analysis_date": "2026-11-03",
+    "checked_at": "2026-11-16",
+    "assessment": "Documented fraud · police advisories and press reporting",
+    "assessment_source": "Singapore Police Force; AsiaOne; TechNode",
+    "sources": [
+      {
+        "name": "Singapore Police Force",
+        "short": "SPF",
+        "role": "Advisory on the resurgence: TracX Logis, uParcel and Park N Parcel impersonated, overseas senders, deadline, re-delivery fee, banking details and OTP · 3 November 2026",
+        "url": "https://www.police.gov.sg/Media-Hub/News/2026/11/20261103_police_advisory_on_resurgence_of_phishing_scams_impersonating_courier_companies"
+      },
+      {
+        "name": "AsiaOne",
+        "short": "AsiaOne",
+        "role": "Report of the 14 November police release: more than $31,000 lost since 31 October and a SingHealth variant · 15 November 2026",
+        "url": "https://www.asiaone.com/singapore/apple-imessage-phishing-scam-police"
+      },
+      {
+        "name": "Singapore Police Force",
+        "short": "SPF",
+        "role": "Advisory on the exploitation of iMessage: about S$2.2 million lost since June, more than 30,000 accounts disrupted, why iMessage escapes SMS filters, cards added to mobile wallets · 20 August 2026",
+        "url": "https://www.police.gov.sg/Media-Hub/News/2026/08/20260820_police_advisory_on_exploitation_of_apple_imessage_by_scammers"
+      },
+      {
+        "name": "TechNode Global",
+        "short": "TechNode",
+        "role": "Independent report of the August figures and of Singapore's new codes of practice for messaging platforms · 20 August 2026",
+        "url": "https://technode.global/2026/08/20/singapore-police-disrupt-30000-apple-imessage-accounts-as-scam-losses-hit-1-7m/"
+      },
+      {
+        "name": "Singapore Police Force",
+        "short": "SPF",
+        "role": "First advisory on the campaign: at least 251 cases and more than S$1.2 million lost since 24 June · 5 August 2026",
+        "url": "https://www.police.gov.sg/Media-Hub/News/2026/08/20260805_police_advisory_on_phishing_scams_impersonating_courier_companies_via_apple_imessage"
+      }
+    ],
+    "pathway": {
+      "heading": "How a fake parcel notice ends in someone else's phone wallet",
+      "intro": "The fee is bait. What the scammers want is the card and the one-time code that lets them load it onto a device they control. The control point is the moment you reply to an unknown sender.",
+      "steps": [
+        {
+          "label": "LURE",
+          "title": "A failed delivery on iMessage",
+          "text": "An overseas number or random email address says your parcel is stuck and gives you a deadline."
+        },
+        {
+          "label": "UNLOCK",
+          "title": "Reply \"Y\" to get the link",
+          "text": "Replying turns off the protection that keeps links from unknown senders unclickable. Couriers do not ask for this: stop here and check in the courier's own app.",
+          "warning": true
+        },
+        {
+          "label": "TAKE",
+          "title": "Fee, card, one-time code",
+          "text": "A lookalike site charges a small fee, takes card or banking details and the code, which can add the card to a mobile wallet."
+        }
+      ],
+      "caption": "Documented public campaign, as described by the Singapore Police Force and the press. No private record is reproduced here."
+    },
+    "es": {
+      "title": "El paquete nunca se retrasó. Lo que querían era que contestaras «Y».",
+      "short_title": "La estafa del paquete por iMessage que vuelve",
+      "category": "Phishing",
+      "technique": "Suplantación de mensajerías por iMessage, falsa tasa de reenvío y robo del código de un solo uso",
+      "subject": "Phishing suplantando a empresas de mensajería por Apple iMessage, Singapur, junio–noviembre de 2026",
+      "summary": "La policía de Singapur avisó el 3 de noviembre de 2026 de un repunte de mensajes de iMessage que se hacen pasar por empresas de mensajería: una entrega fallida, un plazo, un enlace parecido al real, una pequeña tasa de reenvío y, después, los datos de la tarjeta y el código de un solo uso. En agosto la policía había cifrado las pérdidas de la misma campaña en unos 2,2 millones de dólares singapurenses desde junio y dijo haber desactivado más de 30.000 cuentas de iMessage vinculadas. iMessage queda fuera de los filtros de SMS y del registro de remitentes que protegen los mensajes de texto en Singapur.",
+      "lesson": "Una mensajería que no puede entregarte un paquete no te escribe por iMessage desde un número extranjero o una dirección de correo aleatoria; en Singapur, según la policía, ni las mensajerías ni las administraciones usan iMessage. No contestes nunca «Y» o «1» a un remitente desconocido: esa respuesta es la que activa el enlace. Consulta el envío solo en la app de la mensajería o en la web que escribas tú. Y lee para qué sirve un código antes de darlo: si dice que añade tu tarjeta a un móvil o registra un dispositivo nuevo, no está pagando una tasa de 2 euros.",
+      "claim": "Tu paquete no se ha podido entregar: actualiza la dirección y paga una pequeña tasa",
+      "counterclaim": "Una web clonada que se queda con tu tarjeta y con el código que la añade al móvil del estafador",
+      "audience": "Usuarios de iPhone, cualquiera que espere un paquete, bancos y emisores de tarjetas que envían códigos para añadir tarjetas a monederos móviles, y empresas de mensajería",
+      "observations": [
+        "Los mensajes llegan por Apple iMessage, no como SMS normales, desde números extranjeros (la policía cita prefijos como +855, +84, +63, +1, +212 y +44) o desde direcciones de correo hechas de letras y números al azar.",
+        "Dicen que la entrega falló por una dirección no válida o incompleta y ponen un plazo, por ejemplo antes de las 18:00 o en 12 a 24 horas; algunos incluyen el teléfono real de atención al cliente de la mensajería para parecer auténticos.",
+        "Algunos piden contestar «Y» o «1» para recibir un enlace que funcione; según la policía, así se esquiva la protección de iMessage que impide pulsar enlaces de remitentes desconocidos.",
+        "El enlace se parece a la dirección real de la mensajería y lleva a una copia de su web que pide una pequeña tasa de reenvío y después los datos de la tarjeta o de la banca online y el código de un solo uso.",
+        "En el aviso de agosto la policía explicó que con los códigos de algunas víctimas se añadieron sus tarjetas a Google Pay o Apple Pay o se registraron tokens de seguridad del banco en dispositivos desconocidos; las víctimas se enteraron por cargos no autorizados."
+      ],
+      "source_summary": "El 5 de agosto de 2026 la Policía de Singapur informó de al menos 251 casos y más de 1,2 millones de dólares singapurenses perdidos desde el 24 de junio por mensajes de iMessage que suplantaban a mensajerías como DHL, NinjaVan, J&T Express y SingPost. El 20 de agosto elevó la estimación a unos 2,2 millones, citó a NinjaVan, J&T Express y SPX Express entre las empresas suplantadas y dijo que su Cyber Command había detectado y desactivado más de 30.000 cuentas de iMessage vinculadas a la campaña; explicó que iMessage, que funciona en el sistema propio de Apple, no está cubierto por los filtros antiestafa de red ni por el registro de remitentes de SMS. TechNode publicó las mismas cifras (1,7 millones de dólares estadounidenses) y mencionó los nuevos códigos de buenas prácticas de Singapur para plataformas de mensajería, iMessage incluido. El 3 de noviembre de 2026 la policía avisó de un repunte, esta vez suplantando a TracX Logis, uParcel y Park N Parcel, con el mismo guion: entrega fallida, plazo, enlace parecido, tasa de reenvío, datos bancarios y código. AsiaOne informó el 15 de noviembre de que un comunicado policial del 14 de noviembre cifraba en más de 31.000 dólares las pérdidas por estos mensajes desde el 31 de octubre y mencionaba una variante que suplanta a las policlínicas de SingHealth con supuestas facturas impagadas; la policía dijo que el método es el mismo sea cual sea la entidad suplantada.",
+      "limits": "Este caso se apoya en avisos de la Policía de Singapur y en la prensa que los recoge; ningún tribunal se ha pronunciado y estas fuentes no identifican ni imputan a ningún autor. El número de víctimas solo se conoce para la fase de junio a agosto (al menos 251 casos); la cifra de noviembre, más de 31.000 dólares, procede de AsiaOne, que cita un comunicado policial del 14 de noviembre que no hemos leído directamente. La policía no aclara quién desactivó las 30.000 cuentas más allá de su propio Cyber Command y no menciona ninguna actuación de Apple. Las mensajerías, SingHealth y Apple fueron suplantadas o usadas como canal; nada indica que estuvieran implicadas.",
+      "assessment": "Fraude documentado · avisos policiales y prensa",
+      "assessment_source": "Policía de Singapur; AsiaOne; TechNode",
+      "sources": [
+        {
+          "name": "Policía de Singapur (Singapore Police Force)",
+          "short": "SPF",
+          "role": "Aviso del repunte: suplantación de TracX Logis, uParcel y Park N Parcel, remitentes extranjeros, plazo, tasa de reenvío, datos bancarios y código · 3 de noviembre de 2026",
+          "url": "https://www.police.gov.sg/Media-Hub/News/2026/11/20261103_police_advisory_on_resurgence_of_phishing_scams_impersonating_courier_companies"
+        },
+        {
+          "name": "AsiaOne",
+          "short": "AsiaOne",
+          "role": "Crónica del comunicado policial del 14 de noviembre: más de 31.000 dólares perdidos desde el 31 de octubre y una variante con SingHealth · 15 de noviembre de 2026",
+          "url": "https://www.asiaone.com/singapore/apple-imessage-phishing-scam-police"
+        },
+        {
+          "name": "Policía de Singapur (Singapore Police Force)",
+          "short": "SPF",
+          "role": "Aviso sobre el abuso de iMessage: unos 2,2 millones perdidos desde junio, más de 30.000 cuentas desactivadas, por qué iMessage escapa a los filtros de SMS y tarjetas añadidas a monederos móviles · 20 de agosto de 2026",
+          "url": "https://www.police.gov.sg/Media-Hub/News/2026/08/20260820_police_advisory_on_exploitation_of_apple_imessage_by_scammers"
+        },
+        {
+          "name": "TechNode Global",
+          "short": "TechNode",
+          "role": "Crónica independiente de las cifras de agosto y de los nuevos códigos de buenas prácticas de Singapur para plataformas de mensajería · 20 de agosto de 2026",
+          "url": "https://technode.global/2026/08/20/singapore-police-disrupt-30000-apple-imessage-accounts-as-scam-losses-hit-1-7m/"
+        },
+        {
+          "name": "Policía de Singapur (Singapore Police Force)",
+          "short": "SPF",
+          "role": "Primer aviso sobre la campaña: al menos 251 casos y más de 1,2 millones perdidos desde el 24 de junio · 5 de agosto de 2026",
+          "url": "https://www.police.gov.sg/Media-Hub/News/2026/08/20260805_police_advisory_on_phishing_scams_impersonating_courier_companies_via_apple_imessage"
+        }
+      ],
+      "pathway": {
+        "heading": "Cómo un falso aviso de paquete acaba en el monedero móvil de otro",
+        "intro": "La tasa es el cebo. Lo que buscan los estafadores es la tarjeta y el código que les permite cargarla en un dispositivo suyo. El punto de control es el momento en que contestas a un remitente desconocido.",
+        "steps": [
+          {
+            "label": "CEBO",
+            "title": "Una entrega fallida por iMessage",
+            "text": "Un número extranjero o un correo aleatorio dice que tu paquete está retenido y te pone un plazo."
+          },
+          {
+            "label": "DESBLOQUEO",
+            "title": "Contesta «Y» para ver el enlace",
+            "text": "Al contestar se desactiva la protección que impide pulsar enlaces de desconocidos. Las mensajerías no piden esto: para aquí y compruébalo en la app de la mensajería.",
+            "warning": true
+          },
+          {
+            "label": "ROBO",
+            "title": "Tasa, tarjeta y código",
+            "text": "Una web clonada cobra una pequeña tasa y se queda con la tarjeta o los datos bancarios y el código, que puede añadir la tarjeta a un monedero móvil."
+          }
+        ],
+        "caption": "Campaña pública documentada, tal como la describen la Policía de Singapur y la prensa. No se reproduce aquí ningún registro privado."
+      }
+    }
+  },
+  {
     "id": "SA-168",
     "slug": "ai-cloned-ceo-fake-lawyer-confidential-deal-129-million",
     "title": "The CEO called about a secret deal. Then a lawyer from a top firm asked for the wire.",
