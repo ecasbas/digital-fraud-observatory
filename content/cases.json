@@ -7026,5 +7026,77 @@
       }
     ],
     "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-173",
+    "slug": "smartxchainwallet-com",
+    "title": "The coins are real. The platform is not verifiable.",
+    "short_title": "The crypto platform",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "smartxchainwallet.com",
+    "summary": "Captured on 2026-11-14: smartxchainwallet.com, a crypto platform that Desenmascara's AI-assisted analysis rated fraudulent at 95/100.",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "smartxchainwallet-com.png",
+    "image_source": "https://desenmascara.me/screens/017d81cc594786ca.png",
+    "image_alt": "Archived capture of smartxchainwallet.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for smartxchainwallet.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated smartxchainwallet.com fraudulent on 2026-11-14 at 03:17 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-14",
+    "checked_at": "2026-11-16",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/10ee9e33-96e2-4e29-8724-b4ccefa4f66f"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-174",
+    "slug": "spacexsharesinvest-com",
+    "title": "Big returns. No verifiable firm behind them.",
+    "short_title": "The investment offer",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "spacexsharesinvest.com",
+    "summary": "Desenmascara flagged spacexsharesinvest.com as fraudulent (95/100). The site presented itself as an investment or trading platform.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "spacexsharesinvest-com.png",
+    "image_source": "https://desenmascara.me/screens/53cd19b30c87d541.png",
+    "image_alt": "Archived capture of spacexsharesinvest.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for spacexsharesinvest.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated spacexsharesinvest.com fraudulent on 2026-11-13 at 03:48 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-13",
+    "checked_at": "2026-11-16",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/acc80068-e524-4723-9cbf-19293e52c609"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
