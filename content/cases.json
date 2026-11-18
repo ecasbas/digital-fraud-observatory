@@ -1,5 +1,130 @@
 [
   {
+    "id": "SA-182",
+    "slug": "fake-bank-fraud-department-sms-nfc-relay-spain",
+    "title": "The 'fraud department' that called you was the fraud.",
+    "short_title": "Fake bank anti-fraud calls and NFC relay, Spain",
+    "category": "Banking",
+    "technique": "Spoofed bank SMS, vishing, malicious NFC relay app and money mules",
+    "kind": "incident",
+    "audience": "Bank customers, especially older people and the relatives who help them, bank fraud teams, and anyone who gets an SMS about a 'suspicious charge'",
+    "subject": "Policía Nacional operation against a bank-impersonation fraud group, Spain, announced November 2026",
+    "summary": "Spain's Policía Nacional says it arrested 43 people in a group that sent mass SMS posing as banks' security departments, then phoned victims as 'anti-fraud' staff and talked them into transfers, cash deposits at ATMs, handing over credentials or installing an app that relayed their contactless card to accomplices. Police link 134 scams to the group, mostly against people over 65, with losses of about €1.14 million.",
+    "lesson": "A message about a fraudulent charge is not a reason to call the number it gives you: hang up, open your bank's own app or call the number on the back of your card. No real bank asks you to move money to a 'safe account', share your screen, install an app, delete its own app, or hold your card against your phone. If anyone on a call asks you to tap your card on the phone, the call is the attack.",
+    "claim": "Your bank's anti-fraud team is protecting your money",
+    "counterclaim": "A crew with leaked data, a spoofed SMS and a relay app",
+    "observations": [
+      "The first contact was a mass SMS warning of a supposed fraudulent operation on the account, with a phone number or link to 'resolve' it; according to Escudo Digital, spoofing made it appear in the same thread as the bank's genuine messages.",
+      "Callers posing as bank anti-fraud or security staff persuaded victims to transfer money to accounts the group controlled, deposit cash at ATMs, give their credentials, or share their phone screen.",
+      "In some cases victims were told to install an app, sometimes after removing their real banking app, and to bring their card to the phone; the app relayed the card's NFC communication so accomplices could use it without the physical card.",
+      "The group knew the operating limits of the accounts and split transfers to fit them; one victim lost about €45,000.",
+      "Money went through mule accounts opened by young people recruited on social networks and by homeless people, and part was converted into crypto; victims who reported the fraud received threatening messages containing their personal data and home address."
+    ],
+    "source_summary": "On 12 November 2026 the Policía Nacional announced, as reported by Escudo Digital and Euronews, the arrest of 43 people for belonging to a criminal group, fraud and money laundering, with 13 more investigated without arrest (Euronews puts the total charged at about 95). The investigation lasted about a year, analysed some 400 channels and groups on a private messaging app and, according to Escudo Digital, ended in a third phase in October with searches in Madrid and Cádiz. Police attribute 134 scams to the group, against more than 130 victims, mostly over 65, and a loss of about €1.14 million. Both outlets describe the same division of labour: people who obtained bank and personal data from previously leaked databases, 'senders' who picked the most vulnerable profiles, 'spoofers' who posed as bank staff, mule handlers who opened accounts in third parties' names, and a top tier that converted funds into cryptocurrency. Both describe the NFC 'relay attack' variant. Escudo Digital adds that in August 2026 the Policía Nacional broke up a separate group in Jerez de la Frontera using the same relay technique (22 victims, over €35,000). The investigation remains open.",
+    "limits": "This case rests on the police account as reported by two outlets; the official press release could not be retrieved directly. Those arrested are accused, not convicted, and no court has ruled. The figures are the police's (about or above €1.14 million; some reports round to €1.1 million or €1.2 million) and may change as the investigation continues. The sources do not say how many of the 134 scams used the NFC relay app rather than transfers or cash deposits, nor which banks were impersonated; the banks whose names were used were not involved in the fraud.",
+    "analysis_date": "2026-11-12",
+    "checked_at": "2026-11-18",
+    "assessment": "Documented fraud · police operation reported by the press",
+    "assessment_source": "Policía Nacional via Escudo Digital and Euronews",
+    "sources": [
+      {
+        "name": "Escudo Digital",
+        "short": "Escudo Digital",
+        "role": "The operation in detail: phases and searches, SMS spoofing in the bank's thread, the NFC relay app, roles within the group, mules and threats to victims · 12 November 2026",
+        "url": "https://www.escudodigital.com/interior/43-detenidos-por-suplantar-a-los-departamentos-antifraude-de-los-bancos-y-estafar-a-sus-clientes.html"
+      },
+      {
+        "name": "Euronews (Spanish edition)",
+        "short": "Euronews",
+        "role": "Arrests and people charged, losses, the 'cybersecurity department' SMS, screen sharing, the relay attack and the police's description of coordinated campaigns · 12 November 2026",
+        "url": "https://es.euronews.com/2026/11/12/al-menos-43-detenidos-tras-robar-simulando-ser-agentes-bancarios"
+      }
+    ],
+    "pathway": {
+      "heading": "From a fake bank SMS to an emptied account",
+      "intro": "Nobody hacked the bank. The victim was moved, step by step, from a text message to a phone call to acting on the caller's instructions. The control point is the call.",
+      "steps": [
+        {
+          "label": "BAIT",
+          "title": "SMS about a 'fraudulent charge'",
+          "text": "A mass text, posing as the bank's security department and sometimes landing in the bank's real thread, gives a number or link to 'resolve' it."
+        },
+        {
+          "label": "CALL",
+          "title": "The fake anti-fraud agent",
+          "text": "A caller who knows your data asks you to transfer, deposit cash, share your screen or install an app and tap your card. Hang up and call your bank yourself.",
+          "warning": true
+        },
+        {
+          "label": "CASH OUT",
+          "title": "Mules, ATMs and crypto",
+          "text": "Money goes to accounts opened by recruited mules, or the relayed card is used at an ATM; part is converted into crypto."
+        }
+      ],
+      "caption": "Documented public incident, as described by the police and the press. No private record is reproduced here."
+    },
+    "es": {
+      "title": "El «departamento antifraude» que te llamó era el fraude.",
+      "short_title": "Falsos antifraude bancarios y ataque NFC relay, España",
+      "category": "Banca",
+      "technique": "SMS bancarios suplantados, vishing, app maliciosa de retransmisión NFC y cuentas mula",
+      "subject": "Operación de la Policía Nacional contra un grupo que suplantaba a bancos, España, anunciada en noviembre de 2026",
+      "summary": "La Policía Nacional dice haber detenido a 43 personas de un grupo que enviaba SMS masivos haciéndose pasar por el departamento de seguridad de los bancos, y después llamaba a las víctimas como personal «antifraude» para convencerlas de hacer transferencias, ingresar efectivo en cajeros, entregar sus claves o instalar una app que retransmitía su tarjeta contactless a cómplices. La policía atribuye al grupo 134 estafas, sobre todo a mayores de 65 años, con unas pérdidas de alrededor de 1,14 millones de euros.",
+      "lesson": "Un mensaje sobre un cargo fraudulento no es motivo para llamar al número que te da: cuelga, abre la app de tu banco o llama al número que figura en el dorso de tu tarjeta. Ningún banco de verdad te pide pasar dinero a una «cuenta segura», compartir pantalla, instalar una app, borrar la suya ni acercar la tarjeta al móvil. Si alguien en una llamada te pide que acerques la tarjeta al teléfono, la llamada es el ataque.",
+      "claim": "El equipo antifraude de tu banco está protegiendo tu dinero",
+      "counterclaim": "Una banda con datos filtrados, un SMS suplantado y una app de retransmisión",
+      "audience": "Clientes de banca, sobre todo personas mayores y los familiares que las ayudan, equipos de fraude de los bancos, y cualquiera que reciba un SMS sobre un «cargo sospechoso»",
+      "observations": [
+        "El primer contacto era un SMS masivo que avisaba de una supuesta operación fraudulenta en la cuenta, con un teléfono o un enlace para «resolverla»; según Escudo Digital, la suplantación hacía que apareciera en el mismo hilo que los mensajes reales del banco.",
+        "Personas que se hacían pasar por el servicio antifraude o de seguridad del banco convencían a las víctimas de transferir dinero a cuentas controladas por el grupo, ingresar efectivo en cajeros, dar sus claves o compartir la pantalla del móvil.",
+        "En algunos casos les pedían instalar una app, a veces después de desinstalar la de su banco, y acercar la tarjeta al teléfono; la app retransmitía la comunicación NFC de la tarjeta para que los cómplices la usaran sin tenerla físicamente.",
+        "El grupo conocía los límites operativos de las cuentas y fraccionaba las transferencias para ajustarse a ellos; una víctima perdió unos 45.000 euros.",
+        "El dinero pasaba por cuentas mula abiertas por jóvenes captados en redes sociales y por personas sin hogar, y una parte se convertía en criptomonedas; a las víctimas que denunciaban les llegaban mensajes amenazantes con sus datos personales y su domicilio."
+      ],
+      "source_summary": "El 12 de noviembre de 2026 la Policía Nacional anunció, según recogen Escudo Digital y Euronews, la detención de 43 personas por pertenencia a grupo criminal, estafa y blanqueo de capitales, con otras 13 investigadas sin detención (Euronews eleva el total de imputados a unos 95). La investigación duró alrededor de un año, analizó unos 400 canales y grupos de una aplicación de mensajería privada y, según Escudo Digital, culminó en una tercera fase en octubre con registros en Madrid y Cádiz. La policía atribuye al grupo 134 estafas a más de 130 víctimas, en su mayoría mayores de 65 años, y un perjuicio de unos 1,14 millones de euros. Ambos medios describen el mismo reparto de tareas: quienes conseguían datos bancarios y personales de bases de datos filtradas, «senders» que elegían los perfiles más vulnerables, «spoofers» que se hacían pasar por empleados del banco, muleros que abrían cuentas a nombre de terceros y un escalón superior que convertía los fondos en criptomonedas. Los dos describen la variante del «relay attack» por NFC. Escudo Digital añade que en agosto de 2026 la Policía Nacional desarticuló otro grupo en Jerez de la Frontera que usaba la misma técnica (22 víctimas, más de 35.000 euros). La investigación sigue abierta.",
+      "limits": "Este caso se apoya en el relato de la policía tal como lo publican dos medios; no se pudo consultar directamente la nota de prensa oficial. Los detenidos son acusados, no condenados, y ningún tribunal se ha pronunciado. Las cifras son las de la policía (unos o más de 1,14 millones de euros; algunos medios redondean a 1,1 o 1,2 millones) y pueden cambiar porque la investigación continúa. Las fuentes no dicen cuántas de las 134 estafas usaron la app de retransmisión NFC en lugar de transferencias o ingresos en efectivo, ni qué bancos se suplantaron; los bancos cuyo nombre se usó no participaron en el fraude.",
+      "assessment": "Fraude documentado · operación policial recogida por la prensa",
+      "assessment_source": "Policía Nacional vía Escudo Digital y Euronews",
+      "sources": [
+        {
+          "name": "Escudo Digital",
+          "short": "Escudo Digital",
+          "role": "La operación en detalle: fases y registros, SMS suplantados en el hilo del banco, la app de retransmisión NFC, el reparto de tareas, las mulas y las amenazas a las víctimas · 12 de noviembre de 2026",
+          "url": "https://www.escudodigital.com/interior/43-detenidos-por-suplantar-a-los-departamentos-antifraude-de-los-bancos-y-estafar-a-sus-clientes.html"
+        },
+        {
+          "name": "Euronews (edición en español)",
+          "short": "Euronews",
+          "role": "Detenidos e imputados, perjuicio, el SMS del «departamento de ciberseguridad», compartir pantalla, el ataque relay y la descripción policial de campañas coordinadas · 12 de noviembre de 2026",
+          "url": "https://es.euronews.com/2026/11/12/al-menos-43-detenidos-tras-robar-simulando-ser-agentes-bancarios"
+        }
+      ],
+      "pathway": {
+        "heading": "De un SMS falso del banco a una cuenta vacía",
+        "intro": "Nadie hackeó al banco. A la víctima se la llevó paso a paso de un mensaje de texto a una llamada y de ahí a seguir las instrucciones de quien llamaba. El punto de control es la llamada.",
+        "steps": [
+          {
+            "label": "CEBO",
+            "title": "SMS sobre un «cargo fraudulento»",
+            "text": "Un SMS masivo, a nombre del departamento de seguridad del banco y a veces dentro de su hilo real, da un teléfono o un enlace para «resolverlo»."
+          },
+          {
+            "label": "LLAMADA",
+            "title": "El falso agente antifraude",
+            "text": "Alguien que conoce tus datos te pide transferir, ingresar efectivo, compartir pantalla o instalar una app y acercar la tarjeta. Cuelga y llama tú a tu banco.",
+            "warning": true
+          },
+          {
+            "label": "COBRAR",
+            "title": "Mulas, cajeros y cripto",
+            "text": "El dinero va a cuentas abiertas por mulas captadas, o la tarjeta retransmitida se usa en un cajero; una parte se convierte en criptomonedas."
+          }
+        ],
+        "caption": "Incidente público documentado, tal como lo describen la policía y la prensa. No se reproduce aquí ningún registro privado."
+      }
+    }
+  },
+  {
     "id": "SA-175",
     "slug": "imessage-courier-reply-y-wallet-phishing-singapore",
     "title": "The parcel was never late. The point was getting you to reply \"Y\".",
