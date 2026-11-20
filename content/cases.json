@@ -1,5 +1,154 @@
 [
   {
+    "id": "SA-189",
+    "slug": "facestealer-fake-video-call-audio-fix-malware",
+    "title": "The face on the call was real. It was recorded on the last victim's call.",
+    "short_title": "The 'can't hear you' fix that stole $400 million",
+    "category": "Crypto",
+    "technique": "Hijacked accounts, replayed webcam footage, deepfakes and a fake 'audio fix' that installs malware",
+    "kind": "incident",
+    "audience": "Crypto and web3 founders, executives and developers, open-source maintainers, and anyone who takes video calls with contacts met on Telegram, LinkedIn, Slack or Discord",
+    "subject": "US Justice Department and FBI action against the North Korean 'FaceStealer' scheme, November 2026",
+    "summary": "The US Justice Department says North Korean hackers stole more than $400 million in cryptocurrency in 18 months by inviting targets to video meetings from accounts stolen from earlier victims, playing back recorded webcam footage of people the target knew, and then faking a technical error whose 'fix' secretly installed malware. The FBI seized the scheme's cloud infrastructure and more than 900 webcam videos of victims. Nobody has been arrested.",
+    "lesson": "If a video call breaks and the other side sends you a link, an installer or a command to paste into your terminal to 'fix' it, stop: no real meeting needs that. Join meetings only from the official app or by typing the meeting code yourself, and confirm an unexpected invitation through a different channel than the one it came on. A familiar face on screen proves nothing: it can be a recording. Keep the webcam off until you trust the call, and if you ran such a 'fix', treat the device and every wallet and account on it as compromised, even if nothing happens for months.",
+    "claim": "A friend you know asks for a quick video call",
+    "counterclaim": "A stolen account, a recorded face, and malware sold as an audio fix",
+    "observations": [
+      "The invitation comes from a real account belonging to someone the target knows: according to the Justice Department, accounts stolen from earlier victims; the FBI, as reported by BleepingComputer and Nextgov, names Telegram, LinkedIn, Slack and Discord.",
+      "On the call, the hackers play prerecorded video of one or more previous victims known to the target, and also AI deepfake videos of well-known figures in crypto and web3, the department says. Meanwhile they record the new target's webcam.",
+      "They then fake a technical error, such as saying the target cannot be heard, and send a link or prompt to fix it; the 'fix' secretly installs malware. Nextgov reports the meeting links led to sites made to look like Zoom or Microsoft Teams and that the fix could mean running a script or pasting commands into the terminal.",
+      "The theft and account takeover can come several months to more than a year after the first compromise, so the victim does not connect the loss with the call.",
+      "Each victim's recorded footage and contact list feed the next round: the stolen account and the stolen face become the bait for that person's contacts."
+    ],
+    "source_summary": "On 12 November 2026 the US Justice Department announced the seizure of cloud infrastructure used in a North Korean social-engineering scheme the FBI calls 'FaceStealer', which it links to the theft of more than $400 million in cryptocurrency over the previous 18 months. Under a federal warrant the FBI also seized more than 900 webcam videos of victims. The department describes the method: meeting invitations from accounts stolen from earlier victims, prerecorded video of previous victims known to the target, AI deepfakes of well-known crypto and web3 figures, a fake error such as 'you cannot be heard' with a link or prompt to fix it, and malware that gives access to wallets, contact lists, social media and messaging apps, with theft months to over a year later. It attributes the activity to groups tracked as Sapphire Sleet, UNC1069, BlueNoroff and APT38, among other names, and warns that attempts on developers' devices and code-repository accounts appear aimed at software supply-chain attacks. Nextgov and BleepingComputer, reporting the FBI's briefing and alert, add the platforms used for the lures and the look-alike Zoom and Teams pages; both cite the security firm Arctic Wolf counting more than 677 targets in 58 countries. Decrypt reported the same figures from the department's announcement. The department announced separately, and the FBI says by different North Korean actors, action over the theft from Binance on or about 29 October.",
+    "limits": "This case rests on the US government's announcement and on press reports of the FBI's briefing and alert; no one has been arrested or charged, no court has ruled on these facts, and North Korea has denied involvement in the separate Binance theft. The $400 million is the government's total and comes without a victim count; the '677 targets in 58 countries' is a private security firm's count of targets, not of confirmed victims. The department documents both replayed recordings of real previous victims and AI deepfakes of well-known figures; some headlines speak of 'deepfakes of trusted contacts', which the department does not say. The platform names (Zoom, Teams, Google Meet) describe what the fake pages imitated: those companies were not involved, and neither were the people whose recorded faces were replayed — they were victims too. We could not read the FBI's own alert directly.",
+    "analysis_date": "2026-11-12",
+    "checked_at": "2026-11-20",
+    "assessment": "Documented fraud · US government announcement and press reporting",
+    "assessment_source": "US Department of Justice; Nextgov/FCW; BleepingComputer; Decrypt",
+    "sources": [
+      {
+        "name": "US Department of Justice, Office of Public Affairs",
+        "short": "DOJ",
+        "role": "Announcement of the FaceStealer seizures: more than $400 million in 18 months, the meeting method, the fake-error 'fix', 900+ webcam videos seized, attribution · 12 November 2026",
+        "url": "https://www.justice.gov/opa/pr/justice-department-announces-actions-disrupt-north-koreas-massive-theft-cryptocurrency"
+      },
+      {
+        "name": "Nextgov/FCW",
+        "short": "Nextgov",
+        "role": "FBI briefing: lures over hijacked Telegram, LinkedIn, Slack and Discord accounts, look-alike Zoom and Teams pages, scripts or terminal commands as the 'fix' · 12 November 2026",
+        "url": "https://www.nextgov.com/cybersecurity/2026/11/fbi-disrupts-intricate-north-korean-fake-call-scheme-tied-400m-crypto-theft/417200/"
+      },
+      {
+        "name": "BleepingComputer",
+        "short": "BleepingComputer",
+        "role": "The FBI alert's description of the fake installer, what the malware steals, the delay before theft, and protective advice; Arctic Wolf's target count · 14 November 2026",
+        "url": "https://bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft"
+      },
+      {
+        "name": "Decrypt",
+        "short": "Decrypt",
+        "role": "Crypto-press coverage of the Justice Department's announcement and figures · 12 November 2026",
+        "url": "https://decrypt.co/383208/north-korea-stole-400-million-crypto-deepfake-video-calls"
+      }
+    ],
+    "pathway": {
+      "heading": "How a familiar face became a malware installer",
+      "intro": "Nothing on the call is invented from scratch: the account is real, the face is a real recording. The only thing the attackers need from you is to run their 'fix'. That is the control point.",
+      "steps": [
+        {
+          "label": "INVITE",
+          "title": "From a contact's stolen account",
+          "text": "A known contact's hijacked account proposes a video meeting through a link to a page that looks like Zoom or Teams."
+        },
+        {
+          "label": "FIX",
+          "title": "'We can't hear you'",
+          "text": "Recorded footage of people you know plays while your webcam is recorded; then a fake audio error comes with a link, installer or command. Never run it.",
+          "warning": true
+        },
+        {
+          "label": "HARVEST",
+          "title": "Months later, the wallets",
+          "text": "The malware gives access to wallets, accounts and contacts; theft can come a year later, and your recording becomes the next bait."
+        }
+      ],
+      "caption": "Documented public incident, as described by the US Justice Department, the FBI and the press. No private record is reproduced here."
+    },
+    "es": {
+      "title": "La cara de la videollamada era real. La grabaron en la llamada de la víctima anterior.",
+      "short_title": "El arreglo de «no se te oye» que robó 400 millones",
+      "category": "Cripto",
+      "technique": "Cuentas secuestradas, vídeos de webcam reutilizados, deepfakes y un falso «arreglo de audio» que instala malware",
+      "subject": "Actuación del Departamento de Justicia y el FBI de EE. UU. contra el esquema norcoreano «FaceStealer», noviembre de 2026",
+      "summary": "El Departamento de Justicia de EE. UU. afirma que hackers norcoreanos robaron más de 400 millones de dólares en criptomonedas en 18 meses invitando a sus objetivos a videollamadas desde cuentas robadas a víctimas anteriores, reproduciendo grabaciones de webcam de personas a las que el objetivo conocía y fingiendo después un fallo técnico cuyo «arreglo» instalaba malware a escondidas. El FBI incautó la infraestructura en la nube del esquema y más de 900 vídeos de webcam de víctimas. No hay detenidos.",
+      "lesson": "Si una videollamada falla y la otra parte te manda un enlace, un instalador o un comando para pegar en el terminal para «arreglarlo», para: ninguna reunión de verdad lo necesita. Entra en las reuniones solo desde la aplicación oficial o tecleando tú el código, y confirma una invitación inesperada por un canal distinto del que la trajo. Una cara conocida en pantalla no demuestra nada: puede ser una grabación. Deja la cámara apagada hasta fiarte de la llamada y, si ejecutaste uno de esos «arreglos», da por comprometidos el equipo y todas las carteras y cuentas que haya en él, aunque no pase nada en meses.",
+      "claim": "Un conocido te pide una videollamada rápida",
+      "counterclaim": "Una cuenta robada, una cara grabada y malware disfrazado de arreglo de audio",
+      "audience": "Fundadores, directivos y desarrolladores del sector cripto y web3, mantenedores de software libre y cualquiera que haga videollamadas con contactos de Telegram, LinkedIn, Slack o Discord",
+      "observations": [
+        "La invitación llega desde una cuenta real de alguien a quien el objetivo conoce: según el Departamento de Justicia, cuentas robadas a víctimas anteriores; el FBI, según BleepingComputer y Nextgov, cita Telegram, LinkedIn, Slack y Discord.",
+        "En la llamada, los hackers reproducen vídeo grabado de una o varias víctimas anteriores conocidas por el objetivo, y también vídeos deepfake hechos con IA de figuras conocidas del mundo cripto y web3, dice el departamento. Mientras, graban la webcam del nuevo objetivo.",
+        "Después fingen un fallo técnico, por ejemplo que no se oye al objetivo, y envían un enlace o una indicación para arreglarlo; el «arreglo» instala malware a escondidas. Nextgov informa de que los enlaces llevaban a webs que imitaban Zoom o Microsoft Teams y de que el arreglo podía consistir en ejecutar un script o pegar comandos en el terminal.",
+        "El robo y la toma de las cuentas pueden llegar entre varios meses y más de un año después del primer compromiso, así que la víctima no relaciona la pérdida con la llamada.",
+        "La grabación y la lista de contactos de cada víctima alimentan la siguiente ronda: la cuenta robada y la cara robada se convierten en el cebo para los contactos de esa persona."
+      ],
+      "source_summary": "El 12 de noviembre de 2026 el Departamento de Justicia de EE. UU. anunció la incautación de la infraestructura en la nube usada en un esquema norcoreano de ingeniería social al que el FBI llama «FaceStealer», y que vincula con el robo de más de 400 millones de dólares en criptomonedas en los 18 meses anteriores. Con una orden federal, el FBI incautó además más de 900 vídeos de webcam de víctimas. El departamento describe el método: invitaciones a reuniones desde cuentas robadas a víctimas anteriores, vídeo grabado de víctimas anteriores conocidas por el objetivo, deepfakes con IA de figuras conocidas del sector cripto y web3, un fallo fingido del tipo «no se te oye» con un enlace o indicación para arreglarlo, y malware que da acceso a carteras, listas de contactos, redes sociales y aplicaciones de mensajería, con el robo meses o más de un año después. Atribuye la actividad a grupos conocidos como Sapphire Sleet, UNC1069, BlueNoroff y APT38, entre otros nombres, y advierte de que los intentos sobre los equipos de desarrolladores y sus cuentas de repositorios de código parecen dirigidos a ataques a la cadena de suministro de software. Nextgov y BleepingComputer, a partir de la rueda de prensa y la alerta del FBI, añaden las plataformas usadas para los cebos y las páginas que imitaban Zoom y Teams; ambos citan a la empresa de seguridad Arctic Wolf, que cuenta más de 677 objetivos en 58 países. Decrypt publicó las mismas cifras a partir del anuncio del departamento. El departamento anunció por separado actuaciones por el robo a Binance del 29 de octubre aproximadamente, que según el FBI cometieron otros actores norcoreanos.",
+      "limits": "Este caso se apoya en el anuncio del Gobierno de EE. UU. y en lo que la prensa recoge de la rueda de prensa y la alerta del FBI; nadie ha sido detenido ni acusado, ningún tribunal se ha pronunciado sobre estos hechos, y Corea del Norte ha negado su implicación en el robo a Binance, que es un caso aparte. Los 400 millones son el total del Gobierno y no van acompañados de un número de víctimas; los «677 objetivos en 58 países» son un recuento de objetivos de una empresa de seguridad privada, no de víctimas confirmadas. El departamento documenta tanto grabaciones reales de víctimas anteriores como deepfakes con IA de figuras conocidas; algunos titulares hablan de «deepfakes de contactos de confianza», cosa que el departamento no dice. Los nombres de plataformas (Zoom, Teams, Google Meet) describen lo que imitaban las páginas falsas: esas empresas no participaron, y tampoco las personas cuyas caras grabadas se reprodujeron, que también fueron víctimas. No pudimos leer directamente la alerta del propio FBI.",
+      "assessment": "Fraude documentado · anuncio del Gobierno de EE. UU. y prensa",
+      "assessment_source": "Departamento de Justicia de EE. UU.; Nextgov/FCW; BleepingComputer; Decrypt",
+      "sources": [
+        {
+          "name": "Departamento de Justicia de EE. UU., Oficina de Asuntos Públicos",
+          "short": "DOJ",
+          "role": "Anuncio de las incautaciones de FaceStealer: más de 400 millones de dólares en 18 meses, el método de las reuniones, el «arreglo» del fallo fingido, más de 900 vídeos de webcam incautados, atribución · 12 de noviembre de 2026",
+          "url": "https://www.justice.gov/opa/pr/justice-department-announces-actions-disrupt-north-koreas-massive-theft-cryptocurrency"
+        },
+        {
+          "name": "Nextgov/FCW",
+          "short": "Nextgov",
+          "role": "Rueda de prensa del FBI: cebos desde cuentas secuestradas de Telegram, LinkedIn, Slack y Discord, páginas que imitan Zoom y Teams, scripts o comandos de terminal como «arreglo» · 12 de noviembre de 2026",
+          "url": "https://www.nextgov.com/cybersecurity/2026/11/fbi-disrupts-intricate-north-korean-fake-call-scheme-tied-400m-crypto-theft/417200/"
+        },
+        {
+          "name": "BleepingComputer",
+          "short": "BleepingComputer",
+          "role": "Descripción de la alerta del FBI sobre el falso instalador, lo que roba el malware, el retraso hasta el robo y consejos de protección; recuento de objetivos de Arctic Wolf · 14 de noviembre de 2026",
+          "url": "https://bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft"
+        },
+        {
+          "name": "Decrypt",
+          "short": "Decrypt",
+          "role": "Cobertura de la prensa cripto del anuncio y las cifras del Departamento de Justicia · 12 de noviembre de 2026",
+          "url": "https://decrypt.co/383208/north-korea-stole-400-million-crypto-deepfake-video-calls"
+        }
+      ],
+      "pathway": {
+        "heading": "Cómo una cara conocida se convirtió en un instalador de malware",
+        "intro": "En la llamada no hay nada inventado de cero: la cuenta es real y la cara es una grabación real. Lo único que los atacantes necesitan de ti es que ejecutes su «arreglo». Ese es el punto de control.",
+        "steps": [
+          {
+            "label": "INVITAR",
+            "title": "Desde la cuenta robada de un contacto",
+            "text": "La cuenta secuestrada de un conocido propone una videollamada con un enlace a una página que parece Zoom o Teams."
+          },
+          {
+            "label": "ARREGLAR",
+            "title": "«No se te oye»",
+            "text": "Suenan grabaciones de gente que conoces mientras graban tu webcam; luego llega un fallo de audio fingido con un enlace, un instalador o un comando. No lo ejecutes nunca.",
+            "warning": true
+          },
+          {
+            "label": "COSECHAR",
+            "title": "Meses después, las carteras",
+            "text": "El malware da acceso a carteras, cuentas y contactos; el robo puede llegar un año después, y tu grabación se convierte en el siguiente cebo."
+          }
+        ],
+        "caption": "Incidente público documentado, tal como lo describen el Departamento de Justicia de EE. UU., el FBI y la prensa. No se reproduce aquí ningún registro privado."
+      }
+    }
+  },
+  {
     "id": "SA-182",
     "slug": "fake-bank-fraud-department-sms-nfc-relay-spain",
     "title": "The 'fraud department' that called you was the fraud.",
