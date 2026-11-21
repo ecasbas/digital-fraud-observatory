@@ -8106,5 +8106,91 @@
       }
     ],
     "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-192",
+    "slug": "segurosmundialsoat-com",
+    "title": "A bank website. No bank you can verify.",
+    "short_title": "The banking portal",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "segurosmundialsoat.com",
+    "summary": "segurosmundialsoat.com presented itself as a bank or financial service. Desenmascara rated it fraudulent (95/100) after AI-assisted analysis.",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "segurosmundialsoat-com.png",
+    "image_source": "https://desenmascara.me/screens/72249ae8639710f4.png",
+    "image_alt": "Archived capture of segurosmundialsoat.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: website status (checked on 20/11/2026): active: it was serving content.",
+      "The source report records: domain registered 2 days ago."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for segurosmundialsoat.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated segurosmundialsoat.com fraudulent on 2026-11-20 at 19:40 UTC.” 9 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-20",
+    "checked_at": "2026-11-21",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/382f4bdf-2155-464e-bfde-f7d3c1e9a902"
+      },
+      {
+        "name": "VirusTotal",
+        "short": "VirusTotal",
+        "role": "Independent corroboration: 9 security vendors flagged the domain as malicious (checked 2026-11-21).",
+        "url": "https://www.virustotal.com/gui/domain/segurosmundialsoat.com"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-11-18 through Cloudflare, Inc..",
+        "url": "https://lookup.icann.org/en/lookup?name=segurosmundialsoat.com"
+      }
+    ],
+    "audience": "Bank customers and payment users"
+  },
+  {
+    "id": "SA-193",
+    "slug": "tamanyieldholm-shop",
+    "title": "A trading desk with no regulator on record.",
+    "short_title": "The returns promise",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "tamanyieldholm.shop",
+    "summary": "Captured on 2026-11-20: tamanyieldholm.shop, an investment or trading platform that Desenmascara's AI-assisted analysis rated fraudulent at 95/100.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "tamanyieldholm-shop.png",
+    "image_source": "https://desenmascara.me/screens/07d3203ce208cb73.png",
+    "image_alt": "Archived capture of tamanyieldholm.shop, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: suspicious TLD (.shop)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for tamanyieldholm.shop, based on AI-assisted analysis. Its analysis says: “Our analysis rated tamanyieldholm.shop fraudulent on 2026-11-20 at 03:42 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-20",
+    "checked_at": "2026-11-21",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/752217ac-0416-4ea6-886b-e1639a8a7e6e"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
