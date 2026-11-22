@@ -8277,5 +8277,91 @@
       }
     ],
     "audience": "Bank customers and payment users"
+  },
+  {
+    "id": "SA-196",
+    "slug": "stoutsecureford-click",
+    "title": "A trading desk with no regulator on record.",
+    "short_title": "The returns promise",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "stoutsecureford.click",
+    "summary": "stoutsecureford.click presented itself as an investment or trading platform. Desenmascara rated it fraudulent (95/100) after AI-assisted analysis.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "stoutsecureford-click.png",
+    "image_source": "https://desenmascara.me/screens/ae33e0972733332b.png",
+    "image_alt": "Archived capture of stoutsecureford.click, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for stoutsecureford.click, based on AI-assisted analysis. Its analysis says: “Our analysis rated stoutsecureford.click fraudulent on 2026-11-22 at 03:45 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-22",
+    "checked_at": "2026-11-22",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/4101015f-fcd4-4660-b9b7-3e295d4bf7c7"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-04-06 through DYNADOT LLC.",
+        "url": "https://lookup.icann.org/en/lookup?name=stoutsecureford.click"
+      }
+    ],
+    "audience": "Retail investors"
+  },
+  {
+    "id": "SA-197",
+    "slug": "theprivethings-com",
+    "title": "A familiar storefront. An unknown seller.",
+    "short_title": "The discount shop",
+    "category": "Shopping",
+    "technique": "Deceptive storefront",
+    "kind": "capture",
+    "subject": "theprivethings.com",
+    "summary": "Captured on 2026-11-22: theprivethings.com, an online shop that Desenmascara's AI-assisted analysis rated fraudulent at 95/100.",
+    "lesson": "Check who operates a shop before trusting its sale. A famous brand and a deep discount prove nothing about who takes your money.",
+    "image": "theprivethings-com.png",
+    "image_source": "https://desenmascara.me/screens/d9b56b3351f3885a.png",
+    "image_alt": "Archived capture of theprivethings.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who operates this shop?",
+    "observations": [
+      "Content looks generic or templated.",
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: domain registered today."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for theprivethings.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated theprivethings.com fraudulent on 2026-11-22 at 03:39 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-22",
+    "checked_at": "2026-11-22",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/57f347c4-dd2f-4f2a-b568-b200850a700c"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-11-21 through TUCOWS.COM, CO..",
+        "url": "https://lookup.icann.org/en/lookup?name=theprivethings.com"
+      }
+    ],
+    "audience": "Online shoppers"
   }
 ]
