@@ -1,5 +1,142 @@
 [
   {
+    "id": "SA-198",
+    "slug": "microsoft-365-outage-held-messages-phishing",
+    "title": "The outage was real. The email about your lost messages was not.",
+    "short_title": "The fake 'held messages' email after the Microsoft 365 outage",
+    "category": "Phishing",
+    "technique": "Real service outage used as a lure for a fake sign-in page",
+    "kind": "incident",
+    "audience": "Anyone who uses Outlook or Microsoft 365 at work, IT and help-desk teams, and security teams who write staff warnings after an outage",
+    "subject": "Phishing campaign using Microsoft 365 outage lures, November 2026",
+    "summary": "On 12 November 2026 a real outage took down Exchange Online, Teams and other Microsoft 365 services for about a day, and mail was delayed. The next day, according to Microsoft Threat Intelligence, a high-volume campaign sent emails posing as Microsoft service notices: four of your messages were held during the disruption and would be deleted in 24 hours unless you clicked 'RESTORE MESSAGES'. Cofense, which saw the same lure, says the link led to a copy of the Microsoft sign-in page that rejects the first password and then sends you to the real Microsoft site.",
+    "lesson": "After any outage, expect emails that match the problem you already have. Never recover mail, files or an account from a link in an email: open Outlook or the Microsoft 365 portal yourself. Microsoft states that its real service-health messages do not send users to non-Microsoft domains to recover held mail, so check where the button leads before clicking. If a sign-in page says your password was wrong and then drops you on the normal Microsoft page, assume you typed it into a fake one: change it at once and tell IT so they can revoke your sessions.",
+    "claim": "Microsoft is holding four of your emails. Restore them in 24 hours or lose them.",
+    "counterclaim": "A real outage, a fake notice and a copied sign-in page",
+    "observations": [
+      "The outage was real: from 12 November Microsoft reported that customers might be unable to connect to Exchange Online, Teams, SharePoint Online, Microsoft 365 Copilot and Defender XDR; it extended its email timeout window to 48 hours to preserve delayed messages and said there was no indication of malicious activity.",
+      "On 13 November Microsoft Threat Intelligence observed a coordinated, high-volume campaign whose emails referred to an Exchange Online incident on 12 November, with subjects such as 'Outage – ' followed by a random token and sender names like 'Outage Notification' or 'Service Health'.",
+      "The body claimed that four messages had been held during the disruption and would be deleted within 24 hours, with a 'RESTORE MESSAGES' or 'TAKE ACTION' button; Microsoft says a hidden fake email conversation was included to slip past filters.",
+      "The links passed through a commercial email-sending service's click tracking before reaching domains unrelated to Microsoft, including two .sbs domains named after the outage being fixed or restored.",
+      "Cofense describes the landing page as a good copy of the Microsoft sign-in page that shows an 'incorrect' error on the first attempt and on the second redirects to Microsoft, to hide that the visitor was on a phishing page; it says the emails got past several commercial email security products."
+    ],
+    "source_summary": "BleepingComputer reported on 12–13 November 2026 a large Microsoft 365 outage that began on 12 November and affected Exchange Online, Teams, SharePoint Online, Copilot and Defender XDR; Microsoft attributed it to an issue during an earlier network capacity upgrade, said it was not caused by malicious activity, and extended the email timeout window to 48 hours to preserve delayed mail. On 16 November, Microsoft Threat Intelligence published an analysis of a coordinated, high-volume phishing campaign observed on 13 November that used outage lures to target several sectors worldwide: fake 'Outage Notification' or 'Service Health' emails saying held messages would be deleted within 24 hours, sent through commercial email infrastructure and linking to non-Microsoft domains. Microsoft assessed it as likely credential phishing, said the available evidence did not confirm credential capture, malware or post-compromise activity, blocked the domains and did not attribute it to any named actor. The same day, Cofense published a flash alert on the same lure, describing a Microsoft 365 look-alike sign-in page that rejects the first password and then redirects to Microsoft, and saying the campaign bypassed several email security products.",
+    "limits": "This case rests on reports by two security companies, one of them Microsoft, the brand being impersonated, and on press coverage of the outage; no victims, losses or arrests have been reported and no court is involved. Microsoft says the available evidence does not confirm that credentials were captured; the fake sign-in page is described by Cofense. Neither company names who was behind the campaign, and Cofense's remark that the attackers likely used generative AI is its own speculation. The sending service and the websites the links passed through may themselves have been abused rather than run by the attackers. Microsoft, as a company, was impersonated and had no part in the fraud.",
+    "analysis_date": "2026-11-16",
+    "checked_at": "2026-11-23",
+    "assessment": "Documented phishing campaign · security vendor analyses",
+    "assessment_source": "Microsoft Threat Intelligence; Cofense Intelligence; BleepingComputer",
+    "sources": [
+      {
+        "name": "Microsoft Security Blog (Microsoft Threat Intelligence)",
+        "short": "Microsoft",
+        "role": "Analysis of the campaign observed on 13 November: lure text, sender infrastructure, landing domains, no confirmed credential capture, no attribution, recommendations · 16 November 2026",
+        "url": "https://www.microsoft.com/en-us/security/blog/2026/11/16/high-volume-phishing-campaign-uses-microsoft-365-outage-lures-target-multiple-industry-sectors-2/"
+      },
+      {
+        "name": "Cofense Intelligence",
+        "short": "Cofense",
+        "role": "Flash alert on the same lure: the 'RESTORE MESSAGES' email, the fake sign-in page that rejects the first password and redirects to Microsoft, and filter evasion · 16 November 2026",
+        "url": "https://cofense.com/blog/flash-alert-weaponizing-the-november-2026-microsoft-outage"
+      },
+      {
+        "name": "BleepingComputer",
+        "short": "BleepingComputer",
+        "role": "Coverage of the real Microsoft 365 outage: services affected, Microsoft's stated cause, the 48-hour email timeout extension · 12–13 November 2026",
+        "url": "https://bleepingcomputer.com/news/microsoft/massive-microsoft-365-outage-disrupts-outlook-teams-copilot-worldwide"
+      }
+    ],
+    "pathway": {
+      "heading": "How a real outage became a phishing lure",
+      "intro": "The attackers did not need to invent a problem. Mail really was delayed, so a notice about held messages sounded plausible. The control point is the button.",
+      "steps": [
+        {
+          "label": "WAIT",
+          "title": "A real outage",
+          "text": "Exchange Online and other Microsoft 365 services go down on 12 November and mail is delayed."
+        },
+        {
+          "label": "LURE",
+          "title": "'Your messages will be deleted'",
+          "text": "A fake service notice says four emails are held and will be deleted in 24 hours. The button leads to a non-Microsoft domain: open Outlook yourself instead.",
+          "warning": true
+        },
+        {
+          "label": "HARVEST",
+          "title": "A copied sign-in page",
+          "text": "A look-alike Microsoft page says the first password is wrong, then sends the visitor to the real Microsoft site."
+        }
+      ],
+      "caption": "Documented public campaign, as described by Microsoft and Cofense. Landing domains are not reproduced here."
+    },
+    "es": {
+      "title": "La caída fue real. El correo sobre tus mensajes perdidos, no.",
+      "short_title": "El falso aviso de «mensajes retenidos» tras la caída de Microsoft 365",
+      "category": "Phishing",
+      "technique": "Una caída real del servicio usada como cebo para una página de acceso falsa",
+      "subject": "Campaña de phishing con cebos de la caída de Microsoft 365, noviembre de 2026",
+      "summary": "El 12 de noviembre de 2026 una caída real dejó sin servicio durante cerca de un día Exchange Online, Teams y otros servicios de Microsoft 365, y el correo llegó con retraso. Al día siguiente, según Microsoft Threat Intelligence, una campaña masiva envió correos que se hacían pasar por avisos de servicio de Microsoft: cuatro de tus mensajes habían quedado retenidos durante la incidencia y se borrarían en 24 horas si no pulsabas «RESTORE MESSAGES». Cofense, que vio el mismo cebo, dice que el enlace llevaba a una copia de la página de acceso de Microsoft que rechaza la primera contraseña y luego te manda a la web real de Microsoft.",
+      "lesson": "Después de cualquier caída, espera correos que encajen con el problema que ya tienes. Nunca recuperes correo, archivos ni una cuenta desde un enlace de un correo: abre tú Outlook o el portal de Microsoft 365. Microsoft afirma que sus avisos reales de estado del servicio no envían a dominios ajenos a Microsoft para recuperar correo retenido, así que mira adónde lleva el botón antes de pulsarlo. Si una página de acceso te dice que la contraseña es incorrecta y después te deja en la página normal de Microsoft, da por hecho que la has escrito en una falsa: cámbiala ya y avisa a informática para que cierre tus sesiones.",
+      "claim": "Microsoft retiene cuatro de tus correos. Recupéralos en 24 horas o los perderás.",
+      "counterclaim": "Una caída real, un aviso falso y una página de acceso copiada",
+      "audience": "Cualquiera que use Outlook o Microsoft 365 en el trabajo, equipos de informática y soporte, y equipos de seguridad que redactan avisos a la plantilla tras una caída",
+      "observations": [
+        "La caída fue real: desde el 12 de noviembre Microsoft avisó de que los clientes podían no conectarse a Exchange Online, Teams, SharePoint Online, Microsoft 365 Copilot y Defender XDR; amplió a 48 horas el margen de espera del correo para conservar los mensajes retrasados y dijo que nada indicaba actividad maliciosa.",
+        "El 13 de noviembre Microsoft Threat Intelligence observó una campaña coordinada y masiva cuyos correos mencionaban una incidencia de Exchange Online del 12 de noviembre, con asuntos como «Outage – » seguido de un código aleatorio y remitentes como «Outage Notification» o «Service Health».",
+        "El texto decía que cuatro mensajes habían quedado retenidos durante la incidencia y se borrarían en 24 horas, con un botón «RESTORE MESSAGES» o «TAKE ACTION»; según Microsoft, incluía una conversación de correo falsa y oculta para burlar los filtros.",
+        "Los enlaces pasaban por el seguimiento de clics de un servicio comercial de envío de correo antes de llegar a dominios sin relación con Microsoft, entre ellos dos .sbs con nombres que aludían a la caída ya resuelta o restaurada.",
+        "Cofense describe la página de destino como una buena copia de la página de acceso de Microsoft que muestra un error de «incorrecto» en el primer intento y en el segundo redirige a Microsoft, para ocultar que el visitante había estado en una página de phishing; dice que los correos superaron varios productos comerciales de seguridad del correo."
+      ],
+      "source_summary": "BleepingComputer informó los días 12 y 13 de noviembre de 2026 de una gran caída de Microsoft 365 que empezó el 12 de noviembre y afectó a Exchange Online, Teams, SharePoint Online, Copilot y Defender XDR; Microsoft la atribuyó a un problema durante una ampliación previa de capacidad de red, dijo que no la causó ninguna actividad maliciosa y amplió a 48 horas el margen de espera del correo para conservar los mensajes retrasados. El 16 de noviembre, Microsoft Threat Intelligence publicó el análisis de una campaña de phishing coordinada y masiva, observada el 13 de noviembre, que usaba la caída como cebo contra varios sectores en todo el mundo: correos falsos de «Outage Notification» o «Service Health» que decían que los mensajes retenidos se borrarían en 24 horas, enviados con infraestructura comercial de correo y con enlaces a dominios ajenos a Microsoft. Microsoft lo valoró como probable robo de credenciales, dijo que las pruebas disponibles no confirmaban captura de credenciales, malware ni actividad posterior, bloqueó los dominios y no lo atribuyó a ningún actor conocido. Ese mismo día, Cofense publicó una alerta sobre el mismo cebo, con una página de acceso que imita la de Microsoft 365, rechaza la primera contraseña y luego redirige a Microsoft, y dijo que la campaña burló varios productos de seguridad del correo.",
+      "limits": "Este caso se apoya en los informes de dos empresas de seguridad, una de ellas Microsoft, la marca suplantada, y en la cobertura de prensa de la caída; no se han comunicado víctimas, pérdidas ni detenciones y no interviene ningún tribunal. Microsoft dice que las pruebas disponibles no confirman que se capturaran credenciales; la página de acceso falsa la describe Cofense. Ninguna de las dos empresas dice quién estaba detrás, y el comentario de Cofense de que los atacantes probablemente usaron IA generativa es una especulación suya. El servicio de envío y las webs por las que pasaban los enlaces pueden haber sido utilizados de forma abusiva y no estar en manos de los atacantes. Microsoft, como empresa, fue suplantada y no tuvo ningún papel en el fraude.",
+      "assessment": "Campaña de phishing documentada · análisis de empresas de seguridad",
+      "assessment_source": "Microsoft Threat Intelligence; Cofense Intelligence; BleepingComputer",
+      "sources": [
+        {
+          "name": "Blog de seguridad de Microsoft (Microsoft Threat Intelligence)",
+          "short": "Microsoft",
+          "role": "Análisis de la campaña observada el 13 de noviembre: texto del cebo, infraestructura de envío, dominios de destino, sin captura de credenciales confirmada, sin atribución, recomendaciones · 16 de noviembre de 2026",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/11/16/high-volume-phishing-campaign-uses-microsoft-365-outage-lures-target-multiple-industry-sectors-2/"
+        },
+        {
+          "name": "Cofense Intelligence",
+          "short": "Cofense",
+          "role": "Alerta sobre el mismo cebo: el correo «RESTORE MESSAGES», la página de acceso falsa que rechaza la primera contraseña y redirige a Microsoft, y la evasión de filtros · 16 de noviembre de 2026",
+          "url": "https://cofense.com/blog/flash-alert-weaponizing-the-november-2026-microsoft-outage"
+        },
+        {
+          "name": "BleepingComputer",
+          "short": "BleepingComputer",
+          "role": "Cobertura de la caída real de Microsoft 365: servicios afectados, causa según Microsoft y ampliación a 48 horas del margen de espera del correo · 12 y 13 de noviembre de 2026",
+          "url": "https://bleepingcomputer.com/news/microsoft/massive-microsoft-365-outage-disrupts-outlook-teams-copilot-worldwide"
+        }
+      ],
+      "pathway": {
+        "heading": "Cómo una caída real se convirtió en cebo de phishing",
+        "intro": "Los atacantes no tuvieron que inventarse un problema. El correo de verdad iba con retraso, así que un aviso de mensajes retenidos sonaba creíble. El punto de control es el botón.",
+        "steps": [
+          {
+            "label": "ESPERAR",
+            "title": "Una caída real",
+            "text": "Exchange Online y otros servicios de Microsoft 365 caen el 12 de noviembre y el correo llega con retraso."
+          },
+          {
+            "label": "CEBO",
+            "title": "«Tus mensajes se borrarán»",
+            "text": "Un aviso de servicio falso dice que hay cuatro correos retenidos que se borrarán en 24 horas. El botón lleva a un dominio ajeno a Microsoft: abre tú Outlook.",
+            "warning": true
+          },
+          {
+            "label": "COSECHAR",
+            "title": "Una página de acceso copiada",
+            "text": "Una página que imita la de Microsoft dice que la primera contraseña es incorrecta y luego manda al visitante a la web real de Microsoft."
+          }
+        ],
+        "caption": "Campaña pública documentada, tal como la describen Microsoft y Cofense. No se reproducen aquí los dominios de destino."
+      }
+    }
+  },
+  {
     "id": "SA-189",
     "slug": "facestealer-fake-video-call-audio-fix-malware",
     "title": "The face on the call was real. It was recorded on the last victim's call.",
