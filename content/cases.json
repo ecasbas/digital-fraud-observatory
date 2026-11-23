@@ -8500,5 +8500,91 @@
       }
     ],
     "audience": "Online shoppers"
+  },
+  {
+    "id": "SA-199",
+    "slug": "tradeboxinc-com",
+    "title": "A trading desk with no regulator on record.",
+    "short_title": "The returns promise",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "tradeboxinc.com",
+    "summary": "An archived look at tradeboxinc.com, an investment or trading platform assessed as fraudulent by Desenmascara (AI-assisted analysis, 95/100).",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "tradeboxinc-com.png",
+    "image_source": "https://desenmascara.me/screens/7d061028c37252b0.png",
+    "image_alt": "Archived capture of tradeboxinc.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "Content looks generic or templated.",
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 8 of 13 domains people asked us about are flagged (62%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for tradeboxinc.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated tradeboxinc.com fraudulent on 2026-11-22 at 03:34 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-22",
+    "checked_at": "2026-11-23",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/d5f0bc74-3422-4855-8e1c-7bff337314fc"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-11-19 through TuringSign Inc. d/b/a Cosmotown.",
+        "url": "https://lookup.icann.org/en/lookup?name=tradeboxinc.com"
+      }
+    ],
+    "audience": "Retail investors"
+  },
+  {
+    "id": "SA-200",
+    "slug": "unifiedmegatrade-com",
+    "title": "The coins are real. The platform is not verifiable.",
+    "short_title": "The crypto platform",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "unifiedmegatrade.com",
+    "summary": "unifiedmegatrade.com presented itself as a crypto platform. Desenmascara rated it fraudulent (95/100) after AI-assisted analysis.",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "unifiedmegatrade-com.png",
+    "image_source": "https://desenmascara.me/screens/1cfed05e35c22e51.png",
+    "image_alt": "Archived capture of unifiedmegatrade.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for unifiedmegatrade.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated unifiedmegatrade.com fraudulent on 2026-11-22 at 03:24 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-22",
+    "checked_at": "2026-11-23",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/3bc89d3d-df7d-49ca-b7af-173f857fc818"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2024-05-28 through OwnRegistrar, Inc..",
+        "url": "https://lookup.icann.org/en/lookup?name=unifiedmegatrade.com"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
   }
 ]
