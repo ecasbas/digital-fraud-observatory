@@ -1,5 +1,144 @@
 [
   {
+    "id": "SA-205",
+    "slug": "black-friday-fake-shop-platform-rotating-domains",
+    "title": "The shop wasn't Aldi. Its address only said so.",
+    "short_title": "The 4,660-domain fake-shop platform",
+    "category": "Shopping",
+    "technique": "Fake-shop platform, retailer name in a subdomain, rotating disposable domains",
+    "kind": "incident",
+    "audience": "Online shoppers hunting Black Friday deals, brand-protection and fraud teams at retailers, registrars, hosting and advertising platforms",
+    "subject": "Fake-shop network built on one store-builder platform, ahead of Black Friday 2026",
+    "summary": "CloudSEK researchers traced 4,660 domains to a single fake-shop store builder in the run-up to Black Friday 2026, with an average of 91 previously unseen domains a day. Many put a retailer's name in front of an unrelated domain (659 used Aldi), and one shoe store moved across 75 domains since April. In a test checkout, the site collected name, email, postal address and phone before any payment step. Check Point separately counted more than 4,000 new shopping-themed domains in the same season.",
+    "lesson": "Before you type anything, read the address from the right: the part just before .com or .shop is who you are dealing with. aldi.anything.shop belongs to 'anything', not to Aldi. Go to the retailer by typing its known address or using its app, not through an ad or a link. If you have already given your details, expect follow-up phishing using your name and address. Pay only by credit card or a single-use virtual card, which give you a way to dispute the charge.",
+    "claim": "Aldi, Lidl and a big-name Black Friday sale",
+    "counterclaim": "One store builder, thousands of throwaway addresses",
+    "observations": [
+      "Following one unreported shoe shop under a 'Black Friday sale' banner, CloudSEK found 4,660 domains linked to the same store-builder platform; 3,415 of them appeared in public scan data between 14 October and 22 November 2026, with 53 to 132 new domains a day (91 on average).",
+      "About 1,120 of those 3,415 domains name a known retailer in the address or page title. Aldi is the most used, on 659 domains, mostly as an 'aldi' subdomain of an unrelated domain, so the brand appears in the address but the domain belongs to someone else.",
+      "A single store, labelled 'Shoes-7' in its own configuration, has been bound to 75 domains since at least 15 April 2026, 62 of them first seen in October and November; the researchers found no web presence for its support email beyond these storefronts.",
+      "In a walkthrough with dummy data, stopping before any card entry, the email typed into the contact form was sent to the site before the form was submitted, and name, address and phone followed on submission; the only payment option shown was 'Credit Card', and the payment step returned 'Failed'.",
+      "576 domains showed a templated 'Warning' page in 21 languages, including Spanish, where a store had been switched off; on one, the hidden configuration still carried the store name LIDL.",
+      "Independently, Check Point Research counted more than 4,000 newly registered shopping-themed domains between 1 October and 8 November 2026, nearly one in five already classed as risky, imitating Amazon, Walmart, Best Buy and couriers such as DHL, FedEx and Royal Mail."
+    ],
+    "source_summary": "On 23 November 2026 CloudSEK published an investigation into a fake-shop network linked to one SaaS store builder, which it assesses with medium confidence to be Chinese-developed. It counts 4,660 domains (3,415 seen in public scan data from 14 October to 22 November, the rest found by additional searches), an average of 91 new domains a day, about 1,120 that name a retailer, and 659 that use Aldi, mostly as a subdomain of an unrelated domain. Most use .shop (2,247) and sit behind Cloudflare (2,905). One store ('Shoes-7') has rotated through 75 domains since April. In a dummy-data checkout the site collected email, name, postal address and phone before any payment; no card page was rendered. The main targets are Central and Eastern Europe (Poland most clearly), the UK and the US. A separate 372-domain 'outlet' network imitating fashion brands showed no technical link to the platform. CloudSEK advises shoppers to check that the full address belongs to the retailer and to pay by credit card or single-use virtual card. The same day TechRadar Pro reported a separate Check Point Research study: more than 4,000 new shopping-themed domains between 1 October and 8 November, nearly one in five classed as risky, including a fake Walmart page that asked for name, email, address and phone.",
+    "limits": "The details of the network rest on one vendor's report; the press coverage we found restates it without independent checks, and Check Point's study confirms the seasonal wave, not this network. CloudSEK itself says the 4,660 and 3,415 counts measure the platform's footprint, not verified fraud, and may include some genuine merchants using the same software; only storefronts with a retailer's name on an unrelated domain are the clear fraud cases, and the rest were not reviewed one by one. The researchers did not establish that card data was stolen or that any purchase was defrauded; the payment page did not load in their test. Some coverage said the email went to 'external servers'; the report says the requests went to the storefront itself. No authority has acted against the operators and no court has ruled; who runs the platform is not known. Aldi, Lidl and the other brands named are impersonated, not involved.",
+    "analysis_date": "2026-11-23",
+    "checked_at": "2026-11-25",
+    "assessment": "Documented fraud network · security researcher's report, with independent research on the same season",
+    "assessment_source": "CloudSEK; Check Point Research via TechRadar Pro",
+    "sources": [
+      {
+        "name": "CloudSEK",
+        "short": "CloudSEK",
+        "role": "Original investigation: 4,660 domains, the store builder, Aldi and Lidl lures, the 75-domain 'Shoes-7' store, the test checkout and the authors' own caveats · 23 November 2026",
+        "url": "https://www.cloudsek.com/blog/black-friday-2026-fake-shopping-websites-scam-network"
+      },
+      {
+        "name": "TechRadar Pro (on Check Point Research)",
+        "short": "TechRadar",
+        "role": "Separate study: over 4,000 new shopping-themed domains from 1 October to 8 November, nearly one in five risky, fake retailer and courier pages asking for personal details · 23 November 2026",
+        "url": "https://www.techradar.com/pro/security/scammers-are-already-setting-up-black-friday-scam-sites-heres-what-to-look-out-for"
+      },
+      {
+        "name": "Pokde.Net",
+        "short": "Pokde",
+        "role": "Press coverage restating CloudSEK's figures, including the caveat that card theft was not established · November 2026",
+        "url": "https://pokde.net/system/security/black-friday-fake-shopping-domains-2026"
+      }
+    ],
+    "pathway": {
+      "heading": "How one store builder becomes thousands of 'retailers'",
+      "intro": "Nobody hacked Aldi. The operators rent a ready-made shop, put a famous name in front of a throwaway domain and move on when it gets burned. The control point is the address, before you type anything.",
+      "steps": [
+        {
+          "label": "LURE",
+          "title": "A famous name in the address",
+          "text": "A Black Friday deal on aldi.<something>.shop. The domain is the part before .shop, and it isn't Aldi's. Check it before typing anything.",
+          "warning": true
+        },
+        {
+          "label": "COLLECT",
+          "title": "Your details, before any payment",
+          "text": "The checkout takes your email as you type it, then your name, address and phone, and offers only 'Credit Card'."
+        },
+        {
+          "label": "ROTATE",
+          "title": "Same shop, new address",
+          "text": "The store moves to a fresh domain: 75 for one shoe shop since April, around 91 new ones a day across the network."
+        }
+      ],
+      "caption": "Documented public research, as described by CloudSEK and Check Point. No private record is reproduced here."
+    },
+    "es": {
+      "title": "La tienda no era Aldi. Solo lo decía su dirección.",
+      "short_title": "La plataforma de tiendas falsas de 4.660 dominios",
+      "category": "Compras",
+      "technique": "Plataforma de tiendas falsas, marca en un subdominio, dominios desechables que van rotando",
+      "subject": "Red de tiendas falsas montada sobre un mismo creador de tiendas, antes del Black Friday de 2026",
+      "summary": "Investigadores de CloudSEK vincularon 4.660 dominios a un mismo creador de tiendas falsas en las semanas previas al Black Friday de 2026, con una media de 91 dominios nuevos al día. Muchos ponen el nombre de un comercio delante de un dominio ajeno (659 usaban Aldi), y una zapatería ha pasado por 75 dominios desde abril. En una compra de prueba, la web recogió nombre, correo, dirección postal y teléfono antes de llegar a ningún pago. Check Point contó por su parte más de 4.000 dominios nuevos con temática de compras en la misma temporada.",
+      "lesson": "Antes de escribir nada, lee la dirección por la derecha: lo que va justo antes del .com o del .shop es con quién estás tratando. aldi.loquesea.shop es de «loquesea», no de Aldi. Entra en la tienda escribiendo tú su dirección conocida o desde su app, no desde un anuncio o un enlace. Si ya has dado tus datos, espera mensajes de phishing que usen tu nombre y tu dirección. Paga solo con tarjeta de crédito o con una tarjeta virtual de un solo uso, que te permiten reclamar el cargo.",
+      "claim": "Aldi, Lidl y unas ofertas de Black Friday de marca",
+      "counterclaim": "Un solo creador de tiendas, miles de direcciones de usar y tirar",
+      "audience": "Compradores online a la caza de ofertas de Black Friday, equipos de protección de marca y de fraude de los comercios, registradores y plataformas de alojamiento y publicidad",
+      "observations": [
+        "Tirando del hilo de una zapatería sin denunciar con un cartel de «Black Friday sale», CloudSEK encontró 4.660 dominios vinculados a la misma plataforma de creación de tiendas; 3.415 aparecieron en datos públicos de escaneo entre el 14 de octubre y el 22 de noviembre de 2026, con entre 53 y 132 dominios nuevos al día (91 de media).",
+        "Unos 1.120 de esos 3.415 dominios llevan el nombre de un comercio conocido en la dirección o en el título de la página. Aldi es el más usado, en 659 dominios, casi siempre como subdominio «aldi» de un dominio ajeno: la marca sale en la dirección, pero el dominio es de otro.",
+        "Una sola tienda, que su propia configuración llama «Shoes-7», ha estado asociada a 75 dominios desde al menos el 15 de abril de 2026, 62 de ellos vistos por primera vez en octubre y noviembre; los investigadores no encontraron rastro de su correo de soporte fuera de esas tiendas.",
+        "En una compra de prueba con datos ficticios, parando antes de introducir ninguna tarjeta, el correo escrito en el formulario se envió a la web antes de pulsar enviar, y nombre, dirección y teléfono llegaron al enviarlo; la única forma de pago era «Credit Card» y el paso de pago devolvió «Failed».",
+        "576 dominios mostraban una página «Warning» de plantilla en 21 idiomas, español incluido, cuando una tienda se había desactivado; en una de ellas, la configuración oculta seguía llevando el nombre de tienda LIDL.",
+        "Por separado, Check Point Research contó más de 4.000 dominios nuevos con temática de compras registrados entre el 1 de octubre y el 8 de noviembre de 2026, casi uno de cada cinco ya clasificado como de riesgo, que imitaban a Amazon, Walmart, Best Buy y a empresas de mensajería como DHL, FedEx y Royal Mail."
+      ],
+      "source_summary": "El 23 de noviembre de 2026 CloudSEK publicó una investigación sobre una red de tiendas falsas vinculada a un mismo creador de tiendas en modalidad SaaS que, con confianza media, atribuye a desarrolladores chinos. Cuenta 4.660 dominios (3.415 vistos en datos públicos de escaneo del 14 de octubre al 22 de noviembre y el resto hallados con búsquedas adicionales), una media de 91 dominios nuevos al día, unos 1.120 que nombran a un comercio y 659 que usan Aldi, casi siempre como subdominio de un dominio ajeno. La mayoría usan .shop (2.247) y están detrás de Cloudflare (2.905). Una tienda («Shoes-7») ha rotado por 75 dominios desde abril. En una compra con datos ficticios la web recogió correo, nombre, dirección postal y teléfono antes de cualquier pago; no llegó a cargarse ninguna página de tarjeta. Los objetivos principales son Europa central y del este (Polonia, de forma más clara), Reino Unido y Estados Unidos. Una red aparte de 372 dominios «outlet» que imitan marcas de moda no mostró ningún vínculo técnico con la plataforma. CloudSEK aconseja comprobar que la dirección completa pertenece al comercio y pagar con tarjeta de crédito o tarjeta virtual de un solo uso. El mismo día, TechRadar Pro publicó un estudio distinto de Check Point Research: más de 4.000 dominios nuevos con temática de compras entre el 1 de octubre y el 8 de noviembre, casi uno de cada cinco clasificado como de riesgo, entre ellos una página falsa de Walmart que pedía nombre, correo, dirección y teléfono.",
+      "limits": "Los detalles de la red se apoyan en el informe de un solo proveedor; la cobertura de prensa que encontramos lo repite sin comprobaciones propias, y el estudio de Check Point confirma la ola de temporada, no esta red en concreto. La propia CloudSEK dice que las cifras de 4.660 y 3.415 dominios miden la huella de la plataforma, no fraude verificado, y que pueden incluir algún comercio real que use el mismo software; los casos claros de fraude son las tiendas con el nombre de un comercio sobre un dominio ajeno, y el resto no se revisó una a una. Los investigadores no demostraron que se robaran datos de tarjetas ni que se defraudara ninguna compra; en su prueba no llegó a cargarse la página de pago. Algunos medios dijeron que el correo iba a «servidores externos»; el informe dice que las peticiones iban a la propia tienda. Ninguna autoridad ha actuado contra los operadores ni se ha pronunciado ningún tribunal; no se sabe quién está detrás de la plataforma. Aldi, Lidl y las demás marcas citadas son suplantadas, no participan.",
+      "assessment": "Red de fraude documentada · informe de un equipo de investigación de seguridad, con un estudio independiente sobre la misma temporada",
+      "assessment_source": "CloudSEK; Check Point Research vía TechRadar Pro",
+      "sources": [
+        {
+          "name": "CloudSEK",
+          "short": "CloudSEK",
+          "role": "Investigación original: 4.660 dominios, el creador de tiendas, los señuelos de Aldi y Lidl, la tienda «Shoes-7» de 75 dominios, la compra de prueba y las salvedades de los propios autores · 23 de noviembre de 2026",
+          "url": "https://www.cloudsek.com/blog/black-friday-2026-fake-shopping-websites-scam-network"
+        },
+        {
+          "name": "TechRadar Pro (sobre Check Point Research)",
+          "short": "TechRadar",
+          "role": "Estudio distinto: más de 4.000 dominios nuevos con temática de compras del 1 de octubre al 8 de noviembre, casi uno de cada cinco de riesgo, páginas falsas de comercios y mensajerías que piden datos personales · 23 de noviembre de 2026",
+          "url": "https://www.techradar.com/pro/security/scammers-are-already-setting-up-black-friday-scam-sites-heres-what-to-look-out-for"
+        },
+        {
+          "name": "Pokde.Net",
+          "short": "Pokde",
+          "role": "Cobertura de prensa que repite las cifras de CloudSEK, incluida la salvedad de que no se demostró robo de tarjetas · noviembre de 2026",
+          "url": "https://pokde.net/system/security/black-friday-fake-shopping-domains-2026"
+        }
+      ],
+      "pathway": {
+        "heading": "Cómo un creador de tiendas se convierte en miles de «comercios»",
+        "intro": "Nadie ha hackeado a Aldi. Los operadores alquilan una tienda ya hecha, ponen un nombre famoso delante de un dominio desechable y se mudan cuando se quema. El punto de control es la dirección, antes de escribir nada.",
+        "steps": [
+          {
+            "label": "ATRAER",
+            "title": "Un nombre famoso en la dirección",
+            "text": "Una oferta de Black Friday en aldi.<algo>.shop. El dominio es lo que va antes del .shop, y no es de Aldi. Compruébalo antes de escribir nada.",
+            "warning": true
+          },
+          {
+            "label": "RECOGER",
+            "title": "Tus datos, antes de cualquier pago",
+            "text": "El formulario de compra se queda con tu correo mientras lo escribes, luego con tu nombre, dirección y teléfono, y solo ofrece «Credit Card»."
+          },
+          {
+            "label": "ROTAR",
+            "title": "La misma tienda, otra dirección",
+            "text": "La tienda se muda a un dominio nuevo: 75 para una sola zapatería desde abril, unos 91 nuevos al día en toda la red."
+          }
+        ],
+        "caption": "Investigación pública documentada, tal como la describen CloudSEK y Check Point. No se reproduce aquí ningún registro privado."
+      }
+    }
+  },
+  {
     "id": "SA-198",
     "slug": "microsoft-365-outage-held-messages-phishing",
     "title": "The outage was real. The email about your lost messages was not.",
