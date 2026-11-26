@@ -9059,5 +9059,91 @@
       }
     ],
     "audience": "Retail investors"
+  },
+  {
+    "id": "SA-210",
+    "slug": "sidrachain5-com",
+    "title": "A familiar page. The wrong address.",
+    "short_title": "The lookalike login",
+    "category": "Phishing",
+    "technique": "Credential phishing",
+    "kind": "capture",
+    "subject": "sidrachain5.com",
+    "summary": "Desenmascara flagged sidrachain5.com as fraudulent (95/100). The site presented itself as a familiar online service.",
+    "lesson": "Open a service from its official app or a saved address, never from a link you were sent, before entering a password or payment details.",
+    "image": "sidrachain5-com.png",
+    "image_source": "https://desenmascara.me/screens/136e9681a5657db1.png",
+    "image_alt": "Archived capture of sidrachain5.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this the real service's own address?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 5 of 6 domains people asked us about are flagged (83%)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for sidrachain5.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated sidrachain5.com fraudulent on 2026-11-26 at 03:48 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-26",
+    "checked_at": "2026-11-26",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/e46b76f7-21ed-4b9d-a6d5-db4e303dbda2"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2025-12-16 through TuringSign Inc. d/b/a Cosmotown.",
+        "url": "https://lookup.icann.org/en/lookup?name=sidrachain5.com"
+      }
+    ],
+    "audience": "Anyone asked to sign in or confirm details"
+  },
+  {
+    "id": "SA-211",
+    "slug": "silvergatesbk-com",
+    "title": "Online banking from a bank nobody licensed.",
+    "short_title": "The card offer",
+    "category": "Banking",
+    "technique": "Financial-service facade",
+    "kind": "capture",
+    "subject": "silvergatesbk.com",
+    "summary": "An archived look at silvergatesbk.com, a bank or financial service assessed as fraudulent by Desenmascara (AI-assisted analysis, 95/100).",
+    "lesson": "Use your bank's official app, domain or support channel before entering credentials or payment details, and check any new bank in the regulator's register.",
+    "image": "silvergatesbk-com.png",
+    "image_source": "https://desenmascara.me/screens/15cb99600efa92a8.png",
+    "image_alt": "Archived capture of silvergatesbk.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this a bank any regulator has heard of?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: domain registered 1 day ago."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for silvergatesbk.com, based on AI-assisted analysis. Its analysis says: “Our analysis rated silvergatesbk.com fraudulent on 2026-11-26 at 03:47 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-26",
+    "checked_at": "2026-11-26",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/0e042378-6fe7-418c-923c-eef08b9d13db"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-11-24 through Gransy, s.r.o..",
+        "url": "https://lookup.icann.org/en/lookup?name=silvergatesbk.com"
+      }
+    ],
+    "audience": "Bank customers and payment users"
   }
 ]
