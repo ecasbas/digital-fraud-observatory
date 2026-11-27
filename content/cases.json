@@ -1,5 +1,156 @@
 [
   {
+    "id": "SA-212",
+    "slug": "one-phishing-kit-29-fake-banks-shared-routing-number",
+    "title": "Twenty-nine banks, one phone number, one routing number. None of them exists.",
+    "short_title": "One phishing kit, 29 fake banks",
+    "category": "Banking",
+    "technique": "Invented banks built from one reusable phishing kit on disposable domains",
+    "kind": "incident",
+    "audience": "Anyone asked to open an account or log in at a bank they have never heard of, and fraud, threat-intelligence and takedown teams who rely on domain reputation",
+    "subject": "Fake online banks built from a single phishing kit, reported by Netskope Threat Labs, November 2026",
+    "summary": "Netskope Threat Labs found about 29 fake online banks that appeared over seven weeks from late September 2026. They carry different invented names, such as Sunray Trust and Quartz Bank, but are the same PHP template, with the same layout, tagline, support number (1-800-BANKING) and, on most sites, the same routing number. Their account-opening and login pages collect credentials and personal data. About a third of the domains had no antivirus detections when first seen.",
+    "lesson": "A bank's name, logo and 'open an account' button prove nothing: anyone can build them in minutes. Before you open an account, deposit money or log in at a bank you don't know, look it up in the official register of banks (the FDIC's BankFind in the US, the Banco de España register in Spain, the equivalent in your country), and reach it through the contact details listed there, not those on the website. Search the site's phone and routing numbers: if they also belong to other 'banks', you have found the kit. Defenders should pivot on those shared details, which tie sites together long before any reputation service flags the new domain.",
+    "claim": "Different banks, each with its own name and website",
+    "counterclaim": "One template, one phone number, one routing number",
+    "observations": [
+      "About 29 fake-bank domains appeared over seven weeks starting in late September 2026, according to Netskope's research as reported by HackRead and Brandefense; Netskope examined six of them in detail.",
+      "The sites share one PHP banking template: the same layout and tagline, the support number '1-800-BANKING' and the routing number 251480576 on most sites; one deployment changes a single digit to 981480576. The operators only swap the bank's name.",
+      "They use cheap top-level domains such as .sbs, .cc, .pro, .live, .online and .info. Sunray Trust (sunraytrustbn.sbs) was first seen one day after its domain was registered, with no antivirus coverage at the time.",
+      "Quartz Bank (qtbnk.com) left the template's own branding visible: 'EMENDY INVEST, Bitcoin, forex investment and trading PHP script'.",
+      "About a third of the domains had no VirusTotal detections when first observed and the rest averaged fewer than five of about 90 engines; one variant added CAPTCHA evasion. Netskope's researchers put it this way: 'These sites live fast and die young.'",
+      "One fake bank was referenced on a real-estate site and another was listed on a business-information site, which HackRead, citing Netskope, says may help them appear in search results and AI-generated answers."
+    ],
+    "source_summary": "HackRead reported on 19 November 2026, based on research by Netskope Threat Labs, that about 29 seemingly separate online banks set up since late September 2026 were built from one ready-made PHP banking template. The sites share a layout, tagline, the support number 1-800-BANKING and, on most of them, the routing number 251480576 (one uses 981480576), and their account-opening and online-banking pages collect logins and personal details such as names and addresses. Examples include Sunray Trust, Quartz Bank, Western Future Bank and Apex Trust Financial Bank. They use low-cost top-level domains; about a third had no VirusTotal detections when first found and the rest averaged fewer than five detections among about 90 engines. Quartz Bank's site still showed the branding of an investment-and-trading PHP script, and some fake banks were listed on a real-estate site and a business-information site. North America had the most affected organisations, followed by Europe and Asia, and finance and banking organisations accounted for nearly half. Brandefense's write-up of the same research (20 November 2026) confirms the 29 domains, the seven-week window, the shared layout, tagline, support number and routing number, the detection figures and the third-party listings. The AlienVault OTX entry for the campaign (19 November 2026) lists the domains and describes the aim as harvesting banking credentials and personal information.",
+    "limits": "This case rests on one company's research, Netskope Threat Labs, as reported by HackRead and summarised by Brandefense and AlienVault OTX; Netskope's own post could not be read directly at check time, so every fact here comes from that coverage. No victim count is published, and the sources do not say how people are led to these sites or whether any deposits were taken; what is documented is the collection of logins and personal data. The 'affected organisations' figures describe organisations whose users reached the sites in Netskope's telemetry, not confirmed losses. The sources do not say whether the routing numbers belong to any real institution. Nobody has been identified or charged. The banks are invented; any real bank or credit union with a similar name has nothing to do with this campaign, and the real-estate and business-information sites that carried listings were used, not involved.",
+    "analysis_date": "2026-11-19",
+    "checked_at": "2026-11-27",
+    "assessment": "Documented campaign · security vendor research and press reporting",
+    "assessment_source": "Netskope Threat Labs via HackRead; Brandefense; AlienVault OTX",
+    "sources": [
+      {
+        "name": "HackRead",
+        "short": "HackRead",
+        "role": "Report on Netskope's findings: 29 fake banks, the shared 1-800-BANKING number and routing number, cheap domains, detection gap, third-party listings · 19 November 2026",
+        "url": "https://hackread.com/29-fake-bank-sites-using-contact-details-steal-logins/"
+      },
+      {
+        "name": "Brandefense",
+        "short": "Brandefense",
+        "role": "Summary of the same research confirming the 29 domains, the seven-week window, shared details, VirusTotal figures and listings, with a takedown playbook · 20 November 2026",
+        "url": "https://brandefense.io/security-news/fake-bank-phishing-sites-response/"
+      },
+      {
+        "name": "AlienVault OTX (via OffSeq Threat Radar)",
+        "short": "AlienVault OTX",
+        "role": "Indicator entry for the campaign: domain list, EMENDY INVEST kit, aim of harvesting credentials and personal data · 19 November 2026",
+        "url": "https://radar.offseq.com/threat/one-phishing-kit-29-fake-banks-15fbdb8dcc9e8f82"
+      },
+      {
+        "name": "Netskope Threat Labs, 'One Phishing Kit, 29 Fake Banks'",
+        "short": "Netskope",
+        "role": "Original research; not directly accessible at check time, facts above are taken from the coverage listed · November 2026",
+        "url": "https://threatlabs.netskope.com/blog/2026/11/phishing_kit_bank/"
+      }
+    ],
+    "pathway": {
+      "heading": "How one template becomes 29 banks",
+      "intro": "Nobody hacked a real bank. The operators invent one, put it on a cheap new domain and drop it before reputation tools catch up. The control point is the moment you are asked to open an account or log in.",
+      "steps": [
+        {
+          "label": "BUILD",
+          "title": "Same kit, new name",
+          "text": "A ready-made PHP banking template goes up on a cheap new domain; only the bank's name changes."
+        },
+        {
+          "label": "LOOK REAL",
+          "title": "Account opening, routing number, listings",
+          "text": "Brochure pages, a support line and listings on third-party sites make it look established. Check the bank in the official register; the same phone and routing number on other 'banks' gives the kit away.",
+          "warning": true
+        },
+        {
+          "label": "HARVEST",
+          "title": "Logins and personal data",
+          "text": "Login and account-opening forms collect credentials and personal details; the domain is dropped before most blocklists flag it."
+        }
+      ],
+      "caption": "Documented public campaign, as described by security researchers and the press. No private record is reproduced here."
+    },
+    "es": {
+      "title": "Veintinueve bancos, un teléfono, un número de ruta. Ninguno existe.",
+      "short_title": "Un kit de phishing, 29 bancos falsos",
+      "category": "Banca",
+      "technique": "Bancos inventados creados con un mismo kit de phishing sobre dominios desechables",
+      "subject": "Bancos online falsos creados con un único kit de phishing, según Netskope Threat Labs, noviembre de 2026",
+      "summary": "Netskope Threat Labs encontró unos 29 bancos online falsos que aparecieron en siete semanas desde finales de septiembre de 2026. Tienen nombres inventados distintos, como Sunray Trust o Quartz Bank, pero son la misma plantilla PHP, con el mismo diseño, el mismo eslogan, el mismo teléfono de atención (1-800-BANKING) y, en la mayoría, el mismo número de ruta bancaria. Sus páginas de apertura de cuenta y de acceso recogen credenciales y datos personales. Cerca de un tercio de los dominios no tenía ninguna detección antivirus cuando se vio por primera vez.",
+      "lesson": "El nombre de un banco, su logotipo y un botón de «abrir cuenta» no prueban nada: cualquiera los monta en minutos. Antes de abrir una cuenta, ingresar dinero o meter tus claves en un banco que no conoces, búscalo en el registro oficial de entidades (en España, el registro del Banco de España; en EE. UU., BankFind de la FDIC; el equivalente en tu país) y contacta por los datos que figuran allí, no por los de la web. Busca en internet su teléfono y su número de ruta: si también aparecen en otros «bancos», has encontrado el kit. Quien defiende debería tirar de esos datos compartidos, que unen las webs mucho antes de que ningún servicio de reputación marque el dominio nuevo.",
+      "claim": "Bancos distintos, cada uno con su nombre y su web",
+      "counterclaim": "Una plantilla, un teléfono, un número de ruta",
+      "audience": "Cualquiera a quien pidan abrir una cuenta o identificarse en un banco del que nunca ha oído hablar, y equipos de fraude, inteligencia de amenazas y retirada de webs que se fían de la reputación de los dominios",
+      "observations": [
+        "Unos 29 dominios de bancos falsos aparecieron en siete semanas desde finales de septiembre de 2026, según la investigación de Netskope recogida por HackRead y Brandefense; Netskope analizó seis a fondo.",
+        "Las webs comparten una plantilla bancaria en PHP: mismo diseño y eslogan, el teléfono «1-800-BANKING» y el número de ruta 251480576 en la mayoría; un despliegue cambia una sola cifra y usa 981480576. Los operadores solo cambian el nombre del banco.",
+        "Usan dominios de primer nivel baratos como .sbs, .cc, .pro, .live, .online e .info. Sunray Trust (sunraytrustbn.sbs) se detectó un día después de registrarse el dominio, sin ninguna cobertura antivirus en ese momento.",
+        "Quartz Bank (qtbnk.com) dejaba ver la marca de la propia plantilla: «EMENDY INVEST, Bitcoin, forex investment and trading PHP script».",
+        "Cerca de un tercio de los dominios no tenía ninguna detección en VirusTotal al verse por primera vez y el resto promediaba menos de cinco de unos 90 motores; una variante añadía evasión de CAPTCHA. Los investigadores de Netskope lo resumen así: «Estas webs viven deprisa y mueren jóvenes».",
+        "Un banco falso aparecía mencionado en una web inmobiliaria y otro figuraba en un directorio de empresas, algo que, según HackRead citando a Netskope, puede ayudarles a salir en buscadores y en respuestas generadas por IA."
+      ],
+      "source_summary": "HackRead publicó el 19 de noviembre de 2026, a partir de una investigación de Netskope Threat Labs, que unos 29 bancos online aparentemente distintos, creados desde finales de septiembre de 2026, salían de una misma plantilla bancaria en PHP. Las webs comparten diseño, eslogan, el teléfono 1-800-BANKING y, en la mayoría, el número de ruta 251480576 (una usa 981480576), y sus páginas de apertura de cuenta y de banca online recogen credenciales y datos personales como nombres y direcciones. Entre los ejemplos están Sunray Trust, Quartz Bank, Western Future Bank y Apex Trust Financial Bank. Usan dominios de primer nivel baratos; cerca de un tercio no tenía detecciones en VirusTotal al encontrarse y el resto promediaba menos de cinco entre unos 90 motores. La web de Quartz Bank seguía mostrando la marca de un script PHP de inversión y trading, y algunos bancos falsos figuraban en una web inmobiliaria y en un directorio de empresas. Norteamérica concentró más organizaciones afectadas, seguida de Europa y Asia, y las organizaciones de finanzas y banca fueron casi la mitad. El resumen de Brandefense sobre la misma investigación (20 de noviembre de 2026) confirma los 29 dominios, el periodo de siete semanas, el diseño, eslogan, teléfono y número de ruta compartidos, las cifras de detección y los listados en webs de terceros. La ficha de AlienVault OTX sobre la campaña (19 de noviembre de 2026) enumera los dominios y describe el objetivo como robo de credenciales bancarias y datos personales.",
+      "limits": "Este caso se apoya en la investigación de una sola empresa, Netskope Threat Labs, tal como la publicó HackRead y la resumieron Brandefense y AlienVault OTX; el artículo original de Netskope no pudo leerse directamente al comprobarlo, así que todos los datos proceden de esa cobertura. No se ha publicado ninguna cifra de víctimas, y las fuentes no dicen cómo se lleva a la gente a estas webs ni si se llegó a captar algún depósito; lo documentado es la recogida de credenciales y datos personales. Las cifras de «organizaciones afectadas» se refieren a organizaciones cuyos usuarios llegaron a las webs según la telemetría de Netskope, no a pérdidas confirmadas. Las fuentes no dicen si los números de ruta pertenecen a alguna entidad real. Nadie ha sido identificado ni acusado. Los bancos son inventados; cualquier banco o cooperativa de crédito real con un nombre parecido no tiene nada que ver con esta campaña, y las webs inmobiliarias y de directorio que incluían los listados fueron utilizadas, no partícipes.",
+      "assessment": "Campaña documentada · investigación de un proveedor de seguridad y prensa",
+      "assessment_source": "Netskope Threat Labs vía HackRead; Brandefense; AlienVault OTX",
+      "sources": [
+        {
+          "name": "HackRead",
+          "short": "HackRead",
+          "role": "Artículo sobre los hallazgos de Netskope: 29 bancos falsos, el teléfono 1-800-BANKING y el número de ruta compartidos, dominios baratos, falta de detección y listados en webs de terceros · 19 de noviembre de 2026",
+          "url": "https://hackread.com/29-fake-bank-sites-using-contact-details-steal-logins/"
+        },
+        {
+          "name": "Brandefense",
+          "short": "Brandefense",
+          "role": "Resumen de la misma investigación que confirma los 29 dominios, el periodo de siete semanas, los datos compartidos, las cifras de VirusTotal y los listados, con una guía para pedir la retirada · 20 de noviembre de 2026",
+          "url": "https://brandefense.io/security-news/fake-bank-phishing-sites-response/"
+        },
+        {
+          "name": "AlienVault OTX (vía OffSeq Threat Radar)",
+          "short": "AlienVault OTX",
+          "role": "Ficha de indicadores de la campaña: lista de dominios, kit EMENDY INVEST, objetivo de robar credenciales y datos personales · 19 de noviembre de 2026",
+          "url": "https://radar.offseq.com/threat/one-phishing-kit-29-fake-banks-15fbdb8dcc9e8f82"
+        },
+        {
+          "name": "Netskope Threat Labs, «One Phishing Kit, 29 Fake Banks»",
+          "short": "Netskope",
+          "role": "Investigación original; no accesible directamente al comprobarlo, los datos proceden de la cobertura citada · noviembre de 2026",
+          "url": "https://threatlabs.netskope.com/blog/2026/11/phishing_kit_bank/"
+        }
+      ],
+      "pathway": {
+        "heading": "Cómo una plantilla se convierte en 29 bancos",
+        "intro": "Nadie hackeó un banco real. Los operadores se inventan uno, lo suben a un dominio nuevo y barato y lo abandonan antes de que las herramientas de reputación reaccionen. El punto de control es el momento en que te piden abrir una cuenta o identificarte.",
+        "steps": [
+          {
+            "label": "MONTAR",
+            "title": "Mismo kit, nombre nuevo",
+            "text": "Una plantilla bancaria en PHP ya hecha se sube a un dominio nuevo y barato; solo cambia el nombre del banco."
+          },
+          {
+            "label": "PARECER REAL",
+            "title": "Apertura de cuenta, número de ruta, listados",
+            "text": "Páginas de folleto, un teléfono de atención y listados en webs de terceros le dan aire de entidad establecida. Busca el banco en el registro oficial; el mismo teléfono y número de ruta en otros «bancos» delata el kit.",
+            "warning": true
+          },
+          {
+            "label": "RECOLECTAR",
+            "title": "Credenciales y datos personales",
+            "text": "Los formularios de acceso y de apertura de cuenta recogen claves y datos personales; el dominio se abandona antes de que la mayoría de listas negras lo marquen."
+          }
+        ],
+        "caption": "Campaña pública documentada, tal como la describen investigadores de seguridad y la prensa. No se reproduce aquí ningún registro privado."
+      }
+    }
+  },
+  {
     "id": "SA-205",
     "slug": "black-friday-fake-shop-platform-rotating-domains",
     "title": "The shop wasn't Aldi. Its address only said so.",
