@@ -9296,5 +9296,84 @@
       }
     ],
     "audience": "Bank customers and payment users"
+  },
+  {
+    "id": "SA-213",
+    "slug": "tsl-stocktrading-icu",
+    "title": "Big returns. No verifiable firm behind them.",
+    "short_title": "The investment offer",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "tsl-stocktrading.icu",
+    "summary": "Captured on 2026-11-26: tsl-stocktrading.icu, an investment or trading platform that Desenmascara's AI-assisted analysis rated fraudulent at 95/100.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "tsl-stocktrading-icu.png",
+    "image_source": "https://desenmascara.me/screens/dde9f14b56fb18f3.png",
+    "image_alt": "Archived capture of tsl-stocktrading.icu, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for tsl-stocktrading.icu, based on AI-assisted analysis. Its analysis says: “Our analysis rated tsl-stocktrading.icu fraudulent on 2026-11-26 at 03:29 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-26",
+    "checked_at": "2026-11-27",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/82db7793-caea-44c2-9428-9410f65c2951"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-04-29 through Hosting Concepts B.V. d/b/a Registrar.eu.",
+        "url": "https://lookup.icann.org/en/lookup?name=tsl-stocktrading.icu"
+      }
+    ],
+    "audience": "Retail investors"
+  },
+  {
+    "id": "SA-214",
+    "slug": "velomarketshopshop-shop",
+    "title": "Deep discounts from a shop with no known owner.",
+    "short_title": "The bargain store",
+    "category": "Shopping",
+    "technique": "Deceptive storefront",
+    "kind": "capture",
+    "subject": "velomarketshopshop.shop",
+    "summary": "Desenmascara flagged velomarketshopshop.shop as fraudulent (95/100). The site presented itself as an online shop.",
+    "lesson": "Check who operates a shop before trusting its sale. A famous brand and a deep discount prove nothing about who takes your money.",
+    "image": "velomarketshopshop-shop.png",
+    "image_source": "https://desenmascara.me/screens/2c4b3eef31d17097.png",
+    "image_alt": "Archived capture of velomarketshopshop.shop, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who operates this shop?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: suspicious TLD (.shop)."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for velomarketshopshop.shop, based on AI-assisted analysis. Its analysis says: “Our analysis rated velomarketshopshop.shop fraudulent on 2026-11-26 at 03:25 UTC.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-26",
+    "checked_at": "2026-11-27",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/a58456eb-17f5-4b55-bb42-c815a361d4ca"
+      }
+    ],
+    "audience": "Online shoppers"
   }
 ]
