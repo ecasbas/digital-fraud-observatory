@@ -9375,5 +9375,96 @@
       }
     ],
     "audience": "Online shoppers"
+  },
+  {
+    "id": "SA-215",
+    "slug": "arvexcapitalmarkets-sbs",
+    "title": "The coins are real. The platform is not verifiable.",
+    "short_title": "The crypto platform",
+    "category": "Crypto",
+    "technique": "Crypto wallet or exchange lure",
+    "kind": "capture",
+    "subject": "arvexcapitalmarkets.sbs",
+    "summary": "An archived look at arvexcapitalmarkets.sbs, a crypto platform assessed as fraudulent by Desenmascara (AI-assisted analysis, 95/100).",
+    "lesson": "Do not connect a wallet, send crypto or trust a token claim until you verify it through independent official channels.",
+    "image": "arvexcapitalmarkets-sbs.png",
+    "image_source": "https://desenmascara.me/screens/e6eff04251e00a55.png",
+    "image_alt": "Archived capture of arvexcapitalmarkets.sbs, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Who controls the wallet you are asked to connect?",
+    "observations": [
+      "The source report records: fraud mechanism quoted verbatim from the page.",
+      "The source report records: domain registered today."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for arvexcapitalmarkets.sbs, based on AI-assisted analysis. Its analysis says: “This is a newly registered English-language investment and cryptocurrency trading platform presenting itself as Arvexcapitalmarkets, with claims of SEC regulation, an A+ credit rating, $2.8 billion under management, and a 32% average annual return.” Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-28",
+    "checked_at": "2026-11-28",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/85341938-78da-4b45-9a16-2cb6c39d7783"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2026-11-27 through DYNADOT LLC.",
+        "url": "https://lookup.icann.org/en/lookup?name=arvexcapitalmarkets.sbs"
+      }
+    ],
+    "audience": "Crypto users and retail investors"
+  },
+  {
+    "id": "SA-216",
+    "slug": "solviontrust-engine-com",
+    "title": "Big returns. No verifiable firm behind them.",
+    "short_title": "The investment offer",
+    "category": "Investment",
+    "technique": "High-return promise",
+    "kind": "capture",
+    "subject": "solviontrust-engine.com",
+    "summary": "solviontrust-engine.com presented itself as an investment or trading platform. Desenmascara rated it fraudulent (95/100) after AI-assisted analysis.",
+    "lesson": "Before investing, verify the firm in the relevant regulator register and treat guaranteed or effortless returns as a warning sign.",
+    "image": "solviontrust-engine-com.png",
+    "image_source": "https://desenmascara.me/screens/4d419ff99238cc63.png",
+    "image_alt": "Archived capture of solviontrust-engine.com, a website assessed as fraudulent.",
+    "claim": "An operating online service",
+    "counterclaim": "Is this firm authorised to take your money?",
+    "observations": [
+      "The source report records: listed on DestroyList, the curated phishing feed maintained by PhishDestroy.",
+      "The source report records: hosted on an address where 9 of 9 domains people asked us about are flagged (100%).",
+      "The source report records: website status (checked on 27/11/2026): active: it was serving content."
+    ],
+    "source_summary": "Desenmascara publishes a Fraudulent assessment of 95/100 for solviontrust-engine.com, based on AI-assisted analysis. 16 security vendors on VirusTotal independently flag the domain as malicious. Follow the report for the full rationale, evidence and any later correction.",
+    "limits": "This case was added automatically from a dated, attributed source assessment; it is not an independent investigation by this project. The capture does not prove customer losses, operator identity or AI generation. Signals such as a young domain or shared hosting do not prove fraud on their own. If the source withdraws the verdict, this case is withdrawn too.",
+    "analysis_date": "2026-11-27",
+    "checked_at": "2026-11-28",
+    "assessment": "Fraudulent · 95/100",
+    "assessment_source": "desenmascara.me · AI-assisted analysis",
+    "sources": [
+      {
+        "name": "desenmascara.me",
+        "short": "Desenmascara",
+        "role": "Public report and archived capture; verdict basis: AI-assisted analysis",
+        "url": "https://desenmascara.me/analisis/496b1088-0011-4641-a462-2561b7d98fe4"
+      },
+      {
+        "name": "VirusTotal",
+        "short": "VirusTotal",
+        "role": "Independent corroboration: 16 security vendors flagged the domain as malicious (checked 2026-11-27).",
+        "url": "https://www.virustotal.com/gui/domain/solviontrust-engine.com"
+      },
+      {
+        "name": "ICANN Registration Data Lookup",
+        "short": "ICANN",
+        "role": "Public registration record. At analysis time it showed the domain registered on 2025-03-28 through MainReg Inc..",
+        "url": "https://lookup.icann.org/en/lookup?name=solviontrust-engine.com"
+      }
+    ],
+    "audience": "Retail investors"
   }
 ]
